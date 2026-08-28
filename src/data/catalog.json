@@ -8,8 +8,10 @@
   "year": "N/E",
   "genre": "Tropical / Instrumental",
   "format": "33 RPM",
-  "coverImageId": "Jaime_Llano_González_y_su_Conjunto_Rítmico_-_Caratula",
-  "labelImageId": "Jaime_Llano_González_y_su_Conjunto_Rítmico",
+  "coverImageId": "vin-001_CAR_A",
+  "coverBackImageId": "vin-001_CAR_B",
+  "labelAImageId": "vin-001_GAL_A",
+  "labelBImageId": "vin-001_GAL_B",
   "dateAdded": "2026-08-28"
  },
  {
@@ -21,8 +23,10 @@
   "year": "1977",
   "genre": "Tropical",
   "format": "33 RPM",
-  "coverImageId": "Los_Bestiales_Geber_Castañeda_y_Lina_Caratula",
-  "labelImageId": "Los_Bestiales_Geber_Castañeda_y_Lina",
+  "coverImageId": "vin-002_CAR_A",
+  "coverBackImageId": "vin-002_CAR_B",
+  "labelAImageId": "vin-002_GAL_A",
+  "labelBImageId": "vin-002_GAL_B",
   "dateAdded": "2026-08-28"
  },
  {
@@ -34,8 +38,10 @@
   "year": "1972",
   "genre": "Bolero / Tango / Romántica",
   "format": "33 RPM",
-  "coverImageId": "Varios_Artistas_Juan_Arvizu_Genaro_Salinas_Nestor_Chayres_Maria_Luisa_Landín_Los_Quincheros_Cuarteto_Mayari_Los_Tres_Diamantes._Caratula",
-  "labelImageId": "Varios_Artistas_Juan_Arvizu_Genaro_Salinas_Nestor_Chayres_Maria_Luisa_Landín_Los_Quincheros_Cuarteto_Mayari_Los_Tres_Diamantes.",
+  "coverImageId": "vin-003_CAR_A",
+  "coverBackImageId": "vin-003_CAR_B",
+  "labelAImageId": "vin-003_GAL_A",
+  "labelBImageId": "vin-003_GAL_B",
   "dateAdded": "2026-08-28"
  },
  {
@@ -47,8 +53,10 @@
   "year": "N/E",
   "genre": "Tropical / Paseo / Merengue",
   "format": "33 RPM",
-  "coverImageId": "Varios_Artistas_Joaquín_Betin_G._Btgo_Guillermo_Buitrago_Rufo_Garrido_R._C._Miranda_Caratula",
-  "labelImageId": "Varios_Artistas_Joaquín_Betin_G._Btgo_Guillermo_Buitrago_Rufo_Garrido_R._C._Miranda",
+  "coverImageId": "vin-004_CAR_A",
+  "coverBackImageId": "vin-004_CAR_B",
+  "labelAImageId": "vin-004_GAL_A",
+  "labelBImageId": "vin-004_GAL_B",
   "dateAdded": "2026-08-28"
  },
  {
@@ -60,8 +68,10 @@
   "year": "N/E",
   "genre": "Tropical / Cumbia / Porro",
   "format": "33 RPM",
-  "coverImageId": "Orq._Edmundo_Cabecenido_Arias_-_Caratula",
-  "labelImageId": "Orq._Edmundo_Cabecenido_Arias",
+  "coverImageId": "vin-005_CAR_A",
+  "coverBackImageId": "vin-005_CAR_B",
+  "labelAImageId": "vin-005_GAL_A",
+  "labelBImageId": "vin-005_GAL_B",
   "dateAdded": "2026-08-28"
  },
  {
@@ -74,7 +84,9 @@
   "genre": "Bolero / Tríos",
   "format": "33 RPM",
   "coverImageId": null,
-  "labelImageId": "Varios_Artistas_Los_Romanceros_Los_Embajadores_Trío_Martino",
+  "coverBackImageId": null,
+  "labelAImageId": "vin-006_GAL_A",
+  "labelBImageId": "vin-006_GAL_B",
   "dateAdded": "2026-08-28"
  },
  {
@@ -87,7 +99,9 @@
   "genre": "Tropical / Salsa",
   "format": "33 RPM",
   "coverImageId": null,
-  "labelImageId": "iganme_los_Buenos_Bailables_-_Volumen_11",
+  "coverBackImageId": null,
+  "labelAImageId": "vin-007_GAL_A",
+  "labelBImageId": "vin-007_GAL_B",
   "dateAdded": "2026-08-28"
  },
  {
@@ -100,7 +114,9 @@
   "genre": "Balada / Pop Latino",
   "format": "33 RPM",
   "coverImageId": null,
-  "labelImageId": null,
+  "coverBackImageId": null,
+  "labelAImageId": null,
+  "labelBImageId": null,
   "dateAdded": "2026-08-28"
  },
  {
@@ -112,8 +128,10 @@
   "year": "1970",
   "genre": "Tropical / Bolero",
   "format": "33 RPM",
-  "coverImageId": "Varios_Artistas_Xiomara_Alfaro_Héctor_Cabrera_Mario_Suárez_Alfredo_Sadel_Raúl_Ruiz_Trío_Hambay_Leo_Barboza_Caratula",
-  "labelImageId": "Varios_Artistas_Xiomara_Alfaro_Héctor_Cabrera_Mario_Suárez_Alfredo_Sadel_Raúl_Ruiz_Trío_Hambay_Leo_Barboza",
+  "coverImageId": "vin-009_CAR_A",
+  "coverBackImageId": "vin-009_CAR_B",
+  "labelAImageId": "vin-009_GAL_A",
+  "labelBImageId": "vin-009_GAL_B",
   "dateAdded": "2026-08-28"
  },
  {
@@ -125,8 +143,10 @@
   "year": "1980",
   "genre": "Tropical / Cumbia",
   "format": "33 RPM",
-  "coverImageId": "Rodolfo_con_Los_Hispanos_-_Caratula",
-  "labelImageId": "Rodolfo_con_Los_Hispanos",
+  "coverImageId": "vin-010_CAR_A",
+  "coverBackImageId": null,
+  "labelAImageId": "vin-010_GAL_A",
+  "labelBImageId": null,
   "dateAdded": "2026-08-28"
  },
  {
@@ -138,8 +158,10 @@
   "year": "1975",
   "genre": "Tropical / Porro",
   "format": "33 RPM",
-  "coverImageId": "Lucho_Bermúdez_y_su_Orquesta_-_Caratula",
-  "labelImageId": "Lucho_Bermúdez_y_su_Orquesta",
+  "coverImageId": "vin-011_CAR_A",
+  "coverBackImageId": null,
+  "labelAImageId": "vin-011_GAL_A",
+  "labelBImageId": null,
   "dateAdded": "2026-08-28"
  },
  {
@@ -151,8 +173,10 @@
   "year": "1973",
   "genre": "Tropical / Parranda",
   "format": "33 RPM",
-  "coverImageId": null,
-  "labelImageId": null,
+  "coverImageId": "vin-012_CAR_A",
+  "coverBackImageId": null,
+  "labelAImageId": "vin-012_GAL_A",
+  "labelBImageId": null,
   "dateAdded": "2026-08-28"
  },
  {
@@ -165,7 +189,9 @@
   "genre": "Tropical / Cumbia",
   "format": "33 RPM",
   "coverImageId": null,
-  "labelImageId": null,
+  "coverBackImageId": null,
+  "labelAImageId": null,
+  "labelBImageId": null,
   "dateAdded": "2026-08-28"
  },
  {
@@ -178,7 +204,9 @@
   "genre": "Salsa / Tropical",
   "format": "33 RPM",
   "coverImageId": null,
-  "labelImageId": null,
+  "coverBackImageId": null,
+  "labelAImageId": null,
+  "labelBImageId": null,
   "dateAdded": "2026-08-28"
  },
  {
@@ -191,7 +219,9 @@
   "genre": "Salsa / Caribeño",
   "format": "33 RPM",
   "coverImageId": null,
-  "labelImageId": null,
+  "coverBackImageId": null,
+  "labelAImageId": null,
+  "labelBImageId": null,
   "dateAdded": "2026-08-28"
  },
  {
@@ -204,7 +234,9 @@
   "genre": "Guaracha / Son",
   "format": "33 RPM",
   "coverImageId": null,
-  "labelImageId": null,
+  "coverBackImageId": null,
+  "labelAImageId": null,
+  "labelBImageId": null,
   "dateAdded": "2026-08-28"
  },
  {
@@ -217,7 +249,9 @@
   "genre": "Cumbia Psicodélica",
   "format": "33 RPM",
   "coverImageId": null,
-  "labelImageId": null,
+  "coverBackImageId": null,
+  "labelAImageId": null,
+  "labelBImageId": null,
   "dateAdded": "2026-08-28"
  },
  {
@@ -230,7 +264,9 @@
   "genre": "Salsa / Tropical",
   "format": "33 RPM",
   "coverImageId": null,
-  "labelImageId": null,
+  "coverBackImageId": null,
+  "labelAImageId": null,
+  "labelBImageId": null,
   "dateAdded": "2026-08-28"
  },
  {
@@ -242,8 +278,10 @@
   "year": "1967",
   "genre": "Tropical / Twist",
   "format": "33 RPM",
-  "coverImageId": "Los_Teen_Agers_-_Caratula",
-  "labelImageId": "Los_Teen_Agers",
+  "coverImageId": "vin-019_CAR_A",
+  "coverBackImageId": null,
+  "labelAImageId": "vin-019_GAL_A",
+  "labelBImageId": null,
   "dateAdded": "2026-08-28"
  },
  {
@@ -256,7 +294,9 @@
   "genre": "Balada Pop",
   "format": "33 RPM",
   "coverImageId": null,
-  "labelImageId": null,
+  "coverBackImageId": null,
+  "labelAImageId": null,
+  "labelBImageId": null,
   "dateAdded": "2026-08-28"
  },
  {
@@ -269,7 +309,9 @@
   "genre": "Canción de Autor",
   "format": "33 RPM",
   "coverImageId": null,
-  "labelImageId": null,
+  "coverBackImageId": null,
+  "labelAImageId": null,
+  "labelBImageId": null,
   "dateAdded": "2026-08-28"
  },
  {
@@ -282,7 +324,9 @@
   "genre": "Balada Romántica",
   "format": "33 RPM",
   "coverImageId": null,
-  "labelImageId": null,
+  "coverBackImageId": null,
+  "labelAImageId": null,
+  "labelBImageId": null,
   "dateAdded": "2026-08-28"
  },
  {
@@ -295,7 +339,9 @@
   "genre": "Balada / Romántico",
   "format": "33 RPM",
   "coverImageId": null,
-  "labelImageId": null,
+  "coverBackImageId": null,
+  "labelAImageId": null,
+  "labelBImageId": null,
   "dateAdded": "2026-08-28"
  },
  {
@@ -307,8 +353,10 @@
   "year": "1969",
   "genre": "Balada / Rock Español",
   "format": "33 RPM",
-  "coverImageId": null,
-  "labelImageId": null,
+  "coverImageId": "vin-024_CAR_A",
+  "coverBackImageId": null,
+  "labelAImageId": "vin-024_GAL_A",
+  "labelBImageId": null,
   "dateAdded": "2026-08-28"
  },
  {
@@ -321,7 +369,9 @@
   "genre": "Balada Pop",
   "format": "33 RPM",
   "coverImageId": null,
-  "labelImageId": null,
+  "coverBackImageId": null,
+  "labelAImageId": null,
+  "labelBImageId": null,
   "dateAdded": "2026-08-28"
  },
  {
@@ -334,7 +384,9 @@
   "genre": "Balada Romántica",
   "format": "33 RPM",
   "coverImageId": null,
-  "labelImageId": null,
+  "coverBackImageId": null,
+  "labelAImageId": null,
+  "labelBImageId": null,
   "dateAdded": "2026-08-28"
  },
  {
@@ -347,7 +399,9 @@
   "genre": "Balada Pop",
   "format": "33 RPM",
   "coverImageId": null,
-  "labelImageId": null,
+  "coverBackImageId": null,
+  "labelAImageId": null,
+  "labelBImageId": null,
   "dateAdded": "2026-08-28"
  },
  {
@@ -360,7 +414,9 @@
   "genre": "Bolero Cantina",
   "format": "33 RPM",
   "coverImageId": null,
-  "labelImageId": null,
+  "coverBackImageId": null,
+  "labelAImageId": null,
+  "labelBImageId": null,
   "dateAdded": "2026-08-28"
  },
  {
@@ -373,7 +429,9 @@
   "genre": "Tango / Pasillo",
   "format": "33 RPM",
   "coverImageId": null,
-  "labelImageId": null,
+  "coverBackImageId": null,
+  "labelAImageId": null,
+  "labelBImageId": null,
   "dateAdded": "2026-08-28"
  },
  {
@@ -386,7 +444,9 @@
   "genre": "Pasillo / Bolero",
   "format": "33 RPM",
   "coverImageId": null,
-  "labelImageId": null,
+  "coverBackImageId": null,
+  "labelAImageId": null,
+  "labelBImageId": null,
   "dateAdded": "2026-08-28"
  },
  {
@@ -399,7 +459,9 @@
   "genre": "Bolero / Ranchera",
   "format": "33 RPM",
   "coverImageId": null,
-  "labelImageId": null,
+  "coverBackImageId": null,
+  "labelAImageId": null,
+  "labelBImageId": null,
   "dateAdded": "2026-08-28"
  },
  {
@@ -412,7 +474,9 @@
   "genre": "Pasillo / Bolero",
   "format": "33 RPM",
   "coverImageId": null,
-  "labelImageId": null,
+  "coverBackImageId": null,
+  "labelAImageId": null,
+  "labelBImageId": null,
   "dateAdded": "2026-08-28"
  },
  {
@@ -425,7 +489,9 @@
   "genre": "Bolero Trío",
   "format": "33 RPM",
   "coverImageId": null,
-  "labelImageId": null,
+  "coverBackImageId": null,
+  "labelAImageId": null,
+  "labelBImageId": null,
   "dateAdded": "2026-08-28"
  },
  {
@@ -438,7 +504,9 @@
   "genre": "Bolero Romántico",
   "format": "33 RPM",
   "coverImageId": null,
-  "labelImageId": null,
+  "coverBackImageId": null,
+  "labelAImageId": null,
+  "labelBImageId": null,
   "dateAdded": "2026-08-28"
  },
  {
@@ -451,7 +519,9 @@
   "genre": "Tropical / Variado",
   "format": "33 RPM",
   "coverImageId": null,
-  "labelImageId": null,
+  "coverBackImageId": null,
+  "labelAImageId": null,
+  "labelBImageId": null,
   "dateAdded": "2026-08-28"
  },
  {
@@ -464,7 +534,9 @@
   "genre": "Tropical / Variado",
   "format": "33 RPM",
   "coverImageId": null,
-  "labelImageId": null,
+  "coverBackImageId": null,
+  "labelAImageId": null,
+  "labelBImageId": null,
   "dateAdded": "2026-08-28"
  },
  {
@@ -477,7 +549,9 @@
   "genre": "Tropical / Variado",
   "format": "33 RPM",
   "coverImageId": null,
-  "labelImageId": null,
+  "coverBackImageId": null,
+  "labelAImageId": null,
+  "labelBImageId": null,
   "dateAdded": "2026-08-28"
  },
  {
@@ -490,7 +564,9 @@
   "genre": "Tropical / Cumbia",
   "format": "33 RPM",
   "coverImageId": null,
-  "labelImageId": null,
+  "coverBackImageId": null,
+  "labelAImageId": null,
+  "labelBImageId": null,
   "dateAdded": "2026-08-28"
  },
  {
@@ -502,8 +578,10 @@
   "year": "1966",
   "genre": "Sabanero / Cumbia",
   "format": "33 RPM",
-  "coverImageId": null,
-  "labelImageId": null,
+  "coverImageId": "vin-039_CAR_A",
+  "coverBackImageId": null,
+  "labelAImageId": "vin-039_GAL_A",
+  "labelBImageId": null,
   "dateAdded": "2026-08-28"
  },
  {
@@ -516,7 +594,9 @@
   "genre": "Vallenato / Paseo",
   "format": "33 RPM",
   "coverImageId": null,
-  "labelImageId": null,
+  "coverBackImageId": null,
+  "labelAImageId": null,
+  "labelBImageId": null,
   "dateAdded": "2026-08-28"
  },
  {
@@ -529,7 +609,9 @@
   "genre": "Guaracha / Vallenato",
   "format": "33 RPM",
   "coverImageId": null,
-  "labelImageId": null,
+  "coverBackImageId": null,
+  "labelAImageId": null,
+  "labelBImageId": null,
   "dateAdded": "2026-08-28"
  },
  {
@@ -541,8 +623,10 @@
   "year": "1985",
   "genre": "Parranda / Cumbia",
   "format": "33 RPM",
-  "coverImageId": "Varios_Artistas_Trío_Huaricancha_Rodolfo_y_su_Típica_RA7_Lisandro_Meza_Sonora_Dinamita_Billo_s_Caracas_Boys_Caratula",
-  "labelImageId": "Varios_Artistas_Trío_Huaricancha_Rodolfo_y_su_Típica_RA7_Lisandro_Meza_Sonora_Dinamita_Billo_s_Caracas_Boys",
+  "coverImageId": null,
+  "coverBackImageId": null,
+  "labelAImageId": null,
+  "labelBImageId": null,
   "dateAdded": "2026-08-28"
  },
  {
@@ -554,8 +638,10 @@
   "year": "1971",
   "genre": "Tropical / Porro",
   "format": "33 RPM",
-  "coverImageId": "Los_Melódicos_-_Caratula",
-  "labelImageId": "Los_Melódicos",
+  "coverImageId": "vin-043_CAR_A",
+  "coverBackImageId": null,
+  "labelAImageId": "vin-043_GAL_A",
+  "labelBImageId": null,
   "dateAdded": "2026-08-28"
  },
  {
@@ -567,8 +653,10 @@
   "year": "1974",
   "genre": "Tropical / Merengue",
   "format": "33 RPM",
-  "coverImageId": "Varios_Artistas_Trío_Huaricancha_Rodolfo_y_su_Típica_RA7_Lisandro_Meza_Sonora_Dinamita_Billo_s_Caracas_Boys_Caratula",
-  "labelImageId": "Varios_Artistas_Trío_Huaricancha_Rodolfo_y_su_Típica_RA7_Lisandro_Meza_Sonora_Dinamita_Billo_s_Caracas_Boys",
+  "coverImageId": "vin-044_CAR_A",
+  "coverBackImageId": null,
+  "labelAImageId": "vin-044_GAL_A",
+  "labelBImageId": null,
   "dateAdded": "2026-08-28"
  },
  {
@@ -581,7 +669,9 @@
   "genre": "Guaracha / Tropical",
   "format": "33 RPM",
   "coverImageId": null,
-  "labelImageId": null,
+  "coverBackImageId": null,
+  "labelAImageId": null,
+  "labelBImageId": null,
   "dateAdded": "2026-08-28"
  },
  {
@@ -594,7 +684,9 @@
   "genre": "Tropical / Paseo",
   "format": "33 RPM",
   "coverImageId": null,
-  "labelImageId": null,
+  "coverBackImageId": null,
+  "labelAImageId": null,
+  "labelBImageId": null,
   "dateAdded": "2026-08-28"
  },
  {
@@ -607,7 +699,9 @@
   "genre": "Tropical / Guaracha",
   "format": "33 RPM",
   "coverImageId": null,
-  "labelImageId": null,
+  "coverBackImageId": null,
+  "labelAImageId": null,
+  "labelBImageId": null,
   "dateAdded": "2026-08-28"
  },
  {
@@ -620,7 +714,9 @@
   "genre": "Cumbia Tradicional",
   "format": "33 RPM",
   "coverImageId": null,
-  "labelImageId": null,
+  "coverBackImageId": null,
+  "labelAImageId": null,
+  "labelBImageId": null,
   "dateAdded": "2026-08-28"
  },
  {
@@ -633,7 +729,9 @@
   "genre": "Tropical / Salsa",
   "format": "33 RPM",
   "coverImageId": null,
-  "labelImageId": null,
+  "coverBackImageId": null,
+  "labelAImageId": null,
+  "labelBImageId": null,
   "dateAdded": "2026-08-28"
  },
  {
@@ -646,7 +744,534 @@
   "genre": "Cumbia / Tropical",
   "format": "33 RPM",
   "coverImageId": null,
-  "labelImageId": null,
+  "coverBackImageId": null,
+  "labelAImageId": null,
+  "labelBImageId": null,
+  "dateAdded": "2026-08-28"
+ },
+ {
+  "id": "vin-051",
+  "artist": "Los Prisioneros",
+  "album": "Los Prisioneros",
+  "label": "CBS",
+  "matrixCode": "S/D",
+  "year": "1988",
+  "genre": "Otro",
+  "format": "33 RPM",
+  "coverImageId": "vin-051_CAR_A",
+  "coverBackImageId": "vin-051_CAR_B",
+  "labelAImageId": "vin-051_GAL_A",
+  "labelBImageId": "vin-051_GAL_B",
+  "dateAdded": "2026-08-28"
+ },
+ {
+  "id": "vin-052",
+  "artist": "Los Galos",
+  "album": "Los Galos",
+  "label": "Famoso (Codiscos)",
+  "matrixCode": "S/D",
+  "year": "1970",
+  "genre": "Otro",
+  "format": "33 RPM",
+  "coverImageId": "vin-052_CAR_A",
+  "coverBackImageId": "vin-052_CAR_B",
+  "labelAImageId": "vin-052_GAL_A",
+  "labelBImageId": "vin-052_GAL_B",
+  "dateAdded": "2026-08-28"
+ },
+ {
+  "id": "vin-053",
+  "artist": "Pablo Milanés",
+  "album": "La vida no vale nada",
+  "label": "Orbe (EGREM)",
+  "matrixCode": "S/D",
+  "year": "1976",
+  "genre": "Otro",
+  "format": "33 RPM",
+  "coverImageId": "vin-053_CAR_A",
+  "coverBackImageId": "vin-053_CAR_B",
+  "labelAImageId": "vin-053_GAL_A",
+  "labelBImageId": "vin-053_GAL_B",
+  "dateAdded": "2026-08-28"
+ },
+ {
+  "id": "vin-054",
+  "artist": "Oscar D'León y Su Salsa Mayor",
+  "album": "El Óscar de la Salsa",
+  "label": "Top Hits (Discos Orbe)",
+  "matrixCode": "S/D",
+  "year": "1977",
+  "genre": "Otro",
+  "format": "33 RPM",
+  "coverImageId": null,
+  "coverBackImageId": null,
+  "labelAImageId": "vin-054_GAL_A",
+  "labelBImageId": "vin-054_GAL_B",
+  "dateAdded": "2026-08-28"
+ },
+ {
+  "id": "vin-055",
+  "artist": "Pérez Prado y su Orquesta",
+  "album": "Las Novias del Mambo",
+  "label": "RCA Victor",
+  "matrixCode": "S/D",
+  "year": "1955",
+  "genre": "Otro",
+  "format": "33 RPM",
+  "coverImageId": "vin-055_CAR_A",
+  "coverBackImageId": null,
+  "labelAImageId": "vin-055_GAL_A",
+  "labelBImageId": "vin-055_GAL_B",
+  "dateAdded": "2026-08-28"
+ },
+ {
+  "id": "vin-056",
+  "artist": "Aníbal Troilo",
+  "album": "Puro Tango",
+  "label": "RCA Victor",
+  "matrixCode": "S/D",
+  "year": "N/E",
+  "genre": "Otro",
+  "format": "33 RPM",
+  "coverImageId": "vin-056_CAR_A",
+  "coverBackImageId": null,
+  "labelAImageId": "vin-056_GAL_A",
+  "labelBImageId": null,
+  "dateAdded": "2026-08-28"
+ },
+ {
+  "id": "vin-057",
+  "artist": "Los Visconti",
+  "album": "Tu y mi guitarra",
+  "label": "S/D",
+  "matrixCode": "S/D",
+  "year": "N/E",
+  "genre": "Otro",
+  "format": "33 RPM",
+  "coverImageId": "vin-057_CAR_A",
+  "coverBackImageId": null,
+  "labelAImageId": null,
+  "labelBImageId": null,
+  "dateAdded": "2026-08-28"
+ },
+ {
+  "id": "vin-058",
+  "artist": "Los Romanceros",
+  "album": "Quiero Amarte",
+  "label": "S/D",
+  "matrixCode": "S/D",
+  "year": "N/E",
+  "genre": "Otro",
+  "format": "33 RPM",
+  "coverImageId": "vin-058_CAR_A",
+  "coverBackImageId": null,
+  "labelAImageId": "vin-058_GAL_A",
+  "labelBImageId": null,
+  "dateAdded": "2026-08-28"
+ },
+ {
+  "id": "vin-059",
+  "artist": "Valente y Cáceres",
+  "album": "Aquellas Canciones Vol. II",
+  "label": "S/D",
+  "matrixCode": "S/D",
+  "year": "N/E",
+  "genre": "Otro",
+  "format": "33 RPM",
+  "coverImageId": "vin-059_CAR_A",
+  "coverBackImageId": null,
+  "labelAImageId": "vin-059_GAL_A",
+  "labelBImageId": null,
+  "dateAdded": "2026-08-28"
+ },
+ {
+  "id": "vin-060",
+  "artist": "El Trío Sensación",
+  "album": "Carita de Ángel",
+  "label": "S/D",
+  "matrixCode": "S/D",
+  "year": "N/E",
+  "genre": "Otro",
+  "format": "33 RPM",
+  "coverImageId": "vin-060_CAR_A",
+  "coverBackImageId": null,
+  "labelAImageId": "vin-060_GAL_A",
+  "labelBImageId": null,
+  "dateAdded": "2026-08-28"
+ },
+ {
+  "id": "vin-061",
+  "artist": "Los Hermanos Martínez Gil",
+  "album": "Recuérdame",
+  "label": "S/D",
+  "matrixCode": "S/D",
+  "year": "N/E",
+  "genre": "Otro",
+  "format": "33 RPM",
+  "coverImageId": null,
+  "coverBackImageId": null,
+  "labelAImageId": "vin-061_GAL_A",
+  "labelBImageId": null,
+  "dateAdded": "2026-08-28"
+ },
+ {
+  "id": "vin-062",
+  "artist": "Varios Artistas (Los Quincheros...)",
+  "album": "Boleros Campeones",
+  "label": "S/D",
+  "matrixCode": "S/D",
+  "year": "N/E",
+  "genre": "Otro",
+  "format": "33 RPM",
+  "coverImageId": null,
+  "coverBackImageId": null,
+  "labelAImageId": "vin-062_GAL_A",
+  "labelBImageId": null,
+  "dateAdded": "2026-08-28"
+ },
+ {
+  "id": "vin-063",
+  "artist": "Paul Anka",
+  "album": "21 Hits de Oro",
+  "label": "RCA Victor",
+  "matrixCode": "S/D",
+  "year": "N/E",
+  "genre": "Otro",
+  "format": "33 RPM",
+  "coverImageId": "vin-063_CAR_A",
+  "coverBackImageId": null,
+  "labelAImageId": "vin-063_GAL_A",
+  "labelBImageId": null,
+  "dateAdded": "2026-08-28"
+ },
+ {
+  "id": "vin-064",
+  "artist": "Edgardo Donato y sus Muchachos",
+  "album": "Serie Tango de Ayer Disco No. 6",
+  "label": "S/D",
+  "matrixCode": "S/D",
+  "year": "N/E",
+  "genre": "Otro",
+  "format": "33 RPM",
+  "coverImageId": "vin-064_CAR_A",
+  "coverBackImageId": null,
+  "labelAImageId": "vin-064_GAL_A",
+  "labelBImageId": null,
+  "dateAdded": "2026-08-28"
+ },
+ {
+  "id": "vin-065",
+  "artist": "Daniel Santos",
+  "album": "En mi soledad y otros éxitos inolvidables",
+  "label": "S/D",
+  "matrixCode": "S/D",
+  "year": "N/E",
+  "genre": "Otro",
+  "format": "33 RPM",
+  "coverImageId": "vin-065_CAR_A",
+  "coverBackImageId": null,
+  "labelAImageId": "vin-065_GAL_A",
+  "labelBImageId": null,
+  "dateAdded": "2026-08-28"
+ },
+ {
+  "id": "vin-066",
+  "artist": "Andre y su Conjunto",
+  "album": "Cocktail de Amor",
+  "label": "S/D",
+  "matrixCode": "S/D",
+  "year": "N/E",
+  "genre": "Otro",
+  "format": "33 RPM",
+  "coverImageId": "vin-066_CAR_A",
+  "coverBackImageId": null,
+  "labelAImageId": "vin-066_GAL_A",
+  "labelBImageId": null,
+  "dateAdded": "2026-08-28"
+ },
+ {
+  "id": "vin-067",
+  "artist": "Trío Vegabajeño",
+  "album": "Aquellas Canciones del Trío Vegabajeño",
+  "label": "S/D",
+  "matrixCode": "S/D",
+  "year": "N/E",
+  "genre": "Otro",
+  "format": "33 RPM",
+  "coverImageId": "vin-067_CAR_A",
+  "coverBackImageId": null,
+  "labelAImageId": "vin-067_GAL_A",
+  "labelBImageId": null,
+  "dateAdded": "2026-08-28"
+ },
+ {
+  "id": "vin-068",
+  "artist": "The Monkees",
+  "album": "Pisces, Aquarius, Capricorn & Jones Ltd.",
+  "label": "RCA Victor",
+  "matrixCode": "S/D",
+  "year": "1967",
+  "genre": "Otro",
+  "format": "33 RPM",
+  "coverImageId": "vin-068_CAR_A",
+  "coverBackImageId": null,
+  "labelAImageId": "vin-068_GAL_A",
+  "labelBImageId": null,
+  "dateAdded": "2026-08-28"
+ },
+ {
+  "id": "vin-069",
+  "artist": "Trío Martino",
+  "album": "Triunfamos !! (Los éxitos del Trío Martino)",
+  "label": "S/D",
+  "matrixCode": "S/D",
+  "year": "N/E",
+  "genre": "Otro",
+  "format": "33 RPM",
+  "coverImageId": "vin-069_CAR_A",
+  "coverBackImageId": null,
+  "labelAImageId": "vin-069_GAL_A",
+  "labelBImageId": null,
+  "dateAdded": "2026-08-28"
+ },
+ {
+  "id": "vin-070",
+  "artist": "Vicentico Valdés",
+  "album": "Mi Diario Musical",
+  "label": "RCA Victor",
+  "matrixCode": "S/D",
+  "year": "N/E",
+  "genre": "Otro",
+  "format": "33 RPM",
+  "coverImageId": "vin-070_CAR_A",
+  "coverBackImageId": null,
+  "labelAImageId": "vin-070_GAL_A",
+  "labelBImageId": null,
+  "dateAdded": "2026-08-28"
+ },
+ {
+  "id": "vin-071",
+  "artist": "Los Embajadores",
+  "album": "Vuelven Los Embajadores",
+  "label": "S/D",
+  "matrixCode": "S/D",
+  "year": "N/E",
+  "genre": "Otro",
+  "format": "33 RPM",
+  "coverImageId": "vin-071_CAR_A",
+  "coverBackImageId": null,
+  "labelAImageId": "vin-071_GAL_A",
+  "labelBImageId": null,
+  "dateAdded": "2026-08-28"
+ },
+ {
+  "id": "vin-072",
+  "artist": "Luz Marina Ramírez G.",
+  "album": "Minerales Industriales S.A. (Mindustriales)",
+  "label": "S/D",
+  "matrixCode": "S/D",
+  "year": "N/E",
+  "genre": "Otro",
+  "format": "33 RPM",
+  "coverImageId": "vin-072_CAR_A",
+  "coverBackImageId": null,
+  "labelAImageId": "vin-072_GAL_A",
+  "labelBImageId": null,
+  "dateAdded": "2026-08-28"
+ },
+ {
+  "id": "vin-073",
+  "artist": "Varios Artistas (Fausto, Roque...)",
+  "album": "Sello Rojo - Con Sabor a Bueno Vol. 13",
+  "label": "S/D",
+  "matrixCode": "S/D",
+  "year": "N/E",
+  "genre": "Otro",
+  "format": "33 RPM",
+  "coverImageId": "vin-073_CAR_A",
+  "coverBackImageId": null,
+  "labelAImageId": "vin-073_GAL_A",
+  "labelBImageId": null,
+  "dateAdded": "2026-08-28"
+ },
+ {
+  "id": "vin-075",
+  "artist": "Varios Artistas (Binomio de Oro...)",
+  "album": "Vallenatos de Oro Vol. 4",
+  "label": "S/D",
+  "matrixCode": "S/D",
+  "year": "N/E",
+  "genre": "Otro",
+  "format": "33 RPM",
+  "coverImageId": "vin-075_CAR_A",
+  "coverBackImageId": null,
+  "labelAImageId": "vin-075_GAL_A",
+  "labelBImageId": null,
+  "dateAdded": "2026-08-28"
+ },
+ {
+  "id": "vin-076",
+  "artist": "Varios Artistas (Obdulio y Julián...)",
+  "album": "Hotel Nutibara",
+  "label": "S/D",
+  "matrixCode": "S/D",
+  "year": "N/E",
+  "genre": "Otro",
+  "format": "33 RPM",
+  "coverImageId": "vin-076_CAR_A",
+  "coverBackImageId": null,
+  "labelAImageId": "vin-076_GAL_A",
+  "labelBImageId": null,
+  "dateAdded": "2026-08-28"
+ },
+ {
+  "id": "vin-077",
+  "artist": "Varios Artistas (Los Dandy...)",
+  "album": "Lo Mejor del Año Vol. 12",
+  "label": "S/D",
+  "matrixCode": "S/D",
+  "year": "N/E",
+  "genre": "Otro",
+  "format": "33 RPM",
+  "coverImageId": "vin-077_CAR_A",
+  "coverBackImageId": null,
+  "labelAImageId": "vin-077_GAL_A",
+  "labelBImageId": null,
+  "dateAdded": "2026-08-28"
+ },
+ {
+  "id": "vin-081",
+  "artist": "Varios Artistas (Luis Felipe González...)",
+  "album": "El Disco del Año - Vol. 7",
+  "label": "S/D",
+  "matrixCode": "S/D",
+  "year": "N/E",
+  "genre": "Otro",
+  "format": "33 RPM",
+  "coverImageId": "vin-081_CAR_A",
+  "coverBackImageId": null,
+  "labelAImageId": "vin-081_GAL_A",
+  "labelBImageId": null,
+  "dateAdded": "2026-08-28"
+ },
+ {
+  "id": "vin-083",
+  "artist": "Varios Artistas (Mari Trini...)",
+  "album": "Boletería Agotada - Vol. 2",
+  "label": "S/D",
+  "matrixCode": "S/D",
+  "year": "N/E",
+  "genre": "Otro",
+  "format": "33 RPM",
+  "coverImageId": "vin-083_CAR_A",
+  "coverBackImageId": null,
+  "labelAImageId": "vin-083_GAL_A",
+  "labelBImageId": null,
+  "dateAdded": "2026-08-28"
+ },
+ {
+  "id": "vin-084",
+  "artist": "Varios Artistas (Andy Montañez...)",
+  "album": "Bailoteca Vol. 8",
+  "label": "S/D",
+  "matrixCode": "S/D",
+  "year": "N/E",
+  "genre": "Otro",
+  "format": "33 RPM",
+  "coverImageId": "vin-084_CAR_A",
+  "coverBackImageId": null,
+  "labelAImageId": "vin-084_GAL_A",
+  "labelBImageId": null,
+  "dateAdded": "2026-08-28"
+ },
+ {
+  "id": "vin-085",
+  "artist": "Varios Artistas (Jorge Araque...)",
+  "album": "De Cumbia con Yolanda",
+  "label": "S/D",
+  "matrixCode": "S/D",
+  "year": "N/E",
+  "genre": "Otro",
+  "format": "33 RPM",
+  "coverImageId": "vin-085_CAR_A",
+  "coverBackImageId": null,
+  "labelAImageId": "vin-085_GAL_A",
+  "labelBImageId": null,
+  "dateAdded": "2026-08-28"
+ },
+ {
+  "id": "vin-086",
+  "artist": "Varios Artistas (Los Graduados...)",
+  "album": "El Disco del Año",
+  "label": "S/D",
+  "matrixCode": "S/D",
+  "year": "N/E",
+  "genre": "Otro",
+  "format": "33 RPM",
+  "coverImageId": "vin-086_CAR_A",
+  "coverBackImageId": null,
+  "labelAImageId": "vin-086_GAL_A",
+  "labelBImageId": null,
+  "dateAdded": "2026-08-28"
+ },
+ {
+  "id": "vin-087",
+  "artist": "Varios Artistas (María Eugenia...)",
+  "album": "Compilado",
+  "label": "S/D",
+  "matrixCode": "S/D",
+  "year": "N/E",
+  "genre": "Otro",
+  "format": "33 RPM",
+  "coverImageId": "vin-087_CAR_A",
+  "coverBackImageId": null,
+  "labelAImageId": "vin-087_GAL_A",
+  "labelBImageId": null,
+  "dateAdded": "2026-08-28"
+ },
+ {
+  "id": "vin-088",
+  "artist": "Dimension",
+  "album": "Lo que el viento se llevó",
+  "label": "RCA Victor (México)",
+  "matrixCode": "S/D",
+  "year": "N/E",
+  "genre": "Otro",
+  "format": "33 RPM",
+  "coverImageId": null,
+  "coverBackImageId": null,
+  "labelAImageId": "vin-088_GAL_A",
+  "labelBImageId": null,
+  "dateAdded": "2026-08-28"
+ },
+ {
+  "id": "vin-089",
+  "artist": "Varios Artistas",
+  "album": "Lo mejor de la salsa",
+  "label": "B Records",
+  "matrixCode": "S/D",
+  "year": "N/E",
+  "genre": "Otro",
+  "format": "33 RPM",
+  "coverImageId": "vin-089_CAR_A",
+  "coverBackImageId": null,
+  "labelAImageId": null,
+  "labelBImageId": null,
+  "dateAdded": "2026-08-28"
+ },
+ {
+  "id": "vin-090",
+  "artist": "Delfines",
+  "album": "Delfines",
+  "label": "RCA",
+  "matrixCode": "S/D",
+  "year": "N/E",
+  "genre": "Otro",
+  "format": "33 RPM",
+  "coverImageId": null,
+  "coverBackImageId": "vin-090_CAR_B",
+  "labelAImageId": null,
+  "labelBImageId": null,
   "dateAdded": "2026-08-28"
  }
 ]

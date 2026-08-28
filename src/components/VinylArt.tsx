@@ -2,7 +2,6 @@ import { useState } from "react";
 import type { Vinyl } from "../types";
 import { resolveImageSrc } from "../config/cloudinary";
 import { discDataUrl, sleeveDataUrl } from "../lib/utils";
-
 function SmartImg({
   src,
   alt,
@@ -58,9 +57,43 @@ export function LabelImage({
   width?: number;
   fit?: "cover" | "contain";
 }) {
-  const real = resolveImageSrc(record.labelImageId, width);
+  const real = resolveImageSrc(record.labelImageId ?? record.labelAImageId, width);
   const src = real ?? discDataUrl(record);
   return (
     <SmartImg src={src} alt={`Galleta de ${record.album}`} className={className} fit={fit} />
+  );
+}
+
+/** Carátula trasera: foto si existe, si no, arte de referencia generado. */
+export function CoverBackImage({
+  record,
+  className,
+  width = 640,
+}: {
+  record: Vinyl;
+  className?: string;
+  width?: number;
+}) {
+  const real = resolveImageSrc(record.coverBackImageId, width);
+  const src = real ?? sleeveDataUrl(record);
+  return <SmartImg src={src} alt={`Contraportada de ${record.album}`} className={className} />;
+}
+
+/** Galleta lado B: foto si existe, si no, galleta generada. */
+export function LabelBImage({
+  record,
+  className,
+  width = 640,
+  fit = "cover",
+}: {
+  record: Vinyl;
+  className?: string;
+  width?: number;
+  fit?: "cover" | "contain";
+}) {
+  const real = resolveImageSrc(record.labelBImageId, width);
+  const src = real ?? discDataUrl(record);
+  return (
+    <SmartImg src={src} alt={`Galleta lado B de ${record.album}`} className={className} fit={fit} />
   );
 }

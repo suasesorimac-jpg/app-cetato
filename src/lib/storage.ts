@@ -1,7 +1,7 @@
 import type { Filters, Prefs, Vinyl, ViewMode } from "../types";
 import { EMPTY_FILTERS } from "../types";
 
-const COLLECTION_KEY = "appcetato:collection:v1";
+const COLLECTION_KEY = "appcetato:collection:v2";
 const PREFS_KEY = "appcetato:prefs:v1";
 
 export function loadCollection(): Vinyl[] | null {
