@@ -1,0 +1,40 @@
+{
+  "name": "AppCetato - Catálogo de Vinilos",
+  "short_name": "AppCetato",
+  "description": "Catálogo maestro de vinilos: referencias, códigos de matriz, sellos disqueros y fichas técnicas.",
+  "id": "/",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "theme_color": "#0F172A",
+  "background_color": "#0F172A",
+  "lang": "es",
+  "categories": ["music", "productivity", "utilities"],
+  "icons": [
+    {
+      "src": "/icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    },
+    {
+      "src": "https://image.qwenlm.ai/generated-images/ee130535-bb82-4fe0-a75f-b038017561b0/_result.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "https://image.qwenlm.ai/generated-images/ee130535-bb82-4fe0-a75f-b038017561b0/_result.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
