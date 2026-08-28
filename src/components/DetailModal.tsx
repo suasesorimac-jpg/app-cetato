@@ -12,7 +12,7 @@ import {
   discDataUrl,
 } from "../lib/utils";
 import ModalShell from "./ModalShell";
-import { CoverImage, LabelImage, CoverBackImage, LabelBImage } from "./VinylArt";
+import { CoverImage, LabelImage } from "./VinylArt";
 import { useToast } from "./Toast";
 
 interface Props {
@@ -80,35 +80,18 @@ export default function DetailModal({ record, onClose, onEdit }: Props) {
   return (
     <ModalShell onClose={onClose} maxW="max-w-4xl">
       <div className="grid max-h-[88vh] md:grid-cols-[minmax(0,10fr)_minmax(0,11fr)]">
-        {/* Columna izquierda: galería de fotos (hasta 4) */}
+        {/* Columna izquierda: carátula + galleta */}
         <div className="border-b border-slate-800 bg-slate-950/40 p-5 md:border-b-0 md:border-r md:p-6">
           <div className="flex h-[380px] flex-col gap-4 sm:h-[460px]">
-            <div className="grid min-h-0 flex-[3] grid-cols-2 gap-3">
-              <CoverImage
-                record={record}
-                className="min-h-0 rounded-xl border border-slate-700 shadow-xl shadow-black/40"
-              />
-              {record.coverBackImageId ? (
-                <CoverBackImage
-                  record={record}
-                  className="min-h-0 rounded-xl border border-slate-700 shadow-xl shadow-black/40"
-                />
-              ) : null}
-            </div>
-            <div className="grid min-h-0 flex-[2] grid-cols-2 gap-3">
-              <LabelImage
-                record={record}
-                fit="contain"
-                className="min-h-0 rounded-xl border border-slate-700 bg-slate-950/70"
-              />
-              {record.labelBImageId ? (
-                <LabelBImage
-                  record={record}
-                  fit="contain"
-                  className="min-h-0 rounded-xl border border-slate-700 bg-slate-950/70"
-                />
-              ) : null}
-            </div>
+            <CoverImage
+              record={record}
+              className="min-h-0 flex-[3] rounded-xl border border-slate-700 shadow-xl shadow-black/40"
+            />
+            <LabelImage
+              record={record}
+              fit="contain"
+              className="min-h-0 flex-[2] rounded-xl border border-slate-700 bg-slate-950/70"
+            />
           </div>
         </div>
 

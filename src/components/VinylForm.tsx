@@ -16,14 +16,7 @@ interface Props {
   onClose: () => void;
 }
 
-type ImageSlot = "cover" | "coverBack" | "labelA" | "labelB";
-
-const SLOT_FIELD: Record<ImageSlot, "coverImageId" | "coverBackImageId" | "labelAImageId" | "labelBImageId"> = {
-  cover: "coverImageId",
-  coverBack: "coverBackImageId",
-  labelA: "labelAImageId",
-  labelB: "labelBImageId",
-};
+type ImageSlot = "cover" | "label";
 
 const inputCls =
   "h-10 w-full rounded-lg border border-slate-700 bg-slate-800 px-3 text-sm text-slate-100 outline-none transition-all placeholder:text-slate-500 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/25";
@@ -57,48 +50,22 @@ export default function VinylForm({ initial, labels, onSave, onClose }: Props) {
   const [genre, setGenre] = useState(initial?.genre ?? "Cumbia");
   const [format, setFormat] = useState<RpmFormat>(initial?.format ?? "33 RPM");
   const [coverId, setCoverId] = useState<string | null>(initial?.coverImageId ?? null);
-  const [coverBackId, setCoverBackId] = useState<string | null>(initial?.coverBackImageId ?? null);
-  const [labelAId, setLabelAId] = useState<string | null>(
-    initial?.labelAImageId ?? initial?.labelImageId ?? null
-  );
-  const [labelBId, setLabelBId] = useState<string | null>(initial?.labelBImageId ?? null);
+  const [labelId, setLabelId] = useState<string | null>(initial?.labelImageId ?? null);
   const [preview, setPreview] = useState<Record<ImageSlot, string | null>>({
     cover: null,
-    coverBack: null,
-    labelA: null,
-    labelB: null,
+    label: null,
   });
   const [progress, setProgress] = useState<Record<ImageSlot, number | null>>({
     cover: null,
-    coverBack: null,
-    labelA: null,
-    labelB: null,
+    label: null,
   });
   const [errors, setErrors] = useState<Record<string, string>>({});
   const coverInput = useRef<HTMLInputElement>(null);
-  const coverBackInput = useRef<HTMLInputElement>(null);
-  const labelAInput = useRef<HTMLInputElement>(null);
-  const labelBInput = useRef<HTMLInputElement>(null);
-
-  const idForSlot = (slot: ImageSlot): string | null =>
-    slot === "cover"
-      ? coverId
-      : slot === "coverBack"
-        ? coverBackId
-        : slot === "labelA"
-          ? labelAId
-          : labelBId;
-
-  const setSlotId = (slot: ImageSlot, val: string | null) => {
-    if (slot === "cover") setCoverId(val);
-    else if (slot === "coverBack") setCoverBackId(val);
-    else if (slot === "labelA") setLabelAId(val);
-    else setLabelBId(val);
-  };
+  const labelInput = useRef<HTMLInputElement>(null);
 
   const currentSrc = (slot: ImageSlot): string | null => {
     if (preview[slot]) return preview[slot];
-    const id = idForSlot(slot);
+    const id = slot === "cover" ? coverId : labelId;
     return id ? resolveImageSrc(id, 480) : null;
   };
 
@@ -113,7 +80,8 @@ export default function VinylForm({ initial, labels, onSave, onClose }: Props) {
     setProgress((p) => ({ ...p, [slot]: 2 }));
     try {
       const res = await uploadImage(file, (pct) => setProgress((p) => ({ ...p, [slot]: pct })));
-      setSlotId(slot, res.value);
+      if (slot === "cover") setCoverId(res.value);
+      else setLabelId(res.value);
       setProgress((p) => ({ ...p, [slot]: null }));
       if (!res.remote) {
         toast("Cloudinary sin configurar: la imagen se guardó localmente", "info");
@@ -128,20 +96,14 @@ export default function VinylForm({ initial, labels, onSave, onClose }: Props) {
   const clearImage = (slot: ImageSlot) => {
     setPreview((p) => ({ ...p, [slot]: null }));
     setProgress((p) => ({ ...p, [slot]: null }));
-    setSlotId(slot, null);
+    if (slot === "cover") setCoverId(null);
+    else setLabelId(null);
   };
 
   const renderImageField = (slot: ImageSlot, title: string) => {
     const src = currentSrc(slot);
     const pct = progress[slot];
-    const inputRef =
-      slot === "cover"
-        ? coverInput
-        : slot === "coverBack"
-          ? coverBackInput
-          : slot === "labelA"
-            ? labelAInput
-            : labelBInput;
+    const inputRef = slot === "cover" ? coverInput : labelInput;
     return (
       <div>
         <FieldLabel>{title}</FieldLabel>
@@ -240,9 +202,7 @@ export default function VinylForm({ initial, labels, onSave, onClose }: Props) {
       genre,
       format,
       coverImageId: coverId,
-      coverBackImageId: coverBackId,
-      labelAImageId: labelAId,
-      labelBImageId: labelBId,
+      labelImageId: labelId,
       dateAdded: initial?.dateAdded ?? new Date().toISOString().slice(0, 10),
     };
     onSave(record);
@@ -374,10 +334,8 @@ export default function VinylForm({ initial, labels, onSave, onClose }: Props) {
           </div>
 
           <div className="grid gap-5 sm:grid-cols-2">
-            {renderImageField("cover", "Carátula frontal")}
-            {renderImageField("coverBack", "Carátula trasera")}
-            {renderImageField("labelA", "Galleta lado A")}
-            {renderImageField("labelB", "Galleta lado B")}
+            {renderImageField("cover", "Foto de carátula")}
+            {renderImageField("label", "Foto de galleta")}
           </div>
 
           {!isCloudinaryConfigured && (
@@ -401,10 +359,7 @@ export default function VinylForm({ initial, labels, onSave, onClose }: Props) {
               type="submit"
               className="flex h-11 flex-1 items-center justify-center gap-2 rounded-lg bg-amber-500 px-5 text-sm font-bold text-slate-950 shadow-lg shadow-amber-500/25 transition-all hover:bg-amber-400 hover:shadow-amber-500/40"
             >
-              {progress.cover !== null ||
-              progress.coverBack !== null ||
-              progress.labelA !== null ||
-              progress.labelB !== null ? (
+              {progress.cover !== null || progress.label !== null ? (
                 <Loader2 size={16} className="animate-spin" />
               ) : (
                 <Save size={16} />

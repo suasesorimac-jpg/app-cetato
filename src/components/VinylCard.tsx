@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { Camera } from "lucide-react";
 import type { Vinyl } from "../types";
-import { countImages } from "../types";
 import { formatYearShort } from "../lib/utils";
 import { CoverImage, LabelImage } from "./VinylArt";
 
@@ -16,7 +15,7 @@ interface Props {
 }
 
 export default function VinylCard({ record, onOpen }: Props) {
-  const photos = countImages(record);
+  const photos = [record.coverImageId, record.labelImageId].filter(Boolean).length;
 
   return (
     <motion.article

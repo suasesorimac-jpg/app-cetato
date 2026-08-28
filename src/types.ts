@@ -10,30 +10,9 @@ export interface Vinyl {
   genre: string;
   format: RpmFormat;
   coverImageId?: string | null;
-  coverBackImageId?: string | null;
-  labelAImageId?: string | null;
-  labelBImageId?: string | null;
-  /** @deprecated usar labelAImageId */
   labelImageId?: string | null;
   dateAdded: string;
 }
-
-/** Compatibilidad: galleta lado A (o el campo legado). */
-export function labelAId(v: Vinyl): string | null | undefined {
-  return v.labelAImageId ?? v.labelImageId;
-}
-
-/** Cantidad total de fotos del ejemplar (máx 4). */
-export function countImages(v: Vinyl): number {
-  return [v.coverImageId, v.coverBackImageId, labelAId(v), v.labelBImageId].filter(Boolean).length;
-}
-
-export const SLOT_LABELS = {
-  cover: "Carátula frontal",
-  coverBack: "Carátula trasera",
-  labelA: "Galleta lado A",
-  labelB: "Galleta lado B",
-} as const;
 
 export interface Filters {
   formats: string[];
