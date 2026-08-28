@@ -3,6 +3,7 @@ import type { ReactNode } from "react";
 import { motion } from "framer-motion";
 import { FileDown } from "lucide-react";
 import type { Vinyl } from "../types";
+import { countImages } from "../types";
 import { decadeOf } from "../lib/utils";
 import { useCountUp } from "../hooks";
 import ModalShell from "./ModalShell";
@@ -36,7 +37,7 @@ function SectionTitle({ children }: { children: ReactNode }) {
 export default function StatsModal({ collection, onClose, onExportCatalog }: Props) {
   const stats = useMemo(() => {
     const total = collection.length;
-    const withImages = collection.filter((v) => v.coverImageId || v.labelImageId).length;
+    const withImages = collection.filter((v) => countImages(v) > 0).length;
 
     const countBy = (fn: (v: Vinyl) => string | null) => {
       const m = new Map<string, number>();

@@ -222,7 +222,7 @@ ${title}
 }
 
 /** Galleta (label del disco) generada determinísticamente (400×400). */
-export function discDataUrl(v: Vinyl): string {
+export function discDataUrl(v: Vinyl, side: "A" | "B" = "A"): string {
   const rng = mulberry32(hashString(v.id + v.artist + v.album));
   const [labelColor, accent, paper] = PALETTES[Math.floor(rng() * PALETTES.length)];
 
@@ -244,6 +244,7 @@ ${grooves}
 <text x="200" y="176" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="11.5" fill="${paper}" opacity="0.85">${escapeXml(
     v.album.slice(0, 32)
   )}</text>
+<text x="200" y="189" text-anchor="middle" font-family="'Courier New',monospace" font-weight="700" font-size="9.5" letter-spacing="3" fill="${accent}">LADO ${side}</text>
 <text x="200" y="228" text-anchor="middle" font-family="'Arial Black',Arial,sans-serif" font-weight="900" font-size="16" fill="${accent}">${
     v.format === "33 RPM" ? "33⅓ R.P.M." : v.format === "45 RPM" ? "45 R.P.M." : "78 R.P.M."
   }</text>

@@ -61,6 +61,20 @@ public/
 ├── manifest.webmanifest    # PWA
 ├── sw.js                   # Service Worker
 └── icons/                  # icono de la app
+scripts/                    # fotos reales: inspección, subida y mapeo
+```
+
+## Fotos reales por disco (hasta 4 por ejemplar)
+
+Cada vinilo tiene 4 slots: carátula frontal, carátula trasera, galleta lado A
+y galleta lado B (las fotos combinadas A+B ocupan un solo slot).
+`public_id` en Cloudinary con la forma `vin-XXX_CAR_A`, `vin-XXX_GAL_COMBO`, etc.
+
+```bash
+node scripts/inspect-folder.mjs "RUTA_DE_LA_CARPETA"  # propuesta de mapeo
+# → revisar/editar scripts/image-mapping.json (ver scripts/README.md)
+node scripts/upload-to-cloudinary.mjs                 # subida + verificación
+node scripts/apply-mapping.mjs                        # actualiza catalog.json
 ```
 
 ## Nota sobre importación masiva

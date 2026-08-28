@@ -1,8 +1,17 @@
 import { useRef, useState } from "react";
 import type { FormEvent } from "react";
 import { ImagePlus, Loader2, Save, Trash2 } from "lucide-react";
-import type { RpmFormat, Vinyl } from "../types";
-import { FORMAT_OPTIONS, GENRE_OPTIONS } from "../types";
+import type { ImageSlot, RpmFormat, Vinyl } from "../types";
+import {
+  FORMAT_OPTIONS,
+  GENRE_OPTIONS,
+  SLOT_LABELS,
+  SLOT_ORDER,
+  coverBackId,
+  coverId,
+  labelAId,
+  labelBId,
+} from "../types";
 import { isCloudinaryConfigured, resolveImageSrc } from "../config/cloudinary";
 import { uploadImage, validateImageFile } from "../lib/upload";
 import { uid } from "../lib/utils";
@@ -16,7 +25,26 @@ interface Props {
   onClose: () => void;
 }
 
-type ImageSlot = "cover" | "label";
+const EMPTY_SLOTS: Record<ImageSlot, string | null> = {
+  cover: null,
+  coverBack: null,
+  labelA: null,
+  labelB: null,
+};
+
+const EMPTY_PROGRESS: Record<ImageSlot, number | null> = {
+  cover: null,
+  coverBack: null,
+  labelA: null,
+  labelB: null,
+};
+
+const SLOT_HINTS: Record<ImageSlot, string> = {
+  cover: "Carátula frontal (o combinada)",
+  coverBack: "Carátula trasera",
+  labelA: "Galleta lado A (o combinada)",
+  labelB: "Galleta lado B",
+};
 
 const inputCls =
   "h-10 w-full rounded-lg border border-slate-700 bg-slate-800 px-3 text-sm text-slate-100 outline-none transition-all placeholder:text-slate-500 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/25";
@@ -49,23 +77,29 @@ export default function VinylForm({ initial, labels, onSave, onClose }: Props) {
   const [notSpecified, setNotSpecified] = useState(initial ? initial.year === "N/E" : false);
   const [genre, setGenre] = useState(initial?.genre ?? "Cumbia");
   const [format, setFormat] = useState<RpmFormat>(initial?.format ?? "33 RPM");
-  const [coverId, setCoverId] = useState<string | null>(initial?.coverImageId ?? null);
-  const [labelId, setLabelId] = useState<string | null>(initial?.labelImageId ?? null);
-  const [preview, setPreview] = useState<Record<ImageSlot, string | null>>({
-    cover: null,
-    label: null,
-  });
+
+  /* ── 4 slots de imagen ── */
+  const [images, setImages] = useState<Record<ImageSlot, string | null>>(
+    initial
+      ? {
+          cover: coverId(initial),
+          coverBack: coverBackId(initial),
+          labelA: labelAId(initial),
+          labelB: labelBId(initial),
+        }
+      : { ...EMPTY_SLOTS }
+  );
+  const [previews, setPreviews] = useState<Record<ImageSlot, string | null>>({ ...EMPTY_SLOTS });
   const [progress, setProgress] = useState<Record<ImageSlot, number | null>>({
-    cover: null,
-    label: null,
+    ...EMPTY_PROGRESS,
   });
+  const fileInputs = useRef<Partial<Record<ImageSlot, HTMLInputElement | null>>>({});
+
   const [errors, setErrors] = useState<Record<string, string>>({});
-  const coverInput = useRef<HTMLInputElement>(null);
-  const labelInput = useRef<HTMLInputElement>(null);
 
   const currentSrc = (slot: ImageSlot): string | null => {
-    if (preview[slot]) return preview[slot];
-    const id = slot === "cover" ? coverId : labelId;
+    if (previews[slot]) return previews[slot];
+    const id = images[slot];
     return id ? resolveImageSrc(id, 480) : null;
   };
 
@@ -76,37 +110,37 @@ export default function VinylForm({ initial, labels, onSave, onClose }: Props) {
       return;
     }
     const url = URL.createObjectURL(file);
-    setPreview((p) => ({ ...p, [slot]: url }));
+    setPreviews((p) => ({ ...p, [slot]: url }));
     setProgress((p) => ({ ...p, [slot]: 2 }));
     try {
       const res = await uploadImage(file, (pct) => setProgress((p) => ({ ...p, [slot]: pct })));
-      if (slot === "cover") setCoverId(res.value);
-      else setLabelId(res.value);
+      setImages((im) => ({ ...im, [slot]: res.value }));
       setProgress((p) => ({ ...p, [slot]: null }));
       if (!res.remote) {
         toast("Cloudinary sin configurar: la imagen se guardó localmente", "info");
       }
     } catch (e) {
       setProgress((p) => ({ ...p, [slot]: null }));
-      setPreview((p) => ({ ...p, [slot]: null }));
+      setPreviews((p) => ({ ...p, [slot]: null }));
       toast(e instanceof Error ? e.message : "Error al subir la imagen", "error");
     }
   };
 
   const clearImage = (slot: ImageSlot) => {
-    setPreview((p) => ({ ...p, [slot]: null }));
+    setPreviews((p) => ({ ...p, [slot]: null }));
     setProgress((p) => ({ ...p, [slot]: null }));
-    if (slot === "cover") setCoverId(null);
-    else setLabelId(null);
+    setImages((im) => ({ ...im, [slot]: null }));
   };
 
-  const renderImageField = (slot: ImageSlot, title: string) => {
+  const renderImageField = (slot: ImageSlot) => {
     const src = currentSrc(slot);
     const pct = progress[slot];
-    const inputRef = slot === "cover" ? coverInput : labelInput;
+    const inputRef = (el: HTMLInputElement | null) => {
+      fileInputs.current[slot] = el;
+    };
     return (
-      <div>
-        <FieldLabel>{title}</FieldLabel>
+      <div key={slot}>
+        <FieldLabel>{SLOT_HINTS[slot]}</FieldLabel>
         <input
           ref={inputRef}
           type="file"
@@ -121,7 +155,7 @@ export default function VinylForm({ initial, labels, onSave, onClose }: Props) {
         {src ? (
           <div className="flex items-center gap-3">
             <div className="relative h-24 w-24 shrink-0 overflow-hidden rounded-lg border border-slate-700">
-              <img src={src} alt="" className="h-full w-full object-cover" />
+              <img src={src} alt={SLOT_LABELS[slot]} className="h-full w-full object-cover" />
               {pct !== null && (
                 <div className="absolute inset-0 flex items-end bg-slate-950/60">
                   <div className="h-1.5 w-full bg-slate-800">
@@ -136,7 +170,7 @@ export default function VinylForm({ initial, labels, onSave, onClose }: Props) {
             <div className="flex flex-col gap-1.5">
               <button
                 type="button"
-                onClick={() => inputRef.current?.click()}
+                onClick={() => fileInputs.current[slot]?.click()}
                 disabled={pct !== null}
                 className="rounded-md border border-slate-600 px-3 py-1.5 text-xs font-semibold text-slate-200 transition-colors hover:border-amber-500/70 hover:text-amber-400 disabled:opacity-50"
               >
@@ -155,13 +189,11 @@ export default function VinylForm({ initial, labels, onSave, onClose }: Props) {
         ) : (
           <button
             type="button"
-            onClick={() => inputRef.current?.click()}
+            onClick={() => fileInputs.current[slot]?.click()}
             className="flex h-24 w-full flex-col items-center justify-center gap-1.5 rounded-lg border border-dashed border-slate-600 bg-slate-800/50 text-slate-500 transition-colors hover:border-amber-500/60 hover:text-amber-400"
           >
             <ImagePlus size={20} />
-            <span className="text-xs font-medium">
-              Subir foto · JPG o PNG · máx. 5 MB
-            </span>
+            <span className="text-xs font-medium">Subir foto · JPG o PNG · máx. 5 MB</span>
           </button>
         )}
       </div>
@@ -177,13 +209,7 @@ export default function VinylForm({ initial, labels, onSave, onClose }: Props) {
     let year: number | "N/E" = "N/E";
     if (!notSpecified) {
       const n = Number(yearText);
-      if (
-        !yearText.trim() ||
-        Number.isNaN(n) ||
-        !Number.isInteger(n) ||
-        n < 1900 ||
-        n > 2026
-      ) {
+      if (!yearText.trim() || Number.isNaN(n) || !Number.isInteger(n) || n < 1900 || n > 2026) {
         errs.year = "Ingresa un año entre 1900 y 2026, o marca N/E";
       } else {
         year = n;
@@ -201,12 +227,17 @@ export default function VinylForm({ initial, labels, onSave, onClose }: Props) {
       year,
       genre,
       format,
-      coverImageId: coverId,
-      labelImageId: labelId,
+      coverImageId: images.cover,
+      coverBackImageId: images.coverBack,
+      labelAImageId: images.labelA,
+      labelBImageId: images.labelB,
       dateAdded: initial?.dateAdded ?? new Date().toISOString().slice(0, 10),
     };
     onSave(record);
   };
+
+  const anyUploading = SLOT_ORDER.some((s) => progress[s] !== null);
+  const photoCount = SLOT_ORDER.filter((s) => images[s]).length;
 
   return (
     <ModalShell onClose={onClose} maxW="max-w-2xl">
@@ -281,7 +312,9 @@ export default function VinylForm({ initial, labels, onSave, onClose }: Props) {
                   disabled={notSpecified}
                   onChange={(e) => setYearText(e.target.value)}
                   placeholder="1968"
-                  className={`${inputCls} disabled:opacity-40 ${errors.year ? "border-red-500/70" : ""}`}
+                  className={`${inputCls} disabled:opacity-40 ${
+                    errors.year ? "border-red-500/70" : ""
+                  }`}
                 />
                 <label className="flex shrink-0 cursor-pointer select-none items-center gap-2 text-xs font-medium text-slate-400">
                   <input
@@ -333,9 +366,25 @@ export default function VinylForm({ initial, labels, onSave, onClose }: Props) {
             </div>
           </div>
 
-          <div className="grid gap-5 sm:grid-cols-2">
-            {renderImageField("cover", "Foto de carátula")}
-            {renderImageField("label", "Foto de galleta")}
+          {/* ── Fotos del ejemplar: 2 carátulas + 2 galletas ── */}
+          <div>
+            <div className="mb-1.5 flex items-center justify-between">
+              <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-slate-500">
+                Fotos del ejemplar
+              </span>
+              <span
+                className={`rounded-full border px-2 py-0.5 font-mono text-[10px] font-medium ${
+                  photoCount === 4
+                    ? "border-emerald-500/50 bg-emerald-500/10 text-emerald-400"
+                    : "border-slate-600 text-slate-400"
+                }`}
+              >
+                {photoCount}/4 cargadas
+              </span>
+            </div>
+            <div className="grid gap-4 sm:grid-cols-2">
+              {SLOT_ORDER.map((slot) => renderImageField(slot))}
+            </div>
           </div>
 
           {!isCloudinaryConfigured && (
@@ -359,7 +408,7 @@ export default function VinylForm({ initial, labels, onSave, onClose }: Props) {
               type="submit"
               className="flex h-11 flex-1 items-center justify-center gap-2 rounded-lg bg-amber-500 px-5 text-sm font-bold text-slate-950 shadow-lg shadow-amber-500/25 transition-all hover:bg-amber-400 hover:shadow-amber-500/40"
             >
-              {progress.cover !== null || progress.label !== null ? (
+              {anyUploading ? (
                 <Loader2 size={16} className="animate-spin" />
               ) : (
                 <Save size={16} />

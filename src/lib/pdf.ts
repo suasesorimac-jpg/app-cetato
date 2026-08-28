@@ -1,6 +1,7 @@
 import { jsPDF } from "jspdf";
 import html2canvas from "html2canvas";
 import type { Vinyl } from "../types";
+import { countImages, coverId, labelAId } from "../types";
 import { resolveImageSrc } from "../config/cloudinary";
 import {
   decadeOf,
@@ -97,7 +98,7 @@ async function exportFichaNative(record: Vinyl, fileName: string): Promise<void>
   pdf.setFontSize(17);
   pdf.text("APPCETATO — FICHA TÉCNICA", 14, 17);
 
-  const src = resolveImageSrc(record.coverImageId, 800) ?? sleeveDataUrl(record);
+  const src = resolveImageSrc(coverId(record), 800) ?? sleeveDataUrl(record);
   let y = 36;
   try {
     const img = await rasterize(src, 900);
@@ -147,6 +148,20 @@ async function exportFichaNative(record: Vinyl, fileName: string): Promise<void>
   pdf.setFont("courier", "bold");
   pdf.setFontSize(13);
   pdf.text(`MATRIZ  ${record.matrixCode}`, W / 2, y + 9, { align: "center" });
+
+  /* Galleta lado A, si el ejemplar la tiene documentada */
+  const labelSrc = resolveImageSrc(labelAId(record), 700);
+  if (labelSrc) {
+    try {
+      const img = await rasterize(labelSrc, 700);
+      const w = 62;
+      const hMax = 264 - (y + 22);
+      const h = Math.min((img.h * w) / img.w, hMax);
+      if (h > 20) pdf.addImage(img.data, "PNG", (W - w) / 2, y + 22, w, h);
+    } catch {
+      /* la ficha se genera igual sin la galleta */
+    }
+  }
 
   pdf.setFont("helvetica", "normal");
   pdf.setFontSize(8);
@@ -271,7 +286,7 @@ export function exportCatalogPdf(list: Vinyl[]): void {
   const labels = countBy((v) => v.label);
   const genres = countBy((v) => v.genre);
   const decades = countBy((v) => decadeOf(v.year));
-  const withImages = list.filter((v) => v.coverImageId || v.labelImageId).length;
+  const withImages = list.filter((v) => countImages(v) > 0).length;
 
   const top = (arr: Array<[string, number]>, n: number) =>
     arr.slice(0, n).map(([k, c]) => `${k} (${c})`).join("  ·  ");

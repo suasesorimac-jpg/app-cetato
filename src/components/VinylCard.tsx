@@ -1,8 +1,9 @@
 import { motion } from "framer-motion";
 import { Camera } from "lucide-react";
 import type { Vinyl } from "../types";
+import { countImages } from "../types";
 import { formatYearShort } from "../lib/utils";
-import { CoverImage, LabelImage } from "./VinylArt";
+import { CoverImage, LabelAImage } from "./VinylArt";
 
 export const cardVariants = {
   hidden: { opacity: 0, y: 24 },
@@ -15,7 +16,7 @@ interface Props {
 }
 
 export default function VinylCard({ record, onOpen }: Props) {
-  const photos = [record.coverImageId, record.labelImageId].filter(Boolean).length;
+  const photos = countImages(record);
 
   return (
     <motion.article
@@ -27,8 +28,8 @@ export default function VinylCard({ record, onOpen }: Props) {
     >
       <div className="rounded-xl border border-slate-700/70 bg-slate-800/90 p-3 shadow-lg shadow-black/25 transition-[border-color,box-shadow] duration-300 group-hover:border-amber-500/80 group-hover:shadow-2xl group-hover:shadow-black/60">
         <div className="relative">
-          {/* El disco se asoma de la funda al pasar el cursor */}
-          <LabelImage
+          {/* El disco (galleta lado A) se asoma de la funda al pasar el cursor */}
+          <LabelAImage
             record={record}
             className="absolute right-0 top-1/2 aspect-square h-[86%] -translate-y-1/2 translate-x-[14%] rounded-full drop-shadow-2xl drop-shadow-black/70 transition-transform duration-500 ease-out group-hover:translate-x-[42%] group-hover:rotate-[50deg]"
           />
@@ -42,7 +43,7 @@ export default function VinylCard({ record, onOpen }: Props) {
           {photos > 0 && (
             <span className="absolute bottom-2 left-2 z-20 flex items-center gap-1 rounded-full bg-slate-950/80 px-2 py-0.5 font-mono text-[10px] text-amber-400 backdrop-blur-sm">
               <Camera size={11} />
-              {photos} {photos === 1 ? "foto" : "fotos"}
+              {photos}/4 fotos
             </span>
           )}
         </div>
