@@ -1,3 +1,27 @@
+# Scripts de App-Cetato
+
+## 🔄 Reset del repositorio GitHub (push desde cero)
+
+Para borrar lo que hay en el remoto y subir **esta versión** como única fuente:
+
+- **Windows:** doble clic en `reset-and-push.bat` (raíz del proyecto), o
+- Terminal:
+
+```bash
+node scripts/push-fresh.mjs
+```
+
+El script hace: `git init` (si falta) → rama `main` → `git add -A` → commit →
+`git push --force -u origin main` → borra ramas/tags remotos antiguos →
+muestra `git ls-remote` para verificar.
+
+> Si Git pide credenciales, se abrirá el navegador para iniciar sesión en
+> GitHub (cuenta `suasesorimac-jpg`): acéptalo.
+> Si la rama por defecto del repo era otra: en GitHub → Settings → Branches →
+> Default branch → selecciona `main`.
+
+---
+
 # Fotos reales de la colección → Cloudinary → catalog.json
 
 Flujo completo para conectar las fotos de la carpeta local
