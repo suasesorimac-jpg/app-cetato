@@ -3,6 +3,7 @@ import type { ReactNode } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Download, ImagePlus, Loader2, Pencil, Share2, X, ZoomIn } from "lucide-react";
 import type { Vinyl } from "../types";
+import { SLOT_LABELS, SLOT_ORDER, countImages, slotIds } from "../types";
 import { resolveImageSrc } from "../config/cloudinary";
 import { exportFichaPdf } from "../lib/pdf";
 import {
@@ -35,7 +36,14 @@ export default function DetailModal({ record, onClose, onEdit }: Props) {
   const toast = useToast();
   const [exporting, setExporting] = useState(false);
   const [zoom, setZoom] = useState<null | { src: string; caption: string }>(null);
-  const photoCount = [record.coverImageId, record.labelImageId].filter(Boolean).length;
+
+  /* Fotos reales disponibles del ejemplar (hasta 4 slots) */
+  const ids = slotIds(record);
+  const photos = SLOT_ORDER.flatMap((slot) => {
+    const src = resolveImageSrc(ids[slot], 900);
+    return src ? [{ slot, src }] : [];
+  });
+  const photoCount = countImages(record);
 
   const handleExport = async () => {
     setExporting(true);
@@ -69,8 +77,9 @@ export default function DetailModal({ record, onClose, onEdit }: Props) {
     }
   };
 
-  const coverSrc = resolveImageSrc(record.coverImageId, 800) ?? sleeveDataUrl(record);
-  const labelSrc = resolveImageSrc(record.labelImageId, 800) ?? discDataUrl(record);
+  const coverSrc = resolveImageSrc(ids.cover, 800) ?? sleeveDataUrl(record);
+  /* Para la ficha PDF se usa la galleta lado A (resuelve el campo heredado) */
+  const labelSrc = resolveImageSrc(ids.labelA, 800) ?? discDataUrl(record);
 
   const printRows: Array<[string, string]> = [
     ["Sello disquero", record.label],
@@ -93,57 +102,69 @@ export default function DetailModal({ record, onClose, onEdit }: Props) {
           </h2>
           <h3 className="mt-1.5 text-xl font-bold text-amber-500 sm:text-2xl">{record.artist}</h3>
 
-          {/* Imágenes: apiladas en móvil, 2 columnas en escritorio · tocables para zoom */}
-          <div className="mt-5 grid grid-cols-1 gap-3 sm:grid-cols-2">
-            <figure className="min-w-0">
+          {/* Imágenes reales del ejemplar (hasta 4 slots), apiladas en móvil,
+              2 columnas en escritorio · cada una tocable para zoom */}
+          {photos.length > 0 ? (
+            <div className="mt-5 grid grid-cols-1 gap-3 sm:grid-cols-2">
+              {photos.map(({ slot, src }) => (
+                <figure key={slot} className="min-w-0">
+                  <button
+                    type="button"
+                    onClick={() => setZoom({ src, caption: SLOT_LABELS[slot] })}
+                    aria-label={`Ampliar ${SLOT_LABELS[slot].toLowerCase()}`}
+                    className="touch-manipulation group relative block w-full cursor-zoom-in rounded-xl transition-transform duration-200 active:scale-[0.99]"
+                  >
+                    <img
+                      src={src}
+                      alt={`${SLOT_LABELS[slot]} de ${record.album}`}
+                      className={`aspect-square w-full rounded-xl border border-slate-700 shadow-xl shadow-black/40 ${
+                        slot === "labelA" || slot === "labelB"
+                          ? "bg-slate-950/70 object-contain"
+                          : "object-cover"
+                      }`}
+                    />
+                    <span className="absolute right-2 top-2 grid h-9 w-9 place-items-center rounded-lg bg-slate-950/75 text-amber-400 opacity-0 backdrop-blur-sm transition-opacity duration-200 group-hover:opacity-100 group-active:opacity-100">
+                      <ZoomIn size={16} />
+                    </span>
+                  </button>
+                  <figcaption className="mt-1.5 text-center font-mono text-[9px] tracking-[0.22em] text-slate-500">
+                    {SLOT_LABELS[slot].toUpperCase()} · TOCAR PARA AMPLIAR
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
+          ) : (
+            <>
+              {/* Sin fotos: arte de referencia generado */}
+              <div className="mt-5 grid grid-cols-1 gap-3 sm:grid-cols-2">
+                <figure className="min-w-0">
+                  <CoverImage
+                    record={record}
+                    className="aspect-square rounded-xl border border-slate-700 shadow-xl shadow-black/40"
+                  />
+                  <figcaption className="mt-1.5 text-center font-mono text-[9px] tracking-[0.22em] text-slate-500">
+                    CARÁTULA · REFERENCIA
+                  </figcaption>
+                </figure>
+                <figure className="min-w-0">
+                  <LabelImage
+                    record={record}
+                    fit="contain"
+                    className="aspect-square rounded-xl border border-slate-700 bg-slate-950/70 shadow-xl shadow-black/40"
+                  />
+                  <figcaption className="mt-1.5 text-center font-mono text-[9px] tracking-[0.22em] text-slate-500">
+                    GALLETA · REFERENCIA
+                  </figcaption>
+                </figure>
+              </div>
               <button
-                type="button"
-                onClick={() => setZoom({ src: coverSrc, caption: "Carátula" })}
-                aria-label="Ampliar carátula"
-                className="touch-manipulation group relative block w-full cursor-zoom-in rounded-xl transition-transform duration-200 active:scale-[0.99]"
+                onClick={() => onEdit(record)}
+                className="touch-manipulation mt-3 flex w-full items-center justify-center gap-2 rounded-lg border border-dashed border-amber-500/50 bg-amber-500/5 py-3 text-xs font-semibold text-amber-400 transition-colors hover:bg-amber-500/15"
               >
-                <CoverImage
-                  record={record}
-                  className="aspect-square rounded-xl border border-slate-700 shadow-xl shadow-black/40"
-                />
-                <span className="absolute right-2 top-2 grid h-9 w-9 place-items-center rounded-lg bg-slate-950/75 text-amber-400 opacity-0 backdrop-blur-sm transition-opacity duration-200 group-hover:opacity-100 group-active:opacity-100">
-                  <ZoomIn size={16} />
-                </span>
+                <ImagePlus size={15} />
+                Sin fotos aún — arte de referencia · agregar fotos reales
               </button>
-              <figcaption className="mt-1.5 text-center font-mono text-[9px] tracking-[0.22em] text-slate-500">
-                CARÁTULA · TOCAR PARA AMPLIAR
-              </figcaption>
-            </figure>
-            <figure className="min-w-0">
-              <button
-                type="button"
-                onClick={() => setZoom({ src: labelSrc, caption: "Galleta" })}
-                aria-label="Ampliar galleta"
-                className="touch-manipulation group relative block w-full cursor-zoom-in rounded-xl transition-transform duration-200 active:scale-[0.99]"
-              >
-                <LabelImage
-                  record={record}
-                  fit="contain"
-                  className="aspect-square rounded-xl border border-slate-700 bg-slate-950/70 shadow-xl shadow-black/40"
-                />
-                <span className="absolute right-2 top-2 grid h-9 w-9 place-items-center rounded-lg bg-slate-950/75 text-amber-400 opacity-0 backdrop-blur-sm transition-opacity duration-200 group-hover:opacity-100 group-active:opacity-100">
-                  <ZoomIn size={16} />
-                </span>
-              </button>
-              <figcaption className="mt-1.5 text-center font-mono text-[9px] tracking-[0.22em] text-slate-500">
-                GALLETA · TOCAR PARA AMPLIAR
-              </figcaption>
-            </figure>
-          </div>
-
-          {photoCount === 0 && (
-            <button
-              onClick={() => onEdit(record)}
-              className="touch-manipulation mt-3 flex w-full items-center justify-center gap-2 rounded-lg border border-dashed border-amber-500/50 bg-amber-500/5 py-3 text-xs font-semibold text-amber-400 transition-colors hover:bg-amber-500/15"
-            >
-              <ImagePlus size={15} />
-              Sin fotos aún — arte de referencia · agregar fotos reales
-            </button>
+            </>
           )}
 
           {/* Metadatos */}

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import type { Vinyl } from "../types";
+import { coverId, labelAId } from "../types";
 import { resolveImageSrc } from "../config/cloudinary";
 import { discDataUrl, sleeveDataUrl } from "../lib/utils";
 
@@ -43,7 +44,7 @@ export function CoverImage({
   width?: number;
   fit?: "cover" | "contain";
 }) {
-  const real = resolveImageSrc(record.coverImageId, width);
+  const real = resolveImageSrc(coverId(record), width);
   const src = real ?? sleeveDataUrl(record);
   return <SmartImg src={src} alt={`Carátula de ${record.album}`} className={className} fit={fit} />;
 }
@@ -60,7 +61,8 @@ export function LabelImage({
   width?: number;
   fit?: "cover" | "contain";
 }) {
-  const real = resolveImageSrc(record.labelImageId, width);
+  /* El getter resuelve la migración: labelAImageId ?? labelImageId (heredado) */
+  const real = resolveImageSrc(labelAId(record), width);
   const src = real ?? discDataUrl(record);
   return <SmartImg src={src} alt={`Galleta de ${record.album}`} className={className} fit={fit} />;
 }

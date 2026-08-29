@@ -1,8 +1,16 @@
 import { useState } from "react";
 import type { FormEvent } from "react";
 import { Save } from "lucide-react";
-import type { RpmFormat, Vinyl } from "../types";
-import { FORMAT_OPTIONS, GENRE_OPTIONS } from "../types";
+import type { ImageSlot, RpmFormat, Vinyl } from "../types";
+import {
+  FORMAT_OPTIONS,
+  GENRE_OPTIONS,
+  SLOT_ORDER,
+  coverBackId,
+  coverId,
+  labelAId,
+  labelBId,
+} from "../types";
 import { isCloudinaryConfigured, resolveImageSrc } from "../config/cloudinary";
 import { uid } from "../lib/utils";
 import ModalShell from "./ModalShell";
@@ -34,6 +42,14 @@ function ErrorMsg({ msg }: { msg?: string }) {
   return <p className="mt-1 text-xs font-medium text-red-400">{msg}</p>;
 }
 
+/** Etiquetas de los 4 slots de foto en el formulario. */
+const SLOT_FORM_LABELS: Record<ImageSlot, string> = {
+  cover: "Foto de carátula · frente",
+  coverBack: "Foto de carátula · trasera",
+  labelA: "Foto de galleta · lado A",
+  labelB: "Foto de galleta · lado B",
+};
+
 export default function VinylForm({ initial, labels, onSave, onClose }: Props) {
   const [artist, setArtist] = useState(initial?.artist ?? "");
   const [album, setAlbum] = useState(initial?.album ?? "");
@@ -46,16 +62,24 @@ export default function VinylForm({ initial, labels, onSave, onClose }: Props) {
   const [genre, setGenre] = useState(initial?.genre ?? "Cumbia");
   const [format, setFormat] = useState<RpmFormat>(initial?.format ?? "33 RPM");
 
-  /* ── Imágenes (2 slots: carátula + galleta) ── */
-  const [images, setImages] = useState<{ cover: string | null; label: string | null }>({
-    cover: initial?.coverImageId ?? null,
-    label: initial?.labelImageId ?? null,
-  });
+  /* ── Imágenes (4 slots: carátula frente/trasera + galleta A/B) ── */
+  const [images, setImages] = useState<Record<ImageSlot, string | null>>(
+    initial
+      ? {
+          /* Los getters resuelven la migración: un labelImageId heredado
+             aparece precargado como "Galleta · lado A". */
+          cover: coverId(initial),
+          coverBack: coverBackId(initial),
+          labelA: labelAId(initial),
+          labelB: labelBId(initial),
+        }
+      : { cover: null, coverBack: null, labelA: null, labelB: null }
+  );
 
   const [errors, setErrors] = useState<Record<string, string>>({});
 
   const handleImage =
-    (slot: "cover" | "label") =>
+    (slot: ImageSlot) =>
     (publicId: string, url: string) =>
       setImages((im) => ({ ...im, [slot]: publicId || url || null }));
 
@@ -86,8 +110,11 @@ export default function VinylForm({ initial, labels, onSave, onClose }: Props) {
       year,
       genre,
       format,
+      /* 4 slots modernos; nunca se escribe el campo deprecado labelImageId */
       coverImageId: images.cover,
-      labelImageId: images.label,
+      coverBackImageId: images.coverBack,
+      labelAImageId: images.labelA,
+      labelBImageId: images.labelB,
       dateAdded: initial?.dateAdded ?? new Date().toISOString().slice(0, 10),
     };
     onSave(record);
@@ -221,24 +248,19 @@ export default function VinylForm({ initial, labels, onSave, onClose }: Props) {
               </div>
             </div>
 
-            {/* Fotos: cámara / galería (móvil) o archivo (escritorio) */}
+            {/* Fotos: 4 slots (carátula frente/trasera + galleta A/B) · cámara o galería */}
             <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2">
-              <CloudinaryUpload
-                label="Foto de carátula"
-                type="cover"
-                existingImage={
-                  images.cover ? resolveImageSrc(images.cover, 480) ?? undefined : undefined
-                }
-                onUpload={handleImage("cover")}
-              />
-              <CloudinaryUpload
-                label="Foto de galleta"
-                type="label"
-                existingImage={
-                  images.label ? resolveImageSrc(images.label, 480) ?? undefined : undefined
-                }
-                onUpload={handleImage("label")}
-              />
+              {SLOT_ORDER.map((slot) => (
+                <CloudinaryUpload
+                  key={slot}
+                  label={SLOT_FORM_LABELS[slot]}
+                  type={slot}
+                  existingImage={
+                    images[slot] ? resolveImageSrc(images[slot], 480) ?? undefined : undefined
+                  }
+                  onUpload={handleImage(slot)}
+                />
+              ))}
             </div>
 
             {!isCloudinaryConfigured && (

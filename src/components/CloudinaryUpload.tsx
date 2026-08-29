@@ -1,16 +1,25 @@
 import { useRef, useState } from "react";
 import type { ChangeEvent } from "react";
 import { Camera, Image as ImageIcon, Upload, X } from "lucide-react";
+import type { ImageSlot } from "../types";
 import { isCloudinaryConfigured } from "../config/cloudinary";
 import { uploadImage, validateImageFile } from "../lib/upload";
 
 interface CloudinaryUploadProps {
   /** publicId (Cloudinary) o url (modo local). `("", "")` = quitar la foto. */
   onUpload: (publicId: string, url: string) => void;
-  type: "cover" | "label";
+  /** Slot del ejemplar: carátula frente/trasera y galleta lado A/B. */
+  type: ImageSlot;
   existingImage?: string;
   label: string;
 }
+
+const KIND: Record<ImageSlot, string> = {
+  cover: "carátula frontal",
+  coverBack: "carátula trasera",
+  labelA: "galleta lado A",
+  labelB: "galleta lado B",
+};
 
 /**
  * Subida de fotos optimizada para móvil: dos acciones nativas —
@@ -26,7 +35,7 @@ export function CloudinaryUpload({ onUpload, type, existingImage, label }: Cloud
   const fileInputRef = useRef<HTMLInputElement>(null);
   const cameraInputRef = useRef<HTMLInputElement>(null);
 
-  const kind = type === "cover" ? "carátula" : "galleta";
+  const kind = KIND[type];
 
   const handleFileSelect = async (file: File) => {
     const validation = validateImageFile(file);
