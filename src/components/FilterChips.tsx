@@ -54,9 +54,9 @@ export default function FilterChips({ collection, filters, onToggle, onClear }: 
     filters.formats.length + filters.labels.length + filters.genres.length + filters.decades.length;
 
   return (
-    <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+    <div className="flex flex-nowrap items-center gap-x-4 gap-y-2 sm:flex-wrap">
       {groups.map((g) => (
-        <div key={g.key} className="flex flex-wrap items-center gap-1.5">
+        <div key={g.key} className="flex shrink-0 flex-nowrap items-center gap-1.5 sm:flex-wrap">
           <span className="mr-0.5 font-mono text-[10px] uppercase tracking-[0.18em] text-slate-500">
             {g.title}
           </span>
@@ -89,7 +89,7 @@ export default function FilterChips({ collection, filters, onToggle, onClear }: 
       ))}
 
       {activeCount > 0 && (
-        <div className="ml-auto flex items-center gap-2">
+        <div className="ml-auto flex shrink-0 items-center gap-2">
           <span className="rounded-full border border-amber-500/40 bg-amber-500/10 px-2.5 py-0.5 font-mono text-[10px] font-medium text-amber-400">
             {activeCount} {activeCount === 1 ? "filtro activo" : "filtros activos"}
           </span>

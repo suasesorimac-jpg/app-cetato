@@ -1,22 +1,12 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 import type { FormEvent } from "react";
-import { ImagePlus, Loader2, Save, Trash2 } from "lucide-react";
-import type { ImageSlot, RpmFormat, Vinyl } from "../types";
-import {
-  FORMAT_OPTIONS,
-  GENRE_OPTIONS,
-  SLOT_LABELS,
-  SLOT_ORDER,
-  coverBackId,
-  coverId,
-  labelAId,
-  labelBId,
-} from "../types";
+import { Save } from "lucide-react";
+import type { RpmFormat, Vinyl } from "../types";
+import { FORMAT_OPTIONS, GENRE_OPTIONS } from "../types";
 import { isCloudinaryConfigured, resolveImageSrc } from "../config/cloudinary";
-import { uploadImage, validateImageFile } from "../lib/upload";
 import { uid } from "../lib/utils";
 import ModalShell from "./ModalShell";
-import { useToast } from "./Toast";
+import CloudinaryUpload from "./CloudinaryUpload";
 
 interface Props {
   initial: Vinyl | null;
@@ -25,29 +15,8 @@ interface Props {
   onClose: () => void;
 }
 
-const EMPTY_SLOTS: Record<ImageSlot, string | null> = {
-  cover: null,
-  coverBack: null,
-  labelA: null,
-  labelB: null,
-};
-
-const EMPTY_PROGRESS: Record<ImageSlot, number | null> = {
-  cover: null,
-  coverBack: null,
-  labelA: null,
-  labelB: null,
-};
-
-const SLOT_HINTS: Record<ImageSlot, string> = {
-  cover: "Carátula frontal (o combinada)",
-  coverBack: "Carátula trasera",
-  labelA: "Galleta lado A (o combinada)",
-  labelB: "Galleta lado B",
-};
-
 const inputCls =
-  "h-10 w-full rounded-lg border border-slate-700 bg-slate-800 px-3 text-sm text-slate-100 outline-none transition-all placeholder:text-slate-500 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/25";
+  "h-11 w-full rounded-lg border border-slate-700 bg-slate-800 px-3 text-sm text-slate-100 outline-none transition-all placeholder:text-slate-500 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/25";
 
 function FieldLabel({ children, htmlFor }: { children: string; htmlFor?: string }) {
   return (
@@ -66,7 +35,6 @@ function ErrorMsg({ msg }: { msg?: string }) {
 }
 
 export default function VinylForm({ initial, labels, onSave, onClose }: Props) {
-  const toast = useToast();
   const [artist, setArtist] = useState(initial?.artist ?? "");
   const [album, setAlbum] = useState(initial?.album ?? "");
   const [label, setLabel] = useState(initial?.label ?? "");
@@ -78,127 +46,18 @@ export default function VinylForm({ initial, labels, onSave, onClose }: Props) {
   const [genre, setGenre] = useState(initial?.genre ?? "Cumbia");
   const [format, setFormat] = useState<RpmFormat>(initial?.format ?? "33 RPM");
 
-  /* ── 4 slots de imagen ── */
-  const [images, setImages] = useState<Record<ImageSlot, string | null>>(
-    initial
-      ? {
-          cover: coverId(initial),
-          coverBack: coverBackId(initial),
-          labelA: labelAId(initial),
-          labelB: labelBId(initial),
-        }
-      : { ...EMPTY_SLOTS }
-  );
-  const [previews, setPreviews] = useState<Record<ImageSlot, string | null>>({ ...EMPTY_SLOTS });
-  const [progress, setProgress] = useState<Record<ImageSlot, number | null>>({
-    ...EMPTY_PROGRESS,
+  /* ── Imágenes (2 slots: carátula + galleta) ── */
+  const [images, setImages] = useState<{ cover: string | null; label: string | null }>({
+    cover: initial?.coverImageId ?? null,
+    label: initial?.labelImageId ?? null,
   });
-  const fileInputs = useRef<Partial<Record<ImageSlot, HTMLInputElement | null>>>({});
 
   const [errors, setErrors] = useState<Record<string, string>>({});
 
-  const currentSrc = (slot: ImageSlot): string | null => {
-    if (previews[slot]) return previews[slot];
-    const id = images[slot];
-    return id ? resolveImageSrc(id, 480) : null;
-  };
-
-  const handleFile = async (slot: ImageSlot, file: File) => {
-    const err = validateImageFile(file);
-    if (err) {
-      toast(err, "error");
-      return;
-    }
-    const url = URL.createObjectURL(file);
-    setPreviews((p) => ({ ...p, [slot]: url }));
-    setProgress((p) => ({ ...p, [slot]: 2 }));
-    try {
-      const res = await uploadImage(file, (pct) => setProgress((p) => ({ ...p, [slot]: pct })));
-      setImages((im) => ({ ...im, [slot]: res.value }));
-      setProgress((p) => ({ ...p, [slot]: null }));
-      if (!res.remote) {
-        toast("Cloudinary sin configurar: la imagen se guardó localmente", "info");
-      }
-    } catch (e) {
-      setProgress((p) => ({ ...p, [slot]: null }));
-      setPreviews((p) => ({ ...p, [slot]: null }));
-      toast(e instanceof Error ? e.message : "Error al subir la imagen", "error");
-    }
-  };
-
-  const clearImage = (slot: ImageSlot) => {
-    setPreviews((p) => ({ ...p, [slot]: null }));
-    setProgress((p) => ({ ...p, [slot]: null }));
-    setImages((im) => ({ ...im, [slot]: null }));
-  };
-
-  const renderImageField = (slot: ImageSlot) => {
-    const src = currentSrc(slot);
-    const pct = progress[slot];
-    const inputRef = (el: HTMLInputElement | null) => {
-      fileInputs.current[slot] = el;
-    };
-    return (
-      <div key={slot}>
-        <FieldLabel>{SLOT_HINTS[slot]}</FieldLabel>
-        <input
-          ref={inputRef}
-          type="file"
-          accept="image/jpeg,image/png"
-          className="hidden"
-          onChange={(e) => {
-            const f = e.target.files?.[0];
-            if (f) void handleFile(slot, f);
-            e.target.value = "";
-          }}
-        />
-        {src ? (
-          <div className="flex items-center gap-3">
-            <div className="relative h-24 w-24 shrink-0 overflow-hidden rounded-lg border border-slate-700">
-              <img src={src} alt={SLOT_LABELS[slot]} className="h-full w-full object-cover" />
-              {pct !== null && (
-                <div className="absolute inset-0 flex items-end bg-slate-950/60">
-                  <div className="h-1.5 w-full bg-slate-800">
-                    <div
-                      className="h-full bg-amber-500 transition-[width] duration-200"
-                      style={{ width: `${pct}%` }}
-                    />
-                  </div>
-                </div>
-              )}
-            </div>
-            <div className="flex flex-col gap-1.5">
-              <button
-                type="button"
-                onClick={() => fileInputs.current[slot]?.click()}
-                disabled={pct !== null}
-                className="rounded-md border border-slate-600 px-3 py-1.5 text-xs font-semibold text-slate-200 transition-colors hover:border-amber-500/70 hover:text-amber-400 disabled:opacity-50"
-              >
-                {pct !== null ? `Subiendo ${pct}%` : "Cambiar foto"}
-              </button>
-              <button
-                type="button"
-                onClick={() => clearImage(slot)}
-                disabled={pct !== null}
-                className="flex items-center justify-center gap-1 rounded-md px-3 py-1.5 text-xs font-semibold text-slate-500 transition-colors hover:text-red-400 disabled:opacity-50"
-              >
-                <Trash2 size={12} /> Quitar
-              </button>
-            </div>
-          </div>
-        ) : (
-          <button
-            type="button"
-            onClick={() => fileInputs.current[slot]?.click()}
-            className="flex h-24 w-full flex-col items-center justify-center gap-1.5 rounded-lg border border-dashed border-slate-600 bg-slate-800/50 text-slate-500 transition-colors hover:border-amber-500/60 hover:text-amber-400"
-          >
-            <ImagePlus size={20} />
-            <span className="text-xs font-medium">Subir foto · JPG o PNG · máx. 5 MB</span>
-          </button>
-        )}
-      </div>
-    );
-  };
+  const handleImage =
+    (slot: "cover" | "label") =>
+    (publicId: string, url: string) =>
+      setImages((im) => ({ ...im, [slot]: publicId || url || null }));
 
   const submit = (e: FormEvent) => {
     e.preventDefault();
@@ -228,193 +87,188 @@ export default function VinylForm({ initial, labels, onSave, onClose }: Props) {
       genre,
       format,
       coverImageId: images.cover,
-      coverBackImageId: images.coverBack,
-      labelAImageId: images.labelA,
-      labelBImageId: images.labelB,
+      labelImageId: images.label,
       dateAdded: initial?.dateAdded ?? new Date().toISOString().slice(0, 10),
     };
     onSave(record);
   };
 
-  const anyUploading = SLOT_ORDER.some((s) => progress[s] !== null);
-  const photoCount = SLOT_ORDER.filter((s) => images[s]).length;
-
   return (
     <ModalShell onClose={onClose} maxW="max-w-2xl">
-      <div className="max-h-[88vh] overflow-y-auto p-6 md:p-8">
-        <p className="font-mono text-[10px] uppercase tracking-[0.24em] text-slate-500">
-          {initial ? "Editar referencia" : "Nuevo registro"}
-        </p>
-        <h2 className="mt-1 font-display text-4xl tracking-wide text-slate-50">
-          {initial ? "EDITAR VINILO" : "NUEVO VINILO"}
-        </h2>
-
-        <form onSubmit={submit} className="mt-6 space-y-5" noValidate>
-          <div className="grid gap-5 sm:grid-cols-2">
-            <div>
-              <FieldLabel htmlFor="f-artist">Artista *</FieldLabel>
-              <input
-                id="f-artist"
-                value={artist}
-                onChange={(e) => setArtist(e.target.value)}
-                placeholder="Ej. Los Corraleros de Majagual"
-                className={`${inputCls} ${errors.artist ? "border-red-500/70" : ""}`}
-              />
-              <ErrorMsg msg={errors.artist} />
-            </div>
-            <div>
-              <FieldLabel htmlFor="f-album">Álbum *</FieldLabel>
-              <input
-                id="f-album"
-                value={album}
-                onChange={(e) => setAlbum(e.target.value)}
-                placeholder="Ej. Festival Corralero"
-                className={`${inputCls} ${errors.album ? "border-red-500/70" : ""}`}
-              />
-              <ErrorMsg msg={errors.album} />
-            </div>
-            <div>
-              <FieldLabel htmlFor="f-label">Sello disquero</FieldLabel>
-              <input
-                id="f-label"
-                list="appcetato-labels"
-                value={label}
-                onChange={(e) => setLabel(e.target.value)}
-                placeholder="Ej. Discos Fuentes"
-                className={inputCls}
-              />
-              <datalist id="appcetato-labels">
-                {labels.map((l) => (
-                  <option key={l} value={l} />
-                ))}
-              </datalist>
-            </div>
-            <div>
-              <FieldLabel htmlFor="f-matrix">Código de matriz *</FieldLabel>
-              <input
-                id="f-matrix"
-                value={matrixCode}
-                onChange={(e) => setMatrixCode(e.target.value)}
-                placeholder="Ej. L.P.-10094-A"
-                className={`${inputCls} font-mono ${errors.matrixCode ? "border-red-500/70" : ""}`}
-              />
-              <ErrorMsg msg={errors.matrixCode} />
-            </div>
-            <div>
-              <FieldLabel htmlFor="f-year">Año</FieldLabel>
-              <div className="flex items-center gap-3">
-                <input
-                  id="f-year"
-                  type="number"
-                  min={1900}
-                  max={2026}
-                  value={yearText}
-                  disabled={notSpecified}
-                  onChange={(e) => setYearText(e.target.value)}
-                  placeholder="1968"
-                  className={`${inputCls} disabled:opacity-40 ${
-                    errors.year ? "border-red-500/70" : ""
-                  }`}
-                />
-                <label className="flex shrink-0 cursor-pointer select-none items-center gap-2 text-xs font-medium text-slate-400">
-                  <input
-                    type="checkbox"
-                    checked={notSpecified}
-                    onChange={(e) => setNotSpecified(e.target.checked)}
-                    className="h-4 w-4 accent-amber-500"
-                  />
-                  N/E
-                </label>
-              </div>
-              <ErrorMsg msg={errors.year} />
-            </div>
-            <div>
-              <FieldLabel htmlFor="f-genre">Género</FieldLabel>
-              <select
-                id="f-genre"
-                value={genre}
-                onChange={(e) => setGenre(e.target.value)}
-                className={`${inputCls} appearance-none`}
-              >
-                {GENRE_OPTIONS.map((g) => (
-                  <option key={g} value={g} className="bg-slate-800">
-                    {g}
-                  </option>
-                ))}
-              </select>
-            </div>
-          </div>
-
-          <div>
-            <FieldLabel>Formato</FieldLabel>
-            <div className="flex gap-2">
-              {FORMAT_OPTIONS.map((f) => (
-                <button
-                  key={f}
-                  type="button"
-                  onClick={() => setFormat(f)}
-                  aria-pressed={format === f}
-                  className={`flex-1 rounded-lg border px-3 py-2.5 font-mono text-xs font-bold transition-all ${
-                    format === f
-                      ? "border-amber-500 bg-amber-500 text-slate-950 shadow-lg shadow-amber-500/25"
-                      : "border-slate-700 bg-slate-800 text-slate-400 hover:border-amber-500/50 hover:text-amber-400"
-                  }`}
-                >
-                  {f}
-                </button>
-              ))}
-            </div>
-          </div>
-
-          {/* ── Fotos del ejemplar: 2 carátulas + 2 galletas ── */}
-          <div>
-            <div className="mb-1.5 flex items-center justify-between">
-              <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-slate-500">
-                Fotos del ejemplar
-              </span>
-              <span
-                className={`rounded-full border px-2 py-0.5 font-mono text-[10px] font-medium ${
-                  photoCount === 4
-                    ? "border-emerald-500/50 bg-emerald-500/10 text-emerald-400"
-                    : "border-slate-600 text-slate-400"
-                }`}
-              >
-                {photoCount}/4 cargadas
-              </span>
-            </div>
-            <div className="grid gap-4 sm:grid-cols-2">
-              {SLOT_ORDER.map((slot) => renderImageField(slot))}
-            </div>
-          </div>
-
-          {!isCloudinaryConfigured && (
-            <p className="rounded-lg border border-slate-700 bg-slate-800/60 px-3 py-2.5 text-xs leading-relaxed text-slate-400">
-              <span className="font-semibold text-amber-400">Modo local:</span> Cloudinary no está
-              configurado (<span className="font-mono">.env</span> →{" "}
-              <span className="font-mono">VITE_CLOUDINARY_CLOUD_NAME</span>). Las fotos se
-              comprimen y se guardan en el dispositivo.
+      <div className="max-h-[calc(100vh-100px)] overflow-y-auto overscroll-contain sm:max-h-[85vh]">
+        <form onSubmit={submit} noValidate>
+          <div className="p-5 sm:p-8">
+            <p className="font-mono text-[10px] uppercase tracking-[0.24em] text-slate-500">
+              {initial ? "Editar referencia" : "Nuevo registro"}
             </p>
-          )}
+            <h2 className="mt-1 font-display text-4xl tracking-wide text-slate-50">
+              {initial ? "EDITAR VINILO" : "NUEVO VINILO"}
+            </h2>
 
-          <div className="flex gap-2 pt-1">
-            <button
-              type="button"
-              onClick={onClose}
-              className="h-11 rounded-lg border border-slate-600 px-5 text-sm font-semibold text-slate-300 transition-colors hover:border-slate-400 hover:text-slate-100"
-            >
-              Cancelar
-            </button>
-            <button
-              type="submit"
-              className="flex h-11 flex-1 items-center justify-center gap-2 rounded-lg bg-amber-500 px-5 text-sm font-bold text-slate-950 shadow-lg shadow-amber-500/25 transition-all hover:bg-amber-400 hover:shadow-amber-500/40"
-            >
-              {anyUploading ? (
-                <Loader2 size={16} className="animate-spin" />
-              ) : (
+            <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2">
+              <div>
+                <FieldLabel htmlFor="f-artist">Artista *</FieldLabel>
+                <input
+                  id="f-artist"
+                  value={artist}
+                  onChange={(e) => setArtist(e.target.value)}
+                  placeholder="Ej. Los Corraleros de Majagual"
+                  className={`${inputCls} ${errors.artist ? "border-red-500/70" : ""}`}
+                />
+                <ErrorMsg msg={errors.artist} />
+              </div>
+              <div>
+                <FieldLabel htmlFor="f-album">Álbum *</FieldLabel>
+                <input
+                  id="f-album"
+                  value={album}
+                  onChange={(e) => setAlbum(e.target.value)}
+                  placeholder="Ej. Festival Corralero"
+                  className={`${inputCls} ${errors.album ? "border-red-500/70" : ""}`}
+                />
+                <ErrorMsg msg={errors.album} />
+              </div>
+              <div>
+                <FieldLabel htmlFor="f-label">Sello disquero</FieldLabel>
+                <input
+                  id="f-label"
+                  list="appcetato-labels"
+                  value={label}
+                  onChange={(e) => setLabel(e.target.value)}
+                  placeholder="Ej. Discos Fuentes"
+                  className={inputCls}
+                />
+                <datalist id="appcetato-labels">
+                  {labels.map((l) => (
+                    <option key={l} value={l} />
+                  ))}
+                </datalist>
+              </div>
+              <div>
+                <FieldLabel htmlFor="f-matrix">Código de matriz *</FieldLabel>
+                <input
+                  id="f-matrix"
+                  value={matrixCode}
+                  onChange={(e) => setMatrixCode(e.target.value)}
+                  placeholder="Ej. L.P.-10094-A"
+                  className={`${inputCls} font-mono ${errors.matrixCode ? "border-red-500/70" : ""}`}
+                />
+                <ErrorMsg msg={errors.matrixCode} />
+              </div>
+              <div>
+                <FieldLabel htmlFor="f-year">Año</FieldLabel>
+                <div className="flex items-center gap-3">
+                  <input
+                    id="f-year"
+                    type="number"
+                    min={1900}
+                    max={2026}
+                    value={yearText}
+                    disabled={notSpecified}
+                    onChange={(e) => setYearText(e.target.value)}
+                    placeholder="1968"
+                    className={`${inputCls} disabled:opacity-40 ${
+                      errors.year ? "border-red-500/70" : ""
+                    }`}
+                  />
+                  <label className="flex shrink-0 cursor-pointer select-none items-center gap-2 text-xs font-medium text-slate-400">
+                    <input
+                      type="checkbox"
+                      checked={notSpecified}
+                      onChange={(e) => setNotSpecified(e.target.checked)}
+                      className="h-4 w-4 accent-amber-500"
+                    />
+                    N/E
+                  </label>
+                </div>
+                <ErrorMsg msg={errors.year} />
+              </div>
+              <div>
+                <FieldLabel htmlFor="f-genre">Género</FieldLabel>
+                <select
+                  id="f-genre"
+                  value={genre}
+                  onChange={(e) => setGenre(e.target.value)}
+                  className={`${inputCls} appearance-none`}
+                >
+                  {GENRE_OPTIONS.map((g) => (
+                    <option key={g} value={g} className="bg-slate-800">
+                      {g}
+                    </option>
+                  ))}
+                </select>
+              </div>
+            </div>
+
+            <div className="mt-5">
+              <FieldLabel>Formato</FieldLabel>
+              <div className="flex gap-2">
+                {FORMAT_OPTIONS.map((f) => (
+                  <button
+                    key={f}
+                    type="button"
+                    onClick={() => setFormat(f)}
+                    aria-pressed={format === f}
+                    className={`touch-manipulation flex-1 rounded-lg border px-3 py-3 font-mono text-xs font-bold transition-all active:scale-[0.97] sm:py-2.5 ${
+                      format === f
+                        ? "border-amber-500 bg-amber-500 text-slate-950 shadow-lg shadow-amber-500/25"
+                        : "border-slate-700 bg-slate-800 text-slate-400 hover:border-amber-500/50 hover:text-amber-400"
+                    }`}
+                  >
+                    {f}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* Fotos: cámara / galería (móvil) o archivo (escritorio) */}
+            <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2">
+              <CloudinaryUpload
+                label="Foto de carátula"
+                type="cover"
+                existingImage={
+                  images.cover ? resolveImageSrc(images.cover, 480) ?? undefined : undefined
+                }
+                onUpload={handleImage("cover")}
+              />
+              <CloudinaryUpload
+                label="Foto de galleta"
+                type="label"
+                existingImage={
+                  images.label ? resolveImageSrc(images.label, 480) ?? undefined : undefined
+                }
+                onUpload={handleImage("label")}
+              />
+            </div>
+
+            {!isCloudinaryConfigured && (
+              <p className="mt-5 rounded-lg border border-slate-700 bg-slate-800/60 px-3 py-2.5 text-xs leading-relaxed text-slate-400">
+                <span className="font-semibold text-amber-400">Modo local:</span> Cloudinary no está
+                configurado (<span className="font-mono">.env</span> →{" "}
+                <span className="font-mono">VITE_CLOUDINARY_CLOUD_NAME</span>). Las fotos se
+                comprimen y se guardan en el dispositivo.
+              </p>
+            )}
+          </div>
+
+          {/* Barra de acciones pegada al borde inferior en móvil */}
+          <div className="sticky bottom-0 z-10 border-t border-slate-700/70 bg-slate-900/95 px-5 py-4 pb-[calc(1rem+env(safe-area-inset-bottom))] backdrop-blur-sm sm:px-8 sm:pb-4">
+            <div className="flex flex-col-reverse gap-2 sm:flex-row">
+              <button
+                type="button"
+                onClick={onClose}
+                className="touch-manipulation h-12 rounded-lg border border-slate-600 px-5 text-sm font-semibold text-slate-300 transition-colors hover:border-slate-400 hover:text-slate-100 active:scale-[0.98] sm:h-11"
+              >
+                Cancelar
+              </button>
+              <button
+                type="submit"
+                className="touch-manipulation flex h-12 flex-1 items-center justify-center gap-2 rounded-lg bg-amber-500 px-5 text-sm font-bold text-slate-950 shadow-lg shadow-amber-500/25 transition-all hover:bg-amber-400 hover:shadow-amber-500/40 active:scale-[0.98] sm:h-11"
+              >
                 <Save size={16} />
-              )}
-              Guardar Vinilo
-            </button>
+                Guardar Vinilo
+              </button>
+            </div>
           </div>
         </form>
       </div>

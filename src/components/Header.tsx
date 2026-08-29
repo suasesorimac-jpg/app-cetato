@@ -62,20 +62,20 @@ export default function Header(props: Props) {
         }}
         placeholder="Buscar por artista, álbum, sello, matriz, año o género…"
         aria-label="Buscar en el catálogo"
-        className="h-10 w-full rounded-lg border border-slate-700 bg-slate-800 pl-10 pr-9 font-mono text-sm text-slate-100 outline-none transition-all duration-200 placeholder:font-sans placeholder:text-slate-500 focus:border-amber-500 focus:shadow-lg focus:shadow-amber-500/15 focus:ring-2 focus:ring-amber-500/25"
+        className="h-11 w-full rounded-lg border border-slate-700 bg-slate-800 pl-10 pr-11 font-mono text-sm text-slate-100 outline-none transition-all duration-200 placeholder:font-sans placeholder:text-slate-500 focus:border-amber-500 focus:shadow-lg focus:shadow-amber-500/15 focus:ring-2 focus:ring-amber-500/25"
       />
       {query && (
         <button
           onClick={() => onQueryChange("")}
           aria-label="Limpiar búsqueda"
-          className="absolute right-2.5 top-1/2 -translate-y-1/2 rounded p-0.5 text-slate-500 transition-colors hover:text-amber-400"
+          className="touch-manipulation absolute right-1.5 top-1/2 grid h-9 w-9 -translate-y-1/2 place-items-center rounded-lg text-slate-500 transition-colors hover:text-amber-400"
         >
-          <X size={15} />
+          <X size={16} />
         </button>
       )}
 
       {open && query.trim() && (
-        <div className="absolute left-0 right-0 top-12 z-50 overflow-hidden rounded-xl border border-slate-700 bg-slate-800 shadow-2xl shadow-black/60">
+        <div className="absolute left-0 right-0 top-[52px] z-50 overflow-hidden rounded-xl border border-slate-700 bg-slate-800 shadow-2xl shadow-black/60">
           {suggestions.length > 0 ? (
             suggestions.map((s, i) => (
               <button
@@ -85,7 +85,7 @@ export default function Header(props: Props) {
                   onQueryChange(s.value);
                   setOpen(false);
                 }}
-                className="flex w-full items-center gap-3 px-4 py-2.5 text-left text-sm text-slate-200 transition-colors hover:bg-slate-700/60"
+                className="flex w-full items-center gap-3 px-4 py-3 text-left text-sm text-slate-200 transition-colors hover:bg-slate-700/60 sm:py-2.5"
               >
                 <span className="rounded bg-slate-700 px-1.5 py-0.5 font-mono text-[9px] font-bold uppercase tracking-wider text-amber-400">
                   {s.type}
@@ -107,7 +107,7 @@ export default function Header(props: Props) {
   return (
     <header className="sticky top-0 z-40 border-b border-slate-700/60 bg-slate-900/85 backdrop-blur-md">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
-        <div className="flex items-center gap-3 py-3 sm:gap-5">
+        <div className="flex items-center gap-2 py-3 sm:gap-5">
           {/* Logo */}
           <div className="flex shrink-0 items-center gap-3">
             <div className="grid h-11 w-11 place-items-center rounded-full border border-amber-500/40 bg-amber-500/10 shadow-lg shadow-amber-500/10">
@@ -131,7 +131,8 @@ export default function Header(props: Props) {
             <button
               onClick={onOpenStats}
               title="Estadísticas del catálogo"
-              className="flex h-10 items-center gap-2 rounded-lg border border-slate-700 bg-slate-800 px-3 text-sm font-medium text-slate-300 transition-colors hover:border-amber-500/60 hover:text-amber-400"
+              aria-label="Estadísticas del catálogo"
+              className="touch-manipulation flex h-11 items-center gap-2 rounded-lg border border-slate-700 bg-slate-800 px-3 text-sm font-medium text-slate-300 transition-colors hover:border-amber-500/60 hover:text-amber-400 active:scale-[0.96]"
             >
               <BarChart3 size={16} />
               <span className="hidden lg:inline">Estadísticas</span>
@@ -140,22 +141,24 @@ export default function Header(props: Props) {
             <button
               onClick={onExportCatalog}
               title="Exportar catálogo completo (PDF)"
-              className="flex h-10 items-center gap-2 rounded-lg border border-slate-700 bg-slate-800 px-3 text-sm font-medium text-slate-300 transition-colors hover:border-amber-500/60 hover:text-amber-400"
+              aria-label="Exportar catálogo completo en PDF"
+              className="touch-manipulation flex h-11 items-center gap-2 rounded-lg border border-slate-700 bg-slate-800 px-3 text-sm font-medium text-slate-300 transition-colors hover:border-amber-500/60 hover:text-amber-400 active:scale-[0.96]"
             >
               <FileDown size={16} />
               <span className="hidden lg:inline">PDF</span>
             </button>
 
             <div
-              className="flex h-10 overflow-hidden rounded-lg border border-slate-700"
+              className="flex h-11 overflow-hidden rounded-lg border border-slate-700"
               role="group"
               aria-label="Cambiar vista"
             >
               <button
                 onClick={() => onViewChange("grid")}
                 title="Vista galería"
+                aria-label="Vista galería"
                 aria-pressed={view === "grid"}
-                className={`grid w-10 place-items-center transition-colors ${
+                className={`touch-manipulation grid w-11 place-items-center transition-colors ${
                   view === "grid"
                     ? "bg-amber-500 text-slate-950"
                     : "bg-slate-800 text-slate-400 hover:text-slate-200"
@@ -166,8 +169,9 @@ export default function Header(props: Props) {
               <button
                 onClick={() => onViewChange("table")}
                 title="Vista tabla"
+                aria-label="Vista tabla"
                 aria-pressed={view === "table"}
-                className={`grid w-10 place-items-center border-l border-slate-700 transition-colors ${
+                className={`touch-manipulation grid w-11 place-items-center border-l border-slate-700 transition-colors ${
                   view === "table"
                     ? "bg-amber-500 text-slate-950"
                     : "bg-slate-800 text-slate-400 hover:text-slate-200"
@@ -179,7 +183,8 @@ export default function Header(props: Props) {
 
             <button
               onClick={onOpenAdd}
-              className="flex h-10 items-center gap-2 rounded-lg bg-amber-500 px-3.5 text-sm font-bold text-slate-950 shadow-lg shadow-amber-500/25 transition-all hover:bg-amber-400 hover:shadow-amber-500/40 sm:px-4"
+              aria-label="Agregar vinilo"
+              className="touch-manipulation flex h-11 items-center gap-2 rounded-lg bg-amber-500 px-3.5 text-sm font-bold text-slate-950 shadow-lg shadow-amber-500/25 transition-all hover:bg-amber-400 hover:shadow-amber-500/40 active:scale-[0.96] sm:px-4"
             >
               <Plus size={17} strokeWidth={2.6} />
               <span className="hidden sm:inline">Agregar Vinilo</span>
@@ -190,14 +195,16 @@ export default function Header(props: Props) {
         {/* Búsqueda (móvil) */}
         <div className="pb-3 md:hidden">{searchBox}</div>
 
-        {/* Filtros */}
+        {/* Filtros: scroll horizontal en móvil */}
         <div className="border-t border-slate-800 py-2.5">
-          <FilterChips
-            collection={collection}
-            filters={filters}
-            onToggle={onToggleFilter}
-            onClear={onClearFilters}
-          />
+          <div className="no-scrollbar -mx-4 overflow-x-auto px-4 pb-2 sm:mx-0 sm:px-0 sm:pb-0">
+            <FilterChips
+              collection={collection}
+              filters={filters}
+              onToggle={onToggleFilter}
+              onClear={onClearFilters}
+            />
+          </div>
         </div>
       </div>
     </header>
