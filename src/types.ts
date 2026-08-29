@@ -77,16 +77,27 @@ export interface Filters {
   labels: string[];
   genres: string[];
   decades: string[];
+  artists: string[];
 }
 
 export type FilterGroup = keyof Filters;
 
 export type ViewMode = "grid" | "table";
 
+/** Modo de navegación: catálogo (grid/tabla + filtros) o exploración jerárquica. */
+export type NavMode = "catalog" | "explore";
+
 export interface Prefs {
   view: ViewMode;
   filters: Filters;
   query: string;
+  mode: NavMode;
+}
+
+/** Navegación jerárquica: Género → Artista → Álbum. */
+export interface HierarchyState {
+  genre: string | null;
+  artist: string | null;
 }
 
 export type SortKey = "artist" | "album" | "label" | "matrixCode" | "year" | "genre";
@@ -96,7 +107,13 @@ export interface SortState {
   dir: "asc" | "desc";
 }
 
-export const EMPTY_FILTERS: Filters = { formats: [], labels: [], genres: [], decades: [] };
+export const EMPTY_FILTERS: Filters = {
+  formats: [],
+  labels: [],
+  genres: [],
+  decades: [],
+  artists: [],
+};
 
 export const GENRE_OPTIONS = [
   "Bolero",

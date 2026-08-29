@@ -1,15 +1,17 @@
 import { useMemo, useState } from "react";
 import {
   BarChart3,
+  Compass,
   Disc3,
   FileDown,
   LayoutGrid,
   Plus,
   Search,
+  SlidersHorizontal,
   Table2,
   X,
 } from "lucide-react";
-import type { FilterGroup, Filters, ViewMode, Vinyl } from "../types";
+import type { FilterGroup, Filters, NavMode, ViewMode, Vinyl } from "../types";
 import { buildSuggestions } from "../lib/utils";
 import FilterChips from "./FilterChips";
 
@@ -22,10 +24,17 @@ interface Props {
   filters: Filters;
   onToggleFilter: (group: FilterGroup, value: string) => void;
   onClearFilters: () => void;
+  mode: NavMode;
+  onModeChange: (m: NavMode) => void;
+  activeFilterCount: number;
+  onOpenDrawer: () => void;
   onOpenStats: () => void;
   onOpenAdd: () => void;
   onExportCatalog: () => void;
 }
+
+const iconBtnCls =
+  "touch-manipulation flex h-11 items-center justify-center gap-2 rounded-lg border border-slate-700 bg-slate-800 px-3 text-sm font-medium text-slate-300 transition-colors hover:border-amber-500/60 hover:text-amber-400";
 
 export default function Header(props: Props) {
   const {
@@ -37,6 +46,10 @@ export default function Header(props: Props) {
     filters,
     onToggleFilter,
     onClearFilters,
+    mode,
+    onModeChange,
+    activeFilterCount,
+    onOpenDrawer,
     onOpenStats,
     onOpenAdd,
     onExportCatalog,
@@ -85,7 +98,7 @@ export default function Header(props: Props) {
                   onQueryChange(s.value);
                   setOpen(false);
                 }}
-                className="flex w-full items-center gap-3 px-4 py-3 text-left text-sm text-slate-200 transition-colors hover:bg-slate-700/60 sm:py-2.5"
+                className="flex w-full items-center gap-3 px-4 py-3 text-left text-sm text-slate-200 transition-colors hover:bg-slate-700/60"
               >
                 <span className="rounded bg-slate-700 px-1.5 py-0.5 font-mono text-[9px] font-bold uppercase tracking-wider text-amber-400">
                   {s.type}
@@ -104,16 +117,85 @@ export default function Header(props: Props) {
     </div>
   );
 
+  /* Selector de modo: Catálogo ↔ Explorar (jerárquico) */
+  const modeToggle = (
+    <div
+      className="flex h-11 shrink-0 overflow-hidden rounded-lg border border-slate-700"
+      role="group"
+      aria-label="Modo de navegación"
+    >
+      <button
+        onClick={() => onModeChange("catalog")}
+        aria-pressed={mode === "catalog"}
+        title="Catálogo completo"
+        className={`touch-manipulation flex items-center gap-1.5 px-3 text-sm font-semibold transition-colors ${
+          mode === "catalog"
+            ? "bg-amber-500 text-slate-950"
+            : "bg-slate-800 text-slate-400 hover:text-slate-200"
+        }`}
+      >
+        <LayoutGrid size={15} />
+        <span className="hidden sm:inline">Catálogo</span>
+      </button>
+      <button
+        onClick={() => onModeChange("explore")}
+        aria-pressed={mode === "explore"}
+        title="Exploración por género → artista → álbum"
+        className={`touch-manipulation flex items-center gap-1.5 border-l border-slate-700 px-3 text-sm font-semibold transition-colors ${
+          mode === "explore"
+            ? "bg-amber-500 text-slate-950"
+            : "bg-slate-800 text-slate-400 hover:text-slate-200"
+        }`}
+      >
+        <Compass size={15} />
+        <span className="hidden sm:inline">Explorar</span>
+      </button>
+    </div>
+  );
+
+  const viewToggle = (
+    <div
+      className="flex h-11 shrink-0 overflow-hidden rounded-lg border border-slate-700"
+      role="group"
+      aria-label="Cambiar vista"
+    >
+      <button
+        onClick={() => onViewChange("grid")}
+        title="Vista galería"
+        aria-pressed={view === "grid"}
+        className={`touch-manipulation grid w-11 place-items-center transition-colors ${
+          view === "grid"
+            ? "bg-amber-500 text-slate-950"
+            : "bg-slate-800 text-slate-400 hover:text-slate-200"
+        }`}
+      >
+        <LayoutGrid size={16} />
+      </button>
+      <button
+        onClick={() => onViewChange("table")}
+        title="Vista tabla"
+        aria-pressed={view === "table"}
+        className={`touch-manipulation grid w-11 place-items-center border-l border-slate-700 transition-colors ${
+          view === "table"
+            ? "bg-amber-500 text-slate-950"
+            : "bg-slate-800 text-slate-400 hover:text-slate-200"
+        }`}
+      >
+        <Table2 size={16} />
+      </button>
+    </div>
+  );
+
   return (
     <header className="sticky top-0 z-40 border-b border-slate-700/60 bg-slate-900/85 backdrop-blur-md">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
-        <div className="flex items-center gap-2 py-3 sm:gap-5">
-          {/* Logo */}
+        {/* ── Fila 1: logo + búsqueda (desktop) + controles ── */}
+        <div className="flex items-center gap-3 py-3">
           <div className="flex shrink-0 items-center gap-3">
             <div className="grid h-11 w-11 place-items-center rounded-full border border-amber-500/40 bg-amber-500/10 shadow-lg shadow-amber-500/10">
               <Disc3 size={24} className="animate-spin-slow text-amber-500" />
             </div>
-            <div className="hidden sm:block">
+            <div className="hidden md:block">
               <h1 className="font-display text-[27px] leading-none tracking-[0.04em] text-slate-50">
                 APP<span className="text-amber-500">CETATO</span>
               </h1>
@@ -131,8 +213,7 @@ export default function Header(props: Props) {
             <button
               onClick={onOpenStats}
               title="Estadísticas del catálogo"
-              aria-label="Estadísticas del catálogo"
-              className="touch-manipulation flex h-11 items-center gap-2 rounded-lg border border-slate-700 bg-slate-800 px-3 text-sm font-medium text-slate-300 transition-colors hover:border-amber-500/60 hover:text-amber-400 active:scale-[0.96]"
+              className={`${iconBtnCls} hidden md:flex`}
             >
               <BarChart3 size={16} />
               <span className="hidden lg:inline">Estadísticas</span>
@@ -141,63 +222,67 @@ export default function Header(props: Props) {
             <button
               onClick={onExportCatalog}
               title="Exportar catálogo completo (PDF)"
-              aria-label="Exportar catálogo completo en PDF"
-              className="touch-manipulation flex h-11 items-center gap-2 rounded-lg border border-slate-700 bg-slate-800 px-3 text-sm font-medium text-slate-300 transition-colors hover:border-amber-500/60 hover:text-amber-400 active:scale-[0.96]"
+              className={`${iconBtnCls} hidden md:flex`}
             >
               <FileDown size={16} />
               <span className="hidden lg:inline">PDF</span>
             </button>
 
-            <div
-              className="flex h-11 overflow-hidden rounded-lg border border-slate-700"
-              role="group"
-              aria-label="Cambiar vista"
-            >
-              <button
-                onClick={() => onViewChange("grid")}
-                title="Vista galería"
-                aria-label="Vista galería"
-                aria-pressed={view === "grid"}
-                className={`touch-manipulation grid w-11 place-items-center transition-colors ${
-                  view === "grid"
-                    ? "bg-amber-500 text-slate-950"
-                    : "bg-slate-800 text-slate-400 hover:text-slate-200"
-                }`}
-              >
-                <LayoutGrid size={16} />
-              </button>
-              <button
-                onClick={() => onViewChange("table")}
-                title="Vista tabla"
-                aria-label="Vista tabla"
-                aria-pressed={view === "table"}
-                className={`touch-manipulation grid w-11 place-items-center border-l border-slate-700 transition-colors ${
-                  view === "table"
-                    ? "bg-amber-500 text-slate-950"
-                    : "bg-slate-800 text-slate-400 hover:text-slate-200"
-                }`}
-              >
-                <Table2 size={16} />
-              </button>
-            </div>
+            {modeToggle}
+
+            {mode === "catalog" && <div className="hidden md:block">{viewToggle}</div>}
 
             <button
               onClick={onOpenAdd}
-              aria-label="Agregar vinilo"
-              className="touch-manipulation flex h-11 items-center gap-2 rounded-lg bg-amber-500 px-3.5 text-sm font-bold text-slate-950 shadow-lg shadow-amber-500/25 transition-all hover:bg-amber-400 hover:shadow-amber-500/40 active:scale-[0.96] sm:px-4"
+              title="Agregar vinilo"
+              className="touch-manipulation flex h-11 w-11 items-center justify-center gap-2 rounded-lg bg-amber-500 px-3.5 text-sm font-bold text-slate-950 shadow-lg shadow-amber-500/25 transition-all hover:bg-amber-400 hover:shadow-amber-500/40 sm:w-auto"
             >
               <Plus size={17} strokeWidth={2.6} />
-              <span className="hidden sm:inline">Agregar Vinilo</span>
+              <span className="hidden sm:inline">Agregar</span>
             </button>
           </div>
         </div>
 
-        {/* Búsqueda (móvil) */}
-        <div className="pb-3 md:hidden">{searchBox}</div>
+        {/* ── Fila 2 (móvil): búsqueda a ancho completo ── */}
+        <div className="pb-2.5 md:hidden">{searchBox}</div>
 
-        {/* Filtros: scroll horizontal en móvil */}
-        <div className="border-t border-slate-800 py-2.5">
-          <div className="no-scrollbar -mx-4 overflow-x-auto px-4 pb-2 sm:mx-0 sm:px-0 sm:pb-0">
+        {/* ── Fila 3 (móvil): acciones del modo ── */}
+        <div className="flex items-center gap-2 pb-3 md:hidden">
+          {mode === "catalog" ? (
+            <>
+              <button
+                onClick={onOpenDrawer}
+                aria-label="Abrir filtros"
+                className="touch-manipulation relative flex h-11 items-center gap-2 rounded-lg border border-slate-700 bg-slate-800 px-3.5 text-sm font-semibold text-slate-200 transition-colors hover:border-amber-500/60 hover:text-amber-400"
+              >
+                <SlidersHorizontal size={15} />
+                Filtrar
+                {activeFilterCount > 0 && (
+                  <span className="absolute -right-1.5 -top-1.5 grid h-5 min-w-5 place-items-center rounded-full bg-amber-500 px-1 font-mono text-[10px] font-bold text-slate-950 shadow-md shadow-amber-500/40">
+                    {activeFilterCount}
+                  </span>
+                )}
+              </button>
+              {viewToggle}
+              <div className="ml-auto flex items-center gap-2">
+                <button onClick={onOpenStats} title="Estadísticas" aria-label="Estadísticas" className={`${iconBtnCls} w-11 px-0`}>
+                  <BarChart3 size={16} />
+                </button>
+                <button onClick={onExportCatalog} title="Exportar catálogo (PDF)" aria-label="Exportar catálogo en PDF" className={`${iconBtnCls} w-11 px-0`}>
+                  <FileDown size={16} />
+                </button>
+              </div>
+            </>
+          ) : (
+            <p className="flex h-11 items-center gap-2 font-mono text-[10px] uppercase tracking-[0.2em] text-slate-500">
+              <span className="text-amber-500">◆</span> Género → Artista → Álbum
+            </p>
+          )}
+        </div>
+
+        {/* ── Chips de filtro (solo escritorio y solo en modo catálogo) ── */}
+        {mode === "catalog" && (
+          <div className="hidden border-t border-slate-800 py-2.5 md:block">
             <FilterChips
               collection={collection}
               filters={filters}
@@ -205,7 +290,7 @@ export default function Header(props: Props) {
               onClear={onClearFilters}
             />
           </div>
-        </div>
+        )}
       </div>
     </header>
   );

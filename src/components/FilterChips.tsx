@@ -23,10 +23,12 @@ export default function FilterChips({ collection, filters, onToggle, onClear }: 
     const genreMap = new Map<string, number>();
     const decadeMap = new Map<string, number>();
     const formatMap = new Map<string, number>();
+    const artistMap = new Map<string, number>();
     for (const v of collection) {
       labelMap.set(v.label, (labelMap.get(v.label) ?? 0) + 1);
       genreMap.set(v.genre, (genreMap.get(v.genre) ?? 0) + 1);
       formatMap.set(v.format, (formatMap.get(v.format) ?? 0) + 1);
+      artistMap.set(v.artist, (artistMap.get(v.artist) ?? 0) + 1);
       const d = decadeOf(v.year);
       if (d) decadeMap.set(d, (decadeMap.get(d) ?? 0) + 1);
     }
@@ -47,11 +49,16 @@ export default function FilterChips({ collection, filters, onToggle, onClear }: 
         title: "Década",
         entries: sortDesc(decadeMap).sort((a, b) => a.value.localeCompare(b.value)),
       },
+      { key: "artists", title: "Artista", entries: sortDesc(artistMap) },
     ];
   }, [collection]);
 
   const activeCount =
-    filters.formats.length + filters.labels.length + filters.genres.length + filters.decades.length;
+    filters.formats.length +
+    filters.labels.length +
+    filters.genres.length +
+    filters.decades.length +
+    filters.artists.length;
 
   return (
     <div className="flex flex-nowrap items-center gap-x-4 gap-y-2 sm:flex-wrap">

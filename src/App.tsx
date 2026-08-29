@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { AnimatePresence } from "framer-motion";
-import type { FilterGroup, Prefs, ViewMode, Vinyl } from "./types";
+import type { FilterGroup, NavMode, Prefs, ViewMode, Vinyl } from "./types";
 import { EMPTY_FILTERS } from "./types";
 import seedCatalog from "./data/catalog.json";
 import { loadCollection, loadPrefs, saveCollection, savePrefs } from "./lib/storage";
@@ -16,6 +16,8 @@ import EmptyState from "./components/EmptyState";
 import DetailModal from "./components/DetailModal";
 import VinylForm from "./components/VinylForm";
 import StatsModal from "./components/StatsModal";
+import MobileFilterDrawer from "./components/MobileFilterDrawer";
+import HierarchicalBrowser from "./components/HierarchicalBrowser";
 
 function initCollection(): Vinyl[] {
   const stored = loadCollection();
@@ -47,8 +49,9 @@ function AppInner() {
     null
   );
   const [statsOpen, setStatsOpen] = useState(false);
+  const [drawerOpen, setDrawerOpen] = useState(false);
 
-  const { view, filters, query } = prefs;
+  const { view, filters, query, mode } = prefs;
   const debouncedQuery = useDebouncedValue(query, 300);
 
   /* ── Persistencia ── */
@@ -65,6 +68,7 @@ function AppInner() {
   /* ── Acciones de estado ── */
   const setView = (v: ViewMode) => setPrefs((p) => ({ ...p, view: v }));
   const setQuery = (q: string) => setPrefs((p) => ({ ...p, query: q }));
+  const setMode = (m: NavMode) => setPrefs((p) => ({ ...p, mode: m }));
   const toggleFilter = (group: FilterGroup, value: string) =>
     setPrefs((p) => {
       const list = p.filters[group];
@@ -72,7 +76,15 @@ function AppInner() {
       return { ...p, filters: { ...p.filters, [group]: next } };
     });
   const clearFilters = () => setPrefs((p) => ({ ...p, filters: EMPTY_FILTERS }));
+  const applyFilters = (f: typeof EMPTY_FILTERS) => setPrefs((p) => ({ ...p, filters: f }));
   const clearAll = () => setPrefs((p) => ({ ...p, query: "", filters: EMPTY_FILTERS }));
+
+  const activeFilterCount =
+    filters.formats.length +
+    filters.labels.length +
+    filters.genres.length +
+    filters.decades.length +
+    filters.artists.length;
 
   /* ── Búsqueda + filtros (AND entre grupos, multi-campo) ── */
   const filtered = useMemo(() => {
@@ -81,6 +93,7 @@ function AppInner() {
       if (filters.formats.length && !filters.formats.includes(v.format)) return false;
       if (filters.labels.length && !filters.labels.includes(v.label)) return false;
       if (filters.genres.length && !filters.genres.includes(v.genre)) return false;
+      if (filters.artists.length && !filters.artists.includes(v.artist)) return false;
       if (filters.decades.length) {
         const d = decadeOf(v.year);
         if (!d || !filters.decades.includes(d)) return false;
@@ -94,6 +107,10 @@ function AppInner() {
       return true;
     });
   }, [collection, filters, debouncedQuery]);
+
+  /* La búsqueda textual tiene prioridad: en modo explorar, una consulta
+     activa muestra los resultados del catálogo en lugar de la jerarquía. */
+  const showExplore = mode === "explore" && !debouncedQuery.trim();
 
   /* ── CRUD ── */
   const handleSave = (record: Vinyl) => {
@@ -132,9 +149,7 @@ function AppInner() {
     [collection]
   );
 
-  const hasActiveFilters =
-    filters.formats.length + filters.labels.length + filters.genres.length + filters.decades.length >
-    0;
+  const hasActiveFilters = activeFilterCount > 0;
 
   return (
     <div className="relative min-h-screen font-sans text-slate-50">
@@ -149,30 +164,42 @@ function AppInner() {
         filters={filters}
         onToggleFilter={toggleFilter}
         onClearFilters={clearFilters}
+        mode={mode}
+        onModeChange={setMode}
+        activeFilterCount={activeFilterCount}
+        onOpenDrawer={() => setDrawerOpen(true)}
         onOpenStats={() => setStatsOpen(true)}
         onOpenAdd={() => setForm({ mode: "create" })}
         onExportCatalog={handleExportCatalog}
       />
 
       <main className="relative mx-auto max-w-7xl px-4 py-6 sm:px-6 sm:py-8">
-        <div className="mb-5 flex flex-wrap items-center justify-between gap-2">
-          <p className="font-mono text-xs text-slate-400" aria-live="polite">
-            <span className="font-bold text-amber-400">{filtered.length}</span>{" "}
-            {filtered.length === 1 ? "vinilo encontrado" : "vinilos encontrados"}
-            {debouncedQuery.trim() && (
-              <>
-                {" "}
-                para «<span className="text-slate-200">{debouncedQuery.trim()}</span>»
-              </>
-            )}
-            <span className="text-slate-600"> · de {collection.length} en el catálogo</span>
-          </p>
-          <p className="hidden font-mono text-[10px] uppercase tracking-[0.22em] text-slate-600 sm:block">
-            {view === "grid" ? "◆ Vista galería" : "≡ Vista tabla"}
-          </p>
-        </div>
+        {!showExplore && (
+          <div className="mb-5 flex flex-wrap items-center justify-between gap-2">
+            <p className="font-mono text-xs text-slate-400" aria-live="polite">
+              <span className="font-bold text-amber-400">{filtered.length}</span>{" "}
+              {filtered.length === 1 ? "vinilo encontrado" : "vinilos encontrados"}
+              {debouncedQuery.trim() && (
+                <>
+                  {" "}
+                  para «<span className="text-slate-200">{debouncedQuery.trim()}</span>»
+                </>
+              )}
+              <span className="text-slate-600"> · de {collection.length} en el catálogo</span>
+            </p>
+            <p className="hidden font-mono text-[10px] uppercase tracking-[0.22em] text-slate-600 sm:block">
+              {view === "grid" ? "◆ Vista galería" : "≡ Vista tabla"}
+            </p>
+          </div>
+        )}
 
-        {filtered.length === 0 ? (
+        {showExplore ? (
+          <HierarchicalBrowser
+            collection={collection}
+            onOpenVinyl={setDetail}
+            onExit={() => setMode("catalog")}
+          />
+        ) : filtered.length === 0 ? (
           <EmptyState
             query={debouncedQuery.trim()}
             hasFilters={hasActiveFilters}
@@ -211,6 +238,15 @@ function AppInner() {
           </p>
         </div>
       </footer>
+
+      {/* Drawer de filtros (móvil) */}
+      <MobileFilterDrawer
+        open={drawerOpen}
+        collection={collection}
+        filters={filters}
+        onApply={applyFilters}
+        onClose={() => setDrawerOpen(false)}
+      />
 
       <AnimatePresence>
         {detail && (

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import type { ReactNode } from "react";
-import { Download, ImagePlus, Loader2, Pencil, Share2 } from "lucide-react";
+import { AnimatePresence, motion } from "framer-motion";
+import { Download, ImagePlus, Loader2, Pencil, Share2, X, ZoomIn } from "lucide-react";
 import type { Vinyl } from "../types";
 import { resolveImageSrc } from "../config/cloudinary";
 import { exportFichaPdf } from "../lib/pdf";
@@ -33,6 +34,7 @@ function MetaCell({ label, children }: { label: string; children: ReactNode }) {
 export default function DetailModal({ record, onClose, onEdit }: Props) {
   const toast = useToast();
   const [exporting, setExporting] = useState(false);
+  const [zoom, setZoom] = useState<null | { src: string; caption: string }>(null);
   const photoCount = [record.coverImageId, record.labelImageId].filter(Boolean).length;
 
   const handleExport = async () => {
@@ -91,25 +93,45 @@ export default function DetailModal({ record, onClose, onEdit }: Props) {
           </h2>
           <h3 className="mt-1.5 text-xl font-bold text-amber-500 sm:text-2xl">{record.artist}</h3>
 
-          {/* Imágenes: apiladas en móvil, 2 columnas en escritorio */}
+          {/* Imágenes: apiladas en móvil, 2 columnas en escritorio · tocables para zoom */}
           <div className="mt-5 grid grid-cols-1 gap-3 sm:grid-cols-2">
             <figure className="min-w-0">
-              <CoverImage
-                record={record}
-                className="aspect-square rounded-xl border border-slate-700 shadow-xl shadow-black/40"
-              />
+              <button
+                type="button"
+                onClick={() => setZoom({ src: coverSrc, caption: "Carátula" })}
+                aria-label="Ampliar carátula"
+                className="touch-manipulation group relative block w-full cursor-zoom-in rounded-xl transition-transform duration-200 active:scale-[0.99]"
+              >
+                <CoverImage
+                  record={record}
+                  className="aspect-square rounded-xl border border-slate-700 shadow-xl shadow-black/40"
+                />
+                <span className="absolute right-2 top-2 grid h-9 w-9 place-items-center rounded-lg bg-slate-950/75 text-amber-400 opacity-0 backdrop-blur-sm transition-opacity duration-200 group-hover:opacity-100 group-active:opacity-100">
+                  <ZoomIn size={16} />
+                </span>
+              </button>
               <figcaption className="mt-1.5 text-center font-mono text-[9px] tracking-[0.22em] text-slate-500">
-                CARÁTULA
+                CARÁTULA · TOCAR PARA AMPLIAR
               </figcaption>
             </figure>
             <figure className="min-w-0">
-              <LabelImage
-                record={record}
-                fit="contain"
-                className="aspect-square rounded-xl border border-slate-700 bg-slate-950/70 shadow-xl shadow-black/40"
-              />
+              <button
+                type="button"
+                onClick={() => setZoom({ src: labelSrc, caption: "Galleta" })}
+                aria-label="Ampliar galleta"
+                className="touch-manipulation group relative block w-full cursor-zoom-in rounded-xl transition-transform duration-200 active:scale-[0.99]"
+              >
+                <LabelImage
+                  record={record}
+                  fit="contain"
+                  className="aspect-square rounded-xl border border-slate-700 bg-slate-950/70 shadow-xl shadow-black/40"
+                />
+                <span className="absolute right-2 top-2 grid h-9 w-9 place-items-center rounded-lg bg-slate-950/75 text-amber-400 opacity-0 backdrop-blur-sm transition-opacity duration-200 group-hover:opacity-100 group-active:opacity-100">
+                  <ZoomIn size={16} />
+                </span>
+              </button>
               <figcaption className="mt-1.5 text-center font-mono text-[9px] tracking-[0.22em] text-slate-500">
-                GALLETA
+                GALLETA · TOCAR PARA AMPLIAR
               </figcaption>
             </figure>
           </div>
@@ -167,6 +189,44 @@ export default function DetailModal({ record, onClose, onEdit }: Props) {
           </div>
         </div>
       </div>
+
+      {/* Overlay de zoom a pantalla completa */}
+      <AnimatePresence>
+        {zoom && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
+            onClick={() => setZoom(null)}
+            role="dialog"
+            aria-modal="true"
+            aria-label={`${zoom.caption} ampliada`}
+            className="fixed inset-0 z-[120] flex flex-col items-center justify-center gap-4 bg-slate-950/95 p-4 backdrop-blur-sm"
+          >
+            <motion.img
+              src={zoom.src}
+              alt={`${zoom.caption} de ${record.album} ampliada`}
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.94, opacity: 0 }}
+              transition={{ type: "spring", stiffness: 300, damping: 28 }}
+              onClick={(e) => e.stopPropagation()}
+              className="max-h-[82vh] max-w-full rounded-xl border border-slate-700 object-contain shadow-2xl shadow-black/80"
+            />
+            <p className="font-mono text-[10px] uppercase tracking-[0.24em] text-slate-500">
+              {zoom.caption} · toca fuera para cerrar
+            </p>
+            <button
+              onClick={() => setZoom(null)}
+              aria-label="Cerrar vista ampliada"
+              className="touch-manipulation absolute right-4 top-4 grid h-11 w-11 place-items-center rounded-lg border border-slate-700 bg-slate-800 text-slate-300 transition-colors hover:border-amber-500/60 hover:text-amber-400"
+            >
+              <X size={18} />
+            </button>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* Nodo oculto que captura html2canvas para el PDF */}
       <div

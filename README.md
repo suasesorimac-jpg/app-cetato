@@ -41,8 +41,13 @@ y se guardan dentro del dispositivo (LocalStorage).
 - Catálogo inicial de **50 vinilos** (cumbia, porro, vallenato, salsa, bolero…)
 - Vista **galería** (tarjetas con disco que se asoma de la funda al hover)
   y vista **tabla** (columnas ordenables, matriz resaltada en mono)
+- **Modo Exploración** jerárquico: Género → Artista → Álbum, con breadcrumb,
+  botón «Atrás» y transiciones de slide direccionales
 - Búsqueda multi-campo con debounce (artista, álbum, sello, matriz, año, género)
-- Filtros combinables (AND): formato, sello, género y década
+- Filtros combinables (AND): formato, sello, género, década y artista
+  - Escritorio: chips horizontales con contadores
+  - Móvil: botón «Filtrar» → bottom-sheet con secciones colapsables,
+    selección múltiple y borrador que se confirma con «Aplicar»
 - Alta/edición de vinilos con validación y subida de carátula/galleta (≤ 5 MB)
 - **Exportar PDF**: ficha técnica individual y catálogo completo
 - **Dashboard**: contadores animados, top sellos/géneros, décadas, insights
@@ -55,7 +60,9 @@ src/
 ├── config/cloudinary.ts    # credenciales desde env + URLs optimizadas
 ├── data/catalog.json       # 50 vinilos iniciales
 ├── lib/                    # storage, upload, pdf, utilidades
-├── components/             # Header, Grid, Table, Modales, Toast, Chips
+├── components/             # Header, Grid, Table, Modales, Toast, Chips,
+│                           # MobileFilterDrawer, HierarchicalBrowser,
+│                           # CloudinaryUpload (cámara/galería)
 └── hooks.ts                # useDebouncedValue, useCountUp
 public/
 ├── manifest.webmanifest    # PWA

@@ -39,7 +39,7 @@ export function saveCollection(list: Vinyl[]): boolean {
 }
 
 export function loadPrefs(): Prefs {
-  const fallback: Prefs = { view: "grid", filters: EMPTY_FILTERS, query: "" };
+  const fallback: Prefs = { view: "grid", filters: EMPTY_FILTERS, query: "", mode: "catalog" };
   try {
     const raw = localStorage.getItem(PREFS_KEY);
     if (!raw) return fallback;
@@ -48,6 +48,7 @@ export function loadPrefs(): Prefs {
       view: p.view === "table" ? "table" : "grid",
       filters: { ...EMPTY_FILTERS, ...(p.filters ?? {}) } as Filters,
       query: typeof p.query === "string" ? p.query : "",
+      mode: p.mode === "explore" ? "explore" : "catalog",
     };
   } catch {
     return fallback;
