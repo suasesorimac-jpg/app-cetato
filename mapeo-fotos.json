@@ -1,0 +1,776 @@
+[
+  {
+    "archivo": "Andre y su Conjunto Caratula.png",
+    "ruta": "fotos/Imagenes - AppCetatos/Andre y su Conjunto Caratula.png",
+    "vin_id": null,
+    "tipo": "NO_APLICA"
+  },
+  {
+    "archivo": "Andre y su Conjunto.png",
+    "ruta": "fotos/Imagenes - AppCetatos/Andre y su Conjunto.png",
+    "vin_id": null,
+    "tipo": "NO_APLICA"
+  },
+  {
+    "archivo": "Anibal Troilo Caratula.png",
+    "ruta": "fotos/Imagenes - AppCetatos/Anibal Troilo Caratula.png",
+    "vin_id": null,
+    "tipo": "NO_APLICA"
+  },
+  {
+    "archivo": "Anibal Troilo.png",
+    "ruta": "fotos/Imagenes - AppCetatos/Anibal Troilo.png",
+    "vin_id": null,
+    "tipo": "NO_APLICA"
+  },
+  {
+    "archivo": "Artistas (Jorge Araque, Tonny Zuñiga, Cheche Ospina, Carlos Román, Pacho Villalba, José Velásquez, Morgan Blanco.) Caratula.png",
+    "ruta": "fotos/Imagenes - AppCetatos/Artistas (Jorge Araque, Tonny Zuñiga, Cheche Ospina, Carlos Román, Pacho Villalba, José Velásquez, Morgan Blanco.) Caratula.png",
+    "vin_id": null,
+    "tipo": "NO_APLICA"
+  },
+  {
+    "archivo": "Artistas (Jorge Araque, Tonny Zuñiga, Cheche Ospina, Carlos Román, Pacho Villalba, José Velásquez, Morgan Blanco.).png",
+    "ruta": "fotos/Imagenes - AppCetatos/Artistas (Jorge Araque, Tonny Zuñiga, Cheche Ospina, Carlos Román, Pacho Villalba, José Velásquez, Morgan Blanco.).png",
+    "vin_id": null,
+    "tipo": "NO_APLICA"
+  },
+  {
+    "archivo": "Billo's Caracas Boys Caratula.png",
+    "ruta": "fotos/Imagenes - AppCetatos/Billo's Caracas Boys Caratula.png",
+    "vin_id": null,
+    "tipo": "NO_APLICA"
+  },
+  {
+    "archivo": "Billo's Caracas Boys.png",
+    "ruta": "fotos/Imagenes - AppCetatos/Billo's Caracas Boys.png",
+    "vin_id": null,
+    "tipo": "NO_APLICA"
+  },
+  {
+    "archivo": "Daniel Santos Caratula.png",
+    "ruta": "fotos/Imagenes - AppCetatos/Daniel Santos Caratula.png",
+    "vin_id": null,
+    "tipo": "NO_APLICA"
+  },
+  {
+    "archivo": "Daniel Santos.png",
+    "ruta": "fotos/Imagenes - AppCetatos/Daniel Santos.png",
+    "vin_id": null,
+    "tipo": "NO_APLICA"
+  },
+  {
+    "archivo": "Edgardo Donato y sus muchachos Caratula.png",
+    "ruta": "fotos/Imagenes - AppCetatos/Edgardo Donato y sus muchachos Caratula.png",
+    "vin_id": null,
+    "tipo": "NO_APLICA"
+  },
+  {
+    "archivo": "Edgardo Donato y sus muchachos.png",
+    "ruta": "fotos/Imagenes - AppCetatos/Edgardo Donato y sus muchachos.png",
+    "vin_id": null,
+    "tipo": "NO_APLICA"
+  },
+  {
+    "archivo": "El trio Sensacion Caratula.png",
+    "ruta": "fotos/Imagenes - AppCetatos/El trio Sensacion Caratula.png",
+    "vin_id": null,
+    "tipo": "NO_APLICA"
+  },
+  {
+    "archivo": "El trio Sensacion.png",
+    "ruta": "fotos/Imagenes - AppCetatos/El trio Sensacion.png",
+    "vin_id": null,
+    "tipo": "NO_APLICA"
+  },
+  {
+    "archivo": "Guillermo Buitrago y sus Muchachos - Caratula B.jpg",
+    "ruta": "fotos/Imagenes - AppCetatos/Guillermo Buitrago y sus Muchachos - Caratula B.jpg",
+    "vin_id": "vin-004",
+    "tipo": "CAR_B"
+  },
+  {
+    "archivo": "Guillermo Buitrago y sus Muchachos - Caratula.jpg",
+    "ruta": "fotos/Imagenes - AppCetatos/Guillermo Buitrago y sus Muchachos - Caratula.jpg",
+    "vin_id": "vin-004",
+    "tipo": "CAR_A"
+  },
+  {
+    "archivo": "Guillermo Buitrago y sus Muchachos B.jpg",
+    "ruta": "fotos/Imagenes - AppCetatos/Guillermo Buitrago y sus Muchachos B.jpg",
+    "vin_id": "vin-004",
+    "tipo": "GAL_B"
+  },
+  {
+    "archivo": "Guillermo Buitrago y sus Muchachos.jpg",
+    "ruta": "fotos/Imagenes - AppCetatos/Guillermo Buitrago y sus Muchachos.jpg",
+    "vin_id": "vin-004",
+    "tipo": "GAL_A"
+  },
+  {
+    "archivo": "Jaime Llano González y su Conjunto Rítmico - Caratula B.jpg",
+    "ruta": "fotos/Imagenes - AppCetatos/Jaime Llano González y su Conjunto Rítmico - Caratula B.jpg",
+    "vin_id": "vin-001",
+    "tipo": "CAR_B"
+  },
+  {
+    "archivo": "Jaime Llano González y su Conjunto Rítmico - Caratula.jpg",
+    "ruta": "fotos/Imagenes - AppCetatos/Jaime Llano González y su Conjunto Rítmico - Caratula.jpg",
+    "vin_id": "vin-001",
+    "tipo": "CAR_A"
+  },
+  {
+    "archivo": "Jaime Llano González y su Conjunto Rítmico B.jpg",
+    "ruta": "fotos/Imagenes - AppCetatos/Jaime Llano González y su Conjunto Rítmico B.jpg",
+    "vin_id": "vin-001",
+    "tipo": "GAL_B"
+  },
+  {
+    "archivo": "Jaime Llano González y su Conjunto Rítmico.jpg",
+    "ruta": "fotos/Imagenes - AppCetatos/Jaime Llano González y su Conjunto Rítmico.jpg",
+    "vin_id": "vin-001",
+    "tipo": "GAL_A"
+  },
+  {
+    "archivo": "Lisandro Meza - Caratula.png",
+    "ruta": "fotos/Imagenes - AppCetatos/Lisandro Meza - Caratula.png",
+    "vin_id": null,
+    "tipo": "NO_APLICA"
+  },
+  {
+    "archivo": "Lisandro Meza.png",
+    "ruta": "fotos/Imagenes - AppCetatos/Lisandro Meza.png",
+    "vin_id": null,
+    "tipo": "NO_APLICA"
+  },
+  {
+    "archivo": "Loa Galos.jpg",
+    "ruta": "fotos/Imagenes - AppCetatos/Loa Galos.jpg",
+    "vin_id": null,
+    "tipo": "NO_APLICA"
+  },
+  {
+    "archivo": "Los Bestiales ( Geber Castañeda y Lina) B.jpg",
+    "ruta": "fotos/Imagenes - AppCetatos/Los Bestiales ( Geber Castañeda y Lina) B.jpg",
+    "vin_id": "vin-002",
+    "tipo": "GAL_B"
+  },
+  {
+    "archivo": "Los Bestiales ( Geber Castañeda y Lina) Caratula B.jpg",
+    "ruta": "fotos/Imagenes - AppCetatos/Los Bestiales ( Geber Castañeda y Lina) Caratula B.jpg",
+    "vin_id": "vin-002",
+    "tipo": "CAR_B"
+  },
+  {
+    "archivo": "Los Bestiales ( Geber Castañeda y Lina) Caratula.jpg",
+    "ruta": "fotos/Imagenes - AppCetatos/Los Bestiales ( Geber Castañeda y Lina) Caratula.jpg",
+    "vin_id": "vin-002",
+    "tipo": "CAR_A"
+  },
+  {
+    "archivo": "Los Bestiales ( Geber Castañeda y Lina).jpg",
+    "ruta": "fotos/Imagenes - AppCetatos/Los Bestiales ( Geber Castañeda y Lina).jpg",
+    "vin_id": "vin-002",
+    "tipo": "GAL_A"
+  },
+  {
+    "archivo": "Los Embajadores - Caratula.png",
+    "ruta": "fotos/Imagenes - AppCetatos/Los Embajadores - Caratula.png",
+    "vin_id": null,
+    "tipo": "NO_APLICA"
+  },
+  {
+    "archivo": "Los Embajadores.png",
+    "ruta": "fotos/Imagenes - AppCetatos/Los Embajadores.png",
+    "vin_id": null,
+    "tipo": "NO_APLICA"
+  },
+  {
+    "archivo": "Los Galos B.jpg",
+    "ruta": "fotos/Imagenes - AppCetatos/Los Galos B.jpg",
+    "vin_id": null,
+    "tipo": "NO_APLICA"
+  },
+  {
+    "archivo": "Los Galos Caratula B.jpg",
+    "ruta": "fotos/Imagenes - AppCetatos/Los Galos Caratula B.jpg",
+    "vin_id": null,
+    "tipo": "NO_APLICA"
+  },
+  {
+    "archivo": "Los Galos Caratula.jpg",
+    "ruta": "fotos/Imagenes - AppCetatos/Los Galos Caratula.jpg",
+    "vin_id": null,
+    "tipo": "NO_APLICA"
+  },
+  {
+    "archivo": "Los Hermanos Martinez Gil Catalogo.png",
+    "ruta": "fotos/Imagenes - AppCetatos/Los Hermanos Martinez Gil Catalogo.png",
+    "vin_id": null,
+    "tipo": "NO_APLICA"
+  },
+  {
+    "archivo": "Los Hermanos Martinez Gil.png",
+    "ruta": "fotos/Imagenes - AppCetatos/Los Hermanos Martinez Gil.png",
+    "vin_id": null,
+    "tipo": "NO_APLICA"
+  },
+  {
+    "archivo": "Los Melódicos - Caratula.png",
+    "ruta": "fotos/Imagenes - AppCetatos/Los Melódicos - Caratula.png",
+    "vin_id": null,
+    "tipo": "NO_APLICA"
+  },
+  {
+    "archivo": "Los Melódicos.png",
+    "ruta": "fotos/Imagenes - AppCetatos/Los Melódicos.png",
+    "vin_id": null,
+    "tipo": "NO_APLICA"
+  },
+  {
+    "archivo": "Los Prisioneros B.jpg",
+    "ruta": "fotos/Imagenes - AppCetatos/Los Prisioneros B.jpg",
+    "vin_id": null,
+    "tipo": "NO_APLICA"
+  },
+  {
+    "archivo": "Los Prisioneros Caratula B.jpg",
+    "ruta": "fotos/Imagenes - AppCetatos/Los Prisioneros Caratula B.jpg",
+    "vin_id": null,
+    "tipo": "NO_APLICA"
+  },
+  {
+    "archivo": "Los Prisioneros Caratula.jpg",
+    "ruta": "fotos/Imagenes - AppCetatos/Los Prisioneros Caratula.jpg",
+    "vin_id": null,
+    "tipo": "NO_APLICA"
+  },
+  {
+    "archivo": "Los Prisioneros.jpg",
+    "ruta": "fotos/Imagenes - AppCetatos/Los Prisioneros.jpg",
+    "vin_id": null,
+    "tipo": "NO_APLICA"
+  },
+  {
+    "archivo": "Los Romanceros Caratula.png",
+    "ruta": "fotos/Imagenes - AppCetatos/Los Romanceros Caratula.png",
+    "vin_id": null,
+    "tipo": "NO_APLICA"
+  },
+  {
+    "archivo": "Los Romanceros.png",
+    "ruta": "fotos/Imagenes - AppCetatos/Los Romanceros.png",
+    "vin_id": null,
+    "tipo": "NO_APLICA"
+  },
+  {
+    "archivo": "Los Teen Agers - Caratula.png",
+    "ruta": "fotos/Imagenes - AppCetatos/Los Teen Agers - Caratula.png",
+    "vin_id": null,
+    "tipo": "NO_APLICA"
+  },
+  {
+    "archivo": "Los Teen Agers.png",
+    "ruta": "fotos/Imagenes - AppCetatos/Los Teen Agers.png",
+    "vin_id": null,
+    "tipo": "NO_APLICA"
+  },
+  {
+    "archivo": "Los Visconti Caratula.png",
+    "ruta": "fotos/Imagenes - AppCetatos/Los Visconti Caratula.png",
+    "vin_id": null,
+    "tipo": "NO_APLICA"
+  },
+  {
+    "archivo": "Lucho Bermúdez y su Orquesta (Promocional corporativo de Mario Avalo López, Asesor de Seguros) Caratula.png",
+    "ruta": "fotos/Imagenes - AppCetatos/Lucho Bermúdez y su Orquesta (Promocional corporativo de Mario Avalo López, Asesor de Seguros) Caratula.png",
+    "vin_id": null,
+    "tipo": "NO_APLICA"
+  },
+  {
+    "archivo": "Lucho Bermúdez y su Orquesta (Promocional corporativo de Mario Avalo López, Asesor de Seguros).png",
+    "ruta": "fotos/Imagenes - AppCetatos/Lucho Bermúdez y su Orquesta (Promocional corporativo de Mario Avalo López, Asesor de Seguros).png",
+    "vin_id": null,
+    "tipo": "NO_APLICA"
+  },
+  {
+    "archivo": "Lucho Bermúdez y su Orquesta - Caratula.png",
+    "ruta": "fotos/Imagenes - AppCetatos/Lucho Bermúdez y su Orquesta - Caratula.png",
+    "vin_id": null,
+    "tipo": "NO_APLICA"
+  },
+  {
+    "archivo": "Lucho Bermúdez y su Orquesta.png",
+    "ruta": "fotos/Imagenes - AppCetatos/Lucho Bermúdez y su Orquesta.png",
+    "vin_id": null,
+    "tipo": "NO_APLICA"
+  },
+  {
+    "archivo": "Luz Marina Ramírez G. (Secretaria Gerencia Mindustriales) con Acompañamiento del Trío Horizontes - Caratula.png",
+    "ruta": "fotos/Imagenes - AppCetatos/Luz Marina Ramírez G. (Secretaria Gerencia Mindustriales) con Acompañamiento del Trío Horizontes - Caratula.png",
+    "vin_id": null,
+    "tipo": "NO_APLICA"
+  },
+  {
+    "archivo": "Luz Marina Ramírez G. (Secretaria Gerencia Mindustriales) con Acompañamiento del Trío Horizontes.png",
+    "ruta": "fotos/Imagenes - AppCetatos/Luz Marina Ramírez G. (Secretaria Gerencia Mindustriales) con Acompañamiento del Trío Horizontes.png",
+    "vin_id": null,
+    "tipo": "NO_APLICA"
+  },
+  {
+    "archivo": "Orq. Edmundo (Cabecenido) Arias - Caratula B.jpg",
+    "ruta": "fotos/Imagenes - AppCetatos/Orq. Edmundo (Cabecenido) Arias - Caratula B.jpg",
+    "vin_id": "vin-005",
+    "tipo": "CAR_B"
+  },
+  {
+    "archivo": "Orq. Edmundo (Cabecenido) Arias - Caratula.jpg",
+    "ruta": "fotos/Imagenes - AppCetatos/Orq. Edmundo (Cabecenido) Arias - Caratula.jpg",
+    "vin_id": "vin-005",
+    "tipo": "CAR_A"
+  },
+  {
+    "archivo": "Orq. Edmundo (Cabecenido) Arias B.jpg",
+    "ruta": "fotos/Imagenes - AppCetatos/Orq. Edmundo (Cabecenido) Arias B.jpg",
+    "vin_id": "vin-005",
+    "tipo": "GAL_B"
+  },
+  {
+    "archivo": "Orq. Edmundo (Cabecenido) Arias.jpg",
+    "ruta": "fotos/Imagenes - AppCetatos/Orq. Edmundo (Cabecenido) Arias.jpg",
+    "vin_id": "vin-005",
+    "tipo": "GAL_A"
+  },
+  {
+    "archivo": "Oscar D'León B.jpg",
+    "ruta": "fotos/Imagenes - AppCetatos/Oscar D'León B.jpg",
+    "vin_id": null,
+    "tipo": "NO_APLICA"
+  },
+  {
+    "archivo": "Oscar D'León.jpg",
+    "ruta": "fotos/Imagenes - AppCetatos/Oscar D'León.jpg",
+    "vin_id": null,
+    "tipo": "NO_APLICA"
+  },
+  {
+    "archivo": "Oscar D´Leon.png",
+    "ruta": "fotos/Imagenes - AppCetatos/Oscar D´Leon.png",
+    "vin_id": null,
+    "tipo": "NO_APLICA"
+  },
+  {
+    "archivo": "Pablo Milanés B.jpg",
+    "ruta": "fotos/Imagenes - AppCetatos/Pablo Milanés B.jpg",
+    "vin_id": null,
+    "tipo": "NO_APLICA"
+  },
+  {
+    "archivo": "Pablo Milanés Caratula jpg.jpg",
+    "ruta": "fotos/Imagenes - AppCetatos/Pablo Milanés Caratula jpg.jpg",
+    "vin_id": null,
+    "tipo": "NO_APLICA"
+  },
+  {
+    "archivo": "Pablo Milanés CaratulaB jpg.jpg",
+    "ruta": "fotos/Imagenes - AppCetatos/Pablo Milanés CaratulaB jpg.jpg",
+    "vin_id": null,
+    "tipo": "NO_APLICA"
+  },
+  {
+    "archivo": "Pablo Milanés.jpg",
+    "ruta": "fotos/Imagenes - AppCetatos/Pablo Milanés.jpg",
+    "vin_id": null,
+    "tipo": "NO_APLICA"
+  },
+  {
+    "archivo": "Paul Anka Caratula.png",
+    "ruta": "fotos/Imagenes - AppCetatos/Paul Anka Caratula.png",
+    "vin_id": null,
+    "tipo": "NO_APLICA"
+  },
+  {
+    "archivo": "Paul Anka.png",
+    "ruta": "fotos/Imagenes - AppCetatos/Paul Anka.png",
+    "vin_id": null,
+    "tipo": "NO_APLICA"
+  },
+  {
+    "archivo": "Perez Prado Caratula.png",
+    "ruta": "fotos/Imagenes - AppCetatos/Perez Prado Caratula.png",
+    "vin_id": null,
+    "tipo": "NO_APLICA"
+  },
+  {
+    "archivo": "Perez Prado.png",
+    "ruta": "fotos/Imagenes - AppCetatos/Perez Prado.png",
+    "vin_id": null,
+    "tipo": "NO_APLICA"
+  },
+  {
+    "archivo": "Pérez Prado y su Orquesta B.jpg",
+    "ruta": "fotos/Imagenes - AppCetatos/Pérez Prado y su Orquesta B.jpg",
+    "vin_id": null,
+    "tipo": "NO_APLICA"
+  },
+  {
+    "archivo": "Pérez Prado y su Orquesta.jpg",
+    "ruta": "fotos/Imagenes - AppCetatos/Pérez Prado y su Orquesta.jpg",
+    "vin_id": null,
+    "tipo": "NO_APLICA"
+  },
+  {
+    "archivo": "Rodolfo con Los Hispanos - Caratula.png",
+    "ruta": "fotos/Imagenes - AppCetatos/Rodolfo con Los Hispanos - Caratula.png",
+    "vin_id": null,
+    "tipo": "NO_APLICA"
+  },
+  {
+    "archivo": "Rodolfo con Los Hispanos.png",
+    "ruta": "fotos/Imagenes - AppCetatos/Rodolfo con Los Hispanos.png",
+    "vin_id": null,
+    "tipo": "NO_APLICA"
+  },
+  {
+    "archivo": "The Monkees - Caratula.png",
+    "ruta": "fotos/Imagenes - AppCetatos/The Monkees - Caratula.png",
+    "vin_id": null,
+    "tipo": "NO_APLICA"
+  },
+  {
+    "archivo": "The Monkees.png",
+    "ruta": "fotos/Imagenes - AppCetatos/The Monkees.png",
+    "vin_id": null,
+    "tipo": "NO_APLICA"
+  },
+  {
+    "archivo": "Trío Martino - Caratula.png",
+    "ruta": "fotos/Imagenes - AppCetatos/Trío Martino - Caratula.png",
+    "vin_id": null,
+    "tipo": "NO_APLICA"
+  },
+  {
+    "archivo": "Trío Martino.png",
+    "ruta": "fotos/Imagenes - AppCetatos/Trío Martino.png",
+    "vin_id": null,
+    "tipo": "NO_APLICA"
+  },
+  {
+    "archivo": "Trío Vegabajeño . Caratula.png",
+    "ruta": "fotos/Imagenes - AppCetatos/Trío Vegabajeño . Caratula.png",
+    "vin_id": null,
+    "tipo": "NO_APLICA"
+  },
+  {
+    "archivo": "Trío Vegabajeño.png",
+    "ruta": "fotos/Imagenes - AppCetatos/Trío Vegabajeño.png",
+    "vin_id": null,
+    "tipo": "NO_APLICA"
+  },
+  {
+    "archivo": "Valente y Caceres Caratula.png",
+    "ruta": "fotos/Imagenes - AppCetatos/Valente y Caceres Caratula.png",
+    "vin_id": null,
+    "tipo": "NO_APLICA"
+  },
+  {
+    "archivo": "Valente y Caceres.png",
+    "ruta": "fotos/Imagenes - AppCetatos/Valente y Caceres.png",
+    "vin_id": null,
+    "tipo": "NO_APLICA"
+  },
+  {
+    "archivo": "Varios Artistas (Andy Montañez, Johnny Ventura, Frankie Ruiz, Paquito Guzmán, Sonora Ponceña.) Caratula.png",
+    "ruta": "fotos/Imagenes - AppCetatos/Varios Artistas (Andy Montañez, Johnny Ventura, Frankie Ruiz, Paquito Guzmán, Sonora Ponceña.) Caratula.png",
+    "vin_id": null,
+    "tipo": "NO_APLICA"
+  },
+  {
+    "archivo": "Varios Artistas (Andy Montañez, Johnny Ventura, Frankie Ruiz, Paquito Guzmán, Sonora Ponceña.).png",
+    "ruta": "fotos/Imagenes - AppCetatos/Varios Artistas (Andy Montañez, Johnny Ventura, Frankie Ruiz, Paquito Guzmán, Sonora Ponceña.).png",
+    "vin_id": null,
+    "tipo": "NO_APLICA"
+  },
+  {
+    "archivo": "Varios Artistas (Binomio de Oro, Emilio Oviedo, Enrique Díaz, Mariano Pérez, Pacho Rivera, Juan Piña, Ismael Rudas) Caratula.png",
+    "ruta": "fotos/Imagenes - AppCetatos/Varios Artistas (Binomio de Oro, Emilio Oviedo, Enrique Díaz, Mariano Pérez, Pacho Rivera, Juan Piña, Ismael Rudas) Caratula.png",
+    "vin_id": null,
+    "tipo": "NO_APLICA"
+  },
+  {
+    "archivo": "Varios Artistas (Binomio de Oro, Emilio Oviedo, Enrique Díaz, Mariano Pérez, Pacho Rivera, Juan Piña, Ismael Rudas).png",
+    "ruta": "fotos/Imagenes - AppCetatos/Varios Artistas (Binomio de Oro, Emilio Oviedo, Enrique Díaz, Mariano Pérez, Pacho Rivera, Juan Piña, Ismael Rudas).png",
+    "vin_id": null,
+    "tipo": "NO_APLICA"
+  },
+  {
+    "archivo": "Varios Artistas (Conjunto Los Hispanos, Los Corraleros de Majagual, Gilberto Torres y su Conjunto, Conjunto Los Rockets, Los Golden Boys) Caratula.png",
+    "ruta": "fotos/Imagenes - AppCetatos/Varios Artistas (Conjunto Los Hispanos, Los Corraleros de Majagual, Gilberto Torres y su Conjunto, Conjunto Los Rockets, Los Golden Boys) Caratula.png",
+    "vin_id": null,
+    "tipo": "NO_APLICA"
+  },
+  {
+    "archivo": "Varios Artistas (Conjunto Los Hispanos, Los Corraleros de Majagual, Gilberto Torres y su Conjunto, Conjunto Los Rockets, Los Golden Boys).png",
+    "ruta": "fotos/Imagenes - AppCetatos/Varios Artistas (Conjunto Los Hispanos, Los Corraleros de Majagual, Gilberto Torres y su Conjunto, Conjunto Los Rockets, Los Golden Boys).png",
+    "vin_id": null,
+    "tipo": "NO_APLICA"
+  },
+  {
+    "archivo": "Varios Artistas (Eduardo Lanz, Fernando Torres, Gregorio Barrios, Elvira Ríos, Arturo Gatica, Los Fernandos) Caratula.png",
+    "ruta": "fotos/Imagenes - AppCetatos/Varios Artistas (Eduardo Lanz, Fernando Torres, Gregorio Barrios, Elvira Ríos, Arturo Gatica, Los Fernandos) Caratula.png",
+    "vin_id": null,
+    "tipo": "NO_APLICA"
+  },
+  {
+    "archivo": "Varios Artistas (Eduardo Lanz, Fernando Torres, Gregorio Barrios, Elvira Ríos, Arturo Gatica, Los Fernandos).png",
+    "ruta": "fotos/Imagenes - AppCetatos/Varios Artistas (Eduardo Lanz, Fernando Torres, Gregorio Barrios, Elvira Ríos, Arturo Gatica, Los Fernandos).png",
+    "vin_id": null,
+    "tipo": "NO_APLICA"
+  },
+  {
+    "archivo": "Varios Artistas (El Combo Nutibara, Jaime Ley y su Combo Feroz, Los Auténticos, Policarpo Calle, Filemón y la Super Banda, Binomio de Oro, La Corporación, El Combo de las Estrellas) Caratula.png",
+    "ruta": "fotos/Imagenes - AppCetatos/Varios Artistas (El Combo Nutibara, Jaime Ley y su Combo Feroz, Los Auténticos, Policarpo Calle, Filemón y la Super Banda, Binomio de Oro, La Corporación, El Combo de las Estrellas) Caratula.png",
+    "vin_id": null,
+    "tipo": "NO_APLICA"
+  },
+  {
+    "archivo": "Varios Artistas (El Combo Nutibara, Jaime Ley y su Combo Feroz, Los Auténticos, Policarpo Calle, Filemón y la Super Banda, Binomio de Oro, La Corporación, El Combo de las Estrellas).png",
+    "ruta": "fotos/Imagenes - AppCetatos/Varios Artistas (El Combo Nutibara, Jaime Ley y su Combo Feroz, Los Auténticos, Policarpo Calle, Filemón y la Super Banda, Binomio de Oro, La Corporación, El Combo de las Estrellas).png",
+    "vin_id": null,
+    "tipo": "NO_APLICA"
+  },
+  {
+    "archivo": "Varios Artistas (Fausto, Roque Martínez, Carmen Silva, Lindomar Castilho, Facundo Cabral, Marco Antonio Muñiz, Los Chalchaleros, Los Zorzales, Los Cuatro Hermanos Silva).png",
+    "ruta": "fotos/Imagenes - AppCetatos/Varios Artistas (Fausto, Roque Martínez, Carmen Silva, Lindomar Castilho, Facundo Cabral, Marco Antonio Muñiz, Los Chalchaleros, Los Zorzales, Los Cuatro Hermanos Silva).png",
+    "vin_id": null,
+    "tipo": "NO_APLICA"
+  },
+  {
+    "archivo": "Varios Artistas (Joaquín Betin, G. Btgo, Guillermo Buitrago, Rufo Garrido, R. C. Miranda) Caratula.png",
+    "ruta": "fotos/Imagenes - AppCetatos/Varios Artistas (Joaquín Betin, G. Btgo, Guillermo Buitrago, Rufo Garrido, R. C. Miranda) Caratula.png",
+    "vin_id": null,
+    "tipo": "NO_APLICA"
+  },
+  {
+    "archivo": "Varios Artistas (Joaquín Betin, G. Btgo, Guillermo Buitrago, Rufo Garrido, R. C. Miranda).png",
+    "ruta": "fotos/Imagenes - AppCetatos/Varios Artistas (Joaquín Betin, G. Btgo, Guillermo Buitrago, Rufo Garrido, R. C. Miranda).png",
+    "vin_id": null,
+    "tipo": "NO_APLICA"
+  },
+  {
+    "archivo": "Varios Artistas (Juan Arvizu, Genaro Salinas, Nestor Chayres, Maria Luisa Landín, Los Quincheros, Cuarteto Mayari, Los Tres Diamantes.) B.jpg",
+    "ruta": "fotos/Imagenes - AppCetatos/Varios Artistas (Juan Arvizu, Genaro Salinas, Nestor Chayres, Maria Luisa Landín, Los Quincheros, Cuarteto Mayari, Los Tres Diamantes.) B.jpg",
+    "vin_id": "vin-003",
+    "tipo": "GAL_B"
+  },
+  {
+    "archivo": "Varios Artistas (Juan Arvizu, Genaro Salinas, Nestor Chayres, Maria Luisa Landín, Los Quincheros, Cuarteto Mayari, Los Tres Diamantes.) Caratula B.jpg",
+    "ruta": "fotos/Imagenes - AppCetatos/Varios Artistas (Juan Arvizu, Genaro Salinas, Nestor Chayres, Maria Luisa Landín, Los Quincheros, Cuarteto Mayari, Los Tres Diamantes.) Caratula B.jpg",
+    "vin_id": "vin-003",
+    "tipo": "CAR_B"
+  },
+  {
+    "archivo": "Varios Artistas (Juan Arvizu, Genaro Salinas, Nestor Chayres, Maria Luisa Landín, Los Quincheros, Cuarteto Mayari, Los Tres Diamantes.) Caratula.jpg",
+    "ruta": "fotos/Imagenes - AppCetatos/Varios Artistas (Juan Arvizu, Genaro Salinas, Nestor Chayres, Maria Luisa Landín, Los Quincheros, Cuarteto Mayari, Los Tres Diamantes.) Caratula.jpg",
+    "vin_id": "vin-003",
+    "tipo": "CAR_A"
+  },
+  {
+    "archivo": "Varios Artistas (Juan Arvizu, Genaro Salinas, Nestor Chayres, Maria Luisa Landín, Los Quincheros, Cuarteto Mayari, Los Tres Diamantes.).jpg",
+    "ruta": "fotos/Imagenes - AppCetatos/Varios Artistas (Juan Arvizu, Genaro Salinas, Nestor Chayres, Maria Luisa Landín, Los Quincheros, Cuarteto Mayari, Los Tres Diamantes.).jpg",
+    "vin_id": "vin-003",
+    "tipo": "GAL_A"
+  },
+  {
+    "archivo": "Varios Artistas (Juan Piña con La Revelación, El Escuadrón, El Binomio de Oro, La Superbanda, El Combo de las Estrellas, Trío Marimbancha, Rafael Ricardo con Otto Serje) Caratula.png",
+    "ruta": "fotos/Imagenes - AppCetatos/Varios Artistas (Juan Piña con La Revelación, El Escuadrón, El Binomio de Oro, La Superbanda, El Combo de las Estrellas, Trío Marimbancha, Rafael Ricardo con Otto Serje) Caratula.png",
+    "vin_id": null,
+    "tipo": "NO_APLICA"
+  },
+  {
+    "archivo": "Varios Artistas (Juan Piña con La Revelación, El Escuadrón, El Binomio de Oro, La Superbanda, El Combo de las Estrellas, Trío Marimbancha, Rafael Ricardo con Otto Serje).png",
+    "ruta": "fotos/Imagenes - AppCetatos/Varios Artistas (Juan Piña con La Revelación, El Escuadrón, El Binomio de Oro, La Superbanda, El Combo de las Estrellas, Trío Marimbancha, Rafael Ricardo con Otto Serje).png",
+    "vin_id": null,
+    "tipo": "NO_APLICA"
+  },
+  {
+    "archivo": "Varios Artistas (Los Dandy, Wilfrido Vargas, Hernán Hernández, Giovanny Ríos, Maxi Combo, Dolcey Gutiérrez) Caratula.png",
+    "ruta": "fotos/Imagenes - AppCetatos/Varios Artistas (Los Dandy, Wilfrido Vargas, Hernán Hernández, Giovanny Ríos, Maxi Combo, Dolcey Gutiérrez) Caratula.png",
+    "vin_id": null,
+    "tipo": "NO_APLICA"
+  },
+  {
+    "archivo": "Varios Artistas (Los Dandy, Wilfrido Vargas, Hernán Hernández, Giovanny Ríos, Maxi Combo, Dolcey Gutiérrez).png",
+    "ruta": "fotos/Imagenes - AppCetatos/Varios Artistas (Los Dandy, Wilfrido Vargas, Hernán Hernández, Giovanny Ríos, Maxi Combo, Dolcey Gutiérrez).png",
+    "vin_id": null,
+    "tipo": "NO_APLICA"
+  },
+  {
+    "archivo": "Varios Artistas (Los Graduados, Alfredo Gutiérrez y Los Caporales del Magdalena, Orquesta Hnos. Martelo, Los Claves, Los Ejecutivos, Los Telestrellitas) Caratula.png",
+    "ruta": "fotos/Imagenes - AppCetatos/Varios Artistas (Los Graduados, Alfredo Gutiérrez y Los Caporales del Magdalena, Orquesta Hnos. Martelo, Los Claves, Los Ejecutivos, Los Telestrellitas) Caratula.png",
+    "vin_id": null,
+    "tipo": "NO_APLICA"
+  },
+  {
+    "archivo": "Varios Artistas (Los Graduados, Alfredo Gutiérrez y Los Caporales del Magdalena, Orquesta Hnos. Martelo, Los Claves, Los Ejecutivos, Los Telestrellitas).png",
+    "ruta": "fotos/Imagenes - AppCetatos/Varios Artistas (Los Graduados, Alfredo Gutiérrez y Los Caporales del Magdalena, Orquesta Hnos. Martelo, Los Claves, Los Ejecutivos, Los Telestrellitas).png",
+    "vin_id": null,
+    "tipo": "NO_APLICA"
+  },
+  {
+    "archivo": "Varios Artistas (Los Quincheros, María Luisa Landín, Johnny Rodríguez, Peronet e Izurieta, Trío Vegabajeño, Cuarteto Mayarí) Catalogo.png",
+    "ruta": "fotos/Imagenes - AppCetatos/Varios Artistas (Los Quincheros, María Luisa Landín, Johnny Rodríguez, Peronet e Izurieta, Trío Vegabajeño, Cuarteto Mayarí) Catalogo.png",
+    "vin_id": null,
+    "tipo": "NO_APLICA"
+  },
+  {
+    "archivo": "Varios Artistas (Los Quincheros, María Luisa Landín, Johnny Rodríguez, Peronet e Izurieta, Trío Vegabajeño, Cuarteto Mayarí).png",
+    "ruta": "fotos/Imagenes - AppCetatos/Varios Artistas (Los Quincheros, María Luisa Landín, Johnny Rodríguez, Peronet e Izurieta, Trío Vegabajeño, Cuarteto Mayarí).png",
+    "vin_id": null,
+    "tipo": "NO_APLICA"
+  },
+  {
+    "archivo": "Varios Artistas (Los Romanceros, Los Embajadores, Trío Martino) B.jpg",
+    "ruta": "fotos/Imagenes - AppCetatos/Varios Artistas (Los Romanceros, Los Embajadores, Trío Martino) B.jpg",
+    "vin_id": "vin-006",
+    "tipo": "GAL_B"
+  },
+  {
+    "archivo": "Varios Artistas (Los Romanceros, Los Embajadores, Trío Martino).jpg",
+    "ruta": "fotos/Imagenes - AppCetatos/Varios Artistas (Los Romanceros, Los Embajadores, Trío Martino).jpg",
+    "vin_id": "vin-006",
+    "tipo": "GAL_A"
+  },
+  {
+    "archivo": "Varios Artistas (Luis Felipe González con La Super Banda, La Patrulla, El Combo de Las Estrellas, Marinella) Caratula.png",
+    "ruta": "fotos/Imagenes - AppCetatos/Varios Artistas (Luis Felipe González con La Super Banda, La Patrulla, El Combo de Las Estrellas, Marinella) Caratula.png",
+    "vin_id": null,
+    "tipo": "NO_APLICA"
+  },
+  {
+    "archivo": "Varios Artistas (Luis Felipe González con La Super Banda, La Patrulla, El Combo de Las Estrellas, Marinella).png",
+    "ruta": "fotos/Imagenes - AppCetatos/Varios Artistas (Luis Felipe González con La Super Banda, La Patrulla, El Combo de Las Estrellas, Marinella).png",
+    "vin_id": null,
+    "tipo": "NO_APLICA"
+  },
+  {
+    "archivo": "Varios Artistas (Mari Trini, Manuel Mijares, Joan Sebastian, Rudy Márquez, Marisela Verena, Paolo Salvatore, Jazmine, Yuri) Caratula.png",
+    "ruta": "fotos/Imagenes - AppCetatos/Varios Artistas (Mari Trini, Manuel Mijares, Joan Sebastian, Rudy Márquez, Marisela Verena, Paolo Salvatore, Jazmine, Yuri) Caratula.png",
+    "vin_id": null,
+    "tipo": "NO_APLICA"
+  },
+  {
+    "archivo": "Varios Artistas (Mari Trini, Manuel Mijares, Joan Sebastian, Rudy Márquez, Marisela Verena, Paolo Salvatore, Jazmine, Yuri).png",
+    "ruta": "fotos/Imagenes - AppCetatos/Varios Artistas (Mari Trini, Manuel Mijares, Joan Sebastian, Rudy Márquez, Marisela Verena, Paolo Salvatore, Jazmine, Yuri).png",
+    "vin_id": null,
+    "tipo": "NO_APLICA"
+  },
+  {
+    "archivo": "Varios Artistas (María Eugenia, René Cabel, Luis D'Ubaldo, Ginette Acevedo, Los Leos y Johnny Dynamo, The Blue Stars, Alejandro) Caratula.png",
+    "ruta": "fotos/Imagenes - AppCetatos/Varios Artistas (María Eugenia, René Cabel, Luis D'Ubaldo, Ginette Acevedo, Los Leos y Johnny Dynamo, The Blue Stars, Alejandro) Caratula.png",
+    "vin_id": null,
+    "tipo": "NO_APLICA"
+  },
+  {
+    "archivo": "Varios Artistas (María Eugenia, René Cabel, Luis D'Ubaldo, Ginette Acevedo, Los Leos y Johnny Dynamo, The Blue Stars, Alejandro).png",
+    "ruta": "fotos/Imagenes - AppCetatos/Varios Artistas (María Eugenia, René Cabel, Luis D'Ubaldo, Ginette Acevedo, Los Leos y Johnny Dynamo, The Blue Stars, Alejandro).png",
+    "vin_id": null,
+    "tipo": "NO_APLICA"
+  },
+  {
+    "archivo": "Varios Artistas (Obdulio y Julián, Jorge Ariza, Alberto Pacheco, Lucho Ramírez, Trío Morales Pino) Caratula.png",
+    "ruta": "fotos/Imagenes - AppCetatos/Varios Artistas (Obdulio y Julián, Jorge Ariza, Alberto Pacheco, Lucho Ramírez, Trío Morales Pino) Caratula.png",
+    "vin_id": null,
+    "tipo": "NO_APLICA"
+  },
+  {
+    "archivo": "Varios Artistas (Obdulio y Julián, Jorge Ariza, Alberto Pacheco, Lucho Ramírez, Trío Morales Pino).png",
+    "ruta": "fotos/Imagenes - AppCetatos/Varios Artistas (Obdulio y Julián, Jorge Ariza, Alberto Pacheco, Lucho Ramírez, Trío Morales Pino).png",
+    "vin_id": null,
+    "tipo": "NO_APLICA"
+  },
+  {
+    "archivo": "Varios Artistas (Trío Huaricancha, Rodolfo y su Típica RA7, Lisandro Meza, Sonora Dinamita, Billo's Caracas Boys) Caratula.png",
+    "ruta": "fotos/Imagenes - AppCetatos/Varios Artistas (Trío Huaricancha, Rodolfo y su Típica RA7, Lisandro Meza, Sonora Dinamita, Billo's Caracas Boys) Caratula.png",
+    "vin_id": null,
+    "tipo": "NO_APLICA"
+  },
+  {
+    "archivo": "Varios Artistas (Trío Huaricancha, Rodolfo y su Típica RA7, Lisandro Meza, Sonora Dinamita, Billo's Caracas Boys).png",
+    "ruta": "fotos/Imagenes - AppCetatos/Varios Artistas (Trío Huaricancha, Rodolfo y su Típica RA7, Lisandro Meza, Sonora Dinamita, Billo's Caracas Boys).png",
+    "vin_id": null,
+    "tipo": "NO_APLICA"
+  },
+  {
+    "archivo": "Varios Artistas (Xiomara Alfaro, Héctor Cabrera, Mario Suárez, Alfredo Sadel, Raúl Ruiz, Trío Hambay, Leo Barboza) B.jpg",
+    "ruta": "fotos/Imagenes - AppCetatos/Varios Artistas (Xiomara Alfaro, Héctor Cabrera, Mario Suárez, Alfredo Sadel, Raúl Ruiz, Trío Hambay, Leo Barboza) B.jpg",
+    "vin_id": "vin-009",
+    "tipo": "GAL_B"
+  },
+  {
+    "archivo": "Varios Artistas (Xiomara Alfaro, Héctor Cabrera, Mario Suárez, Alfredo Sadel, Raúl Ruiz, Trío Hambay, Leo Barboza) Caratula B.jpg",
+    "ruta": "fotos/Imagenes - AppCetatos/Varios Artistas (Xiomara Alfaro, Héctor Cabrera, Mario Suárez, Alfredo Sadel, Raúl Ruiz, Trío Hambay, Leo Barboza) Caratula B.jpg",
+    "vin_id": "vin-009",
+    "tipo": "CAR_B"
+  },
+  {
+    "archivo": "Varios Artistas (Xiomara Alfaro, Héctor Cabrera, Mario Suárez, Alfredo Sadel, Raúl Ruiz, Trío Hambay, Leo Barboza) Caratula.jpg",
+    "ruta": "fotos/Imagenes - AppCetatos/Varios Artistas (Xiomara Alfaro, Héctor Cabrera, Mario Suárez, Alfredo Sadel, Raúl Ruiz, Trío Hambay, Leo Barboza) Caratula.jpg",
+    "vin_id": "vin-009",
+    "tipo": "CAR_A"
+  },
+  {
+    "archivo": "Varios Artistas (Xiomara Alfaro, Héctor Cabrera, Mario Suárez, Alfredo Sadel, Raúl Ruiz, Trío Hambay, Leo Barboza).jpg",
+    "ruta": "fotos/Imagenes - AppCetatos/Varios Artistas (Xiomara Alfaro, Héctor Cabrera, Mario Suárez, Alfredo Sadel, Raúl Ruiz, Trío Hambay, Leo Barboza).jpg",
+    "vin_id": "vin-009",
+    "tipo": "GAL_A"
+  },
+  {
+    "archivo": "Varios Artistas .jpg",
+    "ruta": "fotos/Imagenes - AppCetatos/Varios Artistas .jpg",
+    "vin_id": "vin-007",
+    "tipo": "GAL_A"
+  },
+  {
+    "archivo": "Varios Artistas Caratula B.jpg",
+    "ruta": "fotos/Imagenes - AppCetatos/Varios Artistas Caratula B.jpg",
+    "vin_id": "vin-007",
+    "tipo": "CAR_B"
+  },
+  {
+    "archivo": "Varios Artistas Caratula comercial (Fausto, Roque Martínez, Carmen Silva, Lindomar Castilho, Facundo Cabral, Marco Antonio Muñiz, Los Chalchaleros, Los Zorzales, Los Cuatro Hermanos Silva).png",
+    "ruta": "fotos/Imagenes - AppCetatos/Varios Artistas Caratula comercial (Fausto, Roque Martínez, Carmen Silva, Lindomar Castilho, Facundo Cabral, Marco Antonio Muñiz, Los Chalchaleros, Los Zorzales, Los Cuatro Hermanos Silva).png",
+    "vin_id": null,
+    "tipo": "NO_APLICA"
+  },
+  {
+    "archivo": "Varios Artistas Caratula.jpg",
+    "ruta": "fotos/Imagenes - AppCetatos/Varios Artistas Caratula.jpg",
+    "vin_id": "vin-007",
+    "tipo": "CAR_A"
+  },
+  {
+    "archivo": "Vicentico Valdés con Acompañamiento de Orquesta - Caratula.png",
+    "ruta": "fotos/Imagenes - AppCetatos/Vicentico Valdés con Acompañamiento de Orquesta - Caratula.png",
+    "vin_id": null,
+    "tipo": "NO_APLICA"
+  },
+  {
+    "archivo": "Vicentico Valdés con Acompañamiento de Orquesta.png",
+    "ruta": "fotos/Imagenes - AppCetatos/Vicentico Valdés con Acompañamiento de Orquesta.png",
+    "vin_id": null,
+    "tipo": "NO_APLICA"
+  },
+  {
+    "archivo": "iganme los Buenos Bailables - Volumen 11 B.jpg",
+    "ruta": "fotos/Imagenes - AppCetatos/iganme los Buenos Bailables - Volumen 11 B.jpg",
+    "vin_id": "vin-007",
+    "tipo": "GAL_B"
+  },
+  {
+    "archivo": "iganme los Buenos Bailables - Volumen 11.jpg",
+    "ruta": "fotos/Imagenes - AppCetatos/iganme los Buenos Bailables - Volumen 11.jpg",
+    "vin_id": "vin-007",
+    "tipo": "GAL_A"
+  }
+]
