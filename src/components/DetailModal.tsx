@@ -1,5 +1,5 @@
-import { useState } from "react";
-import type { ReactNode } from "react";
+import { useEffect, useRef, useState } from "react";
+import type { ReactNode, TouchEvent as ReactTouchEvent } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Download, ImagePlus, Loader2, Pencil, Share2, X, ZoomIn } from "lucide-react";
 import type { Vinyl } from "../types";
@@ -23,11 +23,20 @@ interface Props {
   onEdit: (v: Vinyl) => void;
 }
 
-function MetaCell({ label, children }: { label: string; children: ReactNode }) {
+/** Campo de la ficha técnica: etiqueta en versalitas + valor, con filete inferior. */
+function MetadataField({
+  label,
+  noBorder,
+  children,
+}: {
+  label: string;
+  noBorder?: boolean;
+  children: ReactNode;
+}) {
   return (
-    <div className="rounded-lg border border-slate-700/60 bg-slate-800/70 p-3">
-      <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-slate-500">{label}</p>
-      <div className="mt-1.5 text-sm font-medium text-slate-100">{children}</div>
+    <div className={noBorder ? "" : "border-b border-slate-700 pb-4"}>
+      <p className="mb-1 text-xs uppercase tracking-wider text-slate-400">{label}</p>
+      <div className="text-base text-slate-200 sm:text-lg">{children}</div>
     </div>
   );
 }
@@ -35,7 +44,89 @@ function MetaCell({ label, children }: { label: string; children: ReactNode }) {
 export default function DetailModal({ record, onClose, onEdit }: Props) {
   const toast = useToast();
   const [exporting, setExporting] = useState(false);
+
+  /* ── Zoom de fotos con gestos táctiles nativos (sin librerías externas):
+        pinch con 2 dedos (100%–400%), pan con 1 dedo cuando hay zoom,
+        doble toque alterna 100% ↔ 200%. ── */
   const [zoom, setZoom] = useState<null | { src: string; caption: string }>(null);
+  const [zoomState, setZoomState] = useState({ scale: 1, x: 0, y: 0 });
+  const [gesturing, setGesturing] = useState(false);
+  const gesture = useRef({ pinching: false, panning: false, d0: 1, s0: 1, lx: 0, ly: 0 });
+  const scaleRef = useRef(1);
+  useEffect(() => {
+    scaleRef.current = zoomState.scale;
+  }, [zoomState.scale]);
+
+  const openZoom = (target: { src: string; caption: string }) => {
+    setZoom(target);
+    setZoomState({ scale: 1, x: 0, y: 0 });
+  };
+
+  /* Reset completo del zoom al cerrar el overlay */
+  const closeZoom = () => {
+    setZoom(null);
+    setZoomState({ scale: 1, x: 0, y: 0 });
+    gesture.current = { pinching: false, panning: false, d0: 1, s0: 1, lx: 0, ly: 0 };
+  };
+
+  const touchDistance = (t: ReactTouchEvent["touches"]) =>
+    Math.hypot(t[0].clientX - t[1].clientX, t[0].clientY - t[1].clientY);
+
+  const handleTouchStart = (e: ReactTouchEvent<HTMLImageElement>) => {
+    setGesturing(true);
+    if (e.touches.length === 2) {
+      gesture.current = {
+        ...gesture.current,
+        pinching: true,
+        panning: false,
+        d0: touchDistance(e.touches),
+        s0: scaleRef.current,
+      };
+    } else if (e.touches.length === 1 && scaleRef.current > 1) {
+      gesture.current = {
+        ...gesture.current,
+        panning: true,
+        lx: e.touches[0].clientX,
+        ly: e.touches[0].clientY,
+      };
+    }
+  };
+
+  const handleTouchMove = (e: ReactTouchEvent<HTMLImageElement>) => {
+    const g = gesture.current;
+    if (g.pinching && e.touches.length === 2) {
+      const scale = Math.max(1, Math.min(4, (touchDistance(e.touches) / g.d0) * g.s0));
+      /* Al volver a 100% se recentra la imagen */
+      setZoomState((prev) => (scale <= 1 ? { scale: 1, x: 0, y: 0 } : { ...prev, scale }));
+    } else if (g.panning && e.touches.length === 1 && scaleRef.current > 1) {
+      const dx = e.touches[0].clientX - g.lx;
+      const dy = e.touches[0].clientY - g.ly;
+      g.lx = e.touches[0].clientX;
+      g.ly = e.touches[0].clientY;
+      setZoomState((prev) => ({
+        ...prev,
+        x: Math.max(-400, Math.min(400, prev.x + dx)),
+        y: Math.max(-400, Math.min(400, prev.y + dy)),
+      }));
+    }
+  };
+
+  const handleTouchEnd = (e: ReactTouchEvent<HTMLImageElement>) => {
+    const g = gesture.current;
+    if (e.touches.length < 2) g.pinching = false;
+    if (e.touches.length === 0) {
+      g.panning = false;
+      setGesturing(false);
+    } else if (e.touches.length === 1) {
+      /* De pellizco a un solo dedo: continúa como pan */
+      g.panning = scaleRef.current > 1;
+      g.lx = e.touches[0].clientX;
+      g.ly = e.touches[0].clientY;
+    }
+  };
+
+  const handleDoubleTap = () =>
+    setZoomState((prev) => (prev.scale > 1 ? { scale: 1, x: 0, y: 0 } : { scale: 2, x: 0, y: 0 }));
 
   /* Fotos reales disponibles del ejemplar (hasta 4 slots) */
   const ids = slotIds(record);
@@ -93,14 +184,14 @@ export default function DetailModal({ record, onClose, onEdit }: Props) {
     <ModalShell onClose={onClose} maxW="max-w-2xl" fullOnMobile>
       <div className="flex h-full min-h-0 flex-col">
         {/* Contenido desplazable */}
-        <div className="min-h-0 flex-1 overflow-y-auto overscroll-contain p-5 pb-6 sm:p-7">
-          <p className="pr-12 font-mono text-[10px] uppercase tracking-[0.24em] text-slate-500">
-            Ficha técnica · {record.format}
-          </p>
-          <h2 className="mt-2 font-display text-4xl leading-[0.95] tracking-wide text-slate-50 sm:text-[40px]">
-            {record.album}
-          </h2>
-          <h3 className="mt-1.5 text-xl font-bold text-amber-500 sm:text-2xl">{record.artist}</h3>
+        <div className="min-h-0 flex-1 overflow-y-auto overscroll-contain">
+          <div className="p-5 pb-6 sm:p-7">
+            <p className="pr-12 font-mono text-[10px] uppercase tracking-[0.24em] text-slate-500">
+              Pieza {record.id.toUpperCase()} · {photoCount}/4 fotos · {record.format}
+            </p>
+            <h2 className="mt-2 font-display text-4xl leading-[0.95] tracking-wide text-slate-50 sm:text-[40px]">
+              {record.album}
+            </h2>
 
           {/* Imágenes reales del ejemplar (hasta 4 slots), apiladas en móvil,
               2 columnas en escritorio · cada una tocable para zoom */}
@@ -110,17 +201,19 @@ export default function DetailModal({ record, onClose, onEdit }: Props) {
                 <figure key={slot} className="min-w-0">
                   <button
                     type="button"
-                    onClick={() => setZoom({ src, caption: SLOT_LABELS[slot] })}
+                    onClick={() => openZoom({ src, caption: SLOT_LABELS[slot] })}
                     aria-label={`Ampliar ${SLOT_LABELS[slot].toLowerCase()}`}
                     className="touch-manipulation group relative block w-full cursor-zoom-in rounded-xl transition-transform duration-200 active:scale-[0.99]"
                   >
+                    {/* En móvil la carátula domina (~60% de altura) y la galleta
+                        complementa (~40%); en escritorio van lado a lado. */}
                     <img
                       src={src}
                       alt={`${SLOT_LABELS[slot]} de ${record.album}`}
-                      className={`aspect-square w-full rounded-xl border border-slate-700 shadow-xl shadow-black/40 ${
-                        slot === "labelA" || slot === "labelB"
-                          ? "bg-slate-950/70 object-contain"
-                          : "object-cover"
+                      className={`w-full rounded-xl border border-slate-700 shadow-xl shadow-black/40 ${
+                        slot === "cover" || slot === "coverBack"
+                          ? "aspect-[4/5] object-cover sm:aspect-square"
+                          : "aspect-[4/3] bg-slate-950/70 object-contain sm:aspect-square"
                       }`}
                     />
                     <span className="absolute right-2 top-2 grid h-9 w-9 place-items-center rounded-lg bg-slate-950/75 text-amber-400 opacity-0 backdrop-blur-sm transition-opacity duration-200 group-hover:opacity-100 group-active:opacity-100">
@@ -140,7 +233,7 @@ export default function DetailModal({ record, onClose, onEdit }: Props) {
                 <figure className="min-w-0">
                   <CoverImage
                     record={record}
-                    className="aspect-square rounded-xl border border-slate-700 shadow-xl shadow-black/40"
+                    className="aspect-[4/5] rounded-xl border border-slate-700 shadow-xl shadow-black/40 sm:aspect-square"
                   />
                   <figcaption className="mt-1.5 text-center font-mono text-[9px] tracking-[0.22em] text-slate-500">
                     CARÁTULA · REFERENCIA
@@ -150,7 +243,7 @@ export default function DetailModal({ record, onClose, onEdit }: Props) {
                   <LabelImage
                     record={record}
                     fit="contain"
-                    className="aspect-square rounded-xl border border-slate-700 bg-slate-950/70 shadow-xl shadow-black/40"
+                    className="aspect-[4/3] rounded-xl border border-slate-700 bg-slate-950/70 shadow-xl shadow-black/40 sm:aspect-square"
                   />
                   <figcaption className="mt-1.5 text-center font-mono text-[9px] tracking-[0.22em] text-slate-500">
                     GALLETA · REFERENCIA
@@ -167,18 +260,56 @@ export default function DetailModal({ record, onClose, onEdit }: Props) {
             </>
           )}
 
-          {/* Metadatos */}
-          <div className="mt-5 grid grid-cols-2 gap-2.5 sm:gap-3">
-            <MetaCell label="Sello disquero">{record.label}</MetaCell>
-            <MetaCell label="Año">{formatYearLong(record.year)}</MetaCell>
-            <MetaCell label="Código de matriz">
-              <span className="inline-block rounded-lg border border-slate-700 bg-slate-900 px-2 py-1.5 font-mono text-[13px] font-medium text-amber-400">
-                {record.matrixCode}
+          </div>
+
+          {/* ── Ficha técnica estilo exposición: metadatos bajo las fotos ── */}
+          <div className="border-t border-slate-700 bg-slate-800 p-6 sm:p-8">
+            {/* Año: el dato más prominente de la pieza */}
+            <div className="mb-4">
+              <p className="mb-1 text-xs uppercase tracking-wider text-slate-400">Año</p>
+              <span className="text-3xl font-bold leading-none text-amber-500 sm:text-4xl">
+                {record.year === "N/E" ? "Año desconocido" : record.year}
               </span>
-            </MetaCell>
-            <MetaCell label="Género">{record.genre}</MetaCell>
-            <MetaCell label="Formato">{record.format}</MetaCell>
-            <MetaCell label="Fecha de ingreso">{formatDateLong(record.dateAdded)}</MetaCell>
+            </div>
+
+            {/* Artista principal */}
+            <h3 className="mb-6 text-xl font-semibold text-white sm:text-2xl">{record.artist}</h3>
+
+            {/* Orden de lectura: Artistas → Sello → Género → Matriz → Formato → Ingreso */}
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6">
+              <MetadataField label="Artistas">
+                {record.artists && record.artists.length > 1 ? (
+                  <ul className="space-y-1">
+                    {record.artists.map((artist, idx) => (
+                      <li key={idx} className="flex items-start gap-2">
+                        <span aria-hidden className="mt-1 text-amber-500">
+                          •
+                        </span>
+                        <span>{artist}</span>
+                      </li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p>{record.artist}</p>
+                )}
+              </MetadataField>
+
+              <MetadataField label="Sello discográfico">{record.label}</MetadataField>
+
+              <MetadataField label="Género">{record.genre}</MetadataField>
+
+              <MetadataField label="Código de matriz">
+                <span className="inline-block rounded-lg bg-slate-900 px-3 py-2 font-mono text-lg text-amber-400 sm:text-xl">
+                  {record.matrixCode}
+                </span>
+              </MetadataField>
+
+              <MetadataField label="Formato">{record.format}</MetadataField>
+
+              <MetadataField label="Fecha de ingreso" noBorder>
+                {formatDateLong(record.dateAdded)}
+              </MetadataField>
+            </div>
           </div>
         </div>
 
@@ -211,7 +342,7 @@ export default function DetailModal({ record, onClose, onEdit }: Props) {
         </div>
       </div>
 
-      {/* Overlay de zoom a pantalla completa */}
+      {/* Overlay de zoom a pantalla completa · pinch (100–400%) + pan + doble toque */}
       <AnimatePresence>
         {zoom && (
           <motion.div
@@ -219,27 +350,51 @@ export default function DetailModal({ record, onClose, onEdit }: Props) {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            onClick={() => setZoom(null)}
+            onClick={closeZoom}
             role="dialog"
             aria-modal="true"
             aria-label={`${zoom.caption} ampliada`}
             className="fixed inset-0 z-[120] flex flex-col items-center justify-center gap-4 bg-slate-950/95 p-4 backdrop-blur-sm"
           >
-            <motion.img
-              src={zoom.src}
-              alt={`${zoom.caption} de ${record.album} ampliada`}
-              initial={{ scale: 0.9, opacity: 0 }}
+            <motion.div
+              initial={{ scale: 0.92, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.94, opacity: 0 }}
               transition={{ type: "spring", stiffness: 300, damping: 28 }}
               onClick={(e) => e.stopPropagation()}
-              className="max-h-[82vh] max-w-full rounded-xl border border-slate-700 object-contain shadow-2xl shadow-black/80"
-            />
+              className="flex max-h-[82vh] max-w-full items-center justify-center"
+            >
+              <img
+                src={zoom.src}
+                alt={`${zoom.caption} de ${record.album} ampliada`}
+                draggable={false}
+                onDoubleClick={handleDoubleTap}
+                onTouchStart={handleTouchStart}
+                onTouchMove={handleTouchMove}
+                onTouchEnd={handleTouchEnd}
+                className="max-h-[82vh] max-w-full select-none rounded-xl border border-slate-700 object-contain shadow-2xl shadow-black/80"
+                style={{
+                  transform: `scale(${zoomState.scale}) translate(${zoomState.x}px, ${zoomState.y}px)`,
+                  /* Sin transición durante el gesto: respuesta 1:1 al dedo */
+                  transition: gesturing ? "none" : "transform 200ms ease-out",
+                  touchAction: "none",
+                  cursor: zoomState.scale > 1 ? "grab" : "zoom-in",
+                }}
+              />
+            </motion.div>
+
+            {/* Indicador de nivel de zoom */}
+            {zoomState.scale > 1.02 && (
+              <div className="absolute bottom-8 left-1/2 -translate-x-1/2 rounded-full border border-slate-700 bg-slate-800 px-4 py-2 font-mono text-sm font-bold text-white shadow-xl shadow-black/50">
+                {Math.round(zoomState.scale * 100)}%
+              </div>
+            )}
+
             <p className="font-mono text-[10px] uppercase tracking-[0.24em] text-slate-500">
-              {zoom.caption} · toca fuera para cerrar
+              {zoom.caption} · pellizca o doble toque · toca fuera para cerrar
             </p>
             <button
-              onClick={() => setZoom(null)}
+              onClick={closeZoom}
               aria-label="Cerrar vista ampliada"
               className="touch-manipulation absolute right-4 top-4 grid h-11 w-11 place-items-center rounded-lg border border-slate-700 bg-slate-800 text-slate-300 transition-colors hover:border-amber-500/60 hover:text-amber-400"
             >

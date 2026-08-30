@@ -51,7 +51,15 @@ const SLOT_FORM_LABELS: Record<ImageSlot, string> = {
 };
 
 export default function VinylForm({ initial, labels, onSave, onClose }: Props) {
-  const [artist, setArtist] = useState(initial?.artist ?? "");
+  /* Lista de artistas editable (separados por coma). El primer elemento se
+     mantiene en el campo clásico `artist` para compatibilidad hacia atrás. */
+  const [artistsText, setArtistsText] = useState(() =>
+    initial
+      ? initial.artists && initial.artists.length > 0
+        ? initial.artists.join(", ")
+        : initial.artist
+      : ""
+  );
   const [album, setAlbum] = useState(initial?.album ?? "");
   const [label, setLabel] = useState(initial?.label ?? "");
   const [matrixCode, setMatrixCode] = useState(initial?.matrixCode ?? "");
@@ -86,7 +94,11 @@ export default function VinylForm({ initial, labels, onSave, onClose }: Props) {
   const submit = (e: FormEvent) => {
     e.preventDefault();
     const errs: Record<string, string> = {};
-    if (!artist.trim()) errs.artist = "El artista es obligatorio";
+    const artistsList = artistsText
+      .split(",")
+      .map((a) => a.trim())
+      .filter((a) => a.length > 0);
+    if (artistsList.length === 0) errs.artists = "Ingresa al menos un artista";
     if (!album.trim()) errs.album = "El álbum es obligatorio";
     if (!matrixCode.trim()) errs.matrixCode = "El código de matriz es obligatorio";
     let year: number | "N/E" = "N/E";
@@ -103,7 +115,9 @@ export default function VinylForm({ initial, labels, onSave, onClose }: Props) {
 
     const record: Vinyl = {
       id: initial?.id ?? uid(),
-      artist: artist.trim(),
+      /* Compatibilidad: `artist` conserva el primer artista; `artists` la lista */
+      artist: artistsList[0],
+      artists: artistsList,
       album: album.trim(),
       label: label.trim() || "Sello independiente",
       matrixCode: matrixCode.trim(),
@@ -134,15 +148,16 @@ export default function VinylForm({ initial, labels, onSave, onClose }: Props) {
 
             <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2">
               <div>
-                <FieldLabel htmlFor="f-artist">Artista *</FieldLabel>
+                <FieldLabel htmlFor="f-artists">Artistas *</FieldLabel>
                 <input
-                  id="f-artist"
-                  value={artist}
-                  onChange={(e) => setArtist(e.target.value)}
-                  placeholder="Ej. Los Corraleros de Majagual"
-                  className={`${inputCls} ${errors.artist ? "border-red-500/70" : ""}`}
+                  id="f-artists"
+                  value={artistsText}
+                  onChange={(e) => setArtistsText(e.target.value)}
+                  placeholder="Ej: Fruko y sus Tesos, Joe Arroyo, Grupo Niche"
+                  className={`${inputCls} ${errors.artists ? "border-red-500/70" : ""}`}
                 />
-                <ErrorMsg msg={errors.artist} />
+                <p className="mt-1 text-xs text-slate-500">Separa múltiples artistas con comas</p>
+                <ErrorMsg msg={errors.artists} />
               </div>
               <div>
                 <FieldLabel htmlFor="f-album">Álbum *</FieldLabel>

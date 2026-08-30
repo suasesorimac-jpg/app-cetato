@@ -3,6 +3,7 @@ import { AnimatePresence } from "framer-motion";
 import type { FilterGroup, NavMode, Prefs, ViewMode, Vinyl } from "./types";
 import { EMPTY_FILTERS } from "./types";
 import seedCatalog from "./data/catalog.json";
+import { enrichCatalogWithArtists } from "./utils/catalogParser";
 import { loadCollection, loadPrefs, saveCollection, savePrefs } from "./lib/storage";
 import { decadeOf, normalizeText } from "./lib/utils";
 import { useDebouncedValue } from "./hooks";
@@ -103,7 +104,7 @@ function AppInner() {
       }
       if (q) {
         const hay = normalizeText(
-          `${v.artist} ${v.album} ${v.label} ${v.matrixCode} ${v.genre} ${String(v.year)}`
+          `${v.artist} ${(v.artists ?? []).join(" ")} ${v.album} ${v.label} ${v.matrixCode} ${v.genre} ${String(v.year)}`
         );
         if (!hay.includes(q)) return false;
       }
