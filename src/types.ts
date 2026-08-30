@@ -5,7 +5,14 @@ export type ImageSlot = "cover" | "coverBack" | "labelA" | "labelB";
 
 export interface Vinyl {
   id: string;
+  /** Artista principal o texto original (compatible con el catálogo histórico). */
   artist: string;
+  /**
+   * Lista de artistas derivada en runtime por `utils/catalogParser.ts`
+   * (p. ej. "Varios Artistas (A, B, C)" → ["A", "B", "C"]). Opcional:
+   * los registros antiguos sin el campo siguen funcionando.
+   */
+  artists?: string[];
   album: string;
   label: string;
   matrixCode: string;
@@ -27,6 +34,9 @@ export interface Vinyl {
   labelImageId?: string | null;
   dateAdded: string;
 }
+
+/** Alias de compatibilidad con la documentación externa del proyecto. */
+export type VinylRecord = Vinyl;
 
 /* ── Getters de imágenes (con migración del campo heredado) ── */
 

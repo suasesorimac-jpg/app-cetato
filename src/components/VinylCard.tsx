@@ -28,11 +28,13 @@ export default function VinylCard({ record, onOpen }: Props) {
       onClick={() => onOpen(record)}
     >
       <div className="rounded-xl border border-slate-700/70 bg-slate-800/90 p-3 shadow-lg shadow-black/25 transition-[border-color,box-shadow] duration-300 group-hover:border-amber-500/80 group-hover:shadow-2xl group-hover:shadow-black/60">
-        <div className="relative">
-          {/* El disco se asoma de la funda al pasar el cursor */}
+        {/* overflow-hidden en móvil: la galleta reducida (60%, +8%) queda contenida
+            y nunca se superpone al texto ni genera scroll horizontal.
+            En ≥640px se conserva el asomo original (86%, +14%) fuera de la funda. */}
+        <div className="relative overflow-hidden sm:overflow-visible">
           <LabelImage
             record={record}
-            className="absolute right-0 top-1/2 aspect-square h-[86%] -translate-y-1/2 translate-x-[14%] rounded-full drop-shadow-2xl drop-shadow-black/70 transition-transform duration-500 ease-out group-hover:translate-x-[42%] group-hover:rotate-[50deg]"
+            className="absolute right-0 top-1/2 aspect-square h-[60%] -translate-y-1/2 translate-x-[8%] rounded-full drop-shadow-2xl drop-shadow-black/70 transition-transform duration-500 ease-out group-hover:translate-x-[42%] group-hover:rotate-[50deg] sm:h-[86%] sm:translate-x-[14%]"
           />
           <CoverImage
             record={record}

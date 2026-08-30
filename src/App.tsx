@@ -21,10 +21,13 @@ import HierarchicalBrowser from "./components/HierarchicalBrowser";
 
 function initCollection(): Vinyl[] {
   const stored = loadCollection();
-  if (stored) return stored;
+  if (stored) {
+    /* Re-enriquece registros antiguos guardados antes del campo `artists` */
+    return enrichCatalogWithArtists(stored);
+  }
   const seed = seedCatalog as Vinyl[];
   saveCollection(seed);
-  return seed;
+  return enrichCatalogWithArtists(seed);
 }
 
 function AmbientBackground() {
