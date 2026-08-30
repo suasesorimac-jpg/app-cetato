@@ -6,6 +6,7 @@ import seedCatalog from "./data/catalog.json";
 import { enrichCatalogWithArtists } from "./utils/catalogParser";
 import { loadCollection, loadPrefs, saveCollection, savePrefs } from "./lib/storage";
 import { decadeOf, normalizeText } from "./lib/utils";
+import { enrichCatalogWithArtists } from "./utils/catalogParser";
 import { useDebouncedValue } from "./hooks";
 import { exportCatalogPdf } from "./lib/pdf";
 import { isCloudinaryConfigured } from "./config/cloudinary";
