@@ -2,7 +2,7 @@ import { useMemo, useState } from "react";
 import type { ReactNode } from "react";
 import { motion } from "framer-motion";
 import { ArrowDown, ArrowUp, ArrowUpDown, Eye, Pencil, Trash2 } from "lucide-react";
-import type { SortKey, SortState, Vinyl } from "../types";
+import type { AuthMode, SortKey, SortState, Vinyl } from "../types";
 import { formatYearShort, normalizeText } from "../lib/utils";
 import { CoverImage } from "./VinylArt";
 
@@ -20,6 +20,8 @@ interface Props {
   onOpen: (v: Vinyl) => void;
   onEdit: (v: Vinyl) => void;
   onDelete: (id: string) => void;
+  /** Modo de autenticación: en "visitor" se ocultan Editar/Eliminar */
+  authMode: AuthMode;
 }
 
 function IconBtn({
@@ -49,9 +51,11 @@ function IconBtn({
   );
 }
 
-export default function VinylTable({ list, onOpen, onEdit, onDelete }: Props) {
+export default function VinylTable({ list, onOpen, onEdit, onDelete, authMode }: Props) {
   const [sort, setSort] = useState<SortState>({ key: "artist", dir: "asc" });
   const [confirmId, setConfirmId] = useState<string | null>(null);
+  /* Solo el admin puede editar/eliminar; el visitante solo consulta */
+  const canEdit = authMode === "admin";
 
   const sorted = useMemo(() => {
     const mul = sort.dir === "asc" ? 1 : -1;
@@ -149,35 +153,38 @@ export default function VinylTable({ list, onOpen, onEdit, onDelete }: Props) {
                     <IconBtn title="Ver ficha" onClick={() => onOpen(v)}>
                       <Eye size={15} />
                     </IconBtn>
-                    <IconBtn title="Editar" onClick={() => onEdit(v)}>
-                      <Pencil size={15} />
-                    </IconBtn>
-                    {confirmId === v.id ? (
-                      <button
-                        onClick={() => {
-                          onDelete(v.id);
-                          setConfirmId(null);
-                        }}
-                        onMouseLeave={() => setConfirmId(null)}
-                        className="rounded-md bg-red-500/15 px-2 py-1 text-[11px] font-semibold text-red-400 transition-colors hover:bg-red-500/30"
-                      >
-                        ¿Borrar?
-                      </button>
-                    ) : (
-                      <IconBtn
-                        title="Eliminar"
-                        danger
-                        onClick={() => {
-                          setConfirmId(v.id);
-                          window.setTimeout(
-                            () => setConfirmId((c) => (c === v.id ? null : c)),
-                            2600
-                          );
-                        }}
-                      >
-                        <Trash2 size={15} />
+                    {canEdit && (
+                      <IconBtn title="Editar" onClick={() => onEdit(v)}>
+                        <Pencil size={15} />
                       </IconBtn>
                     )}
+                    {canEdit &&
+                      (confirmId === v.id ? (
+                        <button
+                          onClick={() => {
+                            onDelete(v.id);
+                            setConfirmId(null);
+                          }}
+                          onMouseLeave={() => setConfirmId(null)}
+                          className="rounded-md bg-red-500/15 px-2 py-1 text-[11px] font-semibold text-red-400 transition-colors hover:bg-red-500/30"
+                        >
+                          ¿Borrar?
+                        </button>
+                      ) : (
+                        <IconBtn
+                          title="Eliminar"
+                          danger
+                          onClick={() => {
+                            setConfirmId(v.id);
+                            window.setTimeout(
+                              () => setConfirmId((c) => (c === v.id ? null : c)),
+                              2600
+                            );
+                          }}
+                        >
+                          <Trash2 size={15} />
+                        </IconBtn>
+                      ))}
                   </div>
                 </td>
               </motion.tr>

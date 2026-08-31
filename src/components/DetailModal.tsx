@@ -190,6 +190,12 @@ export default function DetailModal({ record, onClose, onEdit, authMode }: Props
             <p className="pr-12 font-mono text-[10px] uppercase tracking-[0.24em] text-slate-500">
               Pieza {record.id.toUpperCase()} · {photoCount}/4 fotos · {record.format}
             </p>
+            {authMode === "visitor" && (
+              <span className="mt-2 inline-flex w-fit items-center gap-1.5 rounded-full border border-slate-600 bg-slate-700/70 px-3 py-1 text-xs font-medium text-slate-300">
+                <Eye size={13} className="text-amber-400" aria-hidden />
+                Solo lectura
+              </span>
+            )}
             <h2 className="mt-2 font-display text-4xl leading-[0.95] tracking-wide text-slate-50 sm:text-[40px]">
               {record.album}
             </h2>
@@ -251,13 +257,15 @@ export default function DetailModal({ record, onClose, onEdit, authMode }: Props
                   </figcaption>
                 </figure>
               </div>
-              <button
-                onClick={() => onEdit(record)}
-                className="touch-manipulation mt-3 flex w-full items-center justify-center gap-2 rounded-lg border border-dashed border-amber-500/50 bg-amber-500/5 py-3 text-xs font-semibold text-amber-400 transition-colors hover:bg-amber-500/15"
-              >
-                <ImagePlus size={15} />
-                Sin fotos aún — arte de referencia · agregar fotos reales
-              </button>
+              {authMode === "admin" && (
+                <button
+                  onClick={() => onEdit(record)}
+                  className="touch-manipulation mt-3 flex w-full items-center justify-center gap-2 rounded-lg border border-dashed border-amber-500/50 bg-amber-500/5 py-3 text-xs font-semibold text-amber-400 transition-colors hover:bg-amber-500/15"
+                >
+                  <ImagePlus size={15} />
+                  Sin fotos aún — arte de referencia · agregar fotos reales
+                </button>
+              )}
             </>
           )}
 
@@ -332,13 +340,16 @@ export default function DetailModal({ record, onClose, onEdit, authMode }: Props
               <Share2 size={16} />
               Compartir
             </button>
-            <button
-              onClick={() => onEdit(record)}
-              className="touch-manipulation flex h-12 items-center justify-center gap-2 rounded-lg border border-slate-600 px-4 text-sm font-semibold text-slate-200 transition-colors hover:border-amber-500/70 hover:text-amber-400 active:scale-[0.98] sm:h-11"
-            >
-              <Pencil size={16} />
-              Editar
-            </button>
+            {/* Editar solo disponible en modo admin */}
+            {authMode === "admin" && (
+              <button
+                onClick={() => onEdit(record)}
+                className="touch-manipulation flex h-12 items-center justify-center gap-2 rounded-lg border border-slate-600 px-4 text-sm font-semibold text-slate-200 transition-colors hover:border-amber-500/70 hover:text-amber-400 active:scale-[0.98] sm:h-11"
+              >
+                <Pencil size={16} />
+                Editar
+              </button>
+            )}
           </div>
         </div>
       </div>
