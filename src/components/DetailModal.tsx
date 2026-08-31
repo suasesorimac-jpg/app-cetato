@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import type { ReactNode, TouchEvent as ReactTouchEvent } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { Download, ImagePlus, Loader2, Pencil, Share2, X, ZoomIn } from "lucide-react";
-import type { Vinyl } from "../types";
+import { Download, Eye, ImagePlus, Loader2, Pencil, Share2, X, ZoomIn } from "lucide-react";
+import type { AuthMode, Vinyl } from "../types";
 import { SLOT_LABELS, SLOT_ORDER, countImages, slotIds } from "../types";
 import { resolveImageSrc } from "../config/cloudinary";
 import { exportFichaPdf } from "../lib/pdf";
@@ -21,6 +21,7 @@ interface Props {
   record: Vinyl;
   onClose: () => void;
   onEdit: (v: Vinyl) => void;
+  authMode: AuthMode;
 }
 
 /** Campo de la ficha técnica: etiqueta en versalitas + valor, con filete inferior. */
@@ -41,7 +42,7 @@ function MetadataField({
   );
 }
 
-export default function DetailModal({ record, onClose, onEdit }: Props) {
+export default function DetailModal({ record, onClose, onEdit, authMode }: Props) {
   const toast = useToast();
   const [exporting, setExporting] = useState(false);
 

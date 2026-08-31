@@ -138,3 +138,12 @@ export const GENRE_OPTIONS = [
 ] as const;
 
 export const FORMAT_OPTIONS: RpmFormat[] = ["33 RPM", "45 RPM", "78 RPM"];
+
+// === MODO ADMIN/VISITANTE ===
+export type AuthMode = "visitor" | "admin";
+
+export interface AuthState {
+  mode: AuthMode;
+  isAuthenticated: boolean;
+  lastLoginAt?: string; // ISO date
+}

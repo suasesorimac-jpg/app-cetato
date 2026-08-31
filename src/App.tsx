@@ -1,10 +1,10 @@
 import { useEffect, useMemo, useState } from "react";
 import { AnimatePresence } from "framer-motion";
-import type { FilterGroup, NavMode, Prefs, ViewMode, Vinyl } from "./types";
+import type { AuthMode, FilterGroup, NavMode, Prefs, ViewMode, Vinyl } from "./types";
 import { EMPTY_FILTERS } from "./types";
 import seedCatalog from "./data/catalog.json";
 import { enrichCatalogWithArtists } from "./utils/catalogParser";
-import { loadCollection, loadPrefs, saveCollection, savePrefs } from "./lib/storage";
+import { getAuthState, loadCollection, loadPrefs, logout, saveCollection, savePrefs } from "./lib/storage";
 import { decadeOf, normalizeText } from "./lib/utils";
 import { useDebouncedValue } from "./hooks";
 import { exportCatalogPdf } from "./lib/pdf";
@@ -19,6 +19,7 @@ import VinylForm from "./components/VinylForm";
 import StatsModal from "./components/StatsModal";
 import MobileFilterDrawer from "./components/MobileFilterDrawer";
 import HierarchicalBrowser from "./components/HierarchicalBrowser";
+import { AuthModal } from "./components/AuthModal";
 
 function initCollection(): Vinyl[] {
   const stored = loadCollection();
@@ -54,6 +55,13 @@ function AppInner() {
   );
   const [statsOpen, setStatsOpen] = useState(false);
   const [drawerOpen, setDrawerOpen] = useState(false);
+
+  /* ── Modo Admin/Visitante (persistido en localStorage) ── */
+  const [authMode, setAuthMode] = useState<AuthMode>(() => {
+    const auth = getAuthState();
+    return auth.mode;
+  });
+  const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
 
   const { view, filters, query, mode } = prefs;
   const debouncedQuery = useDebouncedValue(query, 300);
@@ -135,6 +143,26 @@ function AppInner() {
     toast("Vinilo eliminado del catálogo", "info");
   };
 
+  /* ── Autenticación Admin/Visitante ── */
+  const handleLoginSuccess = () => {
+    setAuthMode("admin");
+    toast("Modo administrador activado", "success");
+  };
+
+  const handleLogout = () => {
+    logout();
+    setAuthMode("visitor");
+    toast("Sesión cerrada · modo visitante", "info");
+  };
+
+  const handleOpenAuthModal = () => {
+    setIsAuthModalOpen(true);
+  };
+
+  const handleCloseAuthModal = () => {
+    setIsAuthModalOpen(false);
+  };
+
   const handleExportCatalog = () => {
     if (collection.length === 0) {
       toast("El catálogo está vacío", "error");
@@ -175,6 +203,9 @@ function AppInner() {
         onOpenStats={() => setStatsOpen(true)}
         onOpenAdd={() => setForm({ mode: "create" })}
         onExportCatalog={handleExportCatalog}
+        authMode={authMode}
+        onOpenAuthModal={handleOpenAuthModal}
+        onLogout={handleLogout}
       />
 
       <main className="relative mx-auto max-w-7xl px-4 py-6 sm:px-6 sm:py-8">
@@ -221,6 +252,7 @@ function AppInner() {
             onOpen={setDetail}
             onEdit={(v) => setForm({ mode: "edit", record: v })}
             onDelete={handleDelete}
+            authMode={authMode}
           />
         )}
       </main>
@@ -241,6 +273,13 @@ function AppInner() {
               : "Modo local · configura VITE_CLOUDINARY_CLOUD_NAME en .env"}
           </p>
         </div>
+        <p className="mt-4 text-center text-xs text-slate-500">
+          Powered by <span className="font-semibold text-amber-500">AppCetato</span> — Catálogo
+          Maestro de Vinilos ·{" "}
+          <span className={authMode === "admin" ? "font-semibold text-amber-400" : ""}>
+            {authMode === "admin" ? "modo administrador activo" : "modo visitante (solo lectura)"}
+          </span>
+        </p>
       </footer>
 
       {/* Drawer de filtros (móvil) */}
@@ -262,6 +301,7 @@ function AppInner() {
               setDetail(null);
               setForm({ mode: "edit", record: v });
             }}
+            authMode={authMode}
           />
         )}
         {form && (
@@ -278,6 +318,13 @@ function AppInner() {
             collection={collection}
             onClose={() => setStatsOpen(false)}
             onExportCatalog={handleExportCatalog}
+          />
+        )}
+        {isAuthModalOpen && (
+          <AuthModal
+            isOpen={isAuthModalOpen}
+            onClose={handleCloseAuthModal}
+            onSuccess={handleLoginSuccess}
           />
         )}
       </AnimatePresence>

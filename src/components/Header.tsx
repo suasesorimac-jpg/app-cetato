@@ -5,13 +5,15 @@ import {
   Disc3,
   FileDown,
   LayoutGrid,
+  Lock,
+  LogOut,
   Plus,
   Search,
   SlidersHorizontal,
   Table2,
   X,
 } from "lucide-react";
-import type { FilterGroup, Filters, NavMode, ViewMode, Vinyl } from "../types";
+import type { AuthMode, FilterGroup, Filters, NavMode, ViewMode, Vinyl } from "../types";
 import { buildSuggestions } from "../lib/utils";
 import FilterChips from "./FilterChips";
 
@@ -31,6 +33,9 @@ interface Props {
   onOpenStats: () => void;
   onOpenAdd: () => void;
   onExportCatalog: () => void;
+  authMode: AuthMode;
+  onOpenAuthModal: () => void;
+  onLogout: () => void;
 }
 
 const iconBtnCls =
@@ -53,6 +58,9 @@ export default function Header(props: Props) {
     onOpenStats,
     onOpenAdd,
     onExportCatalog,
+    authMode,
+    onOpenAuthModal,
+    onLogout,
   } = props;
 
   const [open, setOpen] = useState(false);
@@ -188,6 +196,30 @@ export default function Header(props: Props) {
     </div>
   );
 
+  /* Botón Admin / Salir según el modo de autenticación */
+  const authButton =
+    authMode === "admin" ? (
+      <button
+        onClick={onLogout}
+        title="Cerrar sesión de administrador"
+        aria-label="Cerrar sesión de administrador"
+        className={iconBtnCls}
+      >
+        <LogOut size={16} />
+        <span>Salir</span>
+      </button>
+    ) : (
+      <button
+        onClick={onOpenAuthModal}
+        title="Ingresar como administrador"
+        aria-label="Ingresar como administrador"
+        className="touch-manipulation flex h-11 items-center justify-center gap-2 rounded-lg border border-amber-500/50 bg-amber-500/10 px-3 text-sm font-semibold text-amber-400 transition-colors hover:bg-amber-500/20"
+      >
+        <Lock size={16} />
+        <span>Admin</span>
+      </button>
+    );
+
   return (
     <header className="sticky top-0 z-40 border-b border-slate-700/60 bg-slate-900/85 backdrop-blur-md">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
@@ -216,8 +248,10 @@ export default function Header(props: Props) {
           {/* Búsqueda (desktop) */}
           <div className="hidden max-w-xl flex-1 md:block">{searchBox}</div>
 
-          {/* Controles (desktop ≥768px — sin cambios) */}
+          {/* Controles (desktop ≥768px) */}
           <div className="ml-auto hidden items-center gap-2 md:flex">
+            {authButton}
+
             <button onClick={onOpenStats} title="Estadísticas del catálogo" className={iconBtnCls}>
               <BarChart3 size={16} />
               <span className="hidden lg:inline">Estadísticas</span>
@@ -236,25 +270,29 @@ export default function Header(props: Props) {
 
             {mode === "catalog" && <div className="hidden md:block">{viewToggle}</div>}
 
+            {authMode === "admin" && (
+              <button
+                onClick={onOpenAdd}
+                title="Agregar vinilo"
+                className="touch-manipulation flex h-11 items-center justify-center gap-2 rounded-lg bg-amber-500 px-3.5 text-sm font-bold text-slate-950 shadow-lg shadow-amber-500/25 transition-all hover:bg-amber-400 hover:shadow-amber-500/40"
+              >
+                <Plus size={17} strokeWidth={2.6} />
+                <span>Agregar</span>
+              </button>
+            )}
+          </div>
+
+          {/* Agregar (móvil) — solo en modo admin, siempre icono + texto */}
+          {authMode === "admin" && (
             <button
               onClick={onOpenAdd}
               title="Agregar vinilo"
-              className="touch-manipulation flex h-11 items-center justify-center gap-2 rounded-lg bg-amber-500 px-3.5 text-sm font-bold text-slate-950 shadow-lg shadow-amber-500/25 transition-all hover:bg-amber-400 hover:shadow-amber-500/40"
+              className="touch-manipulation ml-auto flex h-11 shrink-0 items-center gap-1.5 rounded-lg bg-amber-500 px-3 text-sm font-bold text-slate-950 shadow-lg shadow-amber-500/25 transition-all hover:bg-amber-400 active:scale-[0.97] md:hidden"
             >
               <Plus size={17} strokeWidth={2.6} />
               <span>Agregar</span>
             </button>
-          </div>
-
-          {/* Agregar (móvil) — siempre icono + texto */}
-          <button
-            onClick={onOpenAdd}
-            title="Agregar vinilo"
-            className="touch-manipulation ml-auto flex h-11 shrink-0 items-center gap-1.5 rounded-lg bg-amber-500 px-3 text-sm font-bold text-slate-950 shadow-lg shadow-amber-500/25 transition-all hover:bg-amber-400 active:scale-[0.97] md:hidden"
-          >
-            <Plus size={17} strokeWidth={2.6} />
-            <span>Agregar</span>
-          </button>
+          )}
         </div>
 
         {/* ── Fila 2 (móvil): búsqueda a ancho completo ── */}
@@ -294,11 +332,15 @@ export default function Header(props: Props) {
               <FileDown size={16} />
               <span>PDF</span>
             </button>
+            {authButton}
           </div>
         ) : (
-          <p className="flex h-11 items-center gap-2 pb-3 font-mono text-[10px] uppercase tracking-[0.2em] text-slate-500 md:hidden">
-            <span className="text-amber-500">◆</span> Género → Artista → Álbum
-          </p>
+          <div className="flex items-center justify-between gap-2 pb-3 md:hidden">
+            <p className="flex h-11 items-center gap-2 font-mono text-[10px] uppercase tracking-[0.2em] text-slate-500">
+              <span className="text-amber-500">◆</span> Género → Artista → Álbum
+            </p>
+            {authButton}
+          </div>
         )}
 
         {/* ── Chips de filtro (solo escritorio y solo en modo catálogo) ── */}
