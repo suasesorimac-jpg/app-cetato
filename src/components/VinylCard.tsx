@@ -28,17 +28,27 @@ export default function VinylCard({ record, onOpen }: Props) {
       onClick={() => onOpen(record)}
     >
       <div className="rounded-xl border border-slate-700/70 bg-slate-800/90 p-3 shadow-lg shadow-black/25 transition-[border-color,box-shadow] duration-300 group-hover:border-amber-500/80 group-hover:shadow-2xl group-hover:shadow-black/60">
-        {/* overflow-hidden en móvil: la galleta reducida (60%, +8%) queda contenida
-            y nunca se superpone al texto ni genera scroll horizontal.
-            En ≥640px se conserva el asomo original (86%, +14%) fuera de la funda. */}
-        <div className="relative overflow-hidden sm:overflow-visible">
-          <LabelImage
-            record={record}
-            className="absolute right-0 top-1/2 aspect-square h-[60%] -translate-y-1/2 translate-x-[8%] rounded-full drop-shadow-2xl drop-shadow-black/70 transition-transform duration-500 ease-out group-hover:translate-x-[42%] group-hover:rotate-[50deg] sm:h-[86%] sm:translate-x-[14%]"
-          />
+        {/* Layout adaptativo por breakpoint:
+            · Móvil (<640px): la carátula ocupa el 100% y la galleta aparece como
+              un badge circular de 40px en la esquina inferior derecha — sin
+              competencia espacial con el título, que va debajo de la imagen.
+            · Desktop (≥640px): se conserva el asomo de la galleta saliendo de
+              la funda (86% de alto, +14% de desplazamiento). */}
+        <div className="relative overflow-hidden rounded-lg sm:overflow-visible">
           <CoverImage
             record={record}
             className="relative aspect-square rounded-lg border border-slate-700"
+          />
+          {/* Galleta como badge (móvil) */}
+          <LabelImage
+            record={record}
+            width={96}
+            className="absolute bottom-2 right-2 z-10 h-10 w-10 rounded-full border-2 border-slate-800 shadow-lg shadow-black/50 sm:hidden"
+          />
+          {/* Galleta superpuesta (desktop) */}
+          <LabelImage
+            record={record}
+            className="absolute right-0 top-1/2 z-10 hidden aspect-square h-[86%] -translate-y-1/2 translate-x-[14%] rounded-full drop-shadow-2xl drop-shadow-black/70 transition-transform duration-500 ease-out group-hover:translate-x-[42%] group-hover:rotate-[50deg] sm:block"
           />
           <span className="absolute right-2 top-2 z-20 rounded-full bg-amber-500 px-2.5 py-1 font-mono text-xs font-bold text-slate-950 shadow-lg shadow-amber-500/30 sm:text-sm">
             {record.format}

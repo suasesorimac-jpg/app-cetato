@@ -24,11 +24,13 @@ export default function FilterChips({ collection, filters, onToggle, onClear }: 
     const decadeMap = new Map<string, number>();
     const formatMap = new Map<string, number>();
     const artistMap = new Map<string, number>();
+    const countryMap = new Map<string, number>();
     for (const v of collection) {
       labelMap.set(v.label, (labelMap.get(v.label) ?? 0) + 1);
       genreMap.set(v.genre, (genreMap.get(v.genre) ?? 0) + 1);
       formatMap.set(v.format, (formatMap.get(v.format) ?? 0) + 1);
       artistMap.set(v.artist, (artistMap.get(v.artist) ?? 0) + 1);
+      if (v.country) countryMap.set(v.country, (countryMap.get(v.country) ?? 0) + 1);
       const d = decadeOf(v.year);
       if (d) decadeMap.set(d, (decadeMap.get(d) ?? 0) + 1);
     }
@@ -50,6 +52,8 @@ export default function FilterChips({ collection, filters, onToggle, onClear }: 
         entries: sortDesc(decadeMap).sort((a, b) => a.value.localeCompare(b.value)),
       },
       { key: "artists", title: "Artista", entries: sortDesc(artistMap) },
+      /* Solo visible cuando el catálogo trae países (modelo extendido) */
+      { key: "countries", title: "País", entries: sortDesc(countryMap).filter((e) => e.count > 0) },
     ];
   }, [collection]);
 
@@ -58,11 +62,12 @@ export default function FilterChips({ collection, filters, onToggle, onClear }: 
     filters.labels.length +
     filters.genres.length +
     filters.decades.length +
-    filters.artists.length;
+    filters.artists.length +
+    filters.countries.length;
 
   return (
     <div className="flex flex-nowrap items-center gap-x-4 gap-y-2 sm:flex-wrap">
-      {groups.map((g) => (
+      {groups.filter((g) => g.entries.length > 0).map((g) => (
         <div key={g.key} className="flex shrink-0 flex-nowrap items-center gap-1.5 sm:flex-wrap">
           <span className="mr-0.5 font-mono text-[10px] uppercase tracking-[0.18em] text-slate-500">
             {g.title}

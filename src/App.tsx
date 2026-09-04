@@ -96,7 +96,8 @@ function AppInner() {
     filters.labels.length +
     filters.genres.length +
     filters.decades.length +
-    filters.artists.length;
+    filters.artists.length +
+    filters.countries.length;
 
   /* ── Búsqueda + filtros (AND entre grupos, multi-campo) ── */
   const filtered = useMemo(() => {
@@ -106,13 +107,16 @@ function AppInner() {
       if (filters.labels.length && !filters.labels.includes(v.label)) return false;
       if (filters.genres.length && !filters.genres.includes(v.genre)) return false;
       if (filters.artists.length && !filters.artists.includes(v.artist)) return false;
+      if (filters.countries.length && (!v.country || !filters.countries.includes(v.country)))
+        return false;
       if (filters.decades.length) {
         const d = decadeOf(v.year);
         if (!d || !filters.decades.includes(d)) return false;
       }
       if (q) {
+        /* Multi-campo: incluye país y observaciones (modelo extendido) */
         const hay = normalizeText(
-          `${v.artist} ${(v.artists ?? []).join(" ")} ${v.album} ${v.label} ${v.matrixCode} ${v.genre} ${String(v.year)}`
+          `${v.artist} ${(v.artists ?? []).join(" ")} ${v.album} ${v.label} ${v.matrixCode} ${v.genre} ${String(v.year)} ${v.country ?? ""} ${v.notes ?? ""}`
         );
         if (!hay.includes(q)) return false;
       }

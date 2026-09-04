@@ -50,6 +50,16 @@ const SLOT_FORM_LABELS: Record<ImageSlot, string> = {
   labelB: "Foto de galleta · lado B",
 };
 
+/** Convierte el texto del input de estado a `1–5 | "s/c" | undefined`. */
+function parseCondition(raw: string): number | "s/c" | undefined {
+  const t = raw.trim().toLowerCase().replace(",", ".");
+  if (!t) return undefined;
+  if (t === "s/c" || t === "sc" || t === "sin carátula" || t === "sin caratula") return "s/c";
+  const n = parseFloat(t);
+  if (Number.isNaN(n)) return undefined;
+  return Math.min(5, Math.max(1, n));
+}
+
 export default function VinylForm({ initial, labels, onSave, onClose }: Props) {
   /* Lista de artistas editable (separados por coma). El primer elemento se
      mantiene en el campo clásico `artist` para compatibilidad hacia atrás. */
@@ -69,6 +79,20 @@ export default function VinylForm({ initial, labels, onSave, onClose }: Props) {
   const [notSpecified, setNotSpecified] = useState(initial ? initial.year === "N/E" : false);
   const [genre, setGenre] = useState(initial?.genre ?? "Cumbia");
   const [format, setFormat] = useState<RpmFormat>(initial?.format ?? "33 RPM");
+
+  /* ── Campos del modelo extendido (todos opcionales) ── */
+  const [country, setCountry] = useState(initial?.country ?? "");
+  const [physicalFormat, setPhysicalFormat] = useState<"" | "LP" | "Single">(
+    initial?.physicalFormat ?? ""
+  );
+  const [speed, setSpeed] = useState<"" | "33⅓" | "45" | "78">(initial?.speed ?? "");
+  const [coverCondText, setCoverCondText] = useState(
+    initial?.coverCondition != null ? String(initial.coverCondition) : ""
+  );
+  const [discCondText, setDiscCondText] = useState(
+    initial?.discCondition != null ? String(initial.discCondition) : ""
+  );
+  const [notes, setNotes] = useState(initial?.notes ?? "");
 
   /* ── Imágenes (4 slots: carátula frente/trasera + galleta A/B) ── */
   const [images, setImages] = useState<Record<ImageSlot, string | null>>(
@@ -130,6 +154,13 @@ export default function VinylForm({ initial, labels, onSave, onClose }: Props) {
       labelAImageId: images.labelA,
       labelBImageId: images.labelB,
       dateAdded: initial?.dateAdded ?? new Date().toISOString().slice(0, 10),
+      /* Campos del modelo extendido — solo se escriben si tienen valor */
+      country: country.trim() || undefined,
+      physicalFormat: physicalFormat || undefined,
+      speed: speed || undefined,
+      coverCondition: parseCondition(coverCondText),
+      discCondition: parseCondition(discCondText),
+      notes: notes.trim() || undefined,
     };
     onSave(record);
   };
@@ -260,6 +291,97 @@ export default function VinylForm({ initial, labels, onSave, onClose }: Props) {
                     {f}
                   </button>
                 ))}
+              </div>
+            </div>
+
+            {/* ── Datos documentales (modelo extendido, todos opcionales) ── */}
+            <div className="mt-6">
+              <p className="mb-3 font-mono text-[10px] uppercase tracking-[0.18em] text-slate-500">
+                Datos documentales · opcionales
+              </p>
+              <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
+                <div>
+                  <FieldLabel htmlFor="f-country">País de origen</FieldLabel>
+                  <input
+                    id="f-country"
+                    value={country}
+                    onChange={(e) => setCountry(e.target.value)}
+                    placeholder="Ej: Colombia"
+                    className={inputCls}
+                  />
+                </div>
+                <div>
+                  <FieldLabel htmlFor="f-phys">Formato físico</FieldLabel>
+                  <select
+                    id="f-phys"
+                    value={physicalFormat}
+                    onChange={(e) => setPhysicalFormat(e.target.value as "" | "LP" | "Single")}
+                    className={`${inputCls} appearance-none`}
+                  >
+                    <option value="" className="bg-slate-800">
+                      Sin especificar
+                    </option>
+                    <option value="LP" className="bg-slate-800">
+                      LP (álbum)
+                    </option>
+                    <option value="Single" className="bg-slate-800">
+                      Single (sencillo)
+                    </option>
+                  </select>
+                </div>
+                <div>
+                  <FieldLabel htmlFor="f-speed">Velocidad</FieldLabel>
+                  <select
+                    id="f-speed"
+                    value={speed}
+                    onChange={(e) => setSpeed(e.target.value as "" | "33⅓" | "45" | "78")}
+                    className={`${inputCls} appearance-none`}
+                  >
+                    <option value="" className="bg-slate-800">
+                      Sin especificar
+                    </option>
+                    <option value="33⅓" className="bg-slate-800">
+                      33⅓ RPM
+                    </option>
+                    <option value="45" className="bg-slate-800">
+                      45 RPM
+                    </option>
+                    <option value="78" className="bg-slate-800">
+                      78 RPM
+                    </option>
+                  </select>
+                </div>
+                <div>
+                  <FieldLabel htmlFor="f-covercond">Estado carátula (1–5)</FieldLabel>
+                  <input
+                    id="f-covercond"
+                    value={coverCondText}
+                    onChange={(e) => setCoverCondText(e.target.value)}
+                    placeholder="1–5 o s/c"
+                    className={`${inputCls} font-mono`}
+                  />
+                </div>
+                <div>
+                  <FieldLabel htmlFor="f-disccond">Estado disco (1–5)</FieldLabel>
+                  <input
+                    id="f-disccond"
+                    value={discCondText}
+                    onChange={(e) => setDiscCondText(e.target.value)}
+                    placeholder="1–5 o s/c"
+                    className={`${inputCls} font-mono`}
+                  />
+                </div>
+                <div className="sm:col-span-2">
+                  <FieldLabel htmlFor="f-notes">Observaciones</FieldLabel>
+                  <textarea
+                    id="f-notes"
+                    value={notes}
+                    onChange={(e) => setNotes(e.target.value)}
+                    rows={3}
+                    placeholder="Notas documentales sobre el ejemplar…"
+                    className="w-full rounded-lg border border-slate-700 bg-slate-800 px-3 py-2.5 text-sm text-slate-100 outline-none transition-all placeholder:text-slate-500 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/25"
+                  />
+                </div>
               </div>
             </div>
 

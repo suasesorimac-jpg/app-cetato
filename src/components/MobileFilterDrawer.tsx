@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import type { LucideIcon } from "lucide-react";
-import { CalendarDays, Check, ChevronDown, Disc3, Mic2, Music, RotateCcw, Tag, X } from "lucide-react";
+import { CalendarDays, Check, ChevronDown, Disc3, Globe2, Mic2, Music, RotateCcw, Tag, X } from "lucide-react";
 import type { FilterGroup, Filters, Vinyl } from "../types";
 import { EMPTY_FILTERS, FORMAT_OPTIONS } from "../types";
 import { decadeOf } from "../lib/utils";
@@ -27,6 +27,7 @@ const SECTION_ICONS: Record<FilterGroup, LucideIcon> = {
   labels: Tag,
   decades: CalendarDays,
   artists: Mic2,
+  countries: Globe2,
 };
 
 const SECTION_TITLES: Record<FilterGroup, string> = {
@@ -35,6 +36,7 @@ const SECTION_TITLES: Record<FilterGroup, string> = {
   labels: "Sellos",
   decades: "Décadas",
   artists: "Artistas",
+  countries: "Países",
 };
 
 /**
@@ -83,13 +85,16 @@ export default function MobileFilterDrawer({ open, collection, filters, onApply,
     FORMAT_OPTIONS.forEach((f) => formats.set(f, 0));
     collection.forEach((v) => formats.set(v.format, (formats.get(v.format) ?? 0) + 1));
 
-    return [
+    const defs: SectionDef[] = [
       { key: "formats", title: SECTION_TITLES.formats, Icon: SECTION_ICONS.formats, items: toItems(formats) },
       { key: "genres", title: SECTION_TITLES.genres, Icon: SECTION_ICONS.genres, items: toItems(count((v) => v.genre)) },
       { key: "labels", title: SECTION_TITLES.labels, Icon: SECTION_ICONS.labels, items: toItems(count((v) => v.label)) },
       { key: "decades", title: SECTION_TITLES.decades, Icon: SECTION_ICONS.decades, items: toItems(count((v) => decadeOf(v.year)), "asc") },
       { key: "artists", title: SECTION_TITLES.artists, Icon: SECTION_ICONS.artists, items: toItems(count((v) => v.artist)) },
+      { key: "countries", title: SECTION_TITLES.countries, Icon: SECTION_ICONS.countries, items: toItems(count((v) => v.country ?? null)) },
     ];
+    /* Las secciones sin ítems (p. ej. Países antes de la migración) se ocultan */
+    return defs.filter((s) => s.items.length > 0);
   }, [collection]);
 
   const activeCount = (Object.values(draft) as string[][]).reduce((a, l) => a + l.length, 0);

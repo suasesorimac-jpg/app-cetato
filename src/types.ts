@@ -33,6 +33,21 @@ export interface Vinyl {
    */
   labelImageId?: string | null;
   dateAdded: string;
+
+  /* ── Modelo extendido (migración DeepSeek) — opcionales para
+        compatibilidad hacia atrás con registros antiguos ── */
+  /** País de origen (Colombia, EE.UU., México, …). */
+  country?: string;
+  /** Formato físico. */
+  physicalFormat?: "LP" | "Single";
+  /** Velocidad precisa de reproducción. */
+  speed?: "33⅓" | "45" | "78";
+  /** Estado de la carátula (1–5) o "s/c" (sin carátula). */
+  coverCondition?: number | "s/c";
+  /** Estado del disco (1–5) o "s/c". */
+  discCondition?: number | "s/c";
+  /** Observaciones / documentación del ejemplar. */
+  notes?: string;
 }
 
 /** Alias de compatibilidad con la documentación externa del proyecto. */
@@ -88,6 +103,7 @@ export interface Filters {
   genres: string[];
   decades: string[];
   artists: string[];
+  countries: string[];
 }
 
 export type FilterGroup = keyof Filters;
@@ -123,6 +139,7 @@ export const EMPTY_FILTERS: Filters = {
   genres: [],
   decades: [],
   artists: [],
+  countries: [],
 };
 
 export const GENRE_OPTIONS = [
@@ -134,6 +151,18 @@ export const GENRE_OPTIONS = [
   "Guaracha",
   "Balada",
   "Tango",
+  /* Géneros del modelo extendido (detección automática en notas) */
+  "Paseo",
+  "Merengue",
+  "Ranchera",
+  "Pasillo",
+  "Bambuco",
+  "Tropical",
+  "Pop",
+  "Rock",
+  "Jazz",
+  "Clásica",
+  "Sin clasificar",
   "Otro",
 ] as const;
 

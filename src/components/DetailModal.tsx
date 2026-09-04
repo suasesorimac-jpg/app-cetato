@@ -181,6 +181,19 @@ export default function DetailModal({ record, onClose, onEdit, authMode }: Props
     ["Fecha de ingreso", formatDateLong(record.dateAdded)],
   ];
 
+  /* Campos del modelo extendido presentes en este ejemplar */
+  const hasNotes = Boolean(record.notes?.trim());
+  const extendedPresent: string[] = [];
+  if (record.country) extendedPresent.push("country");
+  if (record.physicalFormat) extendedPresent.push("physicalFormat");
+  if (record.speed) extendedPresent.push("speed");
+  if (record.coverCondition != null) extendedPresent.push("coverCondition");
+  if (record.discCondition != null) extendedPresent.push("discCondition");
+  const hasExtendedFields = extendedPresent.length > 0;
+  /* El último campo extendido no lleva filete si nada más le sigue */
+  const isLastExtendedField = (key: string) =>
+    extendedPresent[extendedPresent.length - 1] === key;
+
   return (
     <ModalShell onClose={onClose} maxW="max-w-2xl" fullOnMobile>
       <div className="flex h-full min-h-0 flex-col">
@@ -313,11 +326,56 @@ export default function DetailModal({ record, onClose, onEdit, authMode }: Props
                 </span>
               </MetadataField>
 
-              <MetadataField label="Formato">{record.format}</MetadataField>
+              <MetadataField
+                label="Formato"
+                noBorder={!hasExtendedFields && !hasNotes}
+              >
+                {record.format}
+              </MetadataField>
 
-              <MetadataField label="Fecha de ingreso" noBorder>
+              {/* ── Campos del modelo extendido (solo si existen) ── */}
+              {record.country && <MetadataField label="País de origen">{record.country}</MetadataField>}
+
+              {record.physicalFormat && (
+                <MetadataField label="Formato físico">
+                  {record.physicalFormat === "LP" ? "LP (álbum)" : "Single (sencillo)"}
+                </MetadataField>
+              )}
+
+              {record.speed && (
+                <MetadataField label="Velocidad">{record.speed} RPM</MetadataField>
+              )}
+
+              {record.coverCondition != null && (
+                <MetadataField label="Estado carátula">
+                  {record.coverCondition === "s/c" ? "Sin carátula" : `${record.coverCondition}/5`}
+                </MetadataField>
+              )}
+
+              {record.discCondition != null && (
+                <MetadataField
+                  label="Estado disco"
+                  noBorder={!hasNotes && isLastExtendedField("discCondition")}
+                >
+                  {record.discCondition === "s/c" ? "Sin disco" : `${record.discCondition}/5`}
+                </MetadataField>
+              )}
+
+              <MetadataField label="Fecha de ingreso" noBorder={!hasNotes}>
                 {formatDateLong(record.dateAdded)}
               </MetadataField>
+
+              {/* Observaciones: ancho completo, cierra la ficha */}
+              {hasNotes && (
+                <div className="sm:col-span-2">
+                  <p className="mb-1 text-xs uppercase tracking-wider text-slate-400">
+                    Observaciones
+                  </p>
+                  <p className="text-base italic leading-relaxed text-slate-200 sm:text-lg">
+                    {record.notes}
+                  </p>
+                </div>
+              )}
             </div>
           </div>
         </div>
