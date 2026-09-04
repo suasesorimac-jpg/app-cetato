@@ -20,6 +20,7 @@ import StatsModal from "./components/StatsModal";
 import MobileFilterDrawer from "./components/MobileFilterDrawer";
 import HierarchicalBrowser from "./components/HierarchicalBrowser";
 import { AuthModal } from "./components/AuthModal";
+import { ImportExportModal } from "./components/ImportExportModal";
 
 function initCollection(): Vinyl[] {
   const stored = loadCollection();
@@ -62,6 +63,7 @@ function AppInner() {
     return auth.mode;
   });
   const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
+  const [isImportExportModalOpen, setIsImportExportModalOpen] = useState(false);
 
   const { view, filters, query, mode } = prefs;
   const debouncedQuery = useDebouncedValue(query, 300);
@@ -159,6 +161,12 @@ function AppInner() {
     toast("Sesión cerrada · modo visitante", "info");
   };
 
+  /* Importación CSV: la persistencia en localStorage la cubre el efecto
+     existente que guarda `collection` — una sola fuente de verdad. */
+  const handleImport = (updatedVinyls: Vinyl[]) => {
+    setCollection(updatedVinyls);
+  };
+
   const handleOpenAuthModal = () => {
     setIsAuthModalOpen(true);
   };
@@ -210,6 +218,7 @@ function AppInner() {
         authMode={authMode}
         onOpenAuthModal={handleOpenAuthModal}
         onLogout={handleLogout}
+        onOpenImportExport={() => setIsImportExportModalOpen(true)}
       />
 
       <main className="relative mx-auto max-w-7xl px-4 py-6 sm:px-6 sm:py-8">
@@ -329,6 +338,14 @@ function AppInner() {
             isOpen={isAuthModalOpen}
             onClose={handleCloseAuthModal}
             onSuccess={handleLoginSuccess}
+          />
+        )}
+        {isImportExportModalOpen && (
+          <ImportExportModal
+            isOpen={isImportExportModalOpen}
+            onClose={() => setIsImportExportModalOpen(false)}
+            vinyls={collection}
+            onImport={handleImport}
           />
         )}
       </AnimatePresence>

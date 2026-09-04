@@ -176,3 +176,31 @@ export interface AuthState {
   isAuthenticated: boolean;
   lastLoginAt?: string; // ISO date
 }
+
+// === IMPORT / EXPORT ===
+export type ImportExportFormat = "csv" | "pdf";
+
+/** Resumen de una importación CSV (filas nuevas, actualizadas y omitidas). */
+export interface ImportResult {
+  total: number;
+  imported: number;
+  updated: number;
+  skipped: number;
+  errors: string[];
+}
+
+/** Fila del CSV en formato DeepSeek (separador `;`). */
+export interface CSVRow {
+  "#": string;
+  Artista: string;
+  Título: string;
+  Sello: string;
+  Catálogo: string;
+  Año: string;
+  País: string;
+  Formato: string;
+  Velocidad: string;
+  Carátula: string;
+  Disco: string;
+  Observaciones: string;
+}

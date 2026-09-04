@@ -3,6 +3,7 @@ import {
   BarChart3,
   Compass,
   Disc3,
+  Download,
   FileDown,
   LayoutGrid,
   Lock,
@@ -36,6 +37,7 @@ interface Props {
   authMode: AuthMode;
   onOpenAuthModal: () => void;
   onLogout: () => void;
+  onOpenImportExport: () => void;
 }
 
 const iconBtnCls =
@@ -61,6 +63,7 @@ export default function Header(props: Props) {
     authMode,
     onOpenAuthModal,
     onLogout,
+    onOpenImportExport,
   } = props;
 
   const [open, setOpen] = useState(false);
@@ -266,6 +269,16 @@ export default function Header(props: Props) {
               <span className="hidden lg:inline">PDF</span>
             </button>
 
+            <button
+              onClick={onOpenImportExport}
+              title="Importar o exportar catálogo (CSV / PDF)"
+              aria-label="Importar o exportar catálogo"
+              className={iconBtnCls}
+            >
+              <Download size={16} />
+              <span className="hidden lg:inline">Importar/Exportar</span>
+            </button>
+
             {modeToggle}
 
             {mode === "catalog" && <div className="hidden md:block">{viewToggle}</div>}
@@ -331,6 +344,14 @@ export default function Header(props: Props) {
             >
               <FileDown size={16} />
               <span>PDF</span>
+            </button>
+            <button
+              onClick={onOpenImportExport}
+              title="Importar / Exportar catálogo"
+              aria-label="Importar o exportar catálogo"
+              className={`${iconBtnCls} w-11 justify-center px-0`}
+            >
+              <Download size={16} />
             </button>
             {authButton}
           </div>
