@@ -21,6 +21,7 @@ import MobileFilterDrawer from "./components/MobileFilterDrawer";
 import HierarchicalBrowser from "./components/HierarchicalBrowser";
 import { AuthModal } from "./components/AuthModal";
 import { ImportExportModal } from "./components/ImportExportModal";
+import { useGitHubSync } from "./hooks/useGitHubSync";
 
 function initCollection(): Vinyl[] {
   const stored = loadCollection();
@@ -57,6 +58,9 @@ function AppInner() {
   const [statsOpen, setStatsOpen] = useState(false);
   const [drawerOpen, setDrawerOpen] = useState(false);
 
+  /* ── Sincronización con GitHub ── */
+  const { loadFromGitHub, isLoading: isSyncing, lastSync } = useGitHubSync();
+
   /* ── Modo Admin/Visitante (persistido en localStorage) ── */
   const [authMode, setAuthMode] = useState<AuthMode>(() => {
     const auth = getAuthState();
@@ -78,6 +82,18 @@ function AppInner() {
   useEffect(() => {
     savePrefs(prefs);
   }, [prefs]);
+
+  /* ── Actualizar colección cuando se sincronice desde GitHub ── */
+  useEffect(() => {
+    if (lastSync) {
+      /* Recargar desde localStorage (el hook ya guardó ahí) */
+      const synced = loadCollection();
+      if (synced) {
+        setCollection(enrichCatalogWithArtists(synced));
+        toast("Catálogo sincronizado con GitHub", "success");
+      }
+    }
+  }, [lastSync, toast]);
 
   /* ── Acciones de estado ── */
   const setView = (v: ViewMode) => setPrefs((p) => ({ ...p, view: v }));
@@ -219,6 +235,8 @@ function AppInner() {
         onOpenAuthModal={handleOpenAuthModal}
         onLogout={handleLogout}
         onOpenImportExport={() => setIsImportExportModalOpen(true)}
+        onSync={loadFromGitHub}
+        isSyncing={isSyncing}
       />
 
       <main className="relative mx-auto max-w-7xl px-4 py-6 sm:px-6 sm:py-8">
@@ -346,6 +364,7 @@ function AppInner() {
             onClose={() => setIsImportExportModalOpen(false)}
             vinyls={collection}
             onImport={handleImport}
+            authMode={authMode}
           />
         )}
       </AnimatePresence>

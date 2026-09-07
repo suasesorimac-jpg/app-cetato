@@ -8,6 +8,7 @@ import {
   FileSpreadsheet,
   FileText,
   Loader2,
+  Lock,
   Upload,
 } from "lucide-react";
 import type { ImportResult, Vinyl } from "../types";
@@ -20,6 +21,7 @@ interface ImportExportModalProps {
   onClose: () => void;
   vinyls: Vinyl[];
   onImport: (updatedVinyls: Vinyl[]) => void;
+  authMode?: "admin" | "visitor";
 }
 
 const sectionTitleCls =
@@ -33,13 +35,41 @@ const actionBtnCls =
  *    o a PDF (ventana de impresión).
  *  - Importa un CSV: actualiza por matriz sin duplicar y agrega los nuevos.
  */
-export function ImportExportModal({ isOpen, onClose, vinyls, onImport }: ImportExportModalProps) {
+export function ImportExportModal({ isOpen, onClose, vinyls, onImport, authMode }: ImportExportModalProps) {
   const toast = useToast();
   const [importResult, setImportResult] = useState<ImportResult | null>(null);
   const [isImporting, setIsImporting] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   if (!isOpen) return null;
+
+  /* Si no es admin, mostrar mensaje de restricción */
+  if (authMode !== "admin") {
+    return (
+      <ModalShell onClose={onClose} maxW="max-w-md">
+        <div className="p-6">
+          <div className="flex items-center gap-3 mb-4">
+            <div className="grid h-12 w-12 place-items-center rounded-lg bg-red-600">
+              <Lock className="h-6 w-6 text-white" />
+            </div>
+            <h2 className="font-display text-2xl tracking-wide text-slate-50">
+              ACCESO RESTRINGIDO
+            </h2>
+          </div>
+          <p className="mb-6 text-slate-300">
+            La función de Importar/Exportar solo está disponible para administradores.
+            Ingresa la contraseña para acceder a esta funcionalidad.
+          </p>
+          <button
+            onClick={onClose}
+            className="touch-manipulation w-full rounded-lg bg-slate-700 px-4 py-3 font-medium text-white transition-colors hover:bg-slate-600"
+          >
+            Cerrar
+          </button>
+        </div>
+      </ModalShell>
+    );
+  }
 
   const handleExportCSV = () => {
     const csvContent = exportToCSV(vinyls);

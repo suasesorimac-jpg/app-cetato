@@ -9,6 +9,7 @@ import {
   Lock,
   LogOut,
   Plus,
+  RefreshCw,
   Search,
   SlidersHorizontal,
   Table2,
@@ -38,6 +39,8 @@ interface Props {
   onOpenAuthModal: () => void;
   onLogout: () => void;
   onOpenImportExport: () => void;
+  onSync?: () => void;
+  isSyncing?: boolean;
 }
 
 const iconBtnCls =
@@ -64,6 +67,8 @@ export default function Header(props: Props) {
     onOpenAuthModal,
     onLogout,
     onOpenImportExport,
+    onSync,
+    isSyncing,
   } = props;
 
   const [open, setOpen] = useState(false);
@@ -276,7 +281,9 @@ export default function Header(props: Props) {
               className={iconBtnCls}
             >
               <Download size={16} />
-              <span className="hidden lg:inline">Importar/Exportar</span>
+              <span className="hidden lg:inline">
+                Importar/Exportar{authMode !== "admin" && " 🔒"}
+              </span>
             </button>
 
             {modeToggle}
@@ -337,6 +344,18 @@ export default function Header(props: Props) {
               <BarChart3 size={16} />
               <span>Estadísticas</span>
             </button>
+            {onSync && (
+              <button
+                onClick={onSync}
+                disabled={isSyncing}
+                title="Sincronizar con GitHub"
+                aria-label="Sincronizar catálogo con GitHub"
+                className={iconBtnCls}
+              >
+                <RefreshCw size={16} className={isSyncing ? "animate-spin" : ""} />
+                <span className="hidden sm:inline">Sync</span>
+              </button>
+            )}
             <button
               onClick={onExportCatalog}
               title="Exportar catálogo (PDF)"
@@ -347,11 +366,16 @@ export default function Header(props: Props) {
             </button>
             <button
               onClick={onOpenImportExport}
-              title="Importar / Exportar catálogo"
+              title={authMode !== "admin" ? "Importar / Exportar (requiere admin)" : "Importar / Exportar catálogo"}
               aria-label="Importar o exportar catálogo"
-              className={`${iconBtnCls} w-11 justify-center px-0`}
+              className={`relative ${iconBtnCls} w-11 justify-center px-0`}
             >
               <Download size={16} />
+              {authMode !== "admin" && (
+                <span className="absolute -right-1 -top-1 grid h-4 w-4 place-items-center rounded-full bg-red-600 text-[9px] font-bold text-white">
+                  🔒
+                </span>
+              )}
             </button>
             {authButton}
           </div>
