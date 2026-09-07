@@ -230,10 +230,10 @@ export default function DetailModal({ record, onClose, onEdit, authMode }: Props
                     <img
                       src={src}
                       alt={`${SLOT_LABELS[slot]} de ${record.album}`}
-                      className={`w-full rounded-xl border border-slate-700 shadow-xl shadow-black/40 ${
+                      className={`w-full border border-slate-700 shadow-xl shadow-black/40 ${
                         slot === "cover" || slot === "coverBack"
-                          ? "aspect-[4/5] object-cover sm:aspect-square"
-                          : "aspect-[4/3] bg-slate-950/70 object-contain sm:aspect-square"
+                          ? "aspect-[4/5] rounded-xl object-cover sm:aspect-square"
+                          : "aspect-square rounded-full bg-slate-950/70 object-contain"
                       }`}
                     />
                     <span className="absolute right-2 top-2 grid h-9 w-9 place-items-center rounded-lg bg-slate-950/75 text-amber-400 opacity-0 backdrop-blur-sm transition-opacity duration-200 group-hover:opacity-100 group-active:opacity-100">
@@ -263,7 +263,7 @@ export default function DetailModal({ record, onClose, onEdit, authMode }: Props
                   <LabelImage
                     record={record}
                     fit="contain"
-                    className="aspect-[4/3] rounded-xl border border-slate-700 bg-slate-950/70 shadow-xl shadow-black/40 sm:aspect-square"
+                    className="aspect-square rounded-full border-4 border-slate-700 bg-slate-950/70 shadow-2xl shadow-black/40"
                   />
                   <figcaption className="mt-1.5 text-center font-mono text-[9px] tracking-[0.22em] text-slate-500">
                     GALLETA · REFERENCIA

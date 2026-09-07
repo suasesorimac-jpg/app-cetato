@@ -30,7 +30,7 @@ export default function VinylCard({ record, onOpen }: Props) {
       <div className="rounded-xl border border-slate-700/70 bg-slate-800/90 p-3 shadow-lg shadow-black/25 transition-[border-color,box-shadow] duration-300 group-hover:border-amber-500/80 group-hover:shadow-2xl group-hover:shadow-black/60">
         {/* Layout adaptativo por breakpoint:
             · Móvil (<640px): la carátula ocupa el 100% y la galleta aparece como
-              un badge circular de 40px en la esquina inferior derecha — sin
+              un badge circular de 48px en la esquina inferior derecha — sin
               competencia espacial con el título, que va debajo de la imagen.
             · Desktop (≥640px): se conserva el asomo de la galleta saliendo de
               la funda (86% de alto, +14% de desplazamiento). */}
@@ -43,7 +43,7 @@ export default function VinylCard({ record, onOpen }: Props) {
           <LabelImage
             record={record}
             width={96}
-            className="absolute bottom-2 right-2 z-10 h-10 w-10 rounded-full border-2 border-slate-800 shadow-lg shadow-black/50 sm:hidden"
+            className="absolute bottom-2 right-2 z-10 h-12 w-12 rounded-full border-2 border-slate-800 shadow-lg shadow-black/50 sm:hidden"
           />
           {/* Galleta superpuesta (desktop) */}
           <LabelImage

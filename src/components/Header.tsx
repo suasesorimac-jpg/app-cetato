@@ -232,14 +232,14 @@ export default function Header(props: Props) {
     <header className="sticky top-0 z-40 border-b border-slate-700/60 bg-slate-900/85 backdrop-blur-md">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         {/* ── Fila 1: marca + búsqueda (desktop) + controles ── */}
-        <div className="flex items-center gap-2.5 py-3 md:gap-3">
-          <div className="flex min-w-0 shrink-0 items-center gap-2.5 md:gap-3">
+        <div className="flex items-center gap-2 py-3 md:gap-3">
+          <div className="flex shrink-0 items-center gap-2 md:gap-3">
             <div className="grid h-11 w-11 shrink-0 place-items-center rounded-full border border-amber-500/40 bg-amber-500/10 shadow-lg shadow-amber-500/10">
               <Disc3 size={24} className="animate-spin-slow text-amber-500" />
             </div>
             {/* Nombre visible también en móvil; bajo 360px usa la forma abreviada */}
             <div className="min-w-0">
-              <h1 className="truncate font-display text-[22px] leading-none tracking-[0.04em] text-slate-50 md:text-[27px]">
+              <h1 className="whitespace-nowrap font-display text-[20px] leading-none tracking-[0.04em] text-slate-50 md:text-[27px]">
                 <span className="min-[360px]:hidden">
                   APP<span className="text-amber-500">.</span>
                 </span>
