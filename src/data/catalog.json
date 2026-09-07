@@ -323,23 +323,6 @@
     "dateAdded": "2026-09-04"
   },
   {
-    "id": "20",
-    "artist": "Los Ayer's",
-    "album": "(homónimo) - DUPLICADO",
-    "label": "CBS",
-    "matrixCode": "14529",
-    "year": 1975,
-    "genre": "Sin clasificar",
-    "format": "33 RPM",
-    "country": "Colombia",
-    "physicalFormat": "LP",
-    "speed": "33⅓",
-    "coverCondition": 2.0,
-    "discCondition": 3.0,
-    "notes": "Copia adicional del disco #4. Dirección artística: Humberto Vesga M.",
-    "dateAdded": "2026-09-04"
-  },
-  {
     "id": "21",
     "artist": "Varios",
     "album": "Salsa Mona - Vol. II",
@@ -3181,7 +3164,7 @@
   {
     "id": "188",
     "artist": "Rodolfo con Los Hispanos",
-    "album": "El Perfumito",
+    "album": "El Perfumito / Pomponio",
     "label": "Fuentes",
     "matrixCode": "509030",
     "year": 1978,
@@ -3192,24 +3175,7 @@
     "speed": "45",
     "coverCondition": 3.0,
     "discCondition": 3.0,
-    "notes": "Lado A: \"El Perfumito\" (Porro - José Garibaldi Fuentes - Edimúsica). Del LP 201301 \"De Retorno\". (P) 1978.",
-    "dateAdded": "2026-09-04"
-  },
-  {
-    "id": "189",
-    "artist": "Rodolfo con Los Hispanos",
-    "album": "Pomponio",
-    "label": "Fuentes",
-    "matrixCode": "509030",
-    "year": 1978,
-    "genre": "Paseo",
-    "format": "45 RPM",
-    "country": "Colombia",
-    "physicalFormat": "Single",
-    "speed": "45",
-    "coverCondition": 3.0,
-    "discCondition": 3.0,
-    "notes": "Lado B: \"Pomponio\" (Paseo - Julio Torres). Del LP 201001 \"De Retorno\". (P) 1978.",
+    "notes": "Sencillo. Lado A: \"El Perfumito\" (Porro - José Garibaldi Fuentes - Edimúsica). Lado B: \"Pomponio\" (Paseo - Julio Torres). Ambos temas del LP \"De Retorno\" (las notas originales citan 201301 y 201001). (P) 1978.",
     "dateAdded": "2026-09-04"
   }
 ]
