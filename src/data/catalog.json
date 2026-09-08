@@ -2809,7 +2809,9 @@
     "coverCondition": 4,
     "discCondition": 4,
     "notes": "Lado A: Suite No. 2 en si menor (Rondó, Polonesa, Minué, Badinerie). Lado B: Suite No. 3 en re mayor (Aire, Gavota). Orquesta Sinfónica de Radio Frankfurt, dirigida por Carl Schuricht. Editado por Service S.A., Ginebra 1982. Prensado en México.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "labelAImageId": "appcetato/galletas/Suite No. 2 en si menor (fragmentos) - Suite No. 3 en re mayor (fragmentos) - A",
+    "labelBImageId": "appcetato/galletas/Suite No. 2 en si menor (fragmentos) - Suite No. 3 en re mayor (fragmentos) - B"
   },
   {
     "id": "147",
