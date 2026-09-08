@@ -3307,7 +3307,9 @@
     "coverCondition": 3,
     "discCondition": 3,
     "notes": "Disco de 45 RPM. Lado A: \"Magdalena\" (Gaita - Pedro Laza). Lado B: no se lee claramente. Posiblemente Pedro Laza y sus Pelayeros. Datos pendientes de confirmación.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "labelAImageId": "appcetato/galletas/Magdalena (Gaita) - A",
+    "labelBImageId": "appcetato/galletas/Magdalena (Gaita) - B"
   },
   {
     "id": "171",
