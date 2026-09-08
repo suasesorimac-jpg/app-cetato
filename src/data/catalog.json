@@ -31,7 +31,9 @@
     "coverCondition": 2,
     "discCondition": 2,
     "notes": "Compilado de porros. Incluye \"El Sabanero\", \"Bocachico Sinuano\", \"La Canoa\", etc. Disponible también en cassette y cartucho.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "labelAImageId": "appcetato/galletas/Porros, Solo Porros - A",
+    "labelBImageId": "appcetato/galletas/Porros, Solo Porros - B"
   },
   {
     "id": "3",
@@ -633,7 +635,11 @@
     "coverCondition": 5,
     "discCondition": 5,
     "notes": "Serie \"Tango de Ayer\" - Disco No. 4. Grabaciones originales de 1931-1941. Cantantes: Fernando Díaz, Jorge Omar, Charlo, Mercedes Simone.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "coverImageId": "appcetato/caratulas/Tango de Ayer - Volumen 4 (San Telmo 1931-1941)- caratula A",
+    "coverBackImageId": "appcetato/caratulas/Tango de Ayer - Volumen 4 (San Telmo 1931-1941)- caratula B",
+    "labelAImageId": "appcetato/galletas/Tango de Ayer - Volumen 4 (San Telmo 1931-1941)- lado 1",
+    "labelBImageId": "appcetato/galletas/Tango de Ayer - Volumen 4 (San Telmo 1931-1941)- lado 2"
   },
   {
     "id": "37",
@@ -2098,7 +2104,11 @@
     "coverCondition": 5,
     "discCondition": 3,
     "notes": "Disco promocional de la aerolínea LAN-Chile. Recopilación de temas de varios países (Colombia, Chile, Ecuador, Perú, Argentina, España, Brasil).",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "coverImageId": "appcetato/caratulas/LAN-Chile (Línea Aérea Internacional Chilena) - Varios Intérpretes - Caratula A",
+    "coverBackImageId": "appcetato/caratulas/LAN-Chile (Línea Aérea Internacional Chilena) - Varios Intérpretes - Caratula B",
+    "labelAImageId": "appcetato/galletas/LAN-Chile (Línea Aérea Internacional Chilena) - Varios Intérpretes - A",
+    "labelBImageId": "appcetato/galletas/LAN-Chile (Línea Aérea Internacional Chilena) - Varios Intérpretes - B"
   },
   {
     "id": "110",
@@ -2987,7 +2997,9 @@
     "coverCondition": null,
     "discCondition": null,
     "notes": "Disco de 45 RPM. Lado B: \"Luchador\" (Paseo). Lado A: \"Lento\" (Paseo - Daniel). Producido por Editora Fonoyon. Datos incompletos - pendiente de confirmación.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "labelAImageId": "appcetato/galletas/(B) LUCHADOR (Paseo) - LENTO (Paseo) - A",
+    "labelBImageId": "appcetato/galletas/(B) LUCHADOR (Paseo) - LENTO (Paseo) - B"
   },
   {
     "id": "157",

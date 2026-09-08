@@ -1,11 +1,23 @@
 {
   "stats": {
     "total": 187,
-    "matched": 155,
-    "notMatched": 32,
-    "percentage": "82.9%"
+    "matched": 159,
+    "notMatched": 28,
+    "percentage": "85.0%"
   },
   "matches": [
+    {
+      "id": "2",
+      "album": "El Porro / Porros Solo",
+      "matchedWith": "Porros, Solo Porros",
+      "score": null,
+      "images": {
+        "cover": false,
+        "coverBack": false,
+        "labelA": true,
+        "labelB": true
+      }
+    },
     {
       "id": "8",
       "album": "Boleros Campeones Vol. V",
@@ -191,6 +203,18 @@
       "album": "¡Qué Sabroso Está!",
       "matchedWith": "¡Qué Sabroso Está!",
       "score": 100,
+      "images": {
+        "cover": true,
+        "coverBack": true,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "36",
+      "album": "Tango de Ayer - Vol. 4",
+      "matchedWith": "Tango de Ayer - Volumen 4 (San Telmo 1931-1941)",
+      "score": null,
       "images": {
         "cover": true,
         "coverBack": true,
@@ -1015,6 +1039,18 @@
       }
     },
     {
+      "id": "109",
+      "album": "LAN-Chile - Varios Intérpretes",
+      "matchedWith": "LAN-Chile (Línea Aérea Internacional Chilena) - Varios Intérpretes",
+      "score": null,
+      "images": {
+        "cover": true,
+        "coverBack": true,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
       "id": "110",
       "album": "Boleros Campeones - Vol. IV",
       "matchedWith": "Boleros Campeones - Vol. IV",
@@ -1531,6 +1567,18 @@
       }
     },
     {
+      "id": "156",
+      "album": "Luchador / Lento",
+      "matchedWith": "(B) LUCHADOR (Paseo) - LENTO (Paseo)",
+      "score": null,
+      "images": {
+        "cover": false,
+        "coverBack": false,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
       "id": "157",
       "album": "Todo es Amor / Laura",
       "matchedWith": "Todo es Amor - Laura",
@@ -1875,12 +1923,6 @@
       "score": 0
     },
     {
-      "id": "2",
-      "album": "El Porro / Porros Solo",
-      "bestMatch": "Porros, Solo Porros",
-      "score": 50
-    },
-    {
       "id": "3",
       "album": "A Toda Máquina...",
       "bestMatch": "A Cantar Rancheras",
@@ -1977,12 +2019,6 @@
       "score": 0
     },
     {
-      "id": "36",
-      "album": "Tango de Ayer - Vol. 4",
-      "bestMatch": "Tango de Ayer - Volumen 4 (San Telmo 1931-1941)",
-      "score": 50
-    },
-    {
       "id": "38",
       "album": "Usted y otros éxitos",
       "bestMatch": "Pueblito Viejo y otros grandes éxitos de Garzón y Collazos",
@@ -2007,12 +2043,6 @@
       "score": 25
     },
     {
-      "id": "109",
-      "album": "LAN-Chile - Varios Intérpretes",
-      "bestMatch": "LAN-Chile (Línea Aérea Internacional Chilena) - Varios Intérpretes",
-      "score": 43
-    },
-    {
       "id": "125",
       "album": "Guayabo a la yé",
       "bestMatch": "Vol. 15 (Café La Bastilla - Colección) A",
@@ -2029,12 +2059,6 @@
       "album": "Suites Nos. 2 y 3 (fragmentos)",
       "bestMatch": "Muriendo de Amor- Gloria y Antonio- -Lado 2",
       "score": 25
-    },
-    {
-      "id": "156",
-      "album": "Luchador / Lento",
-      "bestMatch": "(B) LUCHADOR (Paseo) - LENTO (Paseo)",
-      "score": 40
     },
     {
       "id": "169",
