@@ -11,8 +11,8 @@
     "country": "Colombia",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 3.0,
-    "discCondition": 4.0,
+    "coverCondition": 3,
+    "discCondition": 4,
     "notes": "Edición colombiana. Títulos en español e inglés. Producido por The Shadows. Arreglos de John Fiddy.",
     "dateAdded": "2026-09-04"
   },
@@ -28,8 +28,8 @@
     "country": "Colombia",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 2.0,
-    "discCondition": 2.0,
+    "coverCondition": 2,
+    "discCondition": 2,
     "notes": "Compilado de porros. Incluye \"El Sabanero\", \"Bocachico Sinuano\", \"La Canoa\", etc. Disponible también en cassette y cartucho.",
     "dateAdded": "2026-09-04"
   },
@@ -45,8 +45,8 @@
     "country": "México/Colombia",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 2.0,
-    "discCondition": 2.0,
+    "coverCondition": 2,
+    "discCondition": 2,
     "notes": "Producido en México para Colombia. Incluye cumbias, pasacalles, porros, boogaloo y balada.",
     "dateAdded": "2026-09-04"
   },
@@ -62,8 +62,8 @@
     "country": "Colombia",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 2.0,
-    "discCondition": 2.0,
+    "coverCondition": 2,
+    "discCondition": 2,
     "notes": "Dirección artística: Humberto Vesga M. Incluye pasillos, tango, vals, zamba y canciones.",
     "dateAdded": "2026-09-04"
   },
@@ -79,8 +79,8 @@
     "country": "Colombia",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 2.0,
-    "discCondition": 2.0,
+    "coverCondition": 2,
+    "discCondition": 2,
     "notes": "Compilado de boleros con licencias DIA y DISCOMODA. Incluye \"Un Gran Amor\", \"Ansiedad\", \"Preciosa\", \"Sufrir\", etc.",
     "dateAdded": "2026-09-04"
   },
@@ -96,8 +96,8 @@
     "country": "EE.UU.",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 4.0,
-    "discCondition": 4.0,
+    "coverCondition": 4,
+    "discCondition": 4,
     "notes": "Edición estadounidense para mercado latino. Producido por Discos Copacabana, Brasil. Letras en español por Curat Alonso.",
     "dateAdded": "2026-09-04"
   },
@@ -113,8 +113,8 @@
     "country": "Colombia",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 2.0,
-    "discCondition": 3.0,
+    "coverCondition": 2,
+    "discCondition": 3,
     "notes": "Artista principal Luz Amparo. Incluye \"Tu No Me Quieres\", \"El Galope\", \"No Te Vayas\", \"Sabor de Llanto\", etc.",
     "dateAdded": "2026-09-04"
   },
@@ -130,10 +130,14 @@
     "country": "Colombia",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 4.0,
-    "discCondition": 3.0,
+    "coverCondition": 4,
+    "discCondition": 3,
     "notes": "Compilado de boleros. 23ª Edición Sono-Inter. Incluye \"Sabrás Que Te Quiero\", \"Poquita Fe\", \"Contigo en la Distancia\", etc.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "coverImageId": "appcetato/caratulas/Boleros Campeones - Caratula A",
+    "coverBackImageId": "appcetato/caratulas/Boleros Campeones - Caratula B",
+    "labelAImageId": "appcetato/galletas/Boleros Campeones - A",
+    "labelBImageId": "appcetato/galletas/Boleros Campeones - B"
   },
   {
     "id": "9",
@@ -147,8 +151,8 @@
     "country": "Colombia",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 5.0,
-    "discCondition": 5.0,
+    "coverCondition": 5,
+    "discCondition": 5,
     "notes": "Incluye papel de protección. Colección de boleros. Temas: \"Te Espero\", \"Vete Por Favor\", \"Verdad Amarga\", etc.",
     "dateAdded": "2026-09-04"
   },
@@ -164,8 +168,8 @@
     "country": "Colombia",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 5.0,
-    "discCondition": 5.0,
+    "coverCondition": 5,
+    "discCondition": 5,
     "notes": "Carátula plastificada. Versiones en español de éxitos internacionales. Incluye \"Olvídalo\", \"Cuando Calienta el Sol\", etc.",
     "dateAdded": "2026-09-04"
   },
@@ -181,10 +185,14 @@
     "country": "Colombia",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 5.0,
-    "discCondition": 5.0,
+    "coverCondition": 5,
+    "discCondition": 5,
     "notes": "Selección y notas por Hernán Restrepo D. Grabaciones originales. Incluye \"Amor Perdido\", \"Cenizas\", \"Prohibido\", etc.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "coverImageId": "appcetato/caratulas/Boleros Campeones - Caratula A",
+    "coverBackImageId": "appcetato/caratulas/Boleros Campeones - Caratula B",
+    "labelAImageId": "appcetato/galletas/Boleros Campeones - A",
+    "labelBImageId": "appcetato/galletas/Boleros Campeones - B"
   },
   {
     "id": "12",
@@ -198,8 +206,8 @@
     "country": "Colombia",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 5.0,
-    "discCondition": 5.0,
+    "coverCondition": 5,
+    "discCondition": 5,
     "notes": "Incluye papel de protección. Compilado de ritmos colombianos: vallenatos, cumbias, porros y música navideña.",
     "dateAdded": "2026-09-04"
   },
@@ -215,8 +223,8 @@
     "country": "Colombia",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 4.0,
-    "discCondition": 5.0,
+    "coverCondition": 4,
+    "discCondition": 5,
     "notes": "Álbum navideño con ritmos tropicales. Incluye \"Año Viejo\", \"La Cabeza del Lechón\", \"Triste Navidad\", etc.",
     "dateAdded": "2026-09-04"
   },
@@ -232,8 +240,8 @@
     "country": "Colombia",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 1.0,
-    "discCondition": 3.0,
+    "coverCondition": 1,
+    "discCondition": 3,
     "notes": "Álbum de bailables con ritmos colombianos: mapalé, pasquino, gaita, fandango, porro, cumbia.",
     "dateAdded": "2026-09-04"
   },
@@ -249,8 +257,8 @@
     "country": "Colombia",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 1.0,
-    "discCondition": 3.0,
+    "coverCondition": 1,
+    "discCondition": 3,
     "notes": "Álbum con canciones mexicanas de José Alfredo Jiménez y Agustín Lara. Arreglos y dirección: Rafael Ferro.",
     "dateAdded": "2026-09-04"
   },
@@ -266,8 +274,8 @@
     "country": "Colombia",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 5.0,
-    "discCondition": 4.0,
+    "coverCondition": 5,
+    "discCondition": 4,
     "notes": "Selección: Hugo Hernández P. Notas: Hernán Restrepo D. Compilado de éxitos populares colombianos e internacionales.",
     "dateAdded": "2026-09-04"
   },
@@ -283,8 +291,8 @@
     "country": "Colombia",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 2.0,
-    "discCondition": 5.0,
+    "coverCondition": 2,
+    "discCondition": 5,
     "notes": "Carátula plastificada. Compilado de éxitos de 1981 en español e inglés. Incluye popurrí de clásicos de los 60.",
     "dateAdded": "2026-09-04"
   },
@@ -300,8 +308,8 @@
     "country": "Colombia",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 3.0,
-    "discCondition": 2.0,
+    "coverCondition": 3,
+    "discCondition": 2,
     "notes": "Notas: Gabriel Cuartas Franco. Álbum de tangos y ritmos argentinos. Raúl Garcés (argentino, violinista, cantante y director).",
     "dateAdded": "2026-09-04"
   },
@@ -317,8 +325,8 @@
     "country": "Colombia",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 2.0,
-    "discCondition": 2.0,
+    "coverCondition": 2,
+    "discCondition": 2,
     "notes": "Compilado de salsa con licencias de TICO Records, Alegre Records e INCA Records (EE.UU.). Incluye \"Guantanamera\", etc.",
     "dateAdded": "2026-09-04"
   },
@@ -334,10 +342,11 @@
     "country": "Colombia",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 4.0,
-    "discCondition": 5.0,
+    "coverCondition": 4,
+    "discCondition": 5,
     "notes": "Compilado de salsa con licencias de Cotique Records y Vaya Records. Incluye \"Periódico de Ayer\" (Héctor Lavoe).",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "coverImageId": "appcetato/caratulas/Salsa Mona - Vol. II - caratula A"
   },
   {
     "id": "22",
@@ -351,10 +360,11 @@
     "country": "Colombia",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 2.0,
-    "discCondition": 3.0,
+    "coverCondition": 2,
+    "discCondition": 3,
     "notes": "Disco promocional de Café La Bastilla (instantáneo). Incluye \"Ese Día\" (Grupo Niche), \"Ya Lo Sabía\", etc.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "coverImageId": "appcetato/caratulas/Vol. 15 (Café La Bastilla - Colección) Caratula A"
   },
   {
     "id": "23",
@@ -368,10 +378,11 @@
     "country": "EE.UU.",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 4.0,
-    "discCondition": 4.0,
+    "coverCondition": 4,
+    "discCondition": 4,
     "notes": "Álbum instrumental de piano y orquesta. Serie \"At Midnight\". Incluye \"La Vie En Rose\", \"Pigalle\", \"April in Paris\", etc.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "coverBackImageId": "appcetato/caratulas/Paris at Midnight - Caratula B"
   },
   {
     "id": "24",
@@ -385,10 +396,11 @@
     "country": "Colombia",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 2.0,
-    "discCondition": 4.0,
+    "coverCondition": 2,
+    "discCondition": 4,
     "notes": "Compilado de éxitos internacionales de 1970, incluyendo ganadores de festivales de la canción.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "coverImageId": "appcetato/caratulas/Exitómetro - Vol. III - Caratula A"
   },
   {
     "id": "25",
@@ -402,10 +414,11 @@
     "country": "Colombia",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 3.0,
-    "discCondition": 4.0,
+    "coverCondition": 3,
+    "discCondition": 4,
     "notes": "Producción: Javier Yepes Y. Arreglos y Dirección: Al Díaz (El Cubano). Géneros: bolero ranchero, corrido, vals ranchero, pasaje, ranchera.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "labelAImageId": "appcetato/galletas/Como Es Ella - A"
   },
   {
     "id": "26",
@@ -419,10 +432,11 @@
     "country": "Colombia",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 3.0,
-    "discCondition": 3.0,
+    "coverCondition": 3,
+    "discCondition": 3,
     "notes": "Álbum instrumental de saxofón con temas de películas y estándares. Licencia de London Records Inc., New York.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "coverImageId": "appcetato/caratulas/Midnight Blue - The Wistful Sax of Fausto Papetti _ caratula A"
   },
   {
     "id": "27",
@@ -436,10 +450,14 @@
     "country": "Colombia",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 1.0,
-    "discCondition": 5.0,
+    "coverCondition": 1,
+    "discCondition": 5,
     "notes": "Álbum de serenatas mexicanas. Notas en español e inglés. Producto de Industria Electro-Sonora Ltda. Medellín.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "coverImageId": "appcetato/caratulas/Chacha Linda y otras canciones de serenata por Los Romanceros - Caratula A",
+    "coverBackImageId": "appcetato/caratulas/Chacha Linda y otras canciones de serenata por Los Romanceros - Caratula B",
+    "labelAImageId": "appcetato/galletas/Chacha Linda y otras canciones de serenata por Los Romanceros - A",
+    "labelBImageId": "appcetato/galletas/Chacha Linda y otras canciones de serenata por Los Romanceros - B"
   },
   {
     "id": "28",
@@ -453,10 +471,12 @@
     "country": "EE.UU.",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 2.0,
-    "discCondition": 4.0,
+    "coverCondition": 2,
+    "discCondition": 4,
     "notes": "Arreglos y Dirección Musical: Mandy Vizoso. Producido por M.L.I. Productor Ejecutivo: Tony Conga.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "labelAImageId": "appcetato/galletas/Éxitos de los 50 - A",
+    "labelBImageId": "appcetato/galletas/Éxitos de los 50 - B"
   },
   {
     "id": "29",
@@ -470,10 +490,14 @@
     "country": "Colombia",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 3.0,
-    "discCondition": 5.0,
+    "coverCondition": 3,
+    "discCondition": 5,
     "notes": "Álbum instrumental de órgano y ritmos. Música tropical/folclórica colombiana.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "coverImageId": "appcetato/caratulas/Sabrosa Música - Vol. VIII - Caratula A",
+    "coverBackImageId": "appcetato/caratulas/Sabrosa Música - Vol. VIII - Caratula B",
+    "labelAImageId": "appcetato/galletas/Sabrosa Música - Vol. VIII - A",
+    "labelBImageId": "appcetato/galletas/Sabrosa Música - Vol. VIII - B"
   },
   {
     "id": "30",
@@ -487,10 +511,14 @@
     "country": "Colombia",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 2.0,
-    "discCondition": 3.0,
+    "coverCondition": 2,
+    "discCondition": 3,
     "notes": "Todos los temas Edimúsica. Derechos de ejecución pública y radiotransmisión reservados.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "coverImageId": "appcetato/caratulas/El Sabor Inolvidable de los Corraleros de Majagual - Caratula A",
+    "coverBackImageId": "appcetato/caratulas/El Sabor Inolvidable de los Corraleros de Majagual - Caratula B",
+    "labelAImageId": "appcetato/galletas/El Sabor Inolvidable de los Corraleros de Majagual - A",
+    "labelBImageId": "appcetato/galletas/El Sabor Inolvidable de los Corraleros de Majagual - B"
   },
   {
     "id": "31",
@@ -504,10 +532,14 @@
     "country": "Colombia",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 2.0,
-    "discCondition": 3.0,
+    "coverCondition": 2,
+    "discCondition": 3,
     "notes": "Compilado de ritmos bailables. Incluye \"De Parte Mía\", \"La Veintiunica\", \"Esa Niña\", \"A Millón\", etc.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "coverImageId": "appcetato/caratulas/Los Bailables - Caratula A",
+    "coverBackImageId": "appcetato/caratulas/Los Bailables - Caratula B",
+    "labelAImageId": "appcetato/galletas/Los Bailables - A",
+    "labelBImageId": "appcetato/galletas/Los Bailables - B"
   },
   {
     "id": "32",
@@ -521,10 +553,14 @@
     "country": "Colombia",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 1.0,
-    "discCondition": 3.0,
+    "coverCondition": 1,
+    "discCondition": 3,
     "notes": "Compilado de ritmos bailables colombianos. Derechos de ejecución pública y radiotransmisión reservados.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "coverImageId": "appcetato/caratulas/14 Canonazos Bailables - Volumen V _Caratula A",
+    "coverBackImageId": "appcetato/caratulas/14 Canonazos Bailables - Volumen V _Caratula B",
+    "labelAImageId": "appcetato/galletas/14 Canonazos Bailables - Volumen V _A",
+    "labelBImageId": "appcetato/galletas/14 Canonazos Bailables - Volumen V _B"
   },
   {
     "id": "33",
@@ -538,10 +574,11 @@
     "country": "Colombia",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 3.0,
-    "discCondition": 4.0,
+    "coverCondition": 3,
+    "discCondition": 4,
     "notes": "Álbum conmemorativo de 25 años de trayectoria de Los Ocho de Colombia, liderados por Alfredo Gutiérrez.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "coverImageId": "appcetato/caratulas/25 Años de Éxitos con Los Ocho de Colombia - Caratula A"
   },
   {
     "id": "34",
@@ -555,8 +592,8 @@
     "country": "Colombia",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 3.0,
-    "discCondition": 4.0,
+    "coverCondition": 3,
+    "discCondition": 4,
     "notes": "Cantante: Jairo Paternina. Arreglos: Víctor Gutiérrez, Conrado Marrugo. Dirección general: Víctor Gutiérrez.",
     "dateAdded": "2026-09-04"
   },
@@ -572,10 +609,14 @@
     "country": "Colombia",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 2.0,
-    "discCondition": 4.0,
+    "coverCondition": 2,
+    "discCondition": 4,
     "notes": "Compilado de ritmos tropicales colombianos. Producido por Industrias Fonográficas Victoria Ltda.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "coverImageId": "appcetato/caratulas/¡Qué Sabroso Está! - Caratula A",
+    "coverBackImageId": "appcetato/caratulas/¡Qué Sabroso Está! - Caratula B",
+    "labelAImageId": "appcetato/galletas/¡Qué Sabroso Está! - A",
+    "labelBImageId": "appcetato/galletas/¡Qué Sabroso Está! - B"
   },
   {
     "id": "36",
@@ -589,8 +630,8 @@
     "country": "Colombia",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 5.0,
-    "discCondition": 5.0,
+    "coverCondition": 5,
+    "discCondition": 5,
     "notes": "Serie \"Tango de Ayer\" - Disco No. 4. Grabaciones originales de 1931-1941. Cantantes: Fernando Díaz, Jorge Omar, Charlo, Mercedes Simone.",
     "dateAdded": "2026-09-04"
   },
@@ -606,10 +647,11 @@
     "country": "Colombia",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 3.0,
-    "discCondition": 4.0,
+    "coverCondition": 3,
+    "discCondition": 4,
     "notes": "Grabado en los estudios de Discos Victoria en Medellín. Incluye \"Cuando Estemos Viejos\" (de Billo Frómeta).",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "coverBackImageId": "appcetato/caratulas/Rumores de Oración - Dueto Antaño - Caratula B"
   },
   {
     "id": "38",
@@ -623,8 +665,8 @@
     "country": "Colombia",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 2.0,
-    "discCondition": 3.0,
+    "coverCondition": 2,
+    "discCondition": 3,
     "notes": "Grabado en México. Disco \"Nuevo Ortofónico\" Alta Fidelidad. Incluye \"La Gloria Eres Tú\", \"Usted\", \"Júrame\", etc.",
     "dateAdded": "2026-09-04"
   },
@@ -640,10 +682,14 @@
     "country": "Colombia",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 3.0,
-    "discCondition": 4.0,
+    "coverCondition": 3,
+    "discCondition": 4,
     "notes": "Trío originario de Nariño, Colombia. Integrantes: Hugo Ordoñez, Luis Criollo, Sixto Insuasty. Notas: Ramón Ospina M.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "coverImageId": "appcetato/caratulas/Trío Martino- Triunfamos- Caratula A",
+    "coverBackImageId": "appcetato/caratulas/Trío Martino- Triunfamos- Caratula B",
+    "labelAImageId": "appcetato/galletas/Trío Martino- Triunfamos- Lado 1",
+    "labelBImageId": "appcetato/galletas/Trío Martino- Triunfamos- Lado 2"
   },
   {
     "id": "40",
@@ -657,10 +703,13 @@
     "country": "Colombia",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 2.0,
-    "discCondition": 3.0,
+    "coverCondition": 2,
+    "discCondition": 3,
     "notes": "Dirección artística: Humberto Vesga M. Integrantes: Héctor Jaramillo, Jairó Montoya, Leoncio Echeverry, Carlos A. Gómez, Hernando Marín.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "coverImageId": "appcetato/caratulas/Los Ayer's - Volumen 3 - Caratula 1",
+    "coverBackImageId": "appcetato/caratulas/Los Ayer's - Volumen 3 - Caratula 2",
+    "labelBImageId": "appcetato/galletas/Los Ayer's - Volumen 3 - Lado B"
   },
   {
     "id": "41",
@@ -674,10 +723,14 @@
     "country": "Colombia",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 4.0,
-    "discCondition": 4.0,
+    "coverCondition": 4,
+    "discCondition": 4,
     "notes": "Grabado en estudios \"Jarime\" Medellín. Proyecto cultural \"A Cantar\". Músicos: Oscar Álvarez, Fernando Arbeláez, Alonso Rivera, Jorge L. Guardia, Guillermo Hernández.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "coverImageId": "appcetato/caratulas/A Cantar Rancheras - Caratula A",
+    "coverBackImageId": "appcetato/caratulas/A Cantar Rancheras - Caratula B",
+    "labelAImageId": "appcetato/galletas/A Cantar Rancheras - A",
+    "labelBImageId": "appcetato/galletas/A Cantar Rancheras - B"
   },
   {
     "id": "42",
@@ -691,10 +744,11 @@
     "country": "Colombia",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 2.0,
-    "discCondition": 3.0,
+    "coverCondition": 2,
+    "discCondition": 3,
     "notes": "Géneros: tango vals, tango, vals. Incluye \"La Cama Vacía\", \"Cosas Viejas\", \"Por el Alma de Mi Madre\", etc.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "coverImageId": "appcetato/caratulas/Oscar Agudelo - Interpreta sus mejores canciones - Caratula A"
   },
   {
     "id": "43",
@@ -708,10 +762,11 @@
     "country": "Colombia",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 3.0,
-    "discCondition": 3.0,
+    "coverCondition": 3,
+    "discCondition": 3,
     "notes": "Con las orquestas de Jorge Ortega y Nacho Rosales. Incluye \"Sabor a Nada\", \"Copa de Vino\", \"Perdóname Mi Vida\", etc.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "coverImageId": "appcetato/caratulas/Olga Guillot - 12 exitos romanticos Caratula A"
   },
   {
     "id": "44",
@@ -725,10 +780,14 @@
     "country": "Colombia",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 2.0,
-    "discCondition": 3.0,
+    "coverCondition": 2,
+    "discCondition": 3,
     "notes": "Selección para Colombia: Hernán Colorado V. \"Hercovalle\". El Disco es Cultura.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "coverImageId": "appcetato/caratulas/Del Tango al Bolero Ranchero - Raul del mar - Caratula A",
+    "coverBackImageId": "appcetato/caratulas/Del Tango al Bolero Ranchero - Raul del mar - Caratula 2",
+    "labelAImageId": "appcetato/galletas/Del Tango al Bolero Ranchero - Raul del mar - Lado 1",
+    "labelBImageId": "appcetato/galletas/Del Tango al Bolero Ranchero - Raul del mar - Lado 2"
   },
   {
     "id": "45",
@@ -742,8 +801,8 @@
     "country": "Colombia",
     "physicalFormat": "Single",
     "speed": "45",
-    "coverCondition": 4.0,
-    "discCondition": 4.0,
+    "coverCondition": 4,
+    "discCondition": 4,
     "notes": "Producido por Tom Dowd. (P) 1978 WEA Records BV. ASCAP.",
     "dateAdded": "2026-09-04"
   },
@@ -759,10 +818,13 @@
     "country": "Colombia",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 3.0,
-    "discCondition": 3.0,
+    "coverCondition": 3,
+    "discCondition": 3,
     "notes": "Compilado con cortesías de Favencia (Venezuela), Discomoda de Colombia y Mag. del Perú. El Disco es Cultura.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "coverImageId": "appcetato/caratulas/El Especial del Año - Vol. 2 - Caratula A",
+    "coverBackImageId": "appcetato/caratulas/El Especial del Año - Vol. 2- Caratula B",
+    "labelBImageId": "appcetato/galletas/El Especial del Año - Vol. 2 - Lado 2"
   },
   {
     "id": "47",
@@ -776,10 +838,13 @@
     "country": "Colombia",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 2.0,
-    "discCondition": 3.0,
+    "coverCondition": 2,
+    "discCondition": 3,
     "notes": "Producción: Mario Rincón P., Javier García M., Isaac Villanueva M. Grabación: Mario Rincón P. Edimúsica.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "coverBackImageId": "appcetato/caratulas/Wganda Kenya - Caratula B",
+    "labelAImageId": "appcetato/galletas/Wganda Kenya - Lado 1",
+    "labelBImageId": "appcetato/galletas/Wganda Kenya - Lado 2"
   },
   {
     "id": "48",
@@ -793,10 +858,11 @@
     "country": "Colombia",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 2.0,
-    "discCondition": 2.0,
+    "coverCondition": 2,
+    "discCondition": 2,
     "notes": "Dúo colombiano (Gloria Rendón de G. y Antonio Marín Granada). Notas: Emilio Rivera Muñoz.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "coverImageId": "appcetato/caratulas/Muriendo de Amor- Gloria y Antonio- -Caratula A"
   },
   {
     "id": "49",
@@ -810,10 +876,11 @@
     "country": "Colombia",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 5.0,
-    "discCondition": 5.0,
+    "coverCondition": 5,
+    "discCondition": 5,
     "notes": "Arreglos: Enrique Aguilar, Guillermo González y León Cardona. Segundo disco de Nelly Calle en la colección.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "coverImageId": "appcetato/caratulas/Que Sabes Tú de Mí - Nelly Calle -Caratula A"
   },
   {
     "id": "50",
@@ -827,10 +894,13 @@
     "country": "Colombia",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 4.0,
-    "discCondition": 4.0,
+    "coverCondition": 4,
+    "discCondition": 4,
     "notes": "Integrantes: Juan Neri, Marco A. Muñiz y Héctor González. Conocidos como \"Los Reyes del Bolero Moderno\".",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "coverImageId": "appcetato/caratulas/Los Tres Ases- Caratula A",
+    "labelAImageId": "appcetato/galletas/Los Tres Ases - Lado 1",
+    "labelBImageId": "appcetato/galletas/Los Tres Ases - Lado 2"
   },
   {
     "id": "51",
@@ -844,10 +914,13 @@
     "country": "Chile",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 2.0,
-    "discCondition": 5.0,
+    "coverCondition": 2,
+    "discCondition": 5,
     "notes": "Cantante mexicano. Producto de Industria Electro-Sonora Ltda. (Chile). \"His Master's Voice\".",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "coverImageId": "appcetato/caratulas/Conozcalo es Rafael Vázquez- Caratula A",
+    "coverBackImageId": "appcetato/caratulas/Conozcalo es Rafael Vázquez- Caratula B",
+    "labelBImageId": "appcetato/galletas/Conozcalo es Rafael Vázquez - Lado 2"
   },
   {
     "id": "52",
@@ -861,10 +934,13 @@
     "country": "Colombia",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 2.0,
-    "discCondition": 3.0,
+    "coverCondition": 2,
+    "discCondition": 3,
     "notes": "Cantautor cubano-mexicano. Colección de sus éxitos. Marcas Registradas.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "coverImageId": "appcetato/caratulas/Fernando Valades - Vol. II- Caratula A",
+    "labelAImageId": "appcetato/galletas/Fernando Valades - Vol. II - Lado A",
+    "labelBImageId": "appcetato/galletas/Fernando Valades - Vol. II - Lado B"
   },
   {
     "id": "53",
@@ -878,8 +954,8 @@
     "country": "Colombia",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 2.0,
-    "discCondition": 5.0,
+    "coverCondition": 2,
+    "discCondition": 5,
     "notes": "Álbum de boleros y canciones románticas con mariachi. María Elena Sandoval fue una reconocida cantante colombiana.",
     "dateAdded": "2026-09-04"
   },
@@ -895,10 +971,14 @@
     "country": "Colombia",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 2.0,
-    "discCondition": 3.0,
+    "coverCondition": 2,
+    "discCondition": 3,
     "notes": "Álbum de música popular colombiana (paseos, porros, etc.). Con la participación de Betty Vega.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "coverImageId": "appcetato/caratulas/La Piña Madura - Caratula A",
+    "coverBackImageId": "appcetato/caratulas/La Piña Madura - Caratula B",
+    "labelAImageId": "appcetato/galletas/La Piña Madura - A",
+    "labelBImageId": "appcetato/galletas/La Piña Madura - B"
   },
   {
     "id": "55",
@@ -912,10 +992,13 @@
     "country": "Colombia",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 2.0,
-    "discCondition": 4.0,
+    "coverCondition": 2,
+    "discCondition": 4,
     "notes": "Álbum de música tropical colombiana con ritmos de cumbia, paseo, merengue y balada. Producto de Portugal (prensado).",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "coverImageId": "appcetato/caratulas/El Brasil del Enano Original - Caratula A",
+    "labelAImageId": "appcetato/galletas/El Brasil del Enano Original - A",
+    "labelBImageId": "appcetato/galletas/El Brasil del Enano Original - B"
   },
   {
     "id": "56",
@@ -929,10 +1012,12 @@
     "country": "Colombia",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 4.0,
-    "discCondition": 5.0,
+    "coverCondition": 4,
+    "discCondition": 5,
     "notes": "Serie \"Tango de Ayer\" - Volumen 5. Grabaciones históricas de la orquesta de Julio De Caro (1924-1928). (P) 1980 RCA Corporation.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "labelAImageId": "appcetato/galletas/Todo Corazón - Serie Tango de Ayer - Volumen 5 - A",
+    "labelBImageId": "appcetato/galletas/Todo Corazón - Serie Tango de Ayer - Volumen 5 - B"
   },
   {
     "id": "57",
@@ -946,10 +1031,12 @@
     "country": "Colombia",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 4.0,
-    "discCondition": 5.0,
+    "coverCondition": 4,
+    "discCondition": 5,
     "notes": "Álbum compartido entre dos agrupaciones. Notas: Gabriel Clavijo Franco. Producto de Industria Electro Sonora S.A.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "coverImageId": "appcetato/caratulas/Cita Estelar con Los Delfines y Los Embajadores - Caratula A",
+    "coverBackImageId": "appcetato/caratulas/Cita Estelar con Los Delfines y Los Embajadores - Caratula B"
   },
   {
     "id": "58",
@@ -963,10 +1050,14 @@
     "country": "Colombia",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 2.0,
-    "discCondition": 5.0,
+    "coverCondition": 2,
+    "discCondition": 5,
     "notes": "Álbum de 33 éxitos con ritmos tropicales. Sistema de cubierta exclusivo de Discos Fuentes (Patente N° 14.073).",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "coverImageId": "appcetato/caratulas/Como Siempre Buenos - Los 33 Éxitos de Peter Delis - Caratula A",
+    "coverBackImageId": "appcetato/caratulas/Como Siempre Buenos - Los 33 Éxitos de Peter Delis - Caratula B",
+    "labelAImageId": "appcetato/galletas/Como Siempre Buenos - Los 33 Éxitos de Peter Delis - A",
+    "labelBImageId": "appcetato/galletas/Como Siempre Buenos - Los 33 Éxitos de Peter Delis - B"
   },
   {
     "id": "59",
@@ -980,8 +1071,8 @@
     "country": "Colombia",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 2.0,
-    "discCondition": 5.0,
+    "coverCondition": 2,
+    "discCondition": 5,
     "notes": "El Ritmo Inconfundible de Colombia. Incluye \"Yo Me Voy Pa' Macondo\", \"Mi Cumbión\", \"Adiós, Adiós Corazón\", etc. EDIMUSICA.",
     "dateAdded": "2026-09-04"
   },
@@ -997,10 +1088,12 @@
     "country": "Colombia",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 2.0,
-    "discCondition": 5.0,
+    "coverCondition": 2,
+    "discCondition": 5,
     "notes": "Álbum del reconocido músico y compositor colombiano, pionero de la música tropical y porros. Industria Colombiana.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "labelAImageId": "appcetato/galletas/Tolú - A",
+    "labelBImageId": "appcetato/galletas/Tolú - B"
   },
   {
     "id": "61",
@@ -1014,10 +1107,12 @@
     "country": "Colombia",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 3.0,
-    "discCondition": 3.0,
+    "coverCondition": 3,
+    "discCondition": 3,
     "notes": "Disco promocional. Incluye \"Bon Pa'todo el Mundo\" (Dolcey Gutiérrez), \"Las Cosas de la Vida\" (Pacho Galán), \"Fanny\" (Lucho Bermúdez), etc.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "labelAImageId": "appcetato/galletas/(Promocional - Fábrica de Licores de Antioquia) - A",
+    "labelBImageId": "appcetato/galletas/(Promocional - Fábrica de Licores de Antioquia) - B"
   },
   {
     "id": "62",
@@ -1031,10 +1126,14 @@
     "country": "Colombia",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 4.0,
-    "discCondition": 5.0,
+    "coverCondition": 4,
+    "discCondition": 5,
     "notes": "Disco promocional navideño de Gaseosas Lux (1984-1985). Licencias de Dorado Records y Viva Records. © 1984 Sonolux.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "coverImageId": "appcetato/caratulas/Feliz Navidad - Al Ritmo de Lux (Gaseosas Lux) - Caratula A",
+    "coverBackImageId": "appcetato/caratulas/Feliz Navidad - Al Ritmo de Lux (Gaseosas Lux) - Caratula B",
+    "labelAImageId": "appcetato/galletas/Feliz Navidad - Al Ritmo de Lux (Gaseosas Lux) - A",
+    "labelBImageId": "appcetato/galletas/Feliz Navidad - Al Ritmo de Lux (Gaseosas Lux) - B"
   },
   {
     "id": "63",
@@ -1048,10 +1147,14 @@
     "country": "Colombia",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 4.0,
-    "discCondition": 5.0,
+    "coverCondition": 4,
+    "discCondition": 5,
     "notes": "Álbum del reconocido dúo mexicano. Incluye \"Chacha Linda\", \"Manténgase Cal\", \"Vuelvo a ser Triste\", \"Voy Entrando por la Calle\", etc.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "coverImageId": "appcetato/caratulas/Chacha Linda y Otras Canciones Inolvidables - Caratula A",
+    "coverBackImageId": "appcetato/caratulas/Chacha Linda y Otras Canciones Inolvidables - Caratula B",
+    "labelAImageId": "appcetato/galletas/Chacha Linda y Otras Canciones Inolvidables - A",
+    "labelBImageId": "appcetato/galletas/Chacha Linda y Otras Canciones Inolvidables - B"
   },
   {
     "id": "64",
@@ -1065,10 +1168,14 @@
     "country": "Colombia",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 3.0,
-    "discCondition": 4.0,
+    "coverCondition": 3,
+    "discCondition": 4,
     "notes": "Dúo formado en 1945 (Eladio Espinosa y Francisco Bedoya). Bambucos y pasillos del folclor colombiano. Sistema de cubierta exclusivo de Codiscos (Patente No. 10.414).",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "coverImageId": "appcetato/caratulas/Espinosa y Bedoya - Caratula A",
+    "coverBackImageId": "appcetato/caratulas/Espinosa y Bedoya - Caratula B",
+    "labelAImageId": "appcetato/galletas/Espinosa y Bedoya - A",
+    "labelBImageId": "appcetato/galletas/Espinosa y Bedoya - B"
   },
   {
     "id": "65",
@@ -1082,10 +1189,14 @@
     "country": "Colombia",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 4.0,
-    "discCondition": 4.0,
+    "coverCondition": 4,
+    "discCondition": 4,
     "notes": "Compilado de boleros con grandes intérpretes. RCA Victor - Serie Coleccionista.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "coverImageId": "appcetato/caratulas/Boleros Campeones - Caratula A",
+    "coverBackImageId": "appcetato/caratulas/Boleros Campeones - Caratula B",
+    "labelAImageId": "appcetato/galletas/Boleros Campeones - A",
+    "labelBImageId": "appcetato/galletas/Boleros Campeones - B"
   },
   {
     "id": "66",
@@ -1099,10 +1210,14 @@
     "country": "Colombia",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 4.0,
-    "discCondition": 3.0,
+    "coverCondition": 4,
+    "discCondition": 3,
     "notes": "Ingeniero de Sonido: Mario Rincón P. Sistema Dolby. Disponible también en cassette y cartucho de 4 tracks. El Disco es Cultura.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "coverImageId": "appcetato/caratulas/Bailando con el Dueto Villagómez - Pozo - Caratula A",
+    "coverBackImageId": "appcetato/caratulas/Bailando con el Dueto Villagómez - Pozo - Caratula B",
+    "labelAImageId": "appcetato/galletas/Bailando con el Dueto Villagómez - Pozo - A",
+    "labelBImageId": "appcetato/galletas/Bailando con el Dueto Villagómez - Pozo - B"
   },
   {
     "id": "67",
@@ -1116,10 +1231,14 @@
     "country": "Colombia",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 4.0,
-    "discCondition": 3.0,
+    "coverCondition": 4,
+    "discCondition": 3,
     "notes": "Programación: Hernán Colorado V. e Isaac Villanueva M. Diseño: Diego Cortes. Edición y corte: Óscar Valencia. Temas Edimúsica.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "coverImageId": "appcetato/caratulas/Síganme los Buenos - Vol. 12 - Caratula A",
+    "coverBackImageId": "appcetato/caratulas/Síganme los Buenos - Vol. 12 - Caratula B",
+    "labelAImageId": "appcetato/galletas/Síganme los Buenos - Vol. 12 - A",
+    "labelBImageId": "appcetato/galletas/Síganme los Buenos - Vol. 12 - B"
   },
   {
     "id": "68",
@@ -1133,10 +1252,14 @@
     "country": "Colombia",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 4.0,
-    "discCondition": 4.0,
+    "coverCondition": 4,
+    "discCondition": 4,
     "notes": "Arreglos: Kike Aguilar, Diego del Real. Producción: Álvaro Arango, Rafael Mejía, Gildardo Montoya. Sonido: Gabriel Alzate.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "coverImageId": "appcetato/caratulas/El Combo de las Estrellas y... Punto - Caratula A",
+    "coverBackImageId": "appcetato/caratulas/El Combo de las Estrellas y... Punto - Caratula B",
+    "labelAImageId": "appcetato/galletas/El Combo de las Estrellas y... Punto - A",
+    "labelBImageId": "appcetato/galletas/El Combo de las Estrellas y... Punto - B"
   },
   {
     "id": "69",
@@ -1150,10 +1273,14 @@
     "country": "Colombia",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 3.0,
-    "discCondition": 4.0,
+    "coverCondition": 3,
+    "discCondition": 4,
     "notes": "Fabricado en Colombia por Discos CBS S.A. - EMI. Marcas Registradas.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "coverImageId": "appcetato/caratulas/Los Trovadores de Cuyo - Vol. 8 - Caratula A",
+    "coverBackImageId": "appcetato/caratulas/Los Trovadores de Cuyo - Vol. 8 - Caratula B",
+    "labelAImageId": "appcetato/galletas/Los Trovadores de Cuyo - Vol. 8 - A",
+    "labelBImageId": "appcetato/galletas/Los Trovadores de Cuyo - Vol. 8 - B"
   },
   {
     "id": "70",
@@ -1167,10 +1294,14 @@
     "country": "Colombia",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 4.0,
-    "discCondition": 5.0,
+    "coverCondition": 4,
+    "discCondition": 5,
     "notes": "Dúo mexicano. Destacan temas de José Alfredo Jiménez e Indalecio Ramírez. RCA Victor - Serie Coleccionista.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "coverImageId": "appcetato/caratulas/Las Tristes Canciones del Dueto Miseria - Caratula A",
+    "coverBackImageId": "appcetato/caratulas/Las Tristes Canciones del Dueto Miseria - Caratula B",
+    "labelAImageId": "appcetato/galletas/Las Tristes Canciones del Dueto Miseria - A",
+    "labelBImageId": "appcetato/galletas/Las Tristes Canciones del Dueto Miseria - B"
   },
   {
     "id": "71",
@@ -1184,10 +1315,14 @@
     "country": "Colombia",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 4.0,
-    "discCondition": 3.0,
+    "coverCondition": 4,
+    "discCondition": 3,
     "notes": "Producción: Rafael Mejía - Gildardo Montoya. Sonido: Gabriel Alzate. Arreglos: Enrique Aguilar. Diseño: Margarita Rosa.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "coverImageId": "appcetato/caratulas/¡Quién Dice Que No! - Caratula A",
+    "coverBackImageId": "appcetato/caratulas/¡Quién Dice Que No! - Caratula B",
+    "labelAImageId": "appcetato/galletas/¡Quién Dice Que No! - A",
+    "labelBImageId": "appcetato/galletas/¡Quién Dice Que No! - B"
   },
   {
     "id": "72",
@@ -1201,10 +1336,14 @@
     "country": "Colombia",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 5.0,
-    "discCondition": 4.0,
+    "coverCondition": 5,
+    "discCondition": 4,
     "notes": "Incluye mensaje navideño de Jairo Paternina y El Combo de las Estrellas deseando Feliz Navidad 1988 y Prosperidad en 1989.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "coverImageId": "appcetato/caratulas/Mi Nueva Plegaria - Caratula A",
+    "coverBackImageId": "appcetato/caratulas/Mi Nueva Plegaria - Caratula B",
+    "labelAImageId": "appcetato/galletas/Mi Nueva Plegaria - A",
+    "labelBImageId": "appcetato/galletas/Mi Nueva Plegaria - B"
   },
   {
     "id": "73",
@@ -1219,9 +1358,13 @@
     "physicalFormat": "LP",
     "speed": "33⅓",
     "coverCondition": 3.5,
-    "discCondition": 4.0,
+    "discCondition": 4,
     "notes": "El Ritmo Inconfundible de Venezuela. Notas: Jorge E. Ramírez F. Cantantes: Omar Ferrer, Rafa Moreira, Benny.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "coverImageId": "appcetato/caratulas/Orlando en Colombia - Caratula A",
+    "coverBackImageId": "appcetato/caratulas/Orlando en Colombia - Caratula B",
+    "labelAImageId": "appcetato/galletas/Orlando en Colombia - A",
+    "labelBImageId": "appcetato/galletas/Orlando en Colombia - B"
   },
   {
     "id": "74",
@@ -1236,9 +1379,13 @@
     "physicalFormat": "LP",
     "speed": "33⅓",
     "coverCondition": 3.5,
-    "discCondition": 2.0,
+    "discCondition": 2,
     "notes": "Álbum-fiesta del local nocturno \"La Hosteria\" de Medellín. Dirección musical: Guillermo Butikofer. Notas: Gabriel Cuartas Franco.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "coverImageId": "appcetato/caratulas/Una Noche en la Hosteria - Caratula A",
+    "coverBackImageId": "appcetato/caratulas/Una Noche en la Hosteria - Caratula B",
+    "labelAImageId": "appcetato/galletas/Una Noche en la Hosteria - A",
+    "labelBImageId": "appcetato/galletas/Una Noche en la Hosteria - B"
   },
   {
     "id": "75",
@@ -1255,7 +1402,9 @@
     "coverCondition": "s/c",
     "discCondition": 3.5,
     "notes": "Álbum de ritmos tropicales colombianos. Derechos de reproducción, publicación y radiotransmisión reservados.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "labelAImageId": "appcetato/galletas/12 Impactos Atómicos - A",
+    "labelBImageId": "appcetato/galletas/12 Impactos Atómicos - B"
   },
   {
     "id": "76",
@@ -1270,9 +1419,12 @@
     "physicalFormat": "LP",
     "speed": "33⅓",
     "coverCondition": 4.5,
-    "discCondition": 4.0,
+    "discCondition": 4,
     "notes": "Álbum del reconocido cantante español. Hecho en Colombia por Odeon/EMI. Serie Internacional - Codiscos.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "coverImageId": "appcetato/caratulas/Digan lo que digan - Caratula A",
+    "labelAImageId": "appcetato/galletas/Digan lo que digan - A",
+    "labelBImageId": "appcetato/galletas/Digan lo que digan - B"
   },
   {
     "id": "77",
@@ -1286,10 +1438,14 @@
     "country": "Colombia",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 4.0,
-    "discCondition": 4.0,
+    "coverCondition": 4,
+    "discCondition": 4,
     "notes": "Canciones de Pedro Jairo Garcés y Jaime Rincón P. Edimúsica. Derechos de ejecución y radiotransmisión reservados.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "coverImageId": "appcetato/caratulas/De Combate con Los Golden Boys - Caratula A",
+    "coverBackImageId": "appcetato/caratulas/De Combate con Los Golden Boys - Caratula B",
+    "labelAImageId": "appcetato/galletas/De Combate con Los Golden Boys - A",
+    "labelBImageId": "appcetato/galletas/De Combate con Los Golden Boys - B"
   },
   {
     "id": "78",
@@ -1303,10 +1459,14 @@
     "country": "Colombia",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 4.0,
-    "discCondition": 5.0,
+    "coverCondition": 4,
+    "discCondition": 5,
     "notes": "Sistema de cubierta exclusivo de Codiscos (Patente No. 10.414). Director: Hilario Cuadros.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "coverImageId": "appcetato/caratulas/Los Trovadores de Cuyo - Vol. 8 - Caratula A",
+    "coverBackImageId": "appcetato/caratulas/Los Trovadores de Cuyo - Vol. 8 - Caratula B",
+    "labelAImageId": "appcetato/galletas/Los Trovadores de Cuyo - Vol. 8 - A",
+    "labelBImageId": "appcetato/galletas/Los Trovadores de Cuyo - Vol. 8 - B"
   },
   {
     "id": "79",
@@ -1320,10 +1480,14 @@
     "country": "Colombia",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 5.0,
-    "discCondition": 5.0,
+    "coverCondition": 5,
+    "discCondition": 5,
     "notes": "El Rey del Mambo. Fabricado por Industria Electro-Sonora S.A. Medellín, de grabaciones maestras de RCA Records.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "coverImageId": "appcetato/caratulas/Mambo en Sax - Caratula A",
+    "coverBackImageId": "appcetato/caratulas/Mambo en Sax - Caratula B",
+    "labelAImageId": "appcetato/galletas/Mambo en Sax - A",
+    "labelBImageId": "appcetato/galletas/Mambo en Sax - B"
   },
   {
     "id": "80",
@@ -1337,10 +1501,14 @@
     "country": "Colombia",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 4.0,
-    "discCondition": 5.0,
+    "coverCondition": 4,
+    "discCondition": 5,
     "notes": "Incluye \"Mi Negra y la Calentura\" (Grupo Niche). (P) MCMLXXXIII - Colombia.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "coverImageId": "appcetato/caratulas/El Disco del Año - Vol. 15 - Caratula A",
+    "coverBackImageId": "appcetato/caratulas/El Disco del Año - Vol. 15 - Caratula B",
+    "labelAImageId": "appcetato/galletas/El Disco del Año - Vol. 15 - A",
+    "labelBImageId": "appcetato/galletas/El Disco del Año - Vol. 15 - B"
   },
   {
     "id": "81",
@@ -1354,10 +1522,14 @@
     "country": "Colombia",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 2.0,
-    "discCondition": 5.0,
+    "coverCondition": 2,
+    "discCondition": 5,
     "notes": "Producto de Industria Electro-Sonora Ltda. Medellín - Colombia. Derechos de ejecución pública y de radiotransmisión.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "coverImageId": "appcetato/caratulas/Pueblito Viejo y otros grandes éxitos de Garzón y Collazos - Caratula A",
+    "coverBackImageId": "appcetato/caratulas/Pueblito Viejo y otros grandes éxitos de Garzón y Collazos - Caratula B",
+    "labelAImageId": "appcetato/galletas/Pueblito Viejo y otros grandes éxitos de Garzón y Collazos - A",
+    "labelBImageId": "appcetato/galletas/Pueblito Viejo y otros grandes éxitos de Garzón y Collazos - B"
   },
   {
     "id": "82",
@@ -1371,10 +1543,14 @@
     "country": "Colombia",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 2.0,
-    "discCondition": 3.0,
+    "coverCondition": 2,
+    "discCondition": 3,
     "notes": "Artista antioqueño, intérprete de tiple y guitarra. Grabado por medio del sistema de doblaje.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "coverImageId": "appcetato/caratulas/Aquí Colombia - Caratula A",
+    "coverBackImageId": "appcetato/caratulas/Aquí Colombia - Caratula B",
+    "labelAImageId": "appcetato/galletas/Aquí Colombia - A",
+    "labelBImageId": "appcetato/galletas/Aquí Colombia - B"
   },
   {
     "id": "83",
@@ -1388,10 +1564,14 @@
     "country": "Colombia",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 2.0,
-    "discCondition": 5.0,
+    "coverCondition": 2,
+    "discCondition": 5,
     "notes": "Serie Coleccionista. Edición y notas de Hernán Restrepo Duque. Grabaciones históricas con Orquesta Victor de Baile.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "coverImageId": "appcetato/caratulas/Taboga y otros éxitos de Margarita Cueto y Juan Arvizu - Caratula A",
+    "coverBackImageId": "appcetato/caratulas/Taboga y otros éxitos de Margarita Cueto y Juan Arvizu - Caratula B",
+    "labelAImageId": "appcetato/galletas/Taboga y otros éxitos de Margarita Cueto y Juan Arvizu - A",
+    "labelBImageId": "appcetato/galletas/Taboga y otros éxitos de Margarita Cueto y Juan Arvizu - B"
   },
   {
     "id": "84",
@@ -1405,10 +1585,14 @@
     "country": "Colombia",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 4.0,
-    "discCondition": 5.0,
+    "coverCondition": 4,
+    "discCondition": 5,
     "notes": "Fabricado por Industria Electro-Sonora S.A. Medellín, de grabaciones maestras de RCA Records.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "coverImageId": "appcetato/caratulas/Los Chalchaleros - Vol. II - Caratula A",
+    "coverBackImageId": "appcetato/caratulas/Los Chalchaleros - Vol. II - Caratula B",
+    "labelAImageId": "appcetato/galletas/Los Chalchaleros - Vol. II - A",
+    "labelBImageId": "appcetato/galletas/Los Chalchaleros - Vol. II - B"
   },
   {
     "id": "85",
@@ -1422,10 +1606,14 @@
     "country": "Colombia",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 3.0,
-    "discCondition": 5.0,
+    "coverCondition": 3,
+    "discCondition": 5,
     "notes": "Dúo especialista en canciones románticas suramericanas. Grabaciones históricas realizadas en Nueva York para RCA Victor.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "coverImageId": "appcetato/caratulas/Aquellas canciones de Valente y Cáceres - Caratula A",
+    "coverBackImageId": "appcetato/caratulas/Aquellas canciones de Valente y Cáceres - Caratula B",
+    "labelAImageId": "appcetato/galletas/Aquellas canciones de Valente y Cáceres - A",
+    "labelBImageId": "appcetato/galletas/Aquellas canciones de Valente y Cáceres - B"
   },
   {
     "id": "86",
@@ -1439,10 +1627,14 @@
     "country": "Colombia",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 2.0,
-    "discCondition": 3.0,
+    "coverCondition": 2,
+    "discCondition": 3,
     "notes": "Disco promocional de la empresa \"Cacharrería Industrial Pacon\" por sus 30 años. De grabaciones maestras de RCA Records.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "coverImageId": "appcetato/caratulas/30 Años (Cacharrería Industrial Pacon - Vol. IV) - Caratula A",
+    "coverBackImageId": "appcetato/caratulas/30 Años (Cacharrería Industrial Pacon - Vol. IV) - Caratula B",
+    "labelAImageId": "appcetato/galletas/30 Años (Cacharrería Industrial Pacon - Vol. IV) - A",
+    "labelBImageId": "appcetato/galletas/30 Años (Cacharrería Industrial Pacon - Vol. IV) - B"
   },
   {
     "id": "87",
@@ -1456,10 +1648,14 @@
     "country": "Colombia",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 2.0,
-    "discCondition": 4.0,
+    "coverCondition": 2,
+    "discCondition": 4,
     "notes": "La música original de la película \"Bolero Inmortal\". Orquesta y coros bajo la dirección de Antonio Díaz Conde.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "coverImageId": "appcetato/caratulas/Bolero Inmortal (La música original de la película - Bolero Inmortal) - Caratula A",
+    "coverBackImageId": "appcetato/caratulas/Bolero Inmortal (La música original de la película - Bolero Inmortal) - Caratula B",
+    "labelAImageId": "appcetato/galletas/Bolero Inmortal (La música original de la película - Bolero Inmortal) - A",
+    "labelBImageId": "appcetato/galletas/Bolero Inmortal (La música original de la película - Bolero Inmortal) - B"
   },
   {
     "id": "88",
@@ -1473,10 +1669,14 @@
     "country": "Ecuador",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 2.0,
-    "discCondition": 5.0,
+    "coverCondition": 2,
+    "discCondition": 5,
     "notes": "Con Juancho Vargas al piano. Producido en Montemarino, Ecuador - Industria Electro-Sonora Ltda. Medellín.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "coverImageId": "appcetato/caratulas/Chacha Linda y otras canciones de serenata por Los Romanceros - Caratula A",
+    "coverBackImageId": "appcetato/caratulas/Chacha Linda y otras canciones de serenata por Los Romanceros - Caratula B",
+    "labelAImageId": "appcetato/galletas/Chacha Linda y otras canciones de serenata por Los Romanceros - A",
+    "labelBImageId": "appcetato/galletas/Chacha Linda y otras canciones de serenata por Los Romanceros - B"
   },
   {
     "id": "89",
@@ -1490,10 +1690,14 @@
     "country": "Colombia",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 1.0,
-    "discCondition": 5.0,
+    "coverCondition": 1,
+    "discCondition": 5,
     "notes": "Serie Coleccionista. Notas: Hernán Restrepo Duque. Orquesta Típica de Terig Tucci. Canta: Luis Valente.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "coverImageId": "appcetato/caratulas/Aquellas canciones de Valente y Cáceres - Caratula A",
+    "coverBackImageId": "appcetato/caratulas/Aquellas canciones de Valente y Cáceres - Caratula B",
+    "labelAImageId": "appcetato/galletas/Aquellas canciones de Valente y Cáceres - A",
+    "labelBImageId": "appcetato/galletas/Aquellas canciones de Valente y Cáceres - B"
   },
   {
     "id": "90",
@@ -1507,10 +1711,12 @@
     "country": "Colombia",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 3.0,
-    "discCondition": 4.0,
+    "coverCondition": 3,
+    "discCondition": 4,
     "notes": "Saxofón Alto. Estereofónico. Incluye \"Que Te Importa\", \"Noche de Luna\", \"Pa' Todo el Año\", \"Al Di La\", etc.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "labelAImageId": "appcetato/galletas/Romántico - A",
+    "labelBImageId": "appcetato/galletas/Romántico - B"
   },
   {
     "id": "91",
@@ -1524,10 +1730,14 @@
     "country": "Colombia",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 3.0,
-    "discCondition": 4.0,
+    "coverCondition": 3,
+    "discCondition": 4,
     "notes": "Canta: Gustavo Quintero. Industria Colombiana. Ritmos: gaita, cumbia, paseo, pompo.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "coverImageId": "appcetato/caratulas/¡De Locura! - Caratula A",
+    "coverBackImageId": "appcetato/caratulas/¡De Locura! - Caratula B",
+    "labelAImageId": "appcetato/galletas/¡De Locura! - A",
+    "labelBImageId": "appcetato/galletas/¡De Locura! - B"
   },
   {
     "id": "92",
@@ -1541,10 +1751,11 @@
     "country": "Colombia",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 2.0,
-    "discCondition": 3.0,
+    "coverCondition": 2,
+    "discCondition": 3,
     "notes": "Guitarra Hawaiana. Dirección General: Antonio J. Fuentes L. Ingeniero de Sonido: José María Fuentes Estrada.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "coverImageId": "appcetato/caratulas/Cuerdas que Lloran - Vol. 3 -Caratula A"
   },
   {
     "id": "93",
@@ -1558,10 +1769,14 @@
     "country": "Colombia",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 2.0,
-    "discCondition": 2.0,
+    "coverCondition": 2,
+    "discCondition": 2,
     "notes": "Arreglos y dirección: Enrique Aguilar y Reinaldo Carrero. Fotos: Albert.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "coverImageId": "appcetato/caratulas/Grupo Venezuela - Vol. 3 - Caratula A",
+    "coverBackImageId": "appcetato/caratulas/Grupo Venezuela - Vol. 3 - Caratula B",
+    "labelAImageId": "appcetato/galletas/Grupo Venezuela - Vol. 3 - A",
+    "labelBImageId": "appcetato/galletas/Grupo Venezuela - Vol. 3 - B"
   },
   {
     "id": "94",
@@ -1575,10 +1790,14 @@
     "country": "Colombia",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 2.0,
-    "discCondition": 2.0,
+    "coverCondition": 2,
+    "discCondition": 2,
     "notes": "Arreglos y Dirección: Enrique Aguilar. Álbum con ritmos variados de la época (rock, twist, guaracha, bolero, etc.).",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "coverImageId": "appcetato/caratulas/Aquí los Éxitos - Caratula A",
+    "coverBackImageId": "appcetato/caratulas/Aquí los Éxitos - Caratula B",
+    "labelAImageId": "appcetato/galletas/Aquí los Éxitos - A",
+    "labelBImageId": "appcetato/galletas/Aquí los Éxitos - B"
   },
   {
     "id": "95",
@@ -1592,10 +1811,14 @@
     "country": "Colombia",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 3.0,
-    "discCondition": 3.0,
+    "coverCondition": 3,
+    "discCondition": 3,
     "notes": "Incluye el éxito \"El Tren de Seis\". Arreglos y Dirección: Enrique Aguilar. Producción: Álvaro Arango. Sonido: Gabriel Alzate.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "coverImageId": "appcetato/caratulas/Hermanos a Bailar Nos Vamos - Caratula A",
+    "coverBackImageId": "appcetato/caratulas/Hermanos a Bailar Nos Vamos - Caratula B",
+    "labelAImageId": "appcetato/galletas/Hermanos a Bailar Nos Vamos - A",
+    "labelBImageId": "appcetato/galletas/Hermanos a Bailar Nos Vamos - B"
   },
   {
     "id": "96",
@@ -1609,10 +1832,14 @@
     "country": "Colombia",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 4.0,
-    "discCondition": 4.0,
+    "coverCondition": 4,
+    "discCondition": 4,
     "notes": "De grabaciones maestras de RCA Records. Incluye temas de Juan Arvizu, Juan Pulido, Hermanos Martínez Gil, Alfonso Ortiz Tirado, Valente y Cáceres, etc.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "coverImageId": "appcetato/caratulas/Evocando el Ayer - Caratula A",
+    "coverBackImageId": "appcetato/caratulas/Evocando el Ayer - Caratula B",
+    "labelAImageId": "appcetato/galletas/Evocando el Ayer - A",
+    "labelBImageId": "appcetato/galletas/Evocando el Ayer - B"
   },
   {
     "id": "97",
@@ -1626,10 +1853,14 @@
     "country": "Colombia",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 2.0,
-    "discCondition": 3.0,
+    "coverCondition": 2,
+    "discCondition": 3,
     "notes": "Incluye canciones rancheras mexicanas de José Alfredo Jiménez, Tomás Méndez, Quirino Mendoza, etc. Sistema de cubierta exclusivo de Codiscos.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "coverImageId": "appcetato/caratulas/A Cantar Rancheras - Caratula A",
+    "coverBackImageId": "appcetato/caratulas/A Cantar Rancheras - Caratula B",
+    "labelAImageId": "appcetato/galletas/A Cantar Rancheras - A",
+    "labelBImageId": "appcetato/galletas/A Cantar Rancheras - B"
   },
   {
     "id": "98",
@@ -1643,10 +1874,14 @@
     "country": "Colombia",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 4.0,
-    "discCondition": 4.0,
+    "coverCondition": 4,
+    "discCondition": 4,
     "notes": "Serie Coleccionista. Canciones de Miguel Matamoros, Agustín Lara, Rafael Hernández, entre otros.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "coverImageId": "appcetato/caratulas/Trío Matamoros (Serie Coleccionista) - Caratula A",
+    "coverBackImageId": "appcetato/caratulas/Trío Matamoros (Serie Coleccionista) - Caratula B",
+    "labelAImageId": "appcetato/galletas/Trío Matamoros (Serie Coleccionista) - A",
+    "labelBImageId": "appcetato/galletas/Trío Matamoros (Serie Coleccionista) - B"
   },
   {
     "id": "99",
@@ -1660,10 +1895,12 @@
     "country": "Colombia",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 3.0,
-    "discCondition": 3.0,
+    "coverCondition": 3,
+    "discCondition": 3,
     "notes": "Selección y notas de Hernán Restrepo Duque. Incluye tangos y canciones argentinas.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "coverImageId": "appcetato/caratulas/Aquellas Canciones - Volumen XX - caratula A",
+    "coverBackImageId": "appcetato/caratulas/Aquellas Canciones - Volumen XX - caratula B"
   },
   {
     "id": "100",
@@ -1677,10 +1914,14 @@
     "country": "Colombia",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 4.0,
-    "discCondition": 4.0,
+    "coverCondition": 4,
+    "discCondition": 4,
     "notes": "Serie Coleccionista. Disco estereofónico compatible con monofónico. (P) 1975. El Disco es Cultura.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "coverImageId": "appcetato/caratulas/Boleros Campeones - Vol. III - Caratula A",
+    "coverBackImageId": "appcetato/caratulas/Boleros Campeones - Vol. III - Caratula B",
+    "labelAImageId": "appcetato/galletas/Boleros Campeones - Vol. III - A",
+    "labelBImageId": "appcetato/galletas/Boleros Campeones - Vol. III - B"
   },
   {
     "id": "101",
@@ -1697,7 +1938,9 @@
     "coverCondition": "s/c",
     "discCondition": null,
     "notes": "Incluye \"Nuestro Amigo\" (Pastor López), \"Vagabundo Soy\" (Rodolfo), \"Dos Mujeres\" (Alfredo Gutiérrez), etc. Cortesía FM Discos y Cintas Ltda. (P) 1980.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "labelAImageId": "appcetato/galletas/14 Candidos Bailables - Volumen 20 - A",
+    "labelBImageId": "appcetato/galletas/14 Candidos Bailables - Volumen 20 - B"
   },
   {
     "id": "102",
@@ -1714,7 +1957,9 @@
     "coverCondition": "s/c",
     "discCondition": null,
     "notes": "Incluye \"El Porro\" (Los Líderes), \"Bocachito Sinuano\" (Sonora Cordobesa), \"El Sabanero\" (Los Bestiales), etc. (P) 1974. Edimúsica.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "labelAImageId": "appcetato/galletas/Porros, Solo Porros - A",
+    "labelBImageId": "appcetato/galletas/Porros, Solo Porros - B"
   },
   {
     "id": "103",
@@ -1728,10 +1973,12 @@
     "country": "EE.UU.",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 4.0,
-    "discCondition": 5.0,
+    "coverCondition": 4,
+    "discCondition": 5,
     "notes": "Grabado en México. dynaflex. Manufactured by RCA Records - Distributed by Caytronics Records Corp.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "labelAImageId": "appcetato/galletas/Pérez Prado Latino - A",
+    "labelBImageId": "appcetato/galletas/Pérez Prado Latino - B"
   },
   {
     "id": "104",
@@ -1745,10 +1992,14 @@
     "country": "Colombia",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 3.0,
+    "coverCondition": 3,
     "discCondition": 4.5,
     "notes": "Dúo especializado en canciones del tiempo viejo (1925-1930). Integrantes: Ramón Carrasquilla y Camilo García.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "coverImageId": "appcetato/caratulas/Recuerdos del Ayer - Vol. 1 - Caratula A",
+    "coverBackImageId": "appcetato/caratulas/Recuerdos del Ayer - Vol. 1 - Caratula B",
+    "labelAImageId": "appcetato/galletas/Recuerdos del Ayer - Vol. 1 - A",
+    "labelBImageId": "appcetato/galletas/Recuerdos del Ayer - Vol. 1 - B"
   },
   {
     "id": "105",
@@ -1762,10 +2013,14 @@
     "country": "Colombia",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 5.0,
-    "discCondition": 5.0,
+    "coverCondition": 5,
+    "discCondition": 5,
     "notes": "Fabricado por Industria Electro-Sonora S.A. Medellín, de grabaciones maestras de RCA Records. (P) 1974. Afiliado a Asincol.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "coverImageId": "appcetato/caratulas/Más éxitos con el rey del mambo - Caratula A",
+    "coverBackImageId": "appcetato/caratulas/Más éxitos con el rey del mambo - Caratula B",
+    "labelAImageId": "appcetato/galletas/Más éxitos con el rey del mambo - A",
+    "labelBImageId": "appcetato/galletas/Más éxitos con el rey del mambo - B"
   },
   {
     "id": "106",
@@ -1779,10 +2034,14 @@
     "country": "EE.UU.",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 4.0,
-    "discCondition": 4.0,
+    "coverCondition": 4,
+    "discCondition": 4,
     "notes": "Integrantes: Ray Ramos, Gilbert López, Bert Castro, Willie Rodríguez, John Nieves, Rubén García, David Lugo, Alex Nazario, Eddie Marrero. Kim Records, Inc. New Jersey.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "coverImageId": "appcetato/caratulas/Salsa Tracks - Caratula A",
+    "coverBackImageId": "appcetato/caratulas/Salsa Tracks - Caratula B",
+    "labelAImageId": "appcetato/galletas/Salsa Tracks - A",
+    "labelBImageId": "appcetato/galletas/Salsa Tracks - B"
   },
   {
     "id": "107",
@@ -1796,10 +2055,14 @@
     "country": "Colombia",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 5.0,
+    "coverCondition": 5,
     "discCondition": 4.5,
     "notes": "Serie Coleccionista. Notas de Hernán Restrepo Duque. Hugo del Carril (Piero Hugo Bonfano Fontana) fue una de las figuras más queridas del tango argentino.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "coverImageId": "appcetato/caratulas/Aquellas canciones de Hugo del Carril - Caratula A",
+    "coverBackImageId": "appcetato/caratulas/Aquellas canciones de Hugo del Carril - Caratula B",
+    "labelAImageId": "appcetato/galletas/Aquellas canciones de Hugo del Carril - A",
+    "labelBImageId": "appcetato/galletas/Aquellas canciones de Hugo del Carril - B"
   },
   {
     "id": "108",
@@ -1813,10 +2076,12 @@
     "country": "Colombia",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 4.0,
-    "discCondition": 5.0,
+    "coverCondition": 4,
+    "discCondition": 5,
     "notes": "Manufacturado en Colombia por Industrias Fonoton Ltda. Licencia de Deutsche Grammophon Gesellschaft. Distribuido por Philips Colombiana S.A.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "labelAImageId": "appcetato/galletas/Homenaje a Canaro - A",
+    "labelBImageId": "appcetato/galletas/Homenaje a Canaro - B"
   },
   {
     "id": "109",
@@ -1830,8 +2095,8 @@
     "country": "Colombia",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 5.0,
-    "discCondition": 3.0,
+    "coverCondition": 5,
+    "discCondition": 3,
     "notes": "Disco promocional de la aerolínea LAN-Chile. Recopilación de temas de varios países (Colombia, Chile, Ecuador, Perú, Argentina, España, Brasil).",
     "dateAdded": "2026-09-04"
   },
@@ -1848,9 +2113,11 @@
     "physicalFormat": "LP",
     "speed": "33⅓",
     "coverCondition": 4.5,
-    "discCondition": 5.0,
+    "discCondition": 5,
     "notes": "Cuarto volumen de la serie \"Boleros Campeones\" de RCA Victor - Coleccionista.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "labelAImageId": "appcetato/galletas/Boleros Campeones - Vol. IV - A",
+    "labelBImageId": "appcetato/galletas/Boleros Campeones - Vol. IV - B"
   },
   {
     "id": "111",
@@ -1864,10 +2131,14 @@
     "country": "Colombia",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 5.0,
-    "discCondition": 5.0,
+    "coverCondition": 5,
+    "discCondition": 5,
     "notes": "Director General: Renato Capriles. Arreglos: Oscar García. Estudio: Sonomatrix. El Disco es Cultura. (P) C 1975.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "coverImageId": "appcetato/caratulas/Álbum Homenaje a los 30 años de Víctor Piñero - Caratula A",
+    "coverBackImageId": "appcetato/caratulas/Álbum Homenaje a los 30 años de Víctor Piñero - Caratula B",
+    "labelAImageId": "appcetato/galletas/Álbum Homenaje a los 30 años de Víctor Piñero - A",
+    "labelBImageId": "appcetato/galletas/Álbum Homenaje a los 30 años de Víctor Piñero - B"
   },
   {
     "id": "112",
@@ -1881,10 +2152,14 @@
     "country": "Colombia",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 3.0,
-    "discCondition": 4.0,
+    "coverCondition": 3,
+    "discCondition": 4,
     "notes": "Compilado de éxitos de Motown. Fabricado y distribuido en Colombia por INCOLEVE.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "coverImageId": "appcetato/caratulas/Motown Disc-O-Tech No. 2 (Motown MixTech) - Caratula A",
+    "coverBackImageId": "appcetato/caratulas/Motown Disc-O-Tech No. 2 (Motown MixTech) - Caratula B",
+    "labelAImageId": "appcetato/galletas/Motown Disc-O-Tech No. 2 (Motown MixTech) - A",
+    "labelBImageId": "appcetato/galletas/Motown Disc-O-Tech No. 2 (Motown MixTech) - B"
   },
   {
     "id": "113",
@@ -1898,10 +2173,14 @@
     "country": "Colombia",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 3.0,
-    "discCondition": 5.0,
+    "coverCondition": 3,
+    "discCondition": 5,
     "notes": "Álbum de poemas del poeta colombiano Jorge Robledo Ortiz. Notas: Gabriel Cuartas Franco. Producido por Industria Electro-Sonora Ltda. Medellín.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "coverImageId": "appcetato/caratulas/La Casa de los Abuelos - Caratula A",
+    "coverBackImageId": "appcetato/caratulas/La Casa de los Abuelos - Caratula B",
+    "labelAImageId": "appcetato/galletas/La Casa de los Abuelos - A",
+    "labelBImageId": "appcetato/galletas/La Casa de los Abuelos - B"
   },
   {
     "id": "114",
@@ -1915,10 +2194,14 @@
     "country": "Colombia",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 4.0,
-    "discCondition": 5.0,
+    "coverCondition": 4,
+    "discCondition": 5,
     "notes": "Reedición colombiana del clásico álbum navideño de Elvis. Temas 3 y 6 del Lado 2 con Los Jordanaires.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "coverImageId": "appcetato/caratulas/Elvis Sings Christmas Songs (Elvis en Navidad) - Caratula A",
+    "coverBackImageId": "appcetato/caratulas/Elvis Sings Christmas Songs (Elvis en Navidad) - Caratula B",
+    "labelAImageId": "appcetato/galletas/Elvis Sings Christmas Songs (Elvis en Navidad) - A",
+    "labelBImageId": "appcetato/galletas/Elvis Sings Christmas Songs (Elvis en Navidad) - B"
   },
   {
     "id": "115",
@@ -1932,10 +2215,11 @@
     "country": "Colombia",
     "physicalFormat": "Single",
     "speed": "78",
-    "coverCondition": 3.0,
-    "discCondition": 3.0,
+    "coverCondition": 3,
+    "discCondition": 3,
     "notes": "Disco de 78 RPM. Lado 1: \"Noches de Bocagrande\" (Bolero - Faustino Arias Reyuel). Lado 2: \"Triunfamos\" (Bolero - Rafael Cárdenas).",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "labelBImageId": "appcetato/galletas/Noches de Bocagrande  - Triunfamos - B"
   },
   {
     "id": "116",
@@ -1949,10 +2233,12 @@
     "country": "Colombia",
     "physicalFormat": "Single",
     "speed": "78",
-    "coverCondition": 3.0,
-    "discCondition": 3.0,
+    "coverCondition": 3,
+    "discCondition": 3,
     "notes": "Disco de 78 RPM. Lado 1: \"Aquellos Ojos Verdes\" (Bolero - Nilo Menéndez / Adolfo Utrera). Lado 2: \"Capullito de Alelí\" (Bolero - Rafael Hernández). Dirección de orquesta: Dave Cavanaugh.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "labelAImageId": "appcetato/galletas/Aquellos Ojos Verdes - Capullito de Alelí - A",
+    "labelBImageId": "appcetato/galletas/Aquellos Ojos Verdes - Capullito de Alelí - B"
   },
   {
     "id": "117",
@@ -1969,7 +2255,8 @@
     "coverCondition": null,
     "discCondition": null,
     "notes": "Disco de 78 RPM. Lado 1: \"Soledad sin ti\" (Carlos Guerra). Lado 2: \"Sin necesidad\" (Laugutein). Producido por Sonolux.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "labelAImageId": "appcetato/galletas/Soledad sin ti  - Sin necesidad - A"
   },
   {
     "id": "118",
@@ -1983,10 +2270,12 @@
     "country": "Colombia",
     "physicalFormat": "Single",
     "speed": "78",
-    "coverCondition": 3.0,
-    "discCondition": 3.0,
+    "coverCondition": 3,
+    "discCondition": 3,
     "notes": "Disco de 78 RPM. Lado 1: \"Dime pa' quien\" (Porro - Alejandro Blanco). Lado 2: \"La luna y el pescador\" (Cumbia - Heracio Domínguez / Edmundo Arias). Con el Conjunto de Edmundo Arias.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "labelAImageId": "appcetato/galletas/Dime pa' quien - La luna y el pescador - A",
+    "labelBImageId": "appcetato/galletas/Dime pa' quien - La luna y el pescador - B"
   },
   {
     "id": "119",
@@ -2000,10 +2289,12 @@
     "country": "Colombia",
     "physicalFormat": "Single",
     "speed": "78",
-    "coverCondition": 3.0,
-    "discCondition": 3.0,
+    "coverCondition": 3,
+    "discCondition": 3,
     "notes": "Disco de 78 RPM. Lado A: \"El Minú de Belén\" (Villancico / Porro - Pedro Nel Isaza). Lado B: \"Orquesta del Mar\" (Vals - Pedro Nel Isaza). Dirige: Pedro Nel Isaza.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "labelAImageId": "appcetato/galletas/El Minú de Belén - Orquesta del Mar (Rostra del Mar) - A",
+    "labelBImageId": "appcetato/galletas/El Minú de Belén - Orquesta del Mar (Rostra del Mar) - B"
   },
   {
     "id": "120",
@@ -2017,10 +2308,12 @@
     "country": "Argentina",
     "physicalFormat": "Single",
     "speed": "78",
-    "coverCondition": 3.0,
-    "discCondition": 3.0,
+    "coverCondition": 3,
+    "discCondition": 3,
     "notes": "Disco de 78 RPM. Lado A: \"Por vos yo me rompo todo\" (Francisco Canaro). Lado B: \"Sueño de muñeca\" (Francisco Canaro - J. Fernández Blanco). Canta: R. Maida.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "labelAImageId": "appcetato/galletas/Por vos yo me rompo todo - Sueño de muñeca - A",
+    "labelBImageId": "appcetato/galletas/Por vos yo me rompo todo - Sueño de muñeca - B"
   },
   {
     "id": "121",
@@ -2034,10 +2327,12 @@
     "country": "Colombia",
     "physicalFormat": "Single",
     "speed": "78",
-    "coverCondition": 3.0,
-    "discCondition": 3.0,
+    "coverCondition": 3,
+    "discCondition": 3,
     "notes": "Disco de 78 RPM. Lado A: \"Soy aquel\" (Pasillo - D. en D. - Los Cuyotos). Lado B: \"Pequeña\" (Vals - Garcés y Vera / Del LD 4001/6 Lto Monfil). (P) 1973.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "labelAImageId": "appcetato/galletas/Soy aquel - Pequeña - A",
+    "labelBImageId": "appcetato/galletas/Soy aquel - Pequeña - B"
   },
   {
     "id": "122",
@@ -2051,10 +2346,12 @@
     "country": "Uruguay",
     "physicalFormat": "Single",
     "speed": "78",
-    "coverCondition": 3.0,
-    "discCondition": 3.0,
+    "coverCondition": 3,
+    "discCondition": 3,
     "notes": "Disco de 78 RPM. Lado A: \"Dolor de ausencia\" (Vals - Natalio Sedini). Lado B: \"Cinco reales de...\" (Enrique Soriano - C. Limone). Donato Racciatti y su Orquesta Típica. Canta: Carlos Roldán.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "labelAImageId": "appcetato/galletas/Ausencia - A",
+    "labelBImageId": "appcetato/galletas/Ausencia - B"
   },
   {
     "id": "123",
@@ -2068,10 +2365,11 @@
     "country": "Colombia",
     "physicalFormat": "Single",
     "speed": "78",
-    "coverCondition": 3.0,
-    "discCondition": 3.0,
+    "coverCondition": 3,
+    "discCondition": 3,
     "notes": "Disco de 78 RPM. Lado A: \"La Pulga\" (Guaracha - Gili-Navarro-Áviles). Lado B: \"Ya es muy tarde\" (Bolero - Alfredo Gil). Por Discos Tropical. La fecha \"Gill - 1969\" aparece en la etiqueta.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "labelAImageId": "appcetato/galletas/La Pulga -  Ya es muy tarde - A"
   },
   {
     "id": "124",
@@ -2085,10 +2383,12 @@
     "country": "Colombia",
     "physicalFormat": "Single",
     "speed": "78",
-    "coverCondition": 3.0,
-    "discCondition": 3.0,
+    "coverCondition": 3,
+    "discCondition": 3,
     "notes": "Disco de 78 RPM. Lado A: \"Alfonso Piña\" (Canción - Enrique Bártega) - Julio Erazo y su Orquesta Mixta. Lado B: posiblemente otra canción no especificada.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "labelAImageId": "appcetato/galletas/Alfonso Piña (posiblemente) - A",
+    "labelBImageId": "appcetato/galletas/Alfonso Piña (posiblemente) - B"
   },
   {
     "id": "125",
@@ -2102,8 +2402,8 @@
     "country": "Colombia",
     "physicalFormat": "Single",
     "speed": "78",
-    "coverCondition": 3.0,
-    "discCondition": 3.0,
+    "coverCondition": 3,
+    "discCondition": 3,
     "notes": "Disco de 78 RPM. Lado A: \"Guayabo a la yé\" (Guaracha - Eliseo Herencia). Lado B: posiblemente otra canción no especificada. Edicto - Política y de Radiotransmisión reservados.",
     "dateAdded": "2026-09-04"
   },
@@ -2119,10 +2419,12 @@
     "country": "Colombia",
     "physicalFormat": "Single",
     "speed": "78",
-    "coverCondition": 3.0,
-    "discCondition": 3.0,
+    "coverCondition": 3,
+    "discCondition": 3,
     "notes": "Disco de 78 RPM. Lado A: \"El Campeón\" (I. Ricardo) - Orquesta Los Melódicos. Lado B: \"Cumbión Español\" (H. Castro) - Discomoda.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "labelAImageId": "appcetato/galletas/El Campeón - Cumbión Español - A",
+    "labelBImageId": "appcetato/galletas/El Campeón - Cumbión Español - B"
   },
   {
     "id": "127",
@@ -2136,10 +2438,12 @@
     "country": "Colombia",
     "physicalFormat": "Single",
     "speed": "78",
-    "coverCondition": 3.0,
-    "discCondition": 3.0,
+    "coverCondition": 3,
+    "discCondition": 3,
     "notes": "Disco de 78 RPM. Lado A: \"Una postal de París\" (Vals - Tony Rego) - Don Lucho Ramírez con el Trío Carabelli. Lado B: \"A qué negar\" (Bolero - Federico Gamboa / Guty Cárdenas) - Don Lucio Ramírez con Luis Uribe Bueno y sus Chaves.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "labelAImageId": "appcetato/galletas/Una postal de París -  A qué negar - A",
+    "labelBImageId": "appcetato/galletas/Una postal de París -  A qué negar - B"
   },
   {
     "id": "128",
@@ -2153,10 +2457,12 @@
     "country": "Colombia",
     "physicalFormat": "Single",
     "speed": "78",
-    "coverCondition": 3.0,
-    "discCondition": 3.0,
+    "coverCondition": 3,
+    "discCondition": 3,
     "notes": "Disco de 78 RPM. Lado A: \"Maldi\" - Los Black Stars con Gabriel Romero. Lado B: \"Cumbia pa' amanecer\" - Los Black Stars. Sello Negro - Melodipil.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "labelAImageId": "appcetato/galletas/Maldi - Cumbia pa' amanecer - A",
+    "labelBImageId": "appcetato/galletas/Maldi - Cumbia pa' amanecer - B"
   },
   {
     "id": "129",
@@ -2170,8 +2476,8 @@
     "country": "Italia",
     "physicalFormat": "Single",
     "speed": "78",
-    "coverCondition": 3.0,
-    "discCondition": 3.0,
+    "coverCondition": 3,
+    "discCondition": 3,
     "notes": "Disco de 78 RPM. Lado A: \"Me gusta señal tambo\" (Tamborera). Lado B: \"Cumbia sobre el mar\" (Cumbia). Leandro Torres - con arreglos estéreo. Disco de 9 pulgadas. Hecho en Italia.",
     "dateAdded": "2026-09-04"
   },
@@ -2187,10 +2493,12 @@
     "country": "Colombia",
     "physicalFormat": "Single",
     "speed": "78",
-    "coverCondition": 3.0,
-    "discCondition": 3.0,
+    "coverCondition": 3,
+    "discCondition": 3,
     "notes": "Disco de 78 RPM. Lado A: \"Villa YPA, CA\". Lado B: \"Pachanga Guararé\" (Cumbia Guaraníe - Marciano Torres). Victoria Discos.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "labelAImageId": "appcetato/galletas/Villa YPA, CA - Pachanga Guararé - A",
+    "labelBImageId": "appcetato/galletas/Villa YPA, CA - Pachanga Guararé - B"
   },
   {
     "id": "131",
@@ -2204,10 +2512,12 @@
     "country": "Europa/EE.UU.",
     "physicalFormat": "Single",
     "speed": "78",
-    "coverCondition": 3.0,
-    "discCondition": 3.0,
+    "coverCondition": 3,
+    "discCondition": 3,
     "notes": "Disco de 78 RPM. Lado A: \"La Palomba - Andalucía - Lisboa Antigua\" (con acompañamiento rítmico). Lado B: \"El Reglamento de la Máquina\" (Madrid - con acompañamiento rítmico). George Feyers, piano. Serie \"Echoes of Spain\".",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "labelAImageId": "appcetato/galletas/La Palomba - Andalucía - Lisboa Antigua - El Reglamento de la Máquina - A",
+    "labelBImageId": "appcetato/galletas/La Palomba - Andalucía - Lisboa Antigua - El Reglamento de la Máquina - B"
   },
   {
     "id": "132",
@@ -2221,10 +2531,12 @@
     "country": "Colombia",
     "physicalFormat": "Single",
     "speed": "78",
-    "coverCondition": 3.0,
-    "discCondition": 3.0,
+    "coverCondition": 3,
+    "discCondition": 3,
     "notes": "Disco de 78 RPM. Lado A: \"La Casta\" (Pasillo - Ignacio Portuz) - La Sonora Cordobesa, canta El Indio Chávez. Lado B: \"Ron y Cerveza\" (Porro - Nono Narváez) - La Sonora Cordobesa, canta El Turquito.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "labelAImageId": "appcetato/galletas/La Casta - Ron y Cerveza - A",
+    "labelBImageId": "appcetato/galletas/La Casta - Ron y Cerveza - B"
   },
   {
     "id": "133",
@@ -2238,10 +2550,12 @@
     "country": "Colombia",
     "physicalFormat": "Single",
     "speed": "45",
-    "coverCondition": 3.0,
-    "discCondition": 3.0,
+    "coverCondition": 3,
+    "discCondition": 3,
     "notes": "Disco de 45 RPM. Lado A: \"Rosa Blanca\" (Cumbia - Adolfo Acosta). Lado B: \"Cara Sucia\" (Cumbia - Roberto Azula / Augusto Zapata). Producido por Alainky.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "labelAImageId": "appcetato/galletas/Rosa Blanca - Cara Sucia - A",
+    "labelBImageId": "appcetato/galletas/Rosa Blanca - Cara Sucia - B"
   },
   {
     "id": "134",
@@ -2255,10 +2569,12 @@
     "country": "Colombia",
     "physicalFormat": "Single",
     "speed": "78",
-    "coverCondition": 3.0,
-    "discCondition": 3.0,
+    "coverCondition": 3,
+    "discCondition": 3,
     "notes": "Disco de 78 RPM. Lado A: \"Borracho por Amor\" (Vals - Valdivieso / Dougan). Lado B: \"Desde que te marchaste\" (Vals - G. Vanegas Lloveras). RCA Victor.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "labelAImageId": "appcetato/galletas/Borracho por Amor - Desde que te marchaste - A",
+    "labelBImageId": "appcetato/galletas/Borracho por Amor - Desde que te marchaste - B"
   },
   {
     "id": "135",
@@ -2272,10 +2588,12 @@
     "country": "Colombia",
     "physicalFormat": "Single",
     "speed": "45",
-    "coverCondition": 4.0,
-    "discCondition": 4.0,
+    "coverCondition": 4,
+    "discCondition": 4,
     "notes": "Disco de 45 RPM extraído del LP 14191. Lado A: \"Lo Manda el Corazón\" (Vals). Lado B: \"Lo Manda el Corazón\" (Vals - posiblemente la misma canción). Productor Fonográfico: Discos CBS S.A. Colombia.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "labelAImageId": "appcetato/galletas/Lo Manda el Corazón - A",
+    "labelBImageId": "appcetato/galletas/Lo Manda el Corazón - B"
   },
   {
     "id": "136",
@@ -2289,10 +2607,12 @@
     "country": "Colombia",
     "physicalFormat": "Single",
     "speed": "45",
-    "coverCondition": 3.0,
-    "discCondition": 3.0,
+    "coverCondition": 3,
+    "discCondition": 3,
     "notes": "Disco de 45 RPM. Lado A: \"Tristeza Marina\" (Bolero - J. Dames / R. Flores Sanguinetti). Lado B: \"Por la Vuelta\" (Bolero - J. Tinelli / E. D. Cadicamo). Discomoda. Industria Colombiana.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "labelAImageId": "appcetato/galletas/Tristeza Marina - Por la Vuelta - A",
+    "labelBImageId": "appcetato/galletas/Tristeza Marina - Por la Vuelta - B"
   },
   {
     "id": "137",
@@ -2306,10 +2626,11 @@
     "country": "Colombia",
     "physicalFormat": "Single",
     "speed": "45",
-    "coverCondition": 3.0,
-    "discCondition": 3.0,
+    "coverCondition": 3,
+    "discCondition": 3,
     "notes": "Disco de 45 RPM. Lado 1: \"Vagabundo\" (Edilberto Cuestas). Lado 2: \"El Indio Mapuchi\" (Gildardo Montoya). Producido por Zeida - Codiscos.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "labelAImageId": "appcetato/galletas/Vagabundo - El Indio Mapuchi -A"
   },
   {
     "id": "138",
@@ -2323,10 +2644,12 @@
     "country": "Colombia",
     "physicalFormat": "Single",
     "speed": "45",
-    "coverCondition": 3.0,
-    "discCondition": 3.0,
+    "coverCondition": 3,
+    "discCondition": 3,
     "notes": "Disco de 45 RPM. Lado A: \"Agüita que vas corriendo\" (Bambuco - Emma de Perea). Lado B: \"Muerte toda cuestión\" (Pasillo - José Longas). MARREG.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "labelAImageId": "appcetato/galletas/Agüita que vas corriendo - Muerte toda cuestión - A",
+    "labelBImageId": "appcetato/galletas/Agüita que vas corriendo - Muerte toda cuestión - B"
   },
   {
     "id": "139",
@@ -2340,10 +2663,12 @@
     "country": "Colombia",
     "physicalFormat": "Single",
     "speed": "45",
-    "coverCondition": 3.0,
-    "discCondition": 3.0,
+    "coverCondition": 3,
+    "discCondition": 3,
     "notes": "Disco de 45 RPM. Lado A: \"La Historia\" (Porro - Rafael Escalona). Lado B: \"Alma Quibdoseña\" (Porro - O. Salamandra / E. Arias). Discos Victoria.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "labelAImageId": "appcetato/galletas/La Historia - Alma Quibdoseña - A",
+    "labelBImageId": "appcetato/galletas/La Historia - Alma Quibdoseña - B"
   },
   {
     "id": "140",
@@ -2357,10 +2682,12 @@
     "country": "Colombia",
     "physicalFormat": "Single",
     "speed": "45",
-    "coverCondition": 3.0,
-    "discCondition": 3.0,
+    "coverCondition": 3,
+    "discCondition": 3,
     "notes": "Disco de 45 RPM. Lado 1: \"Nadie muere de amor\" (Jorge Hernán Sierra). Lado 2: \"Pan panadera\". (P) MCMLXXXIV - Colombia.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "labelAImageId": "appcetato/galletas/Nadie muere de amor - Pan panadera - A",
+    "labelBImageId": "appcetato/galletas/Nadie muere de amor - Pan panadera - B"
   },
   {
     "id": "141",
@@ -2374,10 +2701,12 @@
     "country": "Colombia",
     "physicalFormat": "Single",
     "speed": "45",
-    "coverCondition": 3.0,
-    "discCondition": 3.0,
+    "coverCondition": 3,
+    "discCondition": 3,
     "notes": "Disco de 45 RPM. Lado 1: \"El Nuevo Hula Hula\" (Darío Gómez). Lado 2: Canción de Darío Montoya (título no especificado). (P) 1978.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "labelAImageId": "appcetato/galletas/El Nuevo Hula Hula - (Canción de Darío Montoya) - A",
+    "labelBImageId": "appcetato/galletas/El Nuevo Hula Hula - (Canción de Darío Montoya) - B"
   },
   {
     "id": "142",
@@ -2391,10 +2720,12 @@
     "country": "Colombia",
     "physicalFormat": "Single",
     "speed": "45",
-    "coverCondition": 3.0,
-    "discCondition": 3.0,
+    "coverCondition": 3,
+    "discCondition": 3,
     "notes": "Disco de 45 RPM. Lado A: \"El Carrataplán\" (Curruíso - José Muñoz). Lado B: \"Se enfermo el Arruina'o\" (Porrito - Joaquín Bedoya). Discos Victoria.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "labelAImageId": "appcetato/galletas/El Carrataplán - Se enfermo el Arruina'o - A",
+    "labelBImageId": "appcetato/galletas/El Carrataplán - Se enfermo el Arruina'o - B"
   },
   {
     "id": "143",
@@ -2408,10 +2739,12 @@
     "country": "Colombia",
     "physicalFormat": "Single",
     "speed": "45",
-    "coverCondition": 3.0,
-    "discCondition": 3.0,
+    "coverCondition": 3,
+    "discCondition": 3,
     "notes": "Disco de 45 RPM. Lado 1: \"El Hijo Sin Consuelo\" (Luis E. Echavarría). Lado 2: \"La Paliza\" (Gildardo Montoya). Producido por Zeida - Codiscos.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "labelAImageId": "appcetato/galletas/El Hijo Sin Consuelo - La Paliza - A",
+    "labelBImageId": "appcetato/galletas/El Hijo Sin Consuelo - La Paliza - B"
   },
   {
     "id": "144",
@@ -2425,10 +2758,12 @@
     "country": "Colombia",
     "physicalFormat": "Single",
     "speed": "45",
-    "coverCondition": 4.0,
-    "discCondition": 4.0,
+    "coverCondition": 4,
+    "discCondition": 4,
     "notes": "Disco de 45 RPM. Lado 1: \"Te Quiero para Mí\" (The way you smiled at me - Héctor Correcy Gómez / adapt. esp. Pablo Herrero). Lado 2: \"Para Amarte Más\" (A. Gabin). P 1981.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "labelAImageId": "appcetato/galletas/Te Quiero para Mí - Para Amarte Más - A",
+    "labelBImageId": "appcetato/galletas/Te Quiero para Mí - Para Amarte Más - B"
   },
   {
     "id": "145",
@@ -2442,10 +2777,12 @@
     "country": "Colombia",
     "physicalFormat": "Single",
     "speed": "45",
-    "coverCondition": 3.0,
-    "discCondition": 3.0,
+    "coverCondition": 3,
+    "discCondition": 3,
     "notes": "Disco de 45 RPM. Lado A: \"Melao de Caña\" (Mercedes Pedroso). Lado B: \"Tuya y más que tuya\" (Bienvenido Fabián). Producido por Discos Fuentes.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "labelAImageId": "appcetato/galletas/Melao de Caña - Tuya y más que tuya - A",
+    "labelBImageId": "appcetato/galletas/Melao de Caña - Tuya y más que tuya - B"
   },
   {
     "id": "146",
@@ -2459,8 +2796,8 @@
     "country": "Suiza",
     "physicalFormat": "LP",
     "speed": "33⅓",
-    "coverCondition": 4.0,
-    "discCondition": 4.0,
+    "coverCondition": 4,
+    "discCondition": 4,
     "notes": "Lado A: Suite No. 2 en si menor (Rondó, Polonesa, Minué, Badinerie). Lado B: Suite No. 3 en re mayor (Aire, Gavota). Orquesta Sinfónica de Radio Frankfurt, dirigida por Carl Schuricht. Editado por Service S.A., Ginebra 1982. Prensado en México.",
     "dateAdded": "2026-09-04"
   },
@@ -2476,10 +2813,12 @@
     "country": "Colombia",
     "physicalFormat": "Single",
     "speed": "45",
-    "coverCondition": 3.0,
-    "discCondition": 3.0,
+    "coverCondition": 3,
+    "discCondition": 3,
     "notes": "Disco de 45 RPM. Lado A: \"La Negra Petrona\" (Porro - Policarpo Calle). Lado B: \"Antico Milagroso\" (Guararé - Policarpo Calle). Canta: Policarpo Calle.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "labelAImageId": "appcetato/galletas/La Negra Petrona - Antico Milagroso - A",
+    "labelBImageId": "appcetato/galletas/La Negra Petrona - Antico Milagroso - B"
   },
   {
     "id": "148",
@@ -2493,10 +2832,12 @@
     "country": "Colombia",
     "physicalFormat": "Single",
     "speed": "45",
-    "coverCondition": 3.0,
-    "discCondition": 3.0,
+    "coverCondition": 3,
+    "discCondition": 3,
     "notes": "Disco de 45 RPM. Lado A: \"El Polvorete\" (Manuel Antonio González) - canta Marcelo Pérez. Lado B: \"Cuerpo Viejo\" (Lorenzo \"Toncho\" Romero - Edimúsica) - canta Lisandro Meza. (P) 1979.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "labelAImageId": "appcetato/galletas/El Polvorete - Cuerpo Viejo - A",
+    "labelBImageId": "appcetato/galletas/El Polvorete - Cuerpo Viejo - B"
   },
   {
     "id": "149",
@@ -2510,10 +2851,12 @@
     "country": "Colombia",
     "physicalFormat": "Single",
     "speed": "45",
-    "coverCondition": 3.0,
-    "discCondition": 3.0,
+    "coverCondition": 3,
+    "discCondition": 3,
     "notes": "Disco de 45 RPM. Lado A: \"Aguardiente\" (Víctor Gutiérrez). Lado B: \"Cuerpo Cobar\" (D.D. - posiblemente \"Cuerpo Cobarde\"). Fabricado y distribuido por Obra Viva.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "labelAImageId": "appcetato/galletas/Aguardiente - Cuerpo Cobar (Cuerpo Cobarde) - A",
+    "labelBImageId": "appcetato/galletas/Aguardiente - Cuerpo Cobar (Cuerpo Cobarde) - B"
   },
   {
     "id": "150",
@@ -2527,10 +2870,12 @@
     "country": "Colombia",
     "physicalFormat": "Single",
     "speed": "45",
-    "coverCondition": 3.0,
-    "discCondition": 3.0,
+    "coverCondition": 3,
+    "discCondition": 3,
     "notes": "Disco de 45 RPM. Lado A: \"Sombras\" (Sansores-Brito). Lado B: \"Las Tres Marías\" (Alcandina Puebla). Serie Famoso.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "labelAImageId": "appcetato/galletas/Sombras - Las Tres Marías - A",
+    "labelBImageId": "appcetato/galletas/Sombras - Las Tres Marías - B"
   },
   {
     "id": "151",
@@ -2544,10 +2889,12 @@
     "country": "Colombia",
     "physicalFormat": "Single",
     "speed": "45",
-    "coverCondition": 3.0,
-    "discCondition": 3.0,
+    "coverCondition": 3,
+    "discCondition": 3,
     "notes": "Disco de 45 RPM. Lado 1: \"Los Caminos de la Vida\" (Omar Goles). Lado 2: \"Danza con los Diablitos\" (Luis Cujia). (P) MCMXCI.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "labelAImageId": "appcetato/galletas/Los Caminos de la Vida - Danza con los Diablitos - A",
+    "labelBImageId": "appcetato/galletas/Los Caminos de la Vida - Danza con los Diablitos - B"
   },
   {
     "id": "152",
@@ -2561,10 +2908,12 @@
     "country": "Colombia",
     "physicalFormat": "Single",
     "speed": "45",
-    "coverCondition": 3.0,
-    "discCondition": 3.0,
+    "coverCondition": 3,
+    "discCondition": 3,
     "notes": "Disco de 45 RPM. Lado A: \"La Despreciada\" (O.A.R.). Lado B: \"Con Nadie Serás Feliz\" (Gonzalo Ramírez). (C) (P) 1978 Discos Valsur S.A.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "labelAImageId": "appcetato/galletas/La Despreciada - Con Nadie Serás Feliz - A",
+    "labelBImageId": "appcetato/galletas/La Despreciada - Con Nadie Serás Feliz - B"
   },
   {
     "id": "153",
@@ -2578,10 +2927,12 @@
     "country": "Colombia",
     "physicalFormat": "Single",
     "speed": "45",
-    "coverCondition": 3.0,
-    "discCondition": 3.0,
+    "coverCondition": 3,
+    "discCondition": 3,
     "notes": "Disco de 45 RPM. Lado 1: \"Sinti\" (Nafer Durán). Lado 2: \"Magangue\" (Manuel Saumeth Ninerz). Rafael Ricardo - Acordeón y su Voz.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "labelAImageId": "appcetato/galletas/Sinti - Magangue - A",
+    "labelBImageId": "appcetato/galletas/Sinti - Magangue - B"
   },
   {
     "id": "154",
@@ -2595,10 +2946,12 @@
     "country": "Colombia",
     "physicalFormat": "Single",
     "speed": "45",
-    "coverCondition": 3.0,
-    "discCondition": 3.0,
+    "coverCondition": 3,
+    "discCondition": 3,
     "notes": "Disco de 45 RPM. Lado 1: \"Cruel Condena\" (Franklin Cabrejos). Lado 2: \"Resignación\" (Vicente Reyes Palma). Licencia Estelar-IFESA.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "labelAImageId": "appcetato/galletas/Cruel Condena - Resignación - A",
+    "labelBImageId": "appcetato/galletas/Cruel Condena - Resignación - B"
   },
   {
     "id": "155",
@@ -2612,10 +2965,12 @@
     "country": "Colombia",
     "physicalFormat": "Single",
     "speed": "45",
-    "coverCondition": 3.0,
-    "discCondition": 3.0,
+    "coverCondition": 3,
+    "discCondition": 3,
     "notes": "Disco de 45 RPM. Lado A: \"Aquella Noche\" (Joropo - Juan Vicente Torrealba) - Piano: Gabriel Cárdenas. Lado B: \"Concierto en la Llanura\" (Pasaje - Juan Vicente Torrealba). Trio Colombia.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "labelAImageId": "appcetato/galletas/Aquella Noche - Concierto en la Llanura - A",
+    "labelBImageId": "appcetato/galletas/Aquella Noche - Concierto en la Llanura - B"
   },
   {
     "id": "156",
@@ -2646,10 +3001,12 @@
     "country": "Colombia",
     "physicalFormat": "Single",
     "speed": "45",
-    "coverCondition": 3.0,
-    "discCondition": 3.0,
+    "coverCondition": 3,
+    "discCondition": 3,
     "notes": "Disco de 45 RPM. Lado A: \"Todo es Amor\" (Pasillo - Nelson Ibarra). Lado B: \"Laura\" (Pasillo - Amador Flor / Constantino M.). Lic. Preludio.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "labelAImageId": "appcetato/galletas/Todo es Amor - Laura - A",
+    "labelBImageId": "appcetato/galletas/Todo es Amor - Laura - B"
   },
   {
     "id": "158",
@@ -2663,10 +3020,12 @@
     "country": "Colombia",
     "physicalFormat": "Single",
     "speed": "45",
-    "coverCondition": 3.0,
-    "discCondition": 3.0,
+    "coverCondition": 3,
+    "discCondition": 3,
     "notes": "Disco de 45 RPM. Lado A: \"Mi Churrunguis\" (Montocumbe - Aníbal Ángel). Lado B: \"El Gordo\" (Aníbal Ángel).",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "labelAImageId": "appcetato/galletas/Mi Churrunguis - El Gordo - A",
+    "labelBImageId": "appcetato/galletas/Mi Churrunguis - El Gordo - B"
   },
   {
     "id": "159",
@@ -2680,10 +3039,12 @@
     "country": "Colombia",
     "physicalFormat": "Single",
     "speed": "45",
-    "coverCondition": 3.0,
-    "discCondition": 3.0,
+    "coverCondition": 3,
+    "discCondition": 3,
     "notes": "Disco de 45 RPM. Lado 1: \"Llegó borracho el borracho\". Lado 2: \"No de Dios\" (Canción). Datos parciales - pendiente de confirmación.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "labelAImageId": "appcetato/galletas/Llegó borracho el borracho - No de Dios (Canción) - A",
+    "labelBImageId": "appcetato/galletas/Llegó borracho el borracho - No de Dios (Canción) - B"
   },
   {
     "id": "160",
@@ -2697,10 +3058,12 @@
     "country": "EE.UU.",
     "physicalFormat": "Single",
     "speed": "45",
-    "coverCondition": 3.0,
-    "discCondition": 3.0,
+    "coverCondition": 3,
+    "discCondition": 3,
     "notes": "Disco de 45 RPM promocional de Helena Rubinstein (Golden Dew). Lado A: \"Mixin' the Blues\" (Dave Brubeck). Lado B: \"Excerpts from Audrey\" (Pete Rugolo). Columbia Records.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "labelAImageId": "appcetato/galletas/Mixin' the Blues - Excerpts from Audrey - A",
+    "labelBImageId": "appcetato/galletas/Mixin' the Blues - Excerpts from Audrey - B"
   },
   {
     "id": "161",
@@ -2714,10 +3077,12 @@
     "country": "Venezuela",
     "physicalFormat": "Single",
     "speed": "45",
-    "coverCondition": 3.0,
-    "discCondition": 3.0,
+    "coverCondition": 3,
+    "discCondition": 3,
     "notes": "Disco de 45 RPM. Lado 1: \"La Saporrita\" (Juvenal Vitoria). Lado 2: \"La Cumbancha\" (Luis Felipe González). Presentado por Luis Felipe González. Suramericana del Disco - Venezuela.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "labelAImageId": "appcetato/galletas/La Saporrita - La Cumbancha - A",
+    "labelBImageId": "appcetato/galletas/La Saporrita - La Cumbancha - B"
   },
   {
     "id": "162",
@@ -2731,10 +3096,12 @@
     "country": "Colombia",
     "physicalFormat": "Single",
     "speed": "45",
-    "coverCondition": 3.0,
-    "discCondition": 3.0,
+    "coverCondition": 3,
+    "discCondition": 3,
     "notes": "Disco de 45 RPM. Lado A: \"Mi Linda Chinita\" (William Ortiz Castro). Lado B: \"Esposa Compañera\" (William Ortiz Castro). Producido por Armando Henao. Canta: Baltasar.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "labelAImageId": "appcetato/galletas/Mi Linda Chinita - Esposa Compañera - A",
+    "labelBImageId": "appcetato/galletas/Mi Linda Chinita - Esposa Compañera - B"
   },
   {
     "id": "163",
@@ -2748,10 +3115,12 @@
     "country": "Colombia",
     "physicalFormat": "Single",
     "speed": "45",
-    "coverCondition": 3.0,
-    "discCondition": 3.0,
+    "coverCondition": 3,
+    "discCondition": 3,
     "notes": "Disco de 45 RPM. Lado A: \"Pueblo Querido\" (Ranchera - Félix Gallego). Lado B: \"Azucena en Poema\" (Ranchero - Misael Ruiz). Discos Galante.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "labelAImageId": "appcetato/galletas/Pueblo Querido - Azucena en Poema - A",
+    "labelBImageId": "appcetato/galletas/Pueblo Querido - Azucena en Poema - B"
   },
   {
     "id": "164",
@@ -2765,10 +3134,12 @@
     "country": "Colombia",
     "physicalFormat": "Single",
     "speed": "45",
-    "coverCondition": 3.0,
-    "discCondition": 3.0,
+    "coverCondition": 3,
+    "discCondition": 3,
     "notes": "Disco de 45 RPM. Lado A: \"Indecisión\" (Bolero - Raúl García). Lado B: \"Morena\" (Bolero - G. Dorosies). Producido por Discos Fuentes - Seeco.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "labelAImageId": "appcetato/galletas/Indecisión - Morena - A",
+    "labelBImageId": "appcetato/galletas/Indecisión - Morena - B"
   },
   {
     "id": "165",
@@ -2782,10 +3153,12 @@
     "country": "Colombia",
     "physicalFormat": "Single",
     "speed": "45",
-    "coverCondition": 3.0,
-    "discCondition": 3.0,
+    "coverCondition": 3,
+    "discCondition": 3,
     "notes": "Disco de 45 RPM. Lado A: \"No es que me arrepienta\" (Vals - Eladia Blásquez). Lado B: \"Ilusión perdida\" (Gilberto Rion - Bie Karcas). P 1976.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "labelAImageId": "appcetato/galletas/No es que me arrepienta - Ilusión perdida - A",
+    "labelBImageId": "appcetato/galletas/No es que me arrepienta - Ilusión perdida - B"
   },
   {
     "id": "166",
@@ -2799,10 +3172,12 @@
     "country": "Brasil/Colombia",
     "physicalFormat": "Single",
     "speed": "45",
-    "coverCondition": 3.0,
-    "discCondition": 3.0,
+    "coverCondition": 3,
+    "discCondition": 3,
     "notes": "Disco de 45 RPM. Lado A: \"Ojos que no ven\" (3:23 - Banda Braulio). Lado B: \"La más bella herejía\" (3:48 - Brasil Braulio). Productor artístico: Barillo. (P) 1983 CBS Inc.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "labelAImageId": "appcetato/galletas/Ojos que no ven - La más bella herejía - A",
+    "labelBImageId": "appcetato/galletas/Ojos que no ven - La más bella herejía - B"
   },
   {
     "id": "167",
@@ -2816,10 +3191,12 @@
     "country": "Colombia",
     "physicalFormat": "Single",
     "speed": "45",
-    "coverCondition": 3.0,
-    "discCondition": 3.0,
+    "coverCondition": 3,
+    "discCondition": 3,
     "notes": "Disco de 45 RPM. Lado A: \"Quiéreme\" (Blues - Mario Gayne / Alberto de Costa) - con Jaime Llano y su Orquesta. Lado B: \"Que pare la vida\" (Bolero - Carmelo Larrea) - con Jaime Llano y su Organización.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "labelAImageId": "appcetato/galletas/Quiéreme - Que pare la vida - A",
+    "labelBImageId": "appcetato/galletas/Quiéreme - Que pare la vida - B"
   },
   {
     "id": "168",
@@ -2833,10 +3210,12 @@
     "country": "Colombia",
     "physicalFormat": "Single",
     "speed": "45",
-    "coverCondition": 3.0,
-    "discCondition": 3.0,
+    "coverCondition": 3,
+    "discCondition": 3,
     "notes": "Disco de 45 RPM. Lado A: \"Tabaco y Ron\" (Manuel de la Roche). (P) 1979.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "labelAImageId": "appcetato/galletas/Tabaco y Ron - A",
+    "labelBImageId": "appcetato/galletas/Tabaco y Ron - B"
   },
   {
     "id": "169",
@@ -2850,8 +3229,8 @@
     "country": "Colombia",
     "physicalFormat": "Single",
     "speed": "45",
-    "coverCondition": 3.0,
-    "discCondition": 3.0,
+    "coverCondition": 3,
+    "discCondition": 3,
     "notes": "Disco de 45 RPM. Lado B: \"Buscando un querer\" (Domingo Alcántara). (P) 1979.",
     "dateAdded": "2026-09-04"
   },
@@ -2867,8 +3246,8 @@
     "country": "Colombia",
     "physicalFormat": "Single",
     "speed": "45",
-    "coverCondition": 3.0,
-    "discCondition": 3.0,
+    "coverCondition": 3,
+    "discCondition": 3,
     "notes": "Disco de 45 RPM. Lado A: \"Magdalena\" (Gaita - Pedro Laza). Lado B: no se lee claramente. Posiblemente Pedro Laza y sus Pelayeros. Datos pendientes de confirmación.",
     "dateAdded": "2026-09-04"
   },
@@ -2884,10 +3263,12 @@
     "country": "Colombia",
     "physicalFormat": "Single",
     "speed": "45",
-    "coverCondition": 3.0,
-    "discCondition": 3.0,
+    "coverCondition": 3,
+    "discCondition": 3,
     "notes": "Disco de 45 RPM. Lado A: \"El Huracán\" (Tango - N. López / E. y O. Donato) - V. 6849. Lado B: \"T. B. C.\" (Tango - R. Fontana / V. Salino / E. Donato) - V. 6850. Canta: A. Galarce.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "labelAImageId": "appcetato/galletas/El Huracán - T. B. C. - A",
+    "labelBImageId": "appcetato/galletas/El Huracán - T. B. C. - B"
   },
   {
     "id": "172",
@@ -2901,10 +3282,12 @@
     "country": "Colombia",
     "physicalFormat": "Single",
     "speed": "45",
-    "coverCondition": 3.0,
-    "discCondition": 3.0,
+    "coverCondition": 3,
+    "discCondition": 3,
     "notes": "Disco de 45 RPM. Lado A: \"Collar de Lágrimas\" (Pasillo - Federico Rivas Frade). Lado B: \"Piedad\" (Pasillo - E. Rivadeneira / C. Silva). Lic. Preludio.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "labelAImageId": "appcetato/galletas/Collar de Lágrimas - Piedad - A",
+    "labelBImageId": "appcetato/galletas/Collar de Lágrimas - Piedad - B"
   },
   {
     "id": "173",
@@ -2918,10 +3301,12 @@
     "country": "Colombia",
     "physicalFormat": "Single",
     "speed": "45",
-    "coverCondition": 3.0,
-    "discCondition": 3.0,
+    "coverCondition": 3,
+    "discCondition": 3,
     "notes": "Disco de 45 RPM. Lado A: \"Cien mil cosas\" (José D. Quiñones). Lado B: \"Demanda el corazón\" (Ricardo Pérez). Producido por Discos Fuentes - Seeco.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "labelAImageId": "appcetato/galletas/Cien mil cosas - Demanda el corazón - A",
+    "labelBImageId": "appcetato/galletas/Cien mil cosas - Demanda el corazón - B"
   },
   {
     "id": "174",
@@ -2935,10 +3320,12 @@
     "country": "Colombia",
     "physicalFormat": "Single",
     "speed": "45",
-    "coverCondition": 3.0,
-    "discCondition": 3.0,
+    "coverCondition": 3,
+    "discCondition": 3,
     "notes": "Disco de 45 RPM. Lado A: \"El Alacrán\" (Merengue - Hernando Ruiz).",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "labelAImageId": "appcetato/galletas/El Alacrán - A",
+    "labelBImageId": "appcetato/galletas/El Alacrán - B"
   },
   {
     "id": "175",
@@ -2952,10 +3339,12 @@
     "country": "Colombia",
     "physicalFormat": "Single",
     "speed": "45",
-    "coverCondition": 3.0,
-    "discCondition": 3.0,
+    "coverCondition": 3,
+    "discCondition": 3,
     "notes": "Disco de 45 RPM. Lado B: \"Cumbia Sonsa\" (Cumbia - Antonio Chavarriaga).",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "labelAImageId": "appcetato/galletas/Cumbia Sonsa - A",
+    "labelBImageId": "appcetato/galletas/Cumbia Sonsa - B"
   },
   {
     "id": "176",
@@ -2969,10 +3358,12 @@
     "country": "Colombia",
     "physicalFormat": "Single",
     "speed": "45",
-    "coverCondition": 3.0,
-    "discCondition": 3.0,
+    "coverCondition": 3,
+    "discCondition": 3,
     "notes": "Disco de 45 RPM. Lado 3: \"La Bruja\" (Parrondo - J.A. Zapata).",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "labelAImageId": "appcetato/galletas/La Bruja - A",
+    "labelBImageId": "appcetato/galletas/La Bruja - B"
   },
   {
     "id": "177",
@@ -2986,8 +3377,8 @@
     "country": "Colombia",
     "physicalFormat": "Single",
     "speed": "45",
-    "coverCondition": 3.0,
-    "discCondition": 3.0,
+    "coverCondition": 3,
+    "discCondition": 3,
     "notes": "Disco de 45 RPM. Lado A: \"El Jornalero\" (Merengue - Francisco J. Rincón).",
     "dateAdded": "2026-09-04"
   },
@@ -3003,10 +3394,12 @@
     "country": "Colombia",
     "physicalFormat": "Single",
     "speed": "45",
-    "coverCondition": 3.0,
-    "discCondition": 3.0,
+    "coverCondition": 3,
+    "discCondition": 3,
     "notes": "Disco de 45 RPM. Lado B: \"Ausencia\" (Bolero - Oscar Mejía D.). Silver - Microsurco.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "labelAImageId": "appcetato/galletas/Ausencia - A",
+    "labelBImageId": "appcetato/galletas/Ausencia - B"
   },
   {
     "id": "179",
@@ -3020,8 +3413,8 @@
     "country": "Colombia",
     "physicalFormat": "Single",
     "speed": "45",
-    "coverCondition": 3.0,
-    "discCondition": 3.0,
+    "coverCondition": 3,
+    "discCondition": 3,
     "notes": "Disco de 45 RPM. Lado A: \"Maldición\" (Bol. Moruno - Leopoldo González). Silver - Microsurco.",
     "dateAdded": "2026-09-04"
   },
@@ -3037,10 +3430,12 @@
     "country": "Colombia",
     "physicalFormat": "Single",
     "speed": "45",
-    "coverCondition": 3.0,
-    "discCondition": 3.0,
+    "coverCondition": 3,
+    "discCondition": 3,
     "notes": "Disco de 45 RPM. Lado A: \"Mi Todo\" (Bolero - Alfredo Parra). Lado B: \"Yo Vivo Mi Vida\" (Bolero - Federico Baena). Producido por Discos Fuentes - Seeco.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "labelAImageId": "appcetato/galletas/Mi Todo - Yo Vivo Mi Vida - A",
+    "labelBImageId": "appcetato/galletas/Mi Todo - Yo Vivo Mi Vida - B"
   },
   {
     "id": "181",
@@ -3054,10 +3449,12 @@
     "country": "Colombia",
     "physicalFormat": "Single",
     "speed": "45",
-    "coverCondition": 3.0,
-    "discCondition": 3.0,
+    "coverCondition": 3,
+    "discCondition": 3,
     "notes": "Disco de 45 RPM. Lado A: \"¿Usted qué haría?\" - Dir. Gral. Diego Verdaguer. Grabado en Hollywood, CA, EE.UU. Lic. Discos y Cintas Melody S.A. - México. Lado B: \"Nena\" - Dir. Gral. Diego Verdaguer.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "labelAImageId": "appcetato/galletas/Usted qué haría - Nena - A",
+    "labelBImageId": "appcetato/galletas/Usted qué haría - Nena - B"
   },
   {
     "id": "182",
@@ -3071,10 +3468,12 @@
     "country": "Colombia",
     "physicalFormat": "Single",
     "speed": "45",
-    "coverCondition": 3.0,
-    "discCondition": 3.0,
+    "coverCondition": 3,
+    "discCondition": 3,
     "notes": "Disco de 45 RPM. Lado A: \"Ella ya me olvidó, recuerdo ahora\" (Lauraro Fario - Leonardo Favio). Lado B: \"Amanecer y la espera\" (Leonardo Favio).",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "labelAImageId": "appcetato/galletas/Ella ya me olvidó, recuerdo ahora - Amanecer y la espera - A",
+    "labelBImageId": "appcetato/galletas/Ella ya me olvidó, recuerdo ahora - Amanecer y la espera - B"
   },
   {
     "id": "183",
@@ -3088,10 +3487,12 @@
     "country": "Colombia",
     "physicalFormat": "Single",
     "speed": "45",
-    "coverCondition": 3.0,
-    "discCondition": 3.0,
+    "coverCondition": 3,
+    "discCondition": 3,
     "notes": "Disco de 45 RPM. Lado A: \"Romance sin final\" (Calixto Ochoa). Lado B: \"Olvidemos el pasado\" (Dorindo Cárdenas). Tomado del LP 141721. Director Artístico: Willie Salcedo. Grabado en Estudio A - CBS - Bogotá.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "labelAImageId": "appcetato/galletas/Romance sin final - Olvidemos el pasado - A",
+    "labelBImageId": "appcetato/galletas/Romance sin final - Olvidemos el pasado - B"
   },
   {
     "id": "184",
@@ -3105,10 +3506,12 @@
     "country": "Colombia",
     "physicalFormat": "Single",
     "speed": "45",
-    "coverCondition": 3.0,
-    "discCondition": 3.0,
+    "coverCondition": 3,
+    "discCondition": 3,
     "notes": "Disco de 45 RPM. Lado A: \"Cumbia pa' Oriente\" (Lisandro Meza) - 19212 Sono-Inter. Lado B: \"El Amor\" (Ramón Chaverra) - 19217 Sono-Inter. © 1984 Sonolux.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "labelAImageId": "appcetato/galletas/Cumbia pa' Oriente - El Amor - A",
+    "labelBImageId": "appcetato/galletas/Cumbia pa' Oriente - El Amor - B"
   },
   {
     "id": "185",
@@ -3122,10 +3525,12 @@
     "country": "Colombia",
     "physicalFormat": "Single",
     "speed": "45",
-    "coverCondition": 3.0,
-    "discCondition": 3.0,
+    "coverCondition": 3,
+    "discCondition": 3,
     "notes": "Disco de 45 RPM. Lado A: \"El Grillo\" (Parranda - Antonio Posada) - V-9304. Lado B: \"Gato Encerrado\" (Parranda - Darío Gómez Zapata) - V-9306. Canta: Darío Gómez. (P) 1984 / (C) 1984.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "labelAImageId": "appcetato/galletas/El Grillo -  Gato Encerrado - A",
+    "labelBImageId": "appcetato/galletas/El Grillo -  Gato Encerrado - B"
   },
   {
     "id": "186",
@@ -3139,10 +3544,12 @@
     "country": "Colombia",
     "physicalFormat": "Single",
     "speed": "45",
-    "coverCondition": 3.0,
-    "discCondition": 3.0,
+    "coverCondition": 3,
+    "discCondition": 3,
     "notes": "Disco de 45 RPM. Lado 1: \"Señora\" (Rafael Manjares) - 32815793. Lado 2: \"El Mochuelo\" (Adolfo Pacheco) - 32815788. (P) MCMXCIX.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "labelAImageId": "appcetato/galletas/Señora - El Mochuelo - A",
+    "labelBImageId": "appcetato/galletas/Señora - El Mochuelo - B"
   },
   {
     "id": "187",
@@ -3156,10 +3563,12 @@
     "country": "Colombia",
     "physicalFormat": "Single",
     "speed": "45",
-    "coverCondition": 3.0,
-    "discCondition": 3.0,
+    "coverCondition": 3,
+    "discCondition": 3,
     "notes": "Disco de 45 RPM. Lado A: \"Sin Ti\" (Rafael G. Peña) - Los Blanco, cantan Cecilio y Leopoldo. Lado B: \"Gozando\" (Ricardo Blanco) - Los Blanco, cantan Cheo y Leopoldo. (P) 1976.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "labelAImageId": "appcetato/galletas/Sin Ti - Gozando - A",
+    "labelBImageId": "appcetato/galletas/Sin Ti - Gozando - B"
   },
   {
     "id": "188",
@@ -3173,9 +3582,11 @@
     "country": "Colombia",
     "physicalFormat": "Single",
     "speed": "45",
-    "coverCondition": 3.0,
-    "discCondition": 3.0,
+    "coverCondition": 3,
+    "discCondition": 3,
     "notes": "Sencillo. Lado A: \"El Perfumito\" (Porro - José Garibaldi Fuentes - Edimúsica). Lado B: \"Pomponio\" (Paseo - Julio Torres). Ambos temas del LP \"De Retorno\" (las notas originales citan 201301 y 201001). (P) 1978.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "labelAImageId": "appcetato/galletas/El Perfumito - A",
+    "labelBImageId": "appcetato/galletas/El Perfumito - B"
   }
 ]
