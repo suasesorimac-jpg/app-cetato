@@ -14,7 +14,11 @@
     "coverCondition": 3,
     "discCondition": 4,
     "notes": "Edición colombiana. Títulos en español e inglés. Producido por The Shadows. Arreglos de John Fiddy.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "coverImageId": "appcetato/caratulas/The Shadows Caratula A",
+    "coverBackImageId": "appcetato/galletas/The Shadows - carutala B",
+    "labelAImageId": "appcetato/galletas/The Shadows A",
+    "labelBImageId": "appcetato/galletas/The Shadows B"
   },
   {
     "id": "2",
@@ -67,7 +71,11 @@
     "coverCondition": 2,
     "discCondition": 2,
     "notes": "Dirección artística: Humberto Vesga M. Incluye pasillos, tango, vals, zamba y canciones.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "coverImageId": "appcetato/caratulas/Los Ayer's - Caratula A",
+    "coverBackImageId": "appcetato/caratulas/Los Ayer's - Caratula B",
+    "labelAImageId": "appcetato/galletas/Los Ayer's - A",
+    "labelBImageId": "appcetato/galletas/Los Ayer's - B"
   },
   {
     "id": "5",
@@ -101,7 +109,11 @@
     "coverCondition": 4,
     "discCondition": 4,
     "notes": "Edición estadounidense para mercado latino. Producido por Discos Copacabana, Brasil. Letras en español por Curat Alonso.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "coverImageId": "appcetato/caratulas/Nelson Ned - Caratula A",
+    "coverBackImageId": "appcetato/caratulas/Nelson Ned - Caratula B",
+    "labelAImageId": "appcetato/galletas/Nelson Ned - A",
+    "labelBImageId": "appcetato/galletas/Nelson Ned - B"
   },
   {
     "id": "7",
@@ -118,7 +130,11 @@
     "coverCondition": 2,
     "discCondition": 3,
     "notes": "Artista principal Luz Amparo. Incluye \"Tu No Me Quieres\", \"El Galope\", \"No Te Vayas\", \"Sabor de Llanto\", etc.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "coverImageId": "appcetato/caratulas/Luz Amparo - caratula A",
+    "coverBackImageId": "appcetato/caratulas/Luz Amparo - Caratula B",
+    "labelAImageId": "appcetato/galletas/Luz Amparo A",
+    "labelBImageId": "appcetato/galletas/Luz Amparo B"
   },
   {
     "id": "8",
@@ -156,7 +172,11 @@
     "coverCondition": 5,
     "discCondition": 5,
     "notes": "Incluye papel de protección. Colección de boleros. Temas: \"Te Espero\", \"Vete Por Favor\", \"Verdad Amarga\", etc.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "coverImageId": "appcetato/caratulas/María Luisa Landín - Caratula A",
+    "coverBackImageId": "appcetato/caratulas/María Luisa Landín - Caratula B",
+    "labelAImageId": "appcetato/galletas/María Luisa Landín - A",
+    "labelBImageId": "appcetato/galletas/María Luisa Landín - B"
   },
   {
     "id": "10",
@@ -173,7 +193,11 @@
     "coverCondition": 5,
     "discCondition": 5,
     "notes": "Carátula plastificada. Versiones en español de éxitos internacionales. Incluye \"Olvídalo\", \"Cuando Calienta el Sol\", etc.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "coverImageId": "appcetato/caratulas/Alberto Vázquez - Caratula A",
+    "coverBackImageId": "appcetato/caratulas/Alberto Vázquez - Caratula B",
+    "labelAImageId": "appcetato/galletas/Alberto Vázquez - A",
+    "labelBImageId": "appcetato/galletas/Alberto Vázquez - B"
   },
   {
     "id": "11",
@@ -228,7 +252,11 @@
     "coverCondition": 4,
     "discCondition": 5,
     "notes": "Álbum navideño con ritmos tropicales. Incluye \"Año Viejo\", \"La Cabeza del Lechón\", \"Triste Navidad\", etc.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "coverImageId": "appcetato/caratulas/Orquesta Los Melódicos - Caratula A",
+    "coverBackImageId": "appcetato/caratulas/Orquesta Los Melódicos - Caratula B",
+    "labelAImageId": "appcetato/galletas/Orquesta Los Melódicos - A",
+    "labelBImageId": "appcetato/galletas/Orquesta Los Melódicos - B"
   },
   {
     "id": "14",
@@ -245,7 +273,9 @@
     "coverCondition": 1,
     "discCondition": 3,
     "notes": "Álbum de bailables con ritmos colombianos: mapalé, pasquino, gaita, fandango, porro, cumbia.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "labelAImageId": "appcetato/galletas/Orquesta Rufo Garrido y Curro - A",
+    "labelBImageId": "appcetato/galletas/Orquesta Rufo Garrido y Curro - B"
   },
   {
     "id": "15",
@@ -597,7 +627,11 @@
     "coverCondition": 3,
     "discCondition": 4,
     "notes": "Cantante: Jairo Paternina. Arreglos: Víctor Gutiérrez, Conrado Marrugo. Dirección general: Víctor Gutiérrez.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "coverImageId": "appcetato/caratulas/El Combo de Las Estrellas - Caratula A",
+    "coverBackImageId": "appcetato/caratulas/El Combo de Las Estrellas - Caratula B",
+    "labelAImageId": "appcetato/galletas/El Combo de Las Estrellas - A",
+    "labelBImageId": "appcetato/galletas/El Combo de Las Estrellas - B"
   },
   {
     "id": "35",
@@ -674,7 +708,11 @@
     "coverCondition": 2,
     "discCondition": 3,
     "notes": "Grabado en México. Disco \"Nuevo Ortofónico\" Alta Fidelidad. Incluye \"La Gloria Eres Tú\", \"Usted\", \"Júrame\", etc.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "coverImageId": "appcetato/caratulas/Los Tres Diamantes - Caratula A",
+    "coverBackImageId": "appcetato/caratulas/Los Tres Diamantes - Caratula B",
+    "labelAImageId": "appcetato/galletas/Los Tres Diamantes- Lado 1",
+    "labelBImageId": "appcetato/galletas/Los Tres Diamantes - Lado 2"
   },
   {
     "id": "39",
@@ -810,7 +848,9 @@
     "coverCondition": 4,
     "discCondition": 4,
     "notes": "Producido por Tom Dowd. (P) 1978 WEA Records BV. ASCAP.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "labelAImageId": "appcetato/galletas/Rod Stewart - Lado 1",
+    "labelBImageId": "appcetato/galletas/Rod Stewart - Lado 2"
   },
   {
     "id": "46",
@@ -963,7 +1003,11 @@
     "coverCondition": 2,
     "discCondition": 5,
     "notes": "Álbum de boleros y canciones románticas con mariachi. María Elena Sandoval fue una reconocida cantante colombiana.",
-    "dateAdded": "2026-09-04"
+    "dateAdded": "2026-09-04",
+    "coverImageId": "appcetato/caratulas/Maria Elena Sandoval - Si no estas Conmigo  - Caratula A",
+    "coverBackImageId": "appcetato/caratulas/Maria Elena Sandoval - Si no estas Conmigo  - Caratula B",
+    "labelAImageId": "appcetato/galletas/Maria Elena Sandoval - Si no estas Conmigo  - A",
+    "labelBImageId": "appcetato/galletas/Maria Elena Sandoval - Si no estas Conmigo  - B"
   },
   {
     "id": "54",

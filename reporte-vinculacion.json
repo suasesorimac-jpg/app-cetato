@@ -1,11 +1,23 @@
 {
   "stats": {
     "total": 187,
-    "matched": 160,
-    "notMatched": 27,
-    "percentage": "85.6%"
+    "matched": 172,
+    "notMatched": 15,
+    "percentage": "92.0%"
   },
   "matches": [
+    {
+      "id": "1",
+      "album": "Honorable Puff-Puff",
+      "matchedWith": "archivo-artista: The Shadows - carutala B | The Shadows A | The Shadows B | The Shadows Caratula A",
+      "score": null,
+      "images": {
+        "cover": true,
+        "coverBack": true,
+        "labelA": true,
+        "labelB": true
+      }
+    },
     {
       "id": "2",
       "album": "El Porro / Porros Solo",
@@ -14,6 +26,42 @@
       "images": {
         "cover": false,
         "coverBack": false,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "4",
+      "album": "(homónimo)",
+      "matchedWith": "archivo-artista: Los Ayer's - A | Los Ayer's - B | Los Ayer's - Caratula A | Los Ayer's - Caratula B",
+      "score": null,
+      "images": {
+        "cover": true,
+        "coverBack": true,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "6",
+      "album": "Canción Popular",
+      "matchedWith": "archivo-artista: Nelson Ned - A | Nelson Ned - B | Nelson Ned - Caratula A | Nelson Ned - Caratula B",
+      "score": null,
+      "images": {
+        "cover": true,
+        "coverBack": true,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "7",
+      "album": "Amar No Es Pecado",
+      "matchedWith": "archivo-artista: Luz Amparo - Caratula B | Luz Amparo - caratula A | Luz Amparo A | Luz Amparo B",
+      "score": null,
+      "images": {
+        "cover": true,
+        "coverBack": true,
         "labelA": true,
         "labelB": true
       }
@@ -31,6 +79,30 @@
       }
     },
     {
+      "id": "9",
+      "album": "Te Espero y otros éxitos",
+      "matchedWith": "archivo-artista: María Luisa Landín - A | María Luisa Landín - B | María Luisa Landín - Caratula A | María Luisa Landín - Caratula B",
+      "score": null,
+      "images": {
+        "cover": true,
+        "coverBack": true,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "10",
+      "album": "Ritmos Juveniles",
+      "matchedWith": "archivo-artista: Alberto Vázquez - A | Alberto Vázquez - B | Alberto Vázquez - Caratula A | Alberto Vázquez - Caratula B",
+      "score": null,
+      "images": {
+        "cover": true,
+        "coverBack": true,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
       "id": "11",
       "album": "Boleros Campeones Vol. II",
       "matchedWith": "Boleros Campeones",
@@ -38,6 +110,30 @@
       "images": {
         "cover": true,
         "coverBack": true,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "13",
+      "album": "Felicidades / Pambiche Navideño",
+      "matchedWith": "archivo-artista: Orquesta Los Melódicos - A | Orquesta Los Melódicos - B | Orquesta Los Melódicos - Caratula A | Orquesta Los Melódicos - Caratula B",
+      "score": null,
+      "images": {
+        "cover": true,
+        "coverBack": true,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "14",
+      "album": "Bailables Curro No. 1",
+      "matchedWith": "archivo-artista: Orquesta Rufo Garrido y Curro - A | Orquesta Rufo Garrido y Curro - B",
+      "score": null,
+      "images": {
+        "cover": false,
+        "coverBack": false,
         "labelA": true,
         "labelB": true
       }
@@ -199,6 +295,18 @@
       }
     },
     {
+      "id": "34",
+      "album": "(homónimo)",
+      "matchedWith": "archivo-artista: El Combo de Las Estrellas - A | El Combo de Las Estrellas - B | El Combo de Las Estrellas - Caratula A | El Combo de Las Estrellas - Caratula B",
+      "score": null,
+      "images": {
+        "cover": true,
+        "coverBack": true,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
       "id": "35",
       "album": "¡Qué Sabroso Está!",
       "matchedWith": "¡Qué Sabroso Está!",
@@ -232,6 +340,18 @@
         "coverBack": true,
         "labelA": false,
         "labelB": false
+      }
+    },
+    {
+      "id": "38",
+      "album": "Usted y otros éxitos",
+      "matchedWith": "archivo-artista: Los Tres Diamantes - Caratula A | Los Tres Diamantes - Caratula B | Los Tres Diamantes - Lado 2 | Los Tres Diamantes- Lado 1",
+      "score": null,
+      "images": {
+        "cover": true,
+        "coverBack": true,
+        "labelA": true,
+        "labelB": true
       }
     },
     {
@@ -302,6 +422,18 @@
       "images": {
         "cover": true,
         "coverBack": true,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "45",
+      "album": "Da Ya Think I'm Sexy? / Scarred and Scared",
+      "matchedWith": "archivo-artista: Rod Stewart - Lado 1 | Rod Stewart - Lado 2",
+      "score": null,
+      "images": {
+        "cover": false,
+        "coverBack": false,
         "labelA": true,
         "labelB": true
       }
@@ -386,6 +518,18 @@
       "images": {
         "cover": true,
         "coverBack": false,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "53",
+      "album": "(álbum sin título)",
+      "matchedWith": "archivo-artista: Maria Elena Sandoval - Si no estas Conmigo  - A | Maria Elena Sandoval - Si no estas Conmigo  - B | Maria Elena Sandoval - Si no estas Conmigo  - Caratula A | Maria Elena Sandoval - Si no estas Conmigo  - Caratula B",
+      "score": null,
+      "images": {
+        "cover": true,
+        "coverBack": true,
         "labelA": true,
         "labelB": true
       }
@@ -1929,22 +2073,10 @@
   ],
   "noMatches": [
     {
-      "id": "1",
-      "album": "Honorable Puff-Puff",
-      "bestMatch": null,
-      "score": 0
-    },
-    {
       "id": "3",
       "album": "A Toda Máquina...",
       "bestMatch": "A Cantar Rancheras",
       "score": 33
-    },
-    {
-      "id": "4",
-      "album": "(homónimo)",
-      "bestMatch": null,
-      "score": 0
     },
     {
       "id": "5",
@@ -1953,46 +2085,10 @@
       "score": 50
     },
     {
-      "id": "6",
-      "album": "Canción Popular",
-      "bestMatch": "El Nuevo Hula Hula - (Canción de Darío Montoya)",
-      "score": 13
-    },
-    {
-      "id": "7",
-      "album": "Amar No Es Pecado",
-      "bestMatch": "No es que me arrepienta - Ilusión perdida",
-      "score": 29
-    },
-    {
-      "id": "9",
-      "album": "Te Espero y otros éxitos",
-      "bestMatch": "Pueblito Viejo y otros grandes éxitos de Garzón y Collazos",
-      "score": 30
-    },
-    {
-      "id": "10",
-      "album": "Ritmos Juveniles",
-      "bestMatch": null,
-      "score": 0
-    },
-    {
       "id": "12",
       "album": "Los Ritmos Alegres",
       "bestMatch": "Aquí los Éxitos",
       "score": 33
-    },
-    {
-      "id": "13",
-      "album": "Felicidades / Pambiche Navideño",
-      "bestMatch": null,
-      "score": 0
-    },
-    {
-      "id": "14",
-      "album": "Bailables Curro No. 1",
-      "bestMatch": "Los Bailables",
-      "score": 25
     },
     {
       "id": "15",
@@ -2023,30 +2119,6 @@
       "album": "La Salsa Es... La Salsa",
       "bestMatch": "La Pulga -  Ya es muy tarde",
       "score": 50
-    },
-    {
-      "id": "34",
-      "album": "(homónimo)",
-      "bestMatch": null,
-      "score": 0
-    },
-    {
-      "id": "38",
-      "album": "Usted y otros éxitos",
-      "bestMatch": "Pueblito Viejo y otros grandes éxitos de Garzón y Collazos",
-      "score": 30
-    },
-    {
-      "id": "45",
-      "album": "Da Ya Think I'm Sexy? / Scarred and Scared",
-      "bestMatch": "La Pulga -  Ya es muy tarde",
-      "score": 13
-    },
-    {
-      "id": "53",
-      "album": "(álbum sin título)",
-      "bestMatch": "Sin Ti - Gozando",
-      "score": 33
     },
     {
       "id": "59",
