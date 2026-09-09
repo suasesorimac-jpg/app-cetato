@@ -37,17 +37,20 @@ export default function VinylCard({ record, onOpen }: Props) {
         <div className="relative overflow-hidden rounded-lg sm:overflow-visible">
           <CoverImage
             record={record}
+            gravity="auto"
             className="relative aspect-square rounded-lg border border-slate-700"
           />
           {/* Galleta como badge (móvil) */}
           <LabelImage
             record={record}
             width={96}
+            gravity="auto"
             className="absolute bottom-2 right-2 z-10 h-12 w-12 rounded-full border-2 border-slate-800 shadow-lg shadow-black/50 sm:hidden"
           />
           {/* Galleta superpuesta (desktop) */}
           <LabelImage
             record={record}
+            gravity="auto"
             className="absolute right-0 top-1/2 z-10 hidden aspect-square h-[86%] -translate-y-1/2 translate-x-[14%] rounded-full drop-shadow-2xl drop-shadow-black/70 transition-transform duration-500 ease-out group-hover:translate-x-[42%] group-hover:rotate-[50deg] sm:block"
           />
           <span className="absolute right-2 top-2 z-20 rounded-full bg-amber-500 px-2.5 py-1 font-mono text-xs font-bold text-slate-950 shadow-lg shadow-amber-500/30 sm:text-sm">

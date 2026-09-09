@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import type { ReactNode, TouchEvent as ReactTouchEvent } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { Download, Eye, ImagePlus, Loader2, Pencil, Share2, X, ZoomIn } from "lucide-react";
+import { Download, Eye, ImagePlus, Loader2, Pencil, RotateCw, Share2, X, ZoomIn } from "lucide-react";
 import type { AuthMode, Vinyl } from "../types";
 import { SLOT_LABELS, SLOT_ORDER, countImages, slotIds } from "../types";
 import { resolveImageSrc } from "../config/cloudinary";
@@ -45,6 +45,39 @@ function MetadataField({
 export default function DetailModal({ record, onClose, onEdit, authMode }: Props) {
   const toast = useToast();
   const [exporting, setExporting] = useState(false);
+
+  /* ── Rotación de imágenes (persistida en localStorage por vinilo) ── */
+  const [rotation, setRotation] = useState<Record<string, number>>({});
+
+  /* Cargar rotación guardada al montar */
+  useEffect(() => {
+    if (record.id) {
+      const saved = localStorage.getItem(`appcetato:rotation:${record.id}`);
+      if (saved) {
+        try {
+          setRotation(JSON.parse(saved));
+        } catch {
+          setRotation({});
+        }
+      } else {
+        setRotation({});
+      }
+    }
+  }, [record.id]);
+
+  /* Guardar rotación al cambiar */
+  useEffect(() => {
+    if (record.id && Object.keys(rotation).length > 0) {
+      localStorage.setItem(`appcetato:rotation:${record.id}`, JSON.stringify(rotation));
+    }
+  }, [rotation, record.id]);
+
+  const handleRotate = (slot: string) => {
+    setRotation((prev) => ({
+      ...prev,
+      [slot]: ((prev[slot] ?? 0) + 90) % 360,
+    }));
+  };
 
   /* ── Zoom de fotos con gestos táctiles nativos (sin librerías externas):
         pinch con 2 dedos (100%–400%), pan con 1 dedo cuando hay zoom,
@@ -217,34 +250,65 @@ export default function DetailModal({ record, onClose, onEdit, authMode }: Props
               2 columnas en escritorio · cada una tocable para zoom */}
           {photos.length > 0 ? (
             <div className="mt-5 grid grid-cols-1 gap-3 sm:grid-cols-2">
-              {photos.map(({ slot, src }) => (
-                <figure key={slot} className="min-w-0">
-                  <button
-                    type="button"
-                    onClick={() => openZoom({ src, caption: SLOT_LABELS[slot] })}
-                    aria-label={`Ampliar ${SLOT_LABELS[slot].toLowerCase()}`}
-                    className="touch-manipulation group relative block w-full cursor-zoom-in rounded-xl transition-transform duration-200 active:scale-[0.99]"
-                  >
-                    {/* En móvil la carátula domina (~60% de altura) y la galleta
-                        complementa (~40%); en escritorio van lado a lado. */}
-                    <img
-                      src={src}
-                      alt={`${SLOT_LABELS[slot]} de ${record.album}`}
-                      className={`w-full border border-slate-700 shadow-xl shadow-black/40 ${
-                        slot === "cover" || slot === "coverBack"
-                          ? "aspect-[4/5] rounded-xl object-cover sm:aspect-square"
-                          : "aspect-square rounded-full bg-slate-950/70 object-contain"
-                      }`}
-                    />
-                    <span className="absolute right-2 top-2 grid h-9 w-9 place-items-center rounded-lg bg-slate-950/75 text-amber-400 opacity-0 backdrop-blur-sm transition-opacity duration-200 group-hover:opacity-100 group-active:opacity-100">
-                      <ZoomIn size={16} />
-                    </span>
-                  </button>
-                  <figcaption className="mt-1.5 text-center font-mono text-[9px] tracking-[0.22em] text-slate-500">
-                    {SLOT_LABELS[slot].toUpperCase()} · TOCAR PARA AMPLIAR
-                  </figcaption>
-                </figure>
-              ))}
+              {photos.map(({ slot, src }) => {
+                const currentRotation = rotation[slot] ?? 0;
+                const isLabel = slot === "labelA" || slot === "labelB";
+                
+                return (
+                  <figure key={slot} className="min-w-0">
+                    <div className="group relative">
+                      {/* Botón de rotación */}
+                      <button
+                        type="button"
+                        onClick={() => handleRotate(slot)}
+                        aria-label={`Rotar ${SLOT_LABELS[slot].toLowerCase()}`}
+                        className="touch-manipulation absolute right-2 top-2 z-20 grid h-10 w-10 place-items-center rounded-full bg-slate-900/80 text-white shadow-lg backdrop-blur-sm transition-all hover:bg-amber-500 hover:text-slate-900 active:scale-90"
+                      >
+                        <RotateCw size={18} />
+                      </button>
+                      
+                      {/* Imagen con rotación */}
+                      <button
+                        type="button"
+                        onClick={() => openZoom({ src, caption: SLOT_LABELS[slot] })}
+                        aria-label={`Ampliar ${SLOT_LABELS[slot].toLowerCase()}`}
+                        className="touch-manipulation relative block w-full cursor-zoom-in rounded-xl transition-transform duration-200 active:scale-[0.99]"
+                      >
+                        {isLabel ? (
+                          <LabelImage
+                            record={record}
+                            gravity="auto"
+                            rotation={currentRotation}
+                            fit="contain"
+                            className={`aspect-square rounded-full border-4 border-slate-700 bg-slate-950/70 shadow-xl shadow-black/40 transition-transform duration-300 ${
+                              slot === "labelA" ? "" : ""
+                            }`}
+                          />
+                        ) : (
+                          <CoverImage
+                            record={record}
+                            gravity="auto"
+                            rotation={currentRotation}
+                            className={`aspect-[4/5] rounded-xl border border-slate-700 shadow-xl shadow-black/40 transition-transform duration-300 sm:aspect-square ${
+                              slot === "coverBack" ? "" : ""
+                            }`}
+                          />
+                        )}
+                        <span className="absolute left-2 top-2 grid h-9 w-9 place-items-center rounded-lg bg-slate-950/75 text-amber-400 opacity-0 backdrop-blur-sm transition-opacity duration-200 group-hover:opacity-100 group-active:opacity-100">
+                          <ZoomIn size={16} />
+                        </span>
+                      </button>
+                    </div>
+                    <figcaption className="mt-1.5 text-center font-mono text-[9px] tracking-[0.22em] text-slate-500">
+                      {SLOT_LABELS[slot].toUpperCase()}
+                      {currentRotation > 0 && (
+                        <span className="ml-2 text-amber-400">· {currentRotation}°</span>
+                      )}
+                      {" · TOCAR PARA AMPLIAR"}
+                    </figcaption>
+                  </figure>
+                );
+              })}
             </div>
           ) : (
             <>

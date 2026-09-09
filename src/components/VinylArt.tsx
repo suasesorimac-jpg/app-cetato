@@ -38,13 +38,19 @@ export function CoverImage({
   className,
   width = 640,
   fit,
+  gravity,
+  rotation,
 }: {
   record: Vinyl;
   className?: string;
   width?: number;
   fit?: "cover" | "contain";
+  /** Gravedad para auto-centrado en Cloudinary (ej: "auto", "face"). */
+  gravity?: string;
+  /** Ángulo de rotación en grados (0, 90, 180, 270). */
+  rotation?: number;
 }) {
-  const real = resolveImageSrc(coverId(record), width);
+  const real = resolveImageSrc(coverId(record), width, { gravity, rotation });
   const src = real ?? sleeveDataUrl(record);
   return <SmartImg src={src} alt={`Carátula de ${record.album}`} className={className} fit={fit} />;
 }
@@ -55,14 +61,20 @@ export function LabelImage({
   className,
   width = 640,
   fit,
+  gravity,
+  rotation,
 }: {
   record: Vinyl;
   className?: string;
   width?: number;
   fit?: "cover" | "contain";
+  /** Gravedad para auto-centrado en Cloudinary. */
+  gravity?: string;
+  /** Ángulo de rotación en grados. */
+  rotation?: number;
 }) {
   /* El getter resuelve la migración: labelAImageId ?? labelImageId (heredado) */
-  const real = resolveImageSrc(labelAId(record), width);
+  const real = resolveImageSrc(labelAId(record), width, { gravity, rotation });
   const src = real ?? discDataUrl(record);
   return <SmartImg src={src} alt={`Galleta de ${record.album}`} className={className} fit={fit} />;
 }
