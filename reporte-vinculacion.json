@@ -1,0 +1,2172 @@
+{
+  "stats": {
+    "total": 187,
+    "matched": 173,
+    "notMatched": 14,
+    "percentage": "92.5%"
+  },
+  "matches": [
+    {
+      "id": "1",
+      "album": "Honorable Puff-Puff",
+      "matchedWith": "archivo-artista: The Shadows - carutala B | The Shadows A | The Shadows B | The Shadows Caratula A",
+      "score": null,
+      "images": {
+        "cover": true,
+        "coverBack": true,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "2",
+      "album": "El Porro / Porros Solo",
+      "matchedWith": "Porros, Solo Porros",
+      "score": null,
+      "images": {
+        "cover": false,
+        "coverBack": false,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "4",
+      "album": "(homónimo)",
+      "matchedWith": "archivo-artista: Los Ayer's - A | Los Ayer's - B | Los Ayer's - Caratula A | Los Ayer's - Caratula B",
+      "score": null,
+      "images": {
+        "cover": true,
+        "coverBack": true,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "6",
+      "album": "Canción Popular",
+      "matchedWith": "archivo-artista: Nelson Ned - A | Nelson Ned - B | Nelson Ned - Caratula A | Nelson Ned - Caratula B",
+      "score": null,
+      "images": {
+        "cover": true,
+        "coverBack": true,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "7",
+      "album": "Amar No Es Pecado",
+      "matchedWith": "archivo-artista: Luz Amparo - Caratula B | Luz Amparo - caratula A | Luz Amparo A | Luz Amparo B",
+      "score": null,
+      "images": {
+        "cover": true,
+        "coverBack": true,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "8",
+      "album": "Boleros Campeones Vol. V",
+      "matchedWith": "Boleros Campeones",
+      "score": 85,
+      "images": {
+        "cover": true,
+        "coverBack": true,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "9",
+      "album": "Te Espero y otros éxitos",
+      "matchedWith": "archivo-artista: María Luisa Landín - A | María Luisa Landín - B | María Luisa Landín - Caratula A | María Luisa Landín - Caratula B",
+      "score": null,
+      "images": {
+        "cover": true,
+        "coverBack": true,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "10",
+      "album": "Ritmos Juveniles",
+      "matchedWith": "archivo-artista: Alberto Vázquez - A | Alberto Vázquez - B | Alberto Vázquez - Caratula A | Alberto Vázquez - Caratula B",
+      "score": null,
+      "images": {
+        "cover": true,
+        "coverBack": true,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "11",
+      "album": "Boleros Campeones Vol. II",
+      "matchedWith": "Boleros Campeones",
+      "score": 85,
+      "images": {
+        "cover": true,
+        "coverBack": true,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "13",
+      "album": "Felicidades / Pambiche Navideño",
+      "matchedWith": "archivo-artista: Orquesta Los Melódicos - A | Orquesta Los Melódicos - B | Orquesta Los Melódicos - Caratula A | Orquesta Los Melódicos - Caratula B",
+      "score": null,
+      "images": {
+        "cover": true,
+        "coverBack": true,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "14",
+      "album": "Bailables Curro No. 1",
+      "matchedWith": "archivo-artista: Orquesta Rufo Garrido y Curro - A | Orquesta Rufo Garrido y Curro - B",
+      "score": null,
+      "images": {
+        "cover": false,
+        "coverBack": false,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "21",
+      "album": "Salsa Mona - Vol. II",
+      "matchedWith": "Salsa Mona - Vol. II",
+      "score": 100,
+      "images": {
+        "cover": true,
+        "coverBack": false,
+        "labelA": false,
+        "labelB": false
+      }
+    },
+    {
+      "id": "22",
+      "album": "Vol. 15 (Café La Bastilla)",
+      "matchedWith": "Vol. 15 (Café La Bastilla - Colección) Caratula A",
+      "score": 85,
+      "images": {
+        "cover": true,
+        "coverBack": false,
+        "labelA": false,
+        "labelB": false
+      }
+    },
+    {
+      "id": "23",
+      "album": "Paris at Midnight",
+      "matchedWith": "Paris at Midnight",
+      "score": 100,
+      "images": {
+        "cover": false,
+        "coverBack": true,
+        "labelA": false,
+        "labelB": false
+      }
+    },
+    {
+      "id": "24",
+      "album": "Exitómetro - Vol. III",
+      "matchedWith": "Exitómetro - Vol. III",
+      "score": 100,
+      "images": {
+        "cover": true,
+        "coverBack": false,
+        "labelA": false,
+        "labelB": false
+      }
+    },
+    {
+      "id": "25",
+      "album": "Como Es Ella",
+      "matchedWith": "Como Es Ella",
+      "score": 100,
+      "images": {
+        "cover": false,
+        "coverBack": false,
+        "labelA": true,
+        "labelB": false
+      }
+    },
+    {
+      "id": "26",
+      "album": "Midnight Blue",
+      "matchedWith": "Midnight Blue - The Wistful Sax of Fausto Papetti _ caratula A",
+      "score": 85,
+      "images": {
+        "cover": true,
+        "coverBack": false,
+        "labelA": false,
+        "labelB": false
+      }
+    },
+    {
+      "id": "27",
+      "album": "Serenata",
+      "matchedWith": "Chacha Linda y otras canciones de serenata por Los Romanceros",
+      "score": 85,
+      "images": {
+        "cover": true,
+        "coverBack": true,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "28",
+      "album": "Éxitos de los 50",
+      "matchedWith": "Éxitos de los 50",
+      "score": 100,
+      "images": {
+        "cover": false,
+        "coverBack": false,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "29",
+      "album": "Sabrosa Música Vol. VIII",
+      "matchedWith": "Sabrosa Música - Vol. VIII",
+      "score": 100,
+      "images": {
+        "cover": true,
+        "coverBack": true,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "30",
+      "album": "El Sabor Inolvidable",
+      "matchedWith": "El Sabor Inolvidable de los Corraleros de Majagual",
+      "score": 85,
+      "images": {
+        "cover": true,
+        "coverBack": true,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "31",
+      "album": "Los Bailables",
+      "matchedWith": "Los Bailables",
+      "score": 100,
+      "images": {
+        "cover": true,
+        "coverBack": true,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "32",
+      "album": "14 Canonazos Bailables Vol. V",
+      "matchedWith": "14 Canonazos Bailables - Volumen V",
+      "score": 80,
+      "images": {
+        "cover": true,
+        "coverBack": true,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "33",
+      "album": "25 Años de Éxitos",
+      "matchedWith": "25 Años de Éxitos con Los Ocho de Colombia",
+      "score": 85,
+      "images": {
+        "cover": true,
+        "coverBack": false,
+        "labelA": false,
+        "labelB": false
+      }
+    },
+    {
+      "id": "34",
+      "album": "(homónimo)",
+      "matchedWith": "archivo-artista: El Combo de Las Estrellas - A | El Combo de Las Estrellas - B | El Combo de Las Estrellas - Caratula A | El Combo de Las Estrellas - Caratula B",
+      "score": null,
+      "images": {
+        "cover": true,
+        "coverBack": true,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "35",
+      "album": "¡Qué Sabroso Está!",
+      "matchedWith": "¡Qué Sabroso Está!",
+      "score": 100,
+      "images": {
+        "cover": true,
+        "coverBack": true,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "36",
+      "album": "Tango de Ayer - Vol. 4",
+      "matchedWith": "Tango de Ayer - Volumen 4 (San Telmo 1931-1941)",
+      "score": null,
+      "images": {
+        "cover": true,
+        "coverBack": true,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "37",
+      "album": "Rumores de Oración",
+      "matchedWith": "Rumores de Oración - Dueto Antaño",
+      "score": 85,
+      "images": {
+        "cover": false,
+        "coverBack": true,
+        "labelA": false,
+        "labelB": false
+      }
+    },
+    {
+      "id": "38",
+      "album": "Usted y otros éxitos",
+      "matchedWith": "archivo-artista: Los Tres Diamantes - Caratula A | Los Tres Diamantes - Caratula B | Los Tres Diamantes - Lado 2 | Los Tres Diamantes- Lado 1",
+      "score": null,
+      "images": {
+        "cover": true,
+        "coverBack": true,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "39",
+      "album": "Triunfamos!!!",
+      "matchedWith": "Trío Martino- Triunfamos",
+      "score": 85,
+      "images": {
+        "cover": true,
+        "coverBack": true,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "40",
+      "album": "Volumen 3",
+      "matchedWith": "Los Ayer's - Volumen 3",
+      "score": 85,
+      "images": {
+        "cover": true,
+        "coverBack": true,
+        "labelA": false,
+        "labelB": true
+      }
+    },
+    {
+      "id": "41",
+      "album": "A Cantar",
+      "matchedWith": "A Cantar Rancheras",
+      "score": 85,
+      "images": {
+        "cover": true,
+        "coverBack": true,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "42",
+      "album": "Interpreta sus Mejores Canciones",
+      "matchedWith": "Oscar Agudelo - Interpreta sus mejores canciones",
+      "score": 85,
+      "images": {
+        "cover": true,
+        "coverBack": false,
+        "labelA": false,
+        "labelB": false
+      }
+    },
+    {
+      "id": "43",
+      "album": "12 Éxitos Románticos",
+      "matchedWith": "Olga Guillot - 12 exitos romanticos Caratula A",
+      "score": 85,
+      "images": {
+        "cover": true,
+        "coverBack": false,
+        "labelA": false,
+        "labelB": false
+      }
+    },
+    {
+      "id": "44",
+      "album": "Del Tango al Bolero Ranchero",
+      "matchedWith": "Del Tango al Bolero Ranchero - Raul del mar",
+      "score": 85,
+      "images": {
+        "cover": true,
+        "coverBack": true,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "45",
+      "album": "Da Ya Think I'm Sexy? / Scarred and Scared",
+      "matchedWith": "archivo-artista: Rod Stewart - Lado 1 | Rod Stewart - Lado 2",
+      "score": null,
+      "images": {
+        "cover": false,
+        "coverBack": false,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "46",
+      "album": "El Especial del Año - Vol. 2",
+      "matchedWith": "El Especial del Año - Vol. 2",
+      "score": 100,
+      "images": {
+        "cover": true,
+        "coverBack": true,
+        "labelA": false,
+        "labelB": true
+      }
+    },
+    {
+      "id": "47",
+      "album": "Wganda Kenya",
+      "matchedWith": "Wganda Kenya",
+      "score": 100,
+      "images": {
+        "cover": false,
+        "coverBack": true,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "48",
+      "album": "Muriendo de Amor",
+      "matchedWith": "Muriendo de Amor- Gloria y Antonio- -Caratula A",
+      "score": 85,
+      "images": {
+        "cover": true,
+        "coverBack": false,
+        "labelA": false,
+        "labelB": false
+      }
+    },
+    {
+      "id": "49",
+      "album": "Que Sabes Tú de Mí",
+      "matchedWith": "Que Sabes Tú de Mí - Nelly Calle -Caratula A",
+      "score": 85,
+      "images": {
+        "cover": true,
+        "coverBack": false,
+        "labelA": false,
+        "labelB": false
+      }
+    },
+    {
+      "id": "50",
+      "album": "Los Tres Ases",
+      "matchedWith": "Los Tres Ases",
+      "score": 100,
+      "images": {
+        "cover": true,
+        "coverBack": false,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "51",
+      "album": "¡Conózcalo! ...es Rafael Vázquez",
+      "matchedWith": "Conozcalo es Rafael Vázquez",
+      "score": 100,
+      "images": {
+        "cover": true,
+        "coverBack": true,
+        "labelA": false,
+        "labelB": true
+      }
+    },
+    {
+      "id": "52",
+      "album": "Fernando Valades - Vol. II",
+      "matchedWith": "Fernando Valades - Vol. II",
+      "score": 100,
+      "images": {
+        "cover": true,
+        "coverBack": false,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "53",
+      "album": "(álbum sin título)",
+      "matchedWith": "archivo-artista: Maria Elena Sandoval - Si no estas Conmigo  - A | Maria Elena Sandoval - Si no estas Conmigo  - B | Maria Elena Sandoval - Si no estas Conmigo  - Caratula A | Maria Elena Sandoval - Si no estas Conmigo  - Caratula B",
+      "score": null,
+      "images": {
+        "cover": true,
+        "coverBack": true,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "54",
+      "album": "La Pina Madura",
+      "matchedWith": "La Piña Madura",
+      "score": 100,
+      "images": {
+        "cover": true,
+        "coverBack": true,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "55",
+      "album": "El Brasil del Enano Original",
+      "matchedWith": "El Brasil del Enano Original",
+      "score": 100,
+      "images": {
+        "cover": true,
+        "coverBack": false,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "56",
+      "album": "Todo Corazón - Tango de Ayer Vol. 5",
+      "matchedWith": "Todo Corazón - Serie Tango de Ayer - Volumen 5",
+      "score": 75,
+      "images": {
+        "cover": false,
+        "coverBack": false,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "57",
+      "album": "Cita Estelar",
+      "matchedWith": "Cita Estelar con Los Delfines y Los Embajadores",
+      "score": 85,
+      "images": {
+        "cover": true,
+        "coverBack": true,
+        "labelA": false,
+        "labelB": false
+      }
+    },
+    {
+      "id": "58",
+      "album": "Como Siempre Buenos - Los 33 Éxitos",
+      "matchedWith": "Como Siempre Buenos - Los 33 Éxitos de Peter Delis",
+      "score": 85,
+      "images": {
+        "cover": true,
+        "coverBack": true,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "60",
+      "album": "Tolú",
+      "matchedWith": "Tolú",
+      "score": 100,
+      "images": {
+        "cover": false,
+        "coverBack": false,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "61",
+      "album": "(Promocional Fábrica de Licores de Antioquia)",
+      "matchedWith": "(Promocional - Fábrica de Licores de Antioquia)",
+      "score": 100,
+      "images": {
+        "cover": false,
+        "coverBack": false,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "62",
+      "album": "Feliz Navidad - Al Ritmo de Lux",
+      "matchedWith": "Feliz Navidad - Al Ritmo de Lux (Gaseosas Lux)",
+      "score": 85,
+      "images": {
+        "cover": true,
+        "coverBack": true,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "63",
+      "album": "Chacha Linda y Otras Canciones Inolvidables",
+      "matchedWith": "Chacha Linda y Otras Canciones Inolvidables",
+      "score": 100,
+      "images": {
+        "cover": true,
+        "coverBack": true,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "64",
+      "album": "Espinosa y Bedoya",
+      "matchedWith": "Espinosa y Bedoya",
+      "score": 100,
+      "images": {
+        "cover": true,
+        "coverBack": true,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "65",
+      "album": "Boleros Campeones",
+      "matchedWith": "Boleros Campeones",
+      "score": 100,
+      "images": {
+        "cover": true,
+        "coverBack": true,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "66",
+      "album": "Bailando",
+      "matchedWith": "Bailando con el Dueto Villagómez - Pozo",
+      "score": 85,
+      "images": {
+        "cover": true,
+        "coverBack": true,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "67",
+      "album": "Síganme los Buenos - Vol. 12",
+      "matchedWith": "Síganme los Buenos - Vol. 12",
+      "score": 100,
+      "images": {
+        "cover": true,
+        "coverBack": true,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "68",
+      "album": "El Combo de las Estrellas y... Punto",
+      "matchedWith": "El Combo de las Estrellas y... Punto",
+      "score": 100,
+      "images": {
+        "cover": true,
+        "coverBack": true,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "69",
+      "album": "Los Trovadores de Cuyo - Vol. 8",
+      "matchedWith": "Los Trovadores de Cuyo - Vol. 8",
+      "score": 100,
+      "images": {
+        "cover": true,
+        "coverBack": true,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "70",
+      "album": "Las Tristes Canciones del Dueto Miseria",
+      "matchedWith": "Las Tristes Canciones del Dueto Miseria",
+      "score": 100,
+      "images": {
+        "cover": true,
+        "coverBack": true,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "71",
+      "album": "¡Quién Dice Que No!",
+      "matchedWith": "¡Quién Dice Que No!",
+      "score": 100,
+      "images": {
+        "cover": true,
+        "coverBack": true,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "72",
+      "album": "Mi Nueva Plegaria",
+      "matchedWith": "Mi Nueva Plegaria",
+      "score": 100,
+      "images": {
+        "cover": true,
+        "coverBack": true,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "73",
+      "album": "Orlando en Colombia",
+      "matchedWith": "Orlando en Colombia",
+      "score": 100,
+      "images": {
+        "cover": true,
+        "coverBack": true,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "74",
+      "album": "Una Noche en la Hosteria",
+      "matchedWith": "Una Noche en la Hosteria",
+      "score": 100,
+      "images": {
+        "cover": true,
+        "coverBack": true,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "75",
+      "album": "12 Impactos Atómicos",
+      "matchedWith": "12 Impactos Atómicos",
+      "score": 100,
+      "images": {
+        "cover": false,
+        "coverBack": false,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "76",
+      "album": "Digan lo que digan",
+      "matchedWith": "Digan lo que digan",
+      "score": 100,
+      "images": {
+        "cover": true,
+        "coverBack": false,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "77",
+      "album": "De Combate con Los Golden Boys",
+      "matchedWith": "De Combate con Los Golden Boys",
+      "score": 100,
+      "images": {
+        "cover": true,
+        "coverBack": true,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "78",
+      "album": "Los Trovadores de Cuyo - Vol. 2",
+      "matchedWith": "Los Trovadores de Cuyo - Vol. 8",
+      "score": 83,
+      "images": {
+        "cover": true,
+        "coverBack": true,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "79",
+      "album": "Mambo en Sax",
+      "matchedWith": "Mambo en Sax",
+      "score": 100,
+      "images": {
+        "cover": true,
+        "coverBack": true,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "80",
+      "album": "El Disco del Año - Vol. 15",
+      "matchedWith": "El Disco del Año - Vol. 15",
+      "score": 100,
+      "images": {
+        "cover": true,
+        "coverBack": true,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "81",
+      "album": "Pueblito Viejo y otros grandes éxitos",
+      "matchedWith": "Pueblito Viejo y otros grandes éxitos de Garzón y Collazos",
+      "score": 85,
+      "images": {
+        "cover": true,
+        "coverBack": true,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "82",
+      "album": "Aquí Colombia",
+      "matchedWith": "Aquí Colombia",
+      "score": 100,
+      "images": {
+        "cover": true,
+        "coverBack": true,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "83",
+      "album": "Taboga y otros éxitos",
+      "matchedWith": "Taboga y otros éxitos de Margarita Cueto y Juan Arvizu",
+      "score": 85,
+      "images": {
+        "cover": true,
+        "coverBack": true,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "84",
+      "album": "Los Chalchaleros - Vol. II",
+      "matchedWith": "Los Chalchaleros - Vol. II",
+      "score": 100,
+      "images": {
+        "cover": true,
+        "coverBack": true,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "85",
+      "album": "Aquellas canciones de Valente y Cáceres",
+      "matchedWith": "Aquellas canciones de Valente y Cáceres",
+      "score": 100,
+      "images": {
+        "cover": true,
+        "coverBack": true,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "86",
+      "album": "30 Años (Cacharrería Industrial Pacon)",
+      "matchedWith": "30 Años (Cacharrería Industrial Pacon - Vol. IV)",
+      "score": 85,
+      "images": {
+        "cover": true,
+        "coverBack": true,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "87",
+      "album": "Bolero Inmortal",
+      "matchedWith": "Bolero Inmortal (La música original de la película - Bolero Inmortal)",
+      "score": 85,
+      "images": {
+        "cover": true,
+        "coverBack": true,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "88",
+      "album": "Chacha Linda y otras canciones de serenata",
+      "matchedWith": "Chacha Linda y otras canciones de serenata por Los Romanceros",
+      "score": 85,
+      "images": {
+        "cover": true,
+        "coverBack": true,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "89",
+      "album": "Aquellas canciones de Valente y Cáceres",
+      "matchedWith": "Aquellas canciones de Valente y Cáceres",
+      "score": 100,
+      "images": {
+        "cover": true,
+        "coverBack": true,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "90",
+      "album": "Romántico",
+      "matchedWith": "Romántico",
+      "score": 100,
+      "images": {
+        "cover": false,
+        "coverBack": false,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "91",
+      "album": "¡De Locura!",
+      "matchedWith": "¡De Locura!",
+      "score": 100,
+      "images": {
+        "cover": true,
+        "coverBack": true,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "92",
+      "album": "Cuerdas que Lloran - Vol. 3",
+      "matchedWith": "Cuerdas que Lloran - Vol. 3 -Caratula A",
+      "score": 85,
+      "images": {
+        "cover": true,
+        "coverBack": false,
+        "labelA": false,
+        "labelB": false
+      }
+    },
+    {
+      "id": "93",
+      "album": "Grupo Venezuela - Vol. 3",
+      "matchedWith": "Grupo Venezuela - Vol. 3",
+      "score": 100,
+      "images": {
+        "cover": true,
+        "coverBack": true,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "94",
+      "album": "Aquí los Éxitos",
+      "matchedWith": "Aquí los Éxitos",
+      "score": 100,
+      "images": {
+        "cover": true,
+        "coverBack": true,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "95",
+      "album": "Hermanos a Bailar Nos Vamos",
+      "matchedWith": "Hermanos a Bailar Nos Vamos",
+      "score": 100,
+      "images": {
+        "cover": true,
+        "coverBack": true,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "96",
+      "album": "Evocando el Ayer",
+      "matchedWith": "Evocando el Ayer",
+      "score": 100,
+      "images": {
+        "cover": true,
+        "coverBack": true,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "97",
+      "album": "A Cantar Rancheras",
+      "matchedWith": "A Cantar Rancheras",
+      "score": 100,
+      "images": {
+        "cover": true,
+        "coverBack": true,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "98",
+      "album": "Trío Matamoros",
+      "matchedWith": "Trío Matamoros (Serie Coleccionista)",
+      "score": 85,
+      "images": {
+        "cover": true,
+        "coverBack": true,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "99",
+      "album": "Aquellas Canciones - Vol. XX",
+      "matchedWith": "Aquellas Canciones - Volumen XX",
+      "score": 75,
+      "images": {
+        "cover": true,
+        "coverBack": true,
+        "labelA": false,
+        "labelB": false
+      }
+    },
+    {
+      "id": "100",
+      "album": "Boleros Campeones - Vol. III",
+      "matchedWith": "Boleros Campeones - Vol. III",
+      "score": 100,
+      "images": {
+        "cover": true,
+        "coverBack": true,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "101",
+      "album": "14 Candidos Bailables - Vol. 20",
+      "matchedWith": "14 Candidos Bailables - Volumen 20",
+      "score": 80,
+      "images": {
+        "cover": false,
+        "coverBack": false,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "102",
+      "album": "Porros, Solo Porros",
+      "matchedWith": "Porros, Solo Porros",
+      "score": 100,
+      "images": {
+        "cover": false,
+        "coverBack": false,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "103",
+      "album": "Pérez Prado Latino",
+      "matchedWith": "Pérez Prado Latino",
+      "score": 100,
+      "images": {
+        "cover": false,
+        "coverBack": false,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "104",
+      "album": "Recuerdos del Ayer - Vol. 1",
+      "matchedWith": "Recuerdos del Ayer - Vol. 1",
+      "score": 100,
+      "images": {
+        "cover": true,
+        "coverBack": true,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "105",
+      "album": "Más éxitos con el rey del mambo",
+      "matchedWith": "Más éxitos con el rey del mambo",
+      "score": 100,
+      "images": {
+        "cover": true,
+        "coverBack": true,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "106",
+      "album": "Salsa Tracks",
+      "matchedWith": "Salsa Tracks",
+      "score": 100,
+      "images": {
+        "cover": true,
+        "coverBack": true,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "107",
+      "album": "Aquellas canciones de Hugo del Carril",
+      "matchedWith": "Aquellas canciones de Hugo del Carril",
+      "score": 100,
+      "images": {
+        "cover": true,
+        "coverBack": true,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "108",
+      "album": "Homenaje a Canaro",
+      "matchedWith": "Homenaje a Canaro",
+      "score": 100,
+      "images": {
+        "cover": false,
+        "coverBack": false,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "109",
+      "album": "LAN-Chile - Varios Intérpretes",
+      "matchedWith": "LAN-Chile (Línea Aérea Internacional Chilena) - Varios Intérpretes",
+      "score": null,
+      "images": {
+        "cover": true,
+        "coverBack": true,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "110",
+      "album": "Boleros Campeones - Vol. IV",
+      "matchedWith": "Boleros Campeones - Vol. IV",
+      "score": 100,
+      "images": {
+        "cover": false,
+        "coverBack": false,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "111",
+      "album": "Álbum Homenaje a los 30 años de Víctor Piñero",
+      "matchedWith": "Álbum Homenaje a los 30 años de Víctor Piñero",
+      "score": 100,
+      "images": {
+        "cover": true,
+        "coverBack": true,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "112",
+      "album": "Motown Disc-O-Tech No. 2",
+      "matchedWith": "Motown Disc-O-Tech No. 2 (Motown MixTech)",
+      "score": 85,
+      "images": {
+        "cover": true,
+        "coverBack": true,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "113",
+      "album": "La Casa de los Abuelos",
+      "matchedWith": "La Casa de los Abuelos",
+      "score": 100,
+      "images": {
+        "cover": true,
+        "coverBack": true,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "114",
+      "album": "Elvis Sings Christmas Songs",
+      "matchedWith": "Elvis Sings Christmas Songs (Elvis en Navidad)",
+      "score": 85,
+      "images": {
+        "cover": true,
+        "coverBack": true,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "115",
+      "album": "Noches de Bocagrande / Triunfamos",
+      "matchedWith": "Noches de Bocagrande  - Triunfamos",
+      "score": 100,
+      "images": {
+        "cover": false,
+        "coverBack": false,
+        "labelA": false,
+        "labelB": true
+      }
+    },
+    {
+      "id": "116",
+      "album": "Aquellos Ojos Verdes / Capullito de Alelí",
+      "matchedWith": "Aquellos Ojos Verdes - Capullito de Alelí",
+      "score": 100,
+      "images": {
+        "cover": false,
+        "coverBack": false,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "117",
+      "album": "Soledad sin ti / Sin necesidad",
+      "matchedWith": "Soledad sin ti  - Sin necesidad",
+      "score": 100,
+      "images": {
+        "cover": false,
+        "coverBack": false,
+        "labelA": true,
+        "labelB": false
+      }
+    },
+    {
+      "id": "118",
+      "album": "Dime pa' quien / La luna y el pescador",
+      "matchedWith": "Dime pa' quien - La luna y el pescador",
+      "score": 100,
+      "images": {
+        "cover": false,
+        "coverBack": false,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "119",
+      "album": "El Minú de Belén / Orquesta del Mar",
+      "matchedWith": "El Minú de Belén - Orquesta del Mar (Rostra del Mar)",
+      "score": 85,
+      "images": {
+        "cover": false,
+        "coverBack": false,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "120",
+      "album": "Por vos yo me rompo todo / Sueño de muñeca",
+      "matchedWith": "Por vos yo me rompo todo - Sueño de muñeca",
+      "score": 100,
+      "images": {
+        "cover": false,
+        "coverBack": false,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "121",
+      "album": "Soy aquel / Pequeña",
+      "matchedWith": "Soy aquel - Pequeña",
+      "score": 100,
+      "images": {
+        "cover": false,
+        "coverBack": false,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "122",
+      "album": "Dolor de ausencia / Cinco reales de...",
+      "matchedWith": "Ausencia",
+      "score": 85,
+      "images": {
+        "cover": false,
+        "coverBack": false,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "123",
+      "album": "La Pulga / Ya es muy tarde",
+      "matchedWith": "La Pulga -  Ya es muy tarde",
+      "score": 100,
+      "images": {
+        "cover": false,
+        "coverBack": false,
+        "labelA": true,
+        "labelB": false
+      }
+    },
+    {
+      "id": "124",
+      "album": "Alfonso Piña",
+      "matchedWith": "Alfonso Piña (posiblemente)",
+      "score": 85,
+      "images": {
+        "cover": false,
+        "coverBack": false,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "126",
+      "album": "El Campeón / Cumbión Español",
+      "matchedWith": "El Campeón - Cumbión Español",
+      "score": 100,
+      "images": {
+        "cover": false,
+        "coverBack": false,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "127",
+      "album": "Una postal de París / A qué negar",
+      "matchedWith": "Una postal de París -  A qué negar",
+      "score": 100,
+      "images": {
+        "cover": false,
+        "coverBack": false,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "128",
+      "album": "Maldi / Cumbia pa' amanecer",
+      "matchedWith": "Maldi - Cumbia pa' amanecer",
+      "score": 100,
+      "images": {
+        "cover": false,
+        "coverBack": false,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "130",
+      "album": "Villa YPA, CA / Pachanga Guararé",
+      "matchedWith": "Villa YPA, CA - Pachanga Guararé",
+      "score": 100,
+      "images": {
+        "cover": false,
+        "coverBack": false,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "131",
+      "album": "La Palomba - Andalucía - Lisboa Antigua / El Reglamento de la Máquina",
+      "matchedWith": "La Palomba - Andalucía - Lisboa Antigua - El Reglamento de la Máquina",
+      "score": 100,
+      "images": {
+        "cover": false,
+        "coverBack": false,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "132",
+      "album": "La Casta / Ron y Cerveza",
+      "matchedWith": "La Casta - Ron y Cerveza",
+      "score": 100,
+      "images": {
+        "cover": false,
+        "coverBack": false,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "133",
+      "album": "Rosa Blanca / Cara Sucia",
+      "matchedWith": "Rosa Blanca - Cara Sucia",
+      "score": 100,
+      "images": {
+        "cover": false,
+        "coverBack": false,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "134",
+      "album": "Borracho por Amor / Desde que te marchaste",
+      "matchedWith": "Borracho por Amor - Desde que te marchaste",
+      "score": 100,
+      "images": {
+        "cover": false,
+        "coverBack": false,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "135",
+      "album": "Lo Manda el Corazón",
+      "matchedWith": "Lo Manda el Corazón",
+      "score": 100,
+      "images": {
+        "cover": false,
+        "coverBack": false,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "136",
+      "album": "Tristeza Marina / Por la Vuelta",
+      "matchedWith": "Tristeza Marina - Por la Vuelta",
+      "score": 100,
+      "images": {
+        "cover": false,
+        "coverBack": false,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "137",
+      "album": "Vagabundo / El Indio Mapuchi",
+      "matchedWith": "Vagabundo - El Indio Mapuchi -A",
+      "score": 85,
+      "images": {
+        "cover": false,
+        "coverBack": false,
+        "labelA": true,
+        "labelB": false
+      }
+    },
+    {
+      "id": "138",
+      "album": "Agüita que vas corriendo / Muerte toda cuestión",
+      "matchedWith": "Agüita que vas corriendo - Muerte toda cuestión",
+      "score": 100,
+      "images": {
+        "cover": false,
+        "coverBack": false,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "139",
+      "album": "La Historia / Alma Quibdoseña",
+      "matchedWith": "La Historia - Alma Quibdoseña",
+      "score": 100,
+      "images": {
+        "cover": false,
+        "coverBack": false,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "140",
+      "album": "Nadie muere de amor / Pan panadera",
+      "matchedWith": "Nadie muere de amor - Pan panadera",
+      "score": 100,
+      "images": {
+        "cover": false,
+        "coverBack": false,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "141",
+      "album": "El Nuevo Hula Hula / Canción de Darío Montoya",
+      "matchedWith": "El Nuevo Hula Hula - (Canción de Darío Montoya)",
+      "score": 100,
+      "images": {
+        "cover": false,
+        "coverBack": false,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "142",
+      "album": "El Carrataplán / Se enfermo el Arruina'o",
+      "matchedWith": "El Carrataplán - Se enfermo el Arruina'o",
+      "score": 100,
+      "images": {
+        "cover": false,
+        "coverBack": false,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "143",
+      "album": "El Hijo Sin Consuelo / La Paliza",
+      "matchedWith": "El Hijo Sin Consuelo - La Paliza",
+      "score": 100,
+      "images": {
+        "cover": false,
+        "coverBack": false,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "144",
+      "album": "Te Quiero para Mí / Para Amarte Más",
+      "matchedWith": "Te Quiero para Mí - Para Amarte Más",
+      "score": 100,
+      "images": {
+        "cover": false,
+        "coverBack": false,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "145",
+      "album": "Melao de Caña / Tuya y más que tuya",
+      "matchedWith": "Melao de Caña - Tuya y más que tuya",
+      "score": 100,
+      "images": {
+        "cover": false,
+        "coverBack": false,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "146",
+      "album": "Suites Nos. 2 y 3 (fragmentos)",
+      "matchedWith": "Suite No. 2 en si menor (fragmentos) - Suite No. 3 en re mayor (fragmentos)",
+      "score": null,
+      "images": {
+        "cover": false,
+        "coverBack": false,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "147",
+      "album": "La Negra Petrona / Antico Milagroso",
+      "matchedWith": "La Negra Petrona - Antico Milagroso",
+      "score": 100,
+      "images": {
+        "cover": false,
+        "coverBack": false,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "148",
+      "album": "El Polvorete / Cuerpo Viejo",
+      "matchedWith": "El Polvorete - Cuerpo Viejo",
+      "score": 100,
+      "images": {
+        "cover": false,
+        "coverBack": false,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "149",
+      "album": "Aguardiente / Cuerpo Cobar",
+      "matchedWith": "Aguardiente - Cuerpo Cobar (Cuerpo Cobarde)",
+      "score": 85,
+      "images": {
+        "cover": false,
+        "coverBack": false,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "150",
+      "album": "Sombras / Las Tres Marías",
+      "matchedWith": "Sombras - Las Tres Marías",
+      "score": 100,
+      "images": {
+        "cover": false,
+        "coverBack": false,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "151",
+      "album": "Los Caminos de la Vida / Danza con los Diablitos",
+      "matchedWith": "Los Caminos de la Vida - Danza con los Diablitos",
+      "score": 100,
+      "images": {
+        "cover": false,
+        "coverBack": false,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "152",
+      "album": "La Despreciada / Con Nadie Serás Feliz",
+      "matchedWith": "La Despreciada - Con Nadie Serás Feliz",
+      "score": 100,
+      "images": {
+        "cover": false,
+        "coverBack": false,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "153",
+      "album": "Sinti / Magangue",
+      "matchedWith": "Sinti - Magangue",
+      "score": 100,
+      "images": {
+        "cover": false,
+        "coverBack": false,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "154",
+      "album": "Cruel Condena / Resignación",
+      "matchedWith": "Cruel Condena - Resignación",
+      "score": 100,
+      "images": {
+        "cover": false,
+        "coverBack": false,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "155",
+      "album": "Aquella Noche / Concierto en la Llanura",
+      "matchedWith": "Aquella Noche - Concierto en la Llanura",
+      "score": 100,
+      "images": {
+        "cover": false,
+        "coverBack": false,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "156",
+      "album": "Luchador / Lento",
+      "matchedWith": "(B) LUCHADOR (Paseo) - LENTO (Paseo)",
+      "score": null,
+      "images": {
+        "cover": false,
+        "coverBack": false,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "157",
+      "album": "Todo es Amor / Laura",
+      "matchedWith": "Todo es Amor - Laura",
+      "score": 100,
+      "images": {
+        "cover": false,
+        "coverBack": false,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "158",
+      "album": "Mi Churrunguis / El Gordo",
+      "matchedWith": "Mi Churrunguis - El Gordo",
+      "score": 100,
+      "images": {
+        "cover": false,
+        "coverBack": false,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "159",
+      "album": "Llegó borracho el borracho / No de Dios",
+      "matchedWith": "Llegó borracho el borracho - No de Dios (Canción)",
+      "score": 85,
+      "images": {
+        "cover": false,
+        "coverBack": false,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "160",
+      "album": "Mixin' the Blues / Excerpts from Audrey",
+      "matchedWith": "Mixin' the Blues - Excerpts from Audrey",
+      "score": 100,
+      "images": {
+        "cover": false,
+        "coverBack": false,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "161",
+      "album": "La Saporrita / La Cumbancha",
+      "matchedWith": "La Saporrita - La Cumbancha",
+      "score": 100,
+      "images": {
+        "cover": false,
+        "coverBack": false,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "162",
+      "album": "Mi Linda Chinita / Esposa Compañera",
+      "matchedWith": "Mi Linda Chinita - Esposa Compañera",
+      "score": 100,
+      "images": {
+        "cover": false,
+        "coverBack": false,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "163",
+      "album": "Pueblo Querido / Azucena en Poema",
+      "matchedWith": "Pueblo Querido - Azucena en Poema",
+      "score": 100,
+      "images": {
+        "cover": false,
+        "coverBack": false,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "164",
+      "album": "Indecisión / Morena",
+      "matchedWith": "Indecisión - Morena",
+      "score": 100,
+      "images": {
+        "cover": false,
+        "coverBack": false,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "165",
+      "album": "No es que me arrepienta / Ilusión perdida",
+      "matchedWith": "No es que me arrepienta - Ilusión perdida",
+      "score": 100,
+      "images": {
+        "cover": false,
+        "coverBack": false,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "166",
+      "album": "Ojos que no ven / La más bella herejía",
+      "matchedWith": "Ojos que no ven - La más bella herejía",
+      "score": 100,
+      "images": {
+        "cover": false,
+        "coverBack": false,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "167",
+      "album": "Quiéreme / Que pare la vida",
+      "matchedWith": "Quiéreme - Que pare la vida",
+      "score": 100,
+      "images": {
+        "cover": false,
+        "coverBack": false,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "168",
+      "album": "Tabaco y Ron",
+      "matchedWith": "Tabaco y Ron",
+      "score": 100,
+      "images": {
+        "cover": false,
+        "coverBack": false,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "170",
+      "album": "Magdalena / (Lado B desconocido)",
+      "matchedWith": "Magdalena (Gaita) - A/B",
+      "score": null,
+      "images": {
+        "cover": false,
+        "coverBack": false,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "171",
+      "album": "El Huracán / T. B. C.",
+      "matchedWith": "El Huracán - T. B. C.",
+      "score": 100,
+      "images": {
+        "cover": false,
+        "coverBack": false,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "172",
+      "album": "Collar de Lágrimas / Piedad",
+      "matchedWith": "Collar de Lágrimas - Piedad",
+      "score": 100,
+      "images": {
+        "cover": false,
+        "coverBack": false,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "173",
+      "album": "Cien mil cosas / Demanda el corazón",
+      "matchedWith": "Cien mil cosas - Demanda el corazón",
+      "score": 100,
+      "images": {
+        "cover": false,
+        "coverBack": false,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "174",
+      "album": "El Alacrán",
+      "matchedWith": "El Alacrán",
+      "score": 100,
+      "images": {
+        "cover": false,
+        "coverBack": false,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "175",
+      "album": "Cumbia Sonsa",
+      "matchedWith": "Cumbia Sonsa",
+      "score": 100,
+      "images": {
+        "cover": false,
+        "coverBack": false,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "176",
+      "album": "La Bruja",
+      "matchedWith": "La Bruja",
+      "score": 100,
+      "images": {
+        "cover": false,
+        "coverBack": false,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "178",
+      "album": "Ausencia",
+      "matchedWith": "Ausencia",
+      "score": 100,
+      "images": {
+        "cover": false,
+        "coverBack": false,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "180",
+      "album": "Mi Todo / Yo Vivo Mi Vida",
+      "matchedWith": "Mi Todo - Yo Vivo Mi Vida",
+      "score": 100,
+      "images": {
+        "cover": false,
+        "coverBack": false,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "181",
+      "album": "¿Usted qué haría? / Nena",
+      "matchedWith": "Usted qué haría - Nena",
+      "score": 100,
+      "images": {
+        "cover": false,
+        "coverBack": false,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "182",
+      "album": "Ella ya me olvidó, recuerdo ahora / Amanecer y la espera",
+      "matchedWith": "Ella ya me olvidó, recuerdo ahora - Amanecer y la espera",
+      "score": 100,
+      "images": {
+        "cover": false,
+        "coverBack": false,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "183",
+      "album": "Romance sin final / Olvidemos el pasado",
+      "matchedWith": "Romance sin final - Olvidemos el pasado",
+      "score": 100,
+      "images": {
+        "cover": false,
+        "coverBack": false,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "184",
+      "album": "Cumbia pa' Oriente / El Amor",
+      "matchedWith": "Cumbia pa' Oriente - El Amor",
+      "score": 100,
+      "images": {
+        "cover": false,
+        "coverBack": false,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "185",
+      "album": "El Grillo / Gato Encerrado",
+      "matchedWith": "El Grillo -  Gato Encerrado",
+      "score": 100,
+      "images": {
+        "cover": false,
+        "coverBack": false,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "186",
+      "album": "Señora / El Mochuelo",
+      "matchedWith": "Señora - El Mochuelo",
+      "score": 100,
+      "images": {
+        "cover": false,
+        "coverBack": false,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "187",
+      "album": "Sin Ti / Gozando",
+      "matchedWith": "Sin Ti - Gozando",
+      "score": 100,
+      "images": {
+        "cover": false,
+        "coverBack": false,
+        "labelA": true,
+        "labelB": true
+      }
+    },
+    {
+      "id": "188",
+      "album": "El Perfumito / Pomponio",
+      "matchedWith": "El Perfumito",
+      "score": 85,
+      "images": {
+        "cover": false,
+        "coverBack": false,
+        "labelA": true,
+        "labelB": true
+      }
+    }
+  ],
+  "noMatches": [
+    {
+      "id": "3",
+      "album": "A Toda Máquina...",
+      "bestMatch": "A Cantar Rancheras",
+      "score": 33
+    },
+    {
+      "id": "5",
+      "album": "Tiernos Boleros",
+      "bestMatch": "Boleros Campeones",
+      "score": 50
+    },
+    {
+      "id": "12",
+      "album": "Los Ritmos Alegres",
+      "bestMatch": "Aquí los Éxitos",
+      "score": 33
+    },
+    {
+      "id": "15",
+      "album": "Desde México",
+      "bestMatch": "Borracho por Amor - Desde que te marchaste",
+      "score": 14
+    },
+    {
+      "id": "16",
+      "album": "Las Canciones Populares Que Usted Quería",
+      "bestMatch": "Las Tristes Canciones del Dueto Miseria",
+      "score": 33
+    },
+    {
+      "id": "17",
+      "album": "Superéxitos 81",
+      "bestMatch": null,
+      "score": 0
+    },
+    {
+      "id": "18",
+      "album": "Lejos de Ti y otros éxitos",
+      "bestMatch": "Pueblito Viejo y otros grandes éxitos de Garzón y Collazos",
+      "score": 40
+    },
+    {
+      "id": "19",
+      "album": "La Salsa Es... La Salsa",
+      "bestMatch": "La Pulga -  Ya es muy tarde",
+      "score": 50
+    },
+    {
+      "id": "59",
+      "album": "De Triunfo en Triunfo",
+      "bestMatch": "Mambo en Sax",
+      "score": 25
+    },
+    {
+      "id": "125",
+      "album": "Guayabo a la yé",
+      "bestMatch": "Vol. 15 (Café La Bastilla - Colección) A",
+      "score": 29
+    },
+    {
+      "id": "129",
+      "album": "Me gusta señal tambo / Cumbia sobre el mar",
+      "bestMatch": "Me gusta baila tambo",
+      "score": 38
+    },
+    {
+      "id": "169",
+      "album": "Buscando un querer",
+      "bestMatch": "Andale - Tuve un Amor",
+      "score": 25
+    },
+    {
+      "id": "177",
+      "album": "El Jornalero",
+      "bestMatch": "El Alacrán",
+      "score": 50
+    },
+    {
+      "id": "179",
+      "album": "Maldición",
+      "bestMatch": null,
+      "score": 0
+    }
+  ]
+}
