@@ -252,7 +252,6 @@ export default function DetailModal({ record, onClose, onEdit, authMode }: Props
             <div className="mt-5 grid grid-cols-1 gap-3 sm:grid-cols-2">
               {photos.map(({ slot, src }) => {
                 const currentRotation = rotation[slot] ?? 0;
-                const isLabel = slot === "labelA" || slot === "labelB";
                 
                 return (
                   <figure key={slot} className="min-w-0">
@@ -274,24 +273,32 @@ export default function DetailModal({ record, onClose, onEdit, authMode }: Props
                         aria-label={`Ampliar ${SLOT_LABELS[slot].toLowerCase()}`}
                         className="touch-manipulation relative block w-full cursor-zoom-in rounded-xl transition-transform duration-200 active:scale-[0.99]"
                       >
-                        {isLabel ? (
-                          <LabelImage
-                            record={record}
-                            gravity="auto"
-                            rotation={currentRotation}
-                            fit="contain"
-                            className={`aspect-square rounded-full border-4 border-slate-700 bg-slate-950/70 shadow-xl shadow-black/40 transition-transform duration-300 ${
-                              slot === "labelA" ? "" : ""
-                            }`}
+                        {slot === "cover" && record.coverImageId && (
+                          <img
+                            src={`https://res.cloudinary.com/fcnzjtqx/image/upload/g_auto,c_fill${currentRotation ? `,a_${currentRotation}` : ""},w_800,q_auto,f_auto/${record.coverImageId}.jpg`}
+                            alt="Carátula frontal"
+                            className="aspect-[4/5] rounded-xl border border-slate-700 shadow-xl shadow-black/40 transition-transform duration-300 sm:aspect-square"
                           />
-                        ) : (
-                          <CoverImage
-                            record={record}
-                            gravity="auto"
-                            rotation={currentRotation}
-                            className={`aspect-[4/5] rounded-xl border border-slate-700 shadow-xl shadow-black/40 transition-transform duration-300 sm:aspect-square ${
-                              slot === "coverBack" ? "" : ""
-                            }`}
+                        )}
+                        {slot === "coverBack" && record.coverBackImageId && (
+                          <img
+                            src={`https://res.cloudinary.com/fcnzjtqx/image/upload/g_auto,c_fill${currentRotation ? `,a_${currentRotation}` : ""},w_800,q_auto,f_auto/${record.coverBackImageId}.jpg`}
+                            alt="Carátula trasera"
+                            className="aspect-[4/5] rounded-xl border border-slate-700 shadow-xl shadow-black/40 transition-transform duration-300 sm:aspect-square"
+                          />
+                        )}
+                        {slot === "labelA" && record.labelAImageId && (
+                          <img
+                            src={`https://res.cloudinary.com/fcnzjtqx/image/upload/g_auto,c_fill${currentRotation ? `,a_${currentRotation}` : ""},w_800,q_auto,f_auto/${record.labelAImageId}.jpg`}
+                            alt="Galleta lado A"
+                            className="aspect-square rounded-full border-4 border-slate-700 bg-slate-950/70 shadow-xl shadow-black/40 transition-transform duration-300"
+                          />
+                        )}
+                        {slot === "labelB" && record.labelBImageId && (
+                          <img
+                            src={`https://res.cloudinary.com/fcnzjtqx/image/upload/g_auto,c_fill${currentRotation ? `,a_${currentRotation}` : ""},w_800,q_auto,f_auto/${record.labelBImageId}.jpg`}
+                            alt="Galleta lado B"
+                            className="aspect-square rounded-full border-4 border-slate-700 bg-slate-950/70 shadow-xl shadow-black/40 transition-transform duration-300"
                           />
                         )}
                         <span className="absolute left-2 top-2 grid h-9 w-9 place-items-center rounded-lg bg-slate-950/75 text-amber-400 opacity-0 backdrop-blur-sm transition-opacity duration-200 group-hover:opacity-100 group-active:opacity-100">
